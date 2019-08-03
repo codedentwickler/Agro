@@ -383,10 +383,10 @@ because you were inactive for a while.</string>
             </objects>
             <point key="canvasLocation" x="2716" y="-192.50374812593705"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms And Conditions View Controller-->
         <scene sceneID="u9c-Po-wgI">
             <objects>
-                <viewController id="8cA-bI-Zf7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsAndConditionsViewController" id="8cA-bI-Zf7" customClass="TermsAndConditionsViewController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ie8-9O-9nG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,6 +418,9 @@ because you were inactive for a while.</string>
                                             <segment title="Cookie Policy"/>
                                         </segments>
                                         <color key="tintColor" red="0.11372549019607843" green="0.23137254901960785" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="userChangedPageSegmentedControl:" destination="8cA-bI-Zf7" eventType="valueChanged" id="1Ak-gw-tGw"/>
+                                        </connections>
                                     </segmentedControl>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GEg-uA-Sz7">
                                         <rect key="frame" x="16" y="205.5" width="343" height="425.5"/>
@@ -452,6 +455,10 @@ because you were inactive for a while.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3hm-Hs-kx1"/>
                     </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="GEg-uA-Sz7" id="Vkd-oc-c4D"/>
+                        <outlet property="pageSwitch" destination="P0z-4I-rJa" id="FQi-2R-Xw7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWL-Gc-NZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
