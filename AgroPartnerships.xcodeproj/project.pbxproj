@@ -96,6 +96,7 @@
 		04BB36FB22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DD22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf */; };
 		04BB36FC22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */; };
 		5A8194B24C2AD6A4E9B0F38F /* Pods_AgroPartnerships.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */; };
+		AD1520C922F6058800C99BEF /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1520C822F6058800C99BEF /* TermsAndConditionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +191,7 @@
 		04BB36DD22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
 		04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgroPartnerships.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1520C822F6058800C99BEF /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		D7402B24C14D9CBC7014C20C /* Pods-AgroPartnerships.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgroPartnerships.debug.xcconfig"; path = "Target Support Files/Pods-AgroPartnerships/Pods-AgroPartnerships.debug.xcconfig"; sourceTree = "<group>"; };
 		F9F65F57B14F0754EEF1741C /* Pods-AgroPartnerships.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgroPartnerships.release.xcconfig"; path = "Target Support Files/Pods-AgroPartnerships/Pods-AgroPartnerships.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +229,7 @@
 		04809CF422E472B500252F74 /* AgroPartnerships */ = {
 			isa = PBXGroup;
 			children = (
+				AD1520C822F6058800C99BEF /* TermsAndConditionsViewController.swift */,
 				04809D5E22E473A900252F74 /* Local */,
 				04809D6122E473A900252F74 /* Presentation */,
 				04809D5B22E473A900252F74 /* Utils */,
@@ -573,6 +576,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Paystack/Paystack.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -587,6 +591,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Paystack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +668,7 @@
 				04809D1122E472F900252F74 /* BaseContract.swift in Sources */,
 				04809DB122E473A900252F74 /* LoginPresenter.swift in Sources */,
 				04809D3E22E4734B00252F74 /* UIColor.swift in Sources */,
+				AD1520C922F6058800C99BEF /* TermsAndConditionsViewController.swift in Sources */,
 				04BB36B922EA5EAB00F266ED /* ProfileUpdateResponse.swift in Sources */,
 				04809DBE22E4A71000252F74 /* AgroActionButton.swift in Sources */,
 				04809D9022E473A900252F74 /* LocalStorage.swift in Sources */,

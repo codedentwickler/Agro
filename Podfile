@@ -17,6 +17,7 @@ use_frameworks!
     pod 'Toast-Swift', '~> 3.0.1'
     pod 'Kingfisher', '~> 4.0'
     pod 'Paystack'
+    pod 'SwiftyJSON', '~> 4.0'
 end
 
 post_install do |installer|
