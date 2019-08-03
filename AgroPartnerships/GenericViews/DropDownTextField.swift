@@ -2,7 +2,7 @@
 import UIKit
 import DropDown
 
-class DropDownTextField: UITextField {
+class DropDownTextField: AgroTextField {
     
     internal var dropDown: DropDown!
     public var selectionAction: SelectionClosure?
@@ -14,10 +14,10 @@ class DropDownTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupLayout()
     }
     
     public func setupDataField() -> () {
-        self.isUserInteractionEnabled = false
     
         addDropDownIndicator()
         
@@ -39,17 +39,13 @@ class DropDownTextField: UITextField {
         self.dropDown.show()
     }
     
-    open func setupLayout() {
+    private func setupLayout() {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.topAnchor.constraint(equalTo: topAnchor).isActive = true
         self.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         self.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        
+
         setupDataField()
-        
-        backgroundColor = UIColor.clear
-        textColor = UIColor.primaryBlue
-        placeholder = StringLiterals.PLEASE_CHOOSE_ONE
     }
     
     public func doSelection(index: Index){
@@ -58,9 +54,9 @@ class DropDownTextField: UITextField {
         dropDown.selectRow(index)
     }
     
-    public var sampleData: [String]? {
+    public var dropDownData: [String]? {
         didSet{
-            if let d = sampleData{
+            if let d = dropDownData{
                 dropDown.dataSource = d
             }
         }

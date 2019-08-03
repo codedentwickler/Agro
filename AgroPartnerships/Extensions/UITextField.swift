@@ -18,7 +18,7 @@ extension UITextField {
         dropDownIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true;
         dropDownIndicator.widthAnchor.constraint(equalToConstant: 8).isActive = true
         dropDownIndicator.heightAnchor.constraint(equalToConstant: 8).isActive = true
-        dropDownIndicator.image = UIImage(named: "iconComboBoxDown")
+        dropDownIndicator.image = UIImage(named: "drop-down-arrow")
     }
     
 }

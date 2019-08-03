@@ -55,4 +55,8 @@ extension UIColor {
     @objc class var transparent: UIColor {
         return UIColor(red: 0.33, green: 0.33, blue: 0.33, alpha: 0.75)
     }
+    
+    @objc class var textFieldBackground: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)
+    }
 }
