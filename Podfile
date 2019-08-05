@@ -18,6 +18,8 @@ use_frameworks!
     pod 'Kingfisher', '~> 4.0'
     pod 'Paystack'
     pod 'SwiftyJSON', '~> 4.0'
+    pod 'SwiftyOnboard'
+
 end
 
 post_install do |installer|

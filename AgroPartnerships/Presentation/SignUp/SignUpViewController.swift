@@ -54,6 +54,10 @@ class SignUpViewController: BaseViewController {
         }
     }
     
+    @IBAction func userPressedTermsAndConditionsButton(_ sender: Any) {
+        push(viewController: TermsAndConditionsViewController.self)
+    }
+    
     func validate() -> Bool {
         var faulted = false
         

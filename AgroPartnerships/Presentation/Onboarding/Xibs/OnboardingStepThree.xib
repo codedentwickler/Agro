@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yNM-O6-H2z" userLabel="Onboarding Step Two" customClass="OnboardingStepThree" customModule="AgroPartnerships" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-6B-OOg">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding-illustration-three-bg" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-Es-sra">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-BH-Jhz">
+                            <rect key="frame" x="16" y="104.5" width="343" height="129"/>
+                            <string key="text">Invest in Farms
+and Trade in 
+Commodities</string>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
+                            <color key="textColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le5-HX-Bid">
+                            <rect key="frame" x="16" y="249.5" width="335" height="54"/>
+                            <string key="text">You fund
+We farm. We process. We sell
+You profit</string>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                            <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding-illustration-three" translatesAutoresizingMaskIntoConstraints="NO" id="lfD-Yv-REW">
+                            <rect key="frame" x="0.0" y="331.5" width="375" height="241.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="lfD-Yv-REW" secondAttribute="height" multiplier="377:243" id="Wwf-11-DMO"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHY-2g-3OC" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
+                            <rect key="frame" x="20" y="581" width="335" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Sal-Aw-cRE"/>
+                            </constraints>
+                            <state key="normal" title="Get started"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                    <color key="value" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="EoI-Es-sra" secondAttribute="bottom" id="0Zt-hO-uAa"/>
+                        <constraint firstAttribute="trailing" secondItem="lfD-Yv-REW" secondAttribute="trailing" id="4TW-sl-EGF"/>
+                        <constraint firstItem="Le5-HX-Bid" firstAttribute="top" secondItem="xFg-BH-Jhz" secondAttribute="bottom" constant="174" id="6xr-oh-DTL"/>
+                        <constraint firstAttribute="bottom" secondItem="oHY-2g-3OC" secondAttribute="bottom" constant="16" id="B56-L2-EK5"/>
+                        <constraint firstItem="Le5-HX-Bid" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" constant="16" id="DSS-2u-oep"/>
+                        <constraint firstAttribute="trailing" secondItem="xFg-BH-Jhz" secondAttribute="trailing" constant="16" id="Kld-Km-UEM"/>
+                        <constraint firstItem="xFg-BH-Jhz" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" constant="16" id="Koo-BT-aKY"/>
+                        <constraint firstAttribute="trailing" secondItem="oHY-2g-3OC" secondAttribute="trailing" constant="20" id="LAh-jy-i6C"/>
+                        <constraint firstItem="oHY-2g-3OC" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" constant="20" id="ZDO-uc-tez"/>
+                        <constraint firstItem="EoI-Es-sra" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" id="bey-vG-ItA"/>
+                        <constraint firstItem="Le5-HX-Bid" firstAttribute="top" secondItem="xFg-BH-Jhz" secondAttribute="bottom" constant="16" id="brl-OE-fg6"/>
+                        <constraint firstAttribute="trailing" secondItem="EoI-Es-sra" secondAttribute="trailing" id="cv9-rT-Xhw"/>
+                        <constraint firstItem="EoI-Es-sra" firstAttribute="top" secondItem="VNf-6B-OOg" secondAttribute="top" id="eTl-V5-J7c"/>
+                        <constraint firstItem="lfD-Yv-REW" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" id="gKP-pB-w8x"/>
+                        <constraint firstItem="oHY-2g-3OC" firstAttribute="top" secondItem="lfD-Yv-REW" secondAttribute="bottom" constant="8" id="jtx-GI-IFh"/>
+                        <constraint firstAttribute="trailing" secondItem="Le5-HX-Bid" secondAttribute="trailing" constant="24" id="mEh-id-5Ue"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="VNf-6B-OOg" firstAttribute="leading" secondItem="YkV-bU-dbZ" secondAttribute="leading" id="7nG-Lc-9Cb"/>
+                <constraint firstItem="VNf-6B-OOg" firstAttribute="top" secondItem="YkV-bU-dbZ" secondAttribute="top" id="MMp-Fa-uOj"/>
+                <constraint firstItem="YkV-bU-dbZ" firstAttribute="trailing" secondItem="VNf-6B-OOg" secondAttribute="trailing" id="ccP-i7-IuU"/>
+                <constraint firstItem="YkV-bU-dbZ" firstAttribute="bottom" secondItem="VNf-6B-OOg" secondAttribute="bottom" id="vBs-Ub-52C"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="YkV-bU-dbZ"/>
+            <connections>
+                <outlet property="subTitleLabel" destination="oHY-2g-3OC" id="ls2-nx-bBO"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="onboarding-illustration-three" width="375" height="231"/>
+        <image name="onboarding-illustration-three-bg" width="375" height="812"/>
+    </resources>
+</document>

@@ -33,13 +33,13 @@ class LandingViewController : UIViewController {
 
     @IBAction func userPressedLoginButton(_ sender: UIButton) {
         let vc = viewController(type: LoginViewController.self,
-                                from: StoryBoardIdentifiers.MAIN)
+                                from: StoryBoardIdentifiers.Main)
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func signUpWasPressed(_ sender: Any) {
         let signUpVc = viewController(type: SignUpViewController.self,
-                                      from: StoryBoardIdentifiers.MAIN)
+                                      from: StoryBoardIdentifiers.Main)
         navigationController?.pushViewController(signUpVc, animated: true)
     }
     

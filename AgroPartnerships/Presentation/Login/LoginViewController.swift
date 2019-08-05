@@ -19,7 +19,7 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func userPressedForgotPassword() {
-
+        push(viewController: TermsAndConditionsViewController.self)
     }
 
     @IBAction func signInWasPressed(_ sender: Any) {

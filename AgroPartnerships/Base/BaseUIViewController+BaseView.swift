@@ -56,7 +56,7 @@ extension UIViewController {
     }
     
     func viewController<T: UIViewController>(type: T.Type,
-                                             from storyBoardName: String = StoryBoardIdentifiers.MAIN) -> T {
+                                             from storyBoardName: String = StoryBoardIdentifiers.Main) -> T {
         let storyboard = UIStoryboard (name: storyBoardName, bundle: nil)
         let storyBoardID = (type as UIViewController.Type).storyboardID
         

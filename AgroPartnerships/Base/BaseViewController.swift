@@ -8,10 +8,7 @@ class BaseViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        UIApplication.shared.statusBarStyle = .lightContent
     }
-    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -58,7 +55,7 @@ extension BaseViewController {
     }
     
     func push<T: UIViewController>(viewController: T.Type,
-                                   from storyBoardName: String = StoryBoardIdentifiers.DASHBOARD) {
+                                   from storyBoardName: String = StoryBoardIdentifiers.Main) {
         let vc = self.viewController(type: viewController,
                                      from: storyBoardName)
         self.navigationController?.pushViewController(vc, animated: true)

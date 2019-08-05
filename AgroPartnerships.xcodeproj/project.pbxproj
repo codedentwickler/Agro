@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04230F1A22F6205E008813F9 /* OnboardingStepTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04230F1922F6205E008813F9 /* OnboardingStepTwo.xib */; };
+		04230F1C22F62958008813F9 /* OnboardingStepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04230F1B22F62958008813F9 /* OnboardingStepTwo.swift */; };
+		04230F1E22F62964008813F9 /* OnboardingStepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04230F1D22F62964008813F9 /* OnboardingStepThree.swift */; };
+		04230F2022F632F5008813F9 /* OnboardingStepThree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04230F1F22F632F5008813F9 /* OnboardingStepThree.xib */; };
+		04230F2222F639E9008813F9 /* OnboardingOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04230F2122F639E8008813F9 /* OnboardingOverlay.xib */; };
+		04230F2422F63B26008813F9 /* OnboardingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04230F2322F63B26008813F9 /* OnboardingOverlay.swift */; };
+		04359C7022F617000047A2B5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04359C6E22F617000047A2B5 /* OnboardingViewController.swift */; };
+		04359C7422F619460047A2B5 /* OnboardingStepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04359C7322F619460047A2B5 /* OnboardingStepOne.xib */; };
+		04359C7622F61DCA0047A2B5 /* OnboardingStepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04359C7522F61DCA0047A2B5 /* OnboardingStepOne.swift */; };
 		04809CF622E472B500252F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809CF522E472B500252F74 /* AppDelegate.swift */; };
 		04809CF822E472B500252F74 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809CF722E472B500252F74 /* LandingViewController.swift */; };
 		04809CFB22E472B500252F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04809CF922E472B500252F74 /* Main.storyboard */; };
@@ -100,6 +109,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04230F1922F6205E008813F9 /* OnboardingStepTwo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingStepTwo.xib; sourceTree = "<group>"; };
+		04230F1B22F62958008813F9 /* OnboardingStepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepTwo.swift; sourceTree = "<group>"; };
+		04230F1D22F62964008813F9 /* OnboardingStepThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepThree.swift; sourceTree = "<group>"; };
+		04230F1F22F632F5008813F9 /* OnboardingStepThree.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingStepThree.xib; sourceTree = "<group>"; };
+		04230F2122F639E8008813F9 /* OnboardingOverlay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingOverlay.xib; sourceTree = "<group>"; };
+		04230F2322F63B26008813F9 /* OnboardingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOverlay.swift; sourceTree = "<group>"; };
+		04359C6E22F617000047A2B5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		04359C7322F619460047A2B5 /* OnboardingStepOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingStepOne.xib; sourceTree = "<group>"; };
+		04359C7522F61DCA0047A2B5 /* OnboardingStepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepOne.swift; sourceTree = "<group>"; };
 		04809CF222E472B500252F74 /* AgroPartnerships.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgroPartnerships.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04809CF522E472B500252F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04809CF722E472B500252F74 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +226,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04359C6D22F617000047A2B5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				04359C7222F619290047A2B5 /* Xibs */,
+				04359C6E22F617000047A2B5 /* OnboardingViewController.swift */,
+				04359C7522F61DCA0047A2B5 /* OnboardingStepOne.swift */,
+				04230F1B22F62958008813F9 /* OnboardingStepTwo.swift */,
+				04230F1D22F62964008813F9 /* OnboardingStepThree.swift */,
+				04230F2322F63B26008813F9 /* OnboardingOverlay.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		04359C7222F619290047A2B5 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				04359C7322F619460047A2B5 /* OnboardingStepOne.xib */,
+				04230F1922F6205E008813F9 /* OnboardingStepTwo.xib */,
+				04230F1F22F632F5008813F9 /* OnboardingStepThree.xib */,
+				04230F2122F639E8008813F9 /* OnboardingOverlay.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		04809CE922E472B500252F74 = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +408,7 @@
 		04809D6122E473A900252F74 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				04359C6D22F617000047A2B5 /* Onboarding */,
 				04809D6222E473A900252F74 /* SignUp */,
 				04809D8622E473A900252F74 /* Login */,
 			);
@@ -522,6 +565,7 @@
 			files = (
 				04BB36F022F38CC700F266ED /* SF-Pro-Display-UltralightItalic.otf in Resources */,
 				04BB36E722F38CC700F266ED /* SF-Pro-Display-Medium.otf in Resources */,
+				04230F2222F639E9008813F9 /* OnboardingOverlay.xib in Resources */,
 				04BB36F522F38CC700F266ED /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				04BB36E522F38CC700F266ED /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				04BB36F422F38CC700F266ED /* SF-Pro-Text-BoldItalic.otf in Resources */,
@@ -531,9 +575,11 @@
 				04BB36EE22F38CC700F266ED /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				04BB36ED22F38CC700F266ED /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				04BB36F922F38CC700F266ED /* SF-Pro-Text-LightItalic.otf in Resources */,
+				04359C7422F619460047A2B5 /* OnboardingStepOne.xib in Resources */,
 				04BB36E222F38CC700F266ED /* SF-Pro-Display-RegularItalic.otf in Resources */,
 				04BB36F722F38CC700F266ED /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				04BB36FA22F38CC700F266ED /* SF-Pro-Text-Medium.otf in Resources */,
+				04230F2022F632F5008813F9 /* OnboardingStepThree.xib in Resources */,
 				04BB36F122F38CC700F266ED /* SF-Pro-Display-LightItalic.otf in Resources */,
 				04BB36F222F38CC700F266ED /* SF-Pro-Display-BlackItalic.otf in Resources */,
 				04BB36EF22F38CC700F266ED /* SF-Pro-Display-Ultralight.otf in Resources */,
@@ -552,6 +598,7 @@
 				04BB36EA22F38CC700F266ED /* SF-Pro-Display-Semibold.otf in Resources */,
 				04BB36E922F38CC700F266ED /* SF-Pro-Text-Light.otf in Resources */,
 				04BB36F822F38CC700F266ED /* SF-Pro-Display-ThinItalic.otf in Resources */,
+				04230F1A22F6205E008813F9 /* OnboardingStepTwo.xib in Resources */,
 				04BB36E622F38CC700F266ED /* SF-Pro-Display-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +624,7 @@
 				"${BUILT_PRODUCTS_DIR}/Paystack/Paystack.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyOnboard/SwiftyOnboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -592,6 +640,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Paystack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyOnboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,7 +680,9 @@
 				04809D5822E4734B00252F74 /* Network.swift in Sources */,
 				04809D1422E472F900252F74 /* VSTextField.swift in Sources */,
 				04BB36B822EA5EAB00F266ED /* RollbackInvestmentResponse.swift in Sources */,
+				04230F1C22F62958008813F9 /* OnboardingStepTwo.swift in Sources */,
 				04809DC422E4A71000252F74 /* AgroAlertDialog.swift in Sources */,
+				04230F2422F63B26008813F9 /* OnboardingOverlay.swift in Sources */,
 				04B3032822F5B52B00B10684 /* DateDropDownTextField.swift in Sources */,
 				04809D5522E4734B00252F74 /* ApiServiceImplementation.swift in Sources */,
 				04809D9122E473A900252F74 /* SignUpViewController.swift in Sources */,
@@ -681,6 +732,9 @@
 				04809D3C22E4734B00252F74 /* UIView.swift in Sources */,
 				04809D8E22E473A900252F74 /* SaveAllLogger.swift in Sources */,
 				04809D1022E472F900252F74 /* BaseViewController.swift in Sources */,
+				04230F1E22F62964008813F9 /* OnboardingStepThree.swift in Sources */,
+				04359C7022F617000047A2B5 /* OnboardingViewController.swift in Sources */,
+				04359C7622F61DCA0047A2B5 /* OnboardingStepOne.swift in Sources */,
 				04BB36BF22EA604100F266ED /* PaymentMethod.swift in Sources */,
 				04809DC022E4A71000252F74 /* Modal.swift in Sources */,
 				04809DC122E4A71000252F74 /* AgroTextField.swift in Sources */,

@@ -112,7 +112,7 @@ final class LocalStorage: NSObject {
     }
     
     public func currentUser() -> CurrentUser? {
-        if let data = LocalStorage.shared.getData(key: PersistenceIDs.CURRENT_USER_INFORMATION)  {
+        if let data = LocalStorage.shared.getData(key: PersistenceIDs.User)  {
             do {
                 let usr = try JSONDecoder().decode(CurrentUser.self, from: data)
                 return usr
@@ -126,7 +126,7 @@ final class LocalStorage: NSObject {
     }
     
     public func getAccessToken() -> String? {
-        return self.getString(key: PersistenceIDs.ACCESS_TOKEN)
+        return self.getString(key: PersistenceIDs.AccessToken)
     }
 
 }
