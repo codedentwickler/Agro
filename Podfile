@@ -19,6 +19,7 @@ use_frameworks!
     pod 'Paystack'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'SwiftyOnboard'
+    pod 'Alamofire-SwiftyJSON'
 
 end
 

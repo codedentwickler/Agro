@@ -12,7 +12,6 @@ import SwiftyOnboard
 class OnboardingOverlay: SwiftyOnboardOverlay {
     
     @IBOutlet weak var skip: UIButton!
-    @IBOutlet weak var buttonContinue: UIButton!
     @IBOutlet weak var contentControl: UIPageControl!
 
     required init?(coder aDecoder: NSCoder) {

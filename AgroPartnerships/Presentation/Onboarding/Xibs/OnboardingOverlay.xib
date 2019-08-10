@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,38 +36,16 @@
                         <constraint firstAttribute="height" constant="37" id="biy-0K-Kms"/>
                     </constraints>
                 </pageControl>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkH-TV-Ewm" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                    <rect key="frame" x="20" y="585" width="335" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Pfr-YK-NTe"/>
-                    </constraints>
-                    <state key="normal" title="Get started"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                            <color key="value" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="BxZ-RC-ATd" firstAttribute="bottom" secondItem="nkH-TV-Ewm" secondAttribute="bottom" constant="32" id="B1D-UZ-tcE"/>
                 <constraint firstItem="zXG-SC-5KE" firstAttribute="centerY" secondItem="BxZ-RC-ATd" secondAttribute="centerY" constant="-30" id="End-yk-wVD"/>
                 <constraint firstAttribute="trailing" secondItem="BWN-jv-be7" secondAttribute="trailing" constant="16" id="RAX-Gs-KgM"/>
-                <constraint firstItem="nkH-TV-Ewm" firstAttribute="leading" secondItem="BxZ-RC-ATd" secondAttribute="leading" constant="20" id="RlG-fn-tMA"/>
                 <constraint firstItem="zXG-SC-5KE" firstAttribute="leading" secondItem="k7o-NG-KWp" secondAttribute="leading" constant="16" id="aub-Xy-s6c"/>
                 <constraint firstItem="BWN-jv-be7" firstAttribute="top" secondItem="k7o-NG-KWp" secondAttribute="top" constant="30" id="brQ-O3-zgh"/>
-                <constraint firstItem="BxZ-RC-ATd" firstAttribute="trailing" secondItem="nkH-TV-Ewm" secondAttribute="trailing" constant="20" id="fFb-N5-S4O"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="BxZ-RC-ATd"/>
             <connections>
-                <outlet property="buttonContinue" destination="nkH-TV-Ewm" id="bAq-Uh-swT"/>
                 <outlet property="contentControl" destination="zXG-SC-5KE" id="YyM-H0-s64"/>
                 <outlet property="skip" destination="BWN-jv-be7" id="oz1-bw-8DE"/>
             </connections>

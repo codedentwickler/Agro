@@ -11,10 +11,6 @@ import SwiftyOnboard
 
 class OnboardingStepOne: SwiftyOnboardPage {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var subTitleLabel: UILabel!
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

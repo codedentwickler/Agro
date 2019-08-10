@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 protocol ApiService {
     
@@ -21,7 +22,7 @@ protocol ApiService {
                 password: String,
                 referral: String?,
                 dob: String,
-                completion: @escaping (_ response: SignUpResponse? ) -> Void)
+                completion: @escaping (_ response: JSON? ) -> Void)
     
     func getAvailableCommodities(limitToNumber limit: Int,
                                  completion: @escaping (_ response: AvailableCommoditiesResponse? ) -> Void)

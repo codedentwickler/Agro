@@ -15,18 +15,24 @@ class TermsAndConditionsViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pageSwitch.selectedSegmentIndex = 0
+        userChangedPageSegmentedControl(pageSwitch)
     }
     
     @IBAction func userChangedPageSegmentedControl(_ sender: UISegmentedControl) {
         
+        var html = ""
         switch sender.selectedSegmentIndex {
-        case 0: contentTextView.text = "Page 1"
-        case 1: contentTextView.text = "Page 2"
-        case 2: contentTextView.text = "Page 3"
+        case 0: html = FileUtils.readHTMLResourceFile(fileName: "Terms_of_use")
+        case 1: html = FileUtils.readHTMLResourceFile(fileName: "Privacy")
+        case 2: html = FileUtils.readHTMLResourceFile(fileName: "Cookie_Policy")
 
         default:
             break
         }
+        
+        contentTextView.setHTMLFromString(htmlText: html)
     }
 }
 

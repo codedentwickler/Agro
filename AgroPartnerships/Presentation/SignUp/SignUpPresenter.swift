@@ -19,53 +19,46 @@ class SignUpPresenter: BasePresenter {
         self.view = nil
     }
     
-    func signUp(firstname: String,
-                lastname: String,
+    @IBOutlet weak var fullnameTextField: AgroTextField!
+    @IBOutlet weak var titleTextField: DropDownTextField!
+    @IBOutlet weak var emailTextField: AgroTextField!
+    @IBOutlet weak var passwordTextField: AgroTextField!
+    @IBOutlet weak var phoneTextField: AgroTextField!
+    @IBOutlet weak var dailingCodeTextField: DropDownTextField!
+    @IBOutlet weak var referralCodeTextField: AgroTextField!
+    @IBOutlet weak var dobTextField: DateDropDownTextField!
+    
+    
+    func signUp(fullname: String,
+                title: String,
                 email: String,
                 phone: String,
-                password: String) {
+                password: String,
+                dialingCode: String,
+                dob: String,
+                referralCode: String) {
         
-//        self.view?.showLoading(withMessage: StringLiterals.CREATING_NEW_CUSTOMER_ACCOUNT)
-//        ApiServiceImplementation.shared.createAccount(firstname: firstname,
-//                                        lastname: lastname,
-//                                        email: email,
-//                                        phone: phone,
-//                                        password: password,
-//                                        completion: { (signUpResponse) in
-//                self.view?.dismissLoading()
-//                
-//                guard let response = signUpResponse else {
-//                    self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
-//                    return
-//                }
-//                
-//                guard response.status else {
-//                    self.view?.showError(message: response.message)
-//                    return
-//                }
-//                
-//                if let user = response.data {
-//                    let currentUser = CurrentUser(firstName: user.first_name,
-//                                                  lastName: user.last_name,
-//                                                  email: user.Email,
-//                                                  phone: user.Phone,
-//                                                  id: user.Id,
-//                                                  timeStamp: Date().timeIntervalSince1970,
-//                                                  token: response.token,
-//                                                  photoName: nil,
-//                                                  address: nil,
-//                                                  gender: nil)
-//                    let jsonEncoder = JSONEncoder()
-//                    let encodedData = try! jsonEncoder.encode(currentUser)
-//                    
-//                    LocalStorage.shared.persistData(encodedData: encodedData, key: PersistenceIDs.CURRENT_USER_INFORMATION)
-//                    LocalStorage.shared.persistString(string: response.token, key: PersistenceIDs.ACCESS_TOKEN)
-//                    LocalStorage.shared.persistDouble(value: Date().timeIntervalSince1970, key: PersistenceIDs.LOGIN_TIME)
-//                    
-//                    self.view?.showDashBoard()
-//                } else {
-//                    self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
-//                }
-//        })
+        self.view?.showLoading(withMessage: StringLiterals.CREATING_NEW_CUSTOMER_ACCOUNT)
+
+        apiService.signUp(title: title,
+                          fullname: fullname,
+                          email: email,
+                          phone: phone,
+                          password: password,
+                          referral: referralCode,
+                          dob: dob) { (responseJSON) in
+                            
+            self.view?.dismissLoading()
+                
+            guard let response = responseJSON else {
+                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                return
+            }
+    
+            AgroLogger.log("SIGN UP RESPONSE \(response)")
+            let token = response[ApiConstants.Token].string
+            let status = response[ApiConstants.Status].string
+            LocalStorage.shared.persistString(string: token, key: PersistenceIDs.AccessToken)
+        }
     }
 }

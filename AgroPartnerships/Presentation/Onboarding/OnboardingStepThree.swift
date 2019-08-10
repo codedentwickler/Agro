@@ -11,16 +11,14 @@ import SwiftyOnboard
 
 class OnboardingStepThree: SwiftyOnboardPage {
     
-    @IBOutlet weak var subTitleLabel: AgroActionButton!
+    @IBOutlet weak var getStartedButton: AgroActionButton!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    
-    
     class func instanceFromNib() -> UIView {
-        return UINib(nibName: "OnboardingStepThree", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        return UINib(nibName: "OnboardingStepThree", bundle: nil)
+            .instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
-    
 }

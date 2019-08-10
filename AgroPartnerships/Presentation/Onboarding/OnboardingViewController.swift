@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyOnboard
 
-class OnboardingViewController: UIViewController {
+class OnboardingViewController: BaseViewController {
     
     @IBOutlet weak var swiftyOnboard: SwiftyOnboard!
     
@@ -25,8 +25,8 @@ class OnboardingViewController: UIViewController {
     }
     
     @objc func handleContinue(sender: UIButton) {
-        let index = sender.tag
-        swiftyOnboard?.goToPage(index: index + 1, animated: true)
+        let loginNavVC = self.storyboard!.instantiateViewController(withIdentifier: "LoginNavigationController") as! UINavigationController
+        self.present(loginNavVC, animated: true, completion: nil)
     }
 }
 
@@ -42,7 +42,10 @@ extension OnboardingViewController: SwiftyOnboardDataSource {
         } else if index == 1 {
             return OnboardingStepTwo.instanceFromNib() as? OnboardingStepTwo
         } else {
-            return OnboardingStepThree.instanceFromNib() as? OnboardingStepThree
+            let view = OnboardingStepThree.instanceFromNib() as? OnboardingStepThree
+            view?.getStartedButton.addTarget(self, action: #selector(handleContinue), for: .touchUpInside)
+
+            return view
         }
     }
 }
@@ -52,7 +55,6 @@ extension OnboardingViewController: SwiftyOnboardDelegate {
     func swiftyOnboardViewForOverlay(_ swiftyOnboard: SwiftyOnboard) -> SwiftyOnboardOverlay? {
         let overlay = OnboardingOverlay.instanceFromNib() as? OnboardingOverlay
         overlay?.skip.addTarget(self, action: #selector(handleSkip), for: .touchUpInside)
-        overlay?.buttonContinue.addTarget(self, action: #selector(handleContinue), for: .touchUpInside)
         return overlay
     }
     
@@ -60,11 +62,8 @@ extension OnboardingViewController: SwiftyOnboardDelegate {
         let overlay = overlay as! OnboardingOverlay
         let currentPage = round(position)
         overlay.pageControl.currentPage = Int(currentPage)
-        overlay.buttonContinue.tag = Int(position)
         if currentPage == 0.0 || currentPage == 1.0 {
-            overlay.buttonContinue.isHidden = true
             overlay.skip.isHidden = false
-            overlay.skip.setTitle("Skip", for: .normal)
         } else {
             overlay.skip.isHidden = true
         }

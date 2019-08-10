@@ -55,7 +55,7 @@ final class LocalStorage: NSObject {
     
     public func getString(key: String) -> String? {
         UserDefaults.standard.synchronize()
-        return UserDefaults.standard.value(forKey: key) as? String;
+        return UserDefaults.standard.value(forKey: key) as? String
     }
     
     public func getDictionary(key: String) -> [String: AnyObject]? {

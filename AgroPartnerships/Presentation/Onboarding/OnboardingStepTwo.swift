@@ -9,19 +9,10 @@
 import UIKit
 import SwiftyOnboard
 
-
 class OnboardingStepTwo: SwiftyOnboardPage {
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var subTitleLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
     }
     
     class func instanceFromNib() -> UIView {

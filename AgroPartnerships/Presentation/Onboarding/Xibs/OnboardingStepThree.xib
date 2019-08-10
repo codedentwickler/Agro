@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding-illustration-three-bg" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-Es-sra">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-BH-Jhz">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFg-BH-Jhz">
                             <rect key="frame" x="16" y="104.5" width="343" height="129"/>
                             <string key="text">Invest in Farms
 and Trade in 
@@ -38,7 +38,7 @@ Commodities</string>
                             <color key="textColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le5-HX-Bid">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le5-HX-Bid">
                             <rect key="frame" x="16" y="249.5" width="335" height="54"/>
                             <string key="text">You fund
 We farm. We process. We sell
@@ -84,7 +84,6 @@ You profit</string>
                         <constraint firstAttribute="trailing" secondItem="oHY-2g-3OC" secondAttribute="trailing" constant="20" id="LAh-jy-i6C"/>
                         <constraint firstItem="oHY-2g-3OC" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" constant="20" id="ZDO-uc-tez"/>
                         <constraint firstItem="EoI-Es-sra" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" id="bey-vG-ItA"/>
-                        <constraint firstItem="Le5-HX-Bid" firstAttribute="top" secondItem="xFg-BH-Jhz" secondAttribute="bottom" constant="16" id="brl-OE-fg6"/>
                         <constraint firstAttribute="trailing" secondItem="EoI-Es-sra" secondAttribute="trailing" id="cv9-rT-Xhw"/>
                         <constraint firstItem="EoI-Es-sra" firstAttribute="top" secondItem="VNf-6B-OOg" secondAttribute="top" id="eTl-V5-J7c"/>
                         <constraint firstItem="lfD-Yv-REW" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" id="gKP-pB-w8x"/>
@@ -102,7 +101,7 @@ You profit</string>
             </constraints>
             <viewLayoutGuide key="safeArea" id="YkV-bU-dbZ"/>
             <connections>
-                <outlet property="subTitleLabel" destination="oHY-2g-3OC" id="ls2-nx-bBO"/>
+                <outlet property="getStartedButton" destination="oHY-2g-3OC" id="d39-fO-UEz"/>
             </connections>
         </view>
     </objects>

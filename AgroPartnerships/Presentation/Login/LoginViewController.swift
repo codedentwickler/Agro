@@ -24,17 +24,17 @@ class LoginViewController: BaseViewController {
 
     @IBAction func signInWasPressed(_ sender: Any) {
                 
-        // Only allowing in DEBUG mode
+//         Only allowing in DEBUG mode
         #if DEBUG
-        emailTextField.text = "test@gmail.com"
-        passwordTextField.text = "@Test123"
+        emailTextField.text = "opeyemi@check-dc.com"
+        passwordTextField.text = "eee123"
         #endif
-//
-//        if !validate() {
-//            return
-//        }
 
-        presenter.login(username: emailTextField.text!, password: passwordTextField.text!)
+        if !validate() {
+            return
+        }
+
+        presenter.login(email: emailTextField.text!, password: passwordTextField.text!)
     }
     
     func validate() -> Bool {
@@ -42,8 +42,7 @@ class LoginViewController: BaseViewController {
         for inputTextField in [emailTextField!, passwordTextField!] {
             inputTextField.resignFirstResponder()
             if (inputTextField.text?.isEmpty)! {
-//                inputTextField.errorColor = UIColor.red
-//                inputTextField.errorMessage = StringLiterals.FIELD_IS_REQUIRED
+                inputTextField.showError(message: StringLiterals.FIELD_IS_REQUIRED)
                 faulted = true
             }
         }

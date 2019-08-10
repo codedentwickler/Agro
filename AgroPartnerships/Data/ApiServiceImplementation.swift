@@ -1,8 +1,9 @@
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class ApiServiceImplementation : ApiService {
-    
+ 
     static let shared = ApiServiceImplementation()
     
     func login(email : String,
@@ -12,7 +13,7 @@ class ApiServiceImplementation : ApiService {
         let parameters = [ApiConstants.Email : email ,
                           ApiConstants.Password : password]
         
-        Network.request(ApiEndPoints.login(),
+        Network.shared.request(ApiEndPoints.login(),
                         method: .post,
                         parameters: parameters,
                         completion: completion)
@@ -25,7 +26,7 @@ class ApiServiceImplementation : ApiService {
                 password: String,
                 referral: String?,
                 dob: String,
-                completion: @escaping (SignUpResponse?) -> Void) {
+                completion: @escaping (JSON?) -> Void) {
         
         var parameters = [ApiConstants.Title : title ,
                           ApiConstants.FullName : fullname,
@@ -37,7 +38,7 @@ class ApiServiceImplementation : ApiService {
             parameters[ApiConstants.Referral] = referral
         }
         
-        Network.request(ApiEndPoints.signUp(),
+        Network.shared.request(ApiEndPoints.signUp(),
                         method: .post,
                         parameters: parameters,
                         completion: completion)
@@ -46,11 +47,11 @@ class ApiServiceImplementation : ApiService {
     func getAvailableCommodities(limitToNumber limit: Int,
                                  completion: @escaping (AvailableCommoditiesResponse?) -> Void) {
         
-        Network.request(ApiEndPoints.getAvailableCommodities(limitToNumber: limit), completion: completion)
+        Network.shared.request(ApiEndPoints.getAvailableCommodities(limitToNumber: limit), completion: completion)
     }
     
     func getDashboardInformation(completion: @escaping (DashboardInformationResponse?) -> Void) {
-        Network.request(ApiEndPoints.getDashboardInformation(), completion: completion)
+        Network.shared.request(ApiEndPoints.getDashboardInformation(), completion: completion)
     }
     
     func initializeInvestment(item: String,
@@ -68,7 +69,7 @@ class ApiServiceImplementation : ApiService {
         if let credit = credit {
             parameters[ApiConstants.Credit] = credit
         }
-        Network.request(ApiEndPoints.initializeInvestment(),
+        Network.shared.request(ApiEndPoints.initializeInvestment(),
                         method: .post,
                         parameters: parameters,
                         completion: completion)
@@ -77,7 +78,7 @@ class ApiServiceImplementation : ApiService {
     func rollbackInvestment(investmentReference: String,
                             completion: @escaping (RollbackInvestmentResponse?) -> Void) {
         
-        Network.request(ApiEndPoints.rollbackInvestment(),
+        Network.shared.request(ApiEndPoints.rollbackInvestment(),
                         method: .post,
                         parameters: [ApiConstants.Investment: investmentReference],
                         completion: completion)
@@ -86,7 +87,7 @@ class ApiServiceImplementation : ApiService {
     func verifyInvestmentTransaction(investmentReference: String,
                                      completion: @escaping (VerifyInvestmentTransactionResponse?) -> Void) {
         
-        Network.request(ApiEndPoints.verifyInvestmentTransaction(),
+        Network.shared.request(ApiEndPoints.verifyInvestmentTransaction(),
                         method: .post,
                         parameters: [ApiConstants.Reference: investmentReference],
                         completion: completion)
@@ -120,7 +121,7 @@ class ApiServiceImplementation : ApiService {
             parameters[ApiConstants.Title] = title
         }
         
-        Network.request(ApiEndPoints.updateProfile(),
+        Network.shared.request(ApiEndPoints.updateProfile(),
                         method: .post,
                         parameters: parameters,
                         completion: completion)

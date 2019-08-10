@@ -61,6 +61,17 @@ class SignUpViewController: BaseViewController {
     func validate() -> Bool {
         var faulted = false
         
+        for inputTextField in [fullnameTextField, titleTextField, emailTextField,
+                               passwordTextField, phoneTextField, dailingCodeTextField,
+                               referralCodeTextField, dobTextField] {
+            inputTextField?.resignFirstResponder()
+            if inputTextField?.text?.isEmpty == true {
+                //                inputTextField.errorColor = UIColor.red
+                //                inputTextField.errorMessage = StringLiterals.FIELD_IS_REQUIRED
+                faulted = true
+            }
+        }
+        
         return !faulted
     }
 }

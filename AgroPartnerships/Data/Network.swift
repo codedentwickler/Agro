@@ -1,20 +1,34 @@
 import Foundation
 import Alamofire
 import EVReflection
+import SwiftyJSON
 
 public class Network {
+    var manager: SessionManager?
     
-    static func getDefaultHeaders() -> HTTPHeaders {
+    public static let shared = Network()
+    
+    init() {
+        let configuration = URLSessionConfiguration.default
+        //        configuration.httpAdditionalHeaders = ourHeaders
+        // disable default credential store
+        configuration.urlCredentialStorage = nil
+    
+        manager = Alamofire.SessionManager(configuration: configuration)
+    }
+    
+    func getDefaultHeaders() -> HTTPHeaders {
         var headers = ["Content-Type": "application/json"]
-        
+
         if let token = LocalStorage.shared.getAccessToken() {
+            AgroLogger.log("TOKEN \(token)")
             headers[ApiConstants.Authorization] = "Bearer \(token)"
         }
         
         return headers
     }
     
-    private static func getFinalHeaders(_ headers: HTTPHeaders) -> HTTPHeaders {
+    private func getFinalHeaders(_ headers: HTTPHeaders) -> HTTPHeaders {
         var finalHeaders = getDefaultHeaders()
         for (key, value) in headers {
             finalHeaders[key] = value
@@ -22,13 +36,19 @@ public class Network {
         return finalHeaders
     }
     
-    public static func request<T: NSObject>(_ url: String!,
-                                            method: HTTPMethod! = .get,
-                                            parameters: Parameters = [:],
-                                            headers: HTTPHeaders = [:],
-                                            completion: @escaping (_ response: T?) -> Void) where T: EVReflectable {
+    public func request<T: NSObject>(_ urlString: String,
+                                     method: HTTPMethod = .get,
+                                     parameters: Parameters = [:],
+                                     headers: HTTPHeaders = [:],
+                                     completion: @escaping (_ response: T?) -> Void) where T: EVReflectable {
         
-        Alamofire.request(url, method: method, parameters: parameters, headers: getFinalHeaders(headers))
+        let url = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
+        
+        manager?.request(URL(string: url)!,
+                         method: method,
+                         parameters: parameters,
+                         encoding: JSONEncoding.default,
+                         headers: getFinalHeaders(headers))
             .debugLog()
             .responseObject {(response: DataResponse<T>) in
                 
@@ -43,6 +63,30 @@ public class Network {
                 case .failure(let error):
                     AgroLogger.log(error)
                     completion(nil);
+                }
+        }
+    }
+    
+    public func request(_ urlString: String,
+                               method: HTTPMethod = .get,
+                               parameters: Parameters = [:],
+                               headers: HTTPHeaders = [:],
+                               completion: @escaping (_ response: JSON?) -> Void) {
+        let url = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!
+
+        manager?.request(URL(string: url)!,
+                         method: method,
+                         parameters: parameters,
+                         encoding: JSONEncoding.default,
+                         headers: getFinalHeaders(headers))
+            .responseJSON { (response) in
+                switch response.result {
+                    case .success(let value):
+                        let json = JSON(value)
+                        completion(json)
+                    case .failure(let error):
+                        completion(nil)
+                        AgroLogger.log(error)
                 }
         }
     }

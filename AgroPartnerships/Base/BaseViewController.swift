@@ -31,7 +31,7 @@ extension BaseViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        (textField as? SkyFloatingLabelTextField)?.errorMessage = ""
+        (textField as? AgroTextField)?.hideErrorLabel()
         return true
     }
     
