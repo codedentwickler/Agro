@@ -3,7 +3,7 @@ import Foundation
 
 struct StoryBoardIdentifiers {
     static let Main =                               "Main"
-    static let DASHBOARD =                          "Dashboard"
+    static let Dashboard =                          "Dashboard"
 }
 
 struct PersistenceIDs {

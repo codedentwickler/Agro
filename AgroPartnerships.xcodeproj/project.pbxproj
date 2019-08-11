@@ -17,7 +17,7 @@
 		04359C7422F619460047A2B5 /* OnboardingStepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04359C7322F619460047A2B5 /* OnboardingStepOne.xib */; };
 		04359C7622F61DCA0047A2B5 /* OnboardingStepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04359C7522F61DCA0047A2B5 /* OnboardingStepOne.swift */; };
 		04809CF622E472B500252F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809CF522E472B500252F74 /* AppDelegate.swift */; };
-		04809CF822E472B500252F74 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809CF722E472B500252F74 /* LandingViewController.swift */; };
+		04809CF822E472B500252F74 /* LoginLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809CF722E472B500252F74 /* LoginLandingViewController.swift */; };
 		04809CFB22E472B500252F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04809CF922E472B500252F74 /* Main.storyboard */; };
 		04809CFD22E472B700252F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04809CFC22E472B700252F74 /* Assets.xcassets */; };
 		04809D0022E472B700252F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04809CFE22E472B700252F74 /* LaunchScreen.storyboard */; };
@@ -32,7 +32,7 @@
 		04809D3F22E4734B00252F74 /* PrimitiveTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D1A22E4734A00252F74 /* PrimitiveTypes.swift */; };
 		04809D4022E4734B00252F74 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D1B22E4734A00252F74 /* UITableView.swift */; };
 		04809D4122E4734B00252F74 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D1C22E4734A00252F74 /* Alamofire.swift */; };
-		04809D4222E4734B00252F74 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D1D22E4734A00252F74 /* UITextField.swift */; };
+		04809D4222E4734B00252F74 /* UITextField+DropDownIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D1D22E4734A00252F74 /* UITextField+DropDownIndicator.swift */; };
 		04809D4322E4734B00252F74 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D1E22E4734A00252F74 /* UIButton.swift */; };
 		04809D4422E4734B00252F74 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D1F22E4734A00252F74 /* UIImage.swift */; };
 		04809D4522E4734B00252F74 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D2022E4734A00252F74 /* UIViewController.swift */; };
@@ -106,6 +106,10 @@
 		04BB36FC22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */; };
 		5A8194B24C2AD6A4E9B0F38F /* Pods_AgroPartnerships.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */; };
 		AD1520C922F6058800C99BEF /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1520C822F6058800C99BEF /* TermsAndConditionsViewController.swift */; };
+		AD44342222FF721F00D09F42 /* UITextField+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44342122FF721F00D09F42 /* UITextField+ErrorHandling.swift */; };
+		AD44342422FF732900D09F42 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44342322FF732900D09F42 /* Validator.swift */; };
+		AD677D7B22FFF51D00F4C149 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD677D7A22FFF51C00F4C149 /* Dashboard.storyboard */; };
+		AD677D7D23000BFA00F4C149 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD677D7C23000BFA00F4C149 /* LandingViewController.swift */; };
 		AD99089022F8588900FAB197 /* Terms_of_use.html in Resources */ = {isa = PBXBuildFile; fileRef = AD99088D22F8588800FAB197 /* Terms_of_use.html */; };
 		AD99089122F8588900FAB197 /* Cookie_Policy.html in Resources */ = {isa = PBXBuildFile; fileRef = AD99088E22F8588800FAB197 /* Cookie_Policy.html */; };
 		AD99089222F8588900FAB197 /* Privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = AD99088F22F8588900FAB197 /* Privacy.html */; };
@@ -125,7 +129,7 @@
 		04359C7522F61DCA0047A2B5 /* OnboardingStepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepOne.swift; sourceTree = "<group>"; };
 		04809CF222E472B500252F74 /* AgroPartnerships.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgroPartnerships.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04809CF522E472B500252F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04809CF722E472B500252F74 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		04809CF722E472B500252F74 /* LoginLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLandingViewController.swift; sourceTree = "<group>"; };
 		04809CFA22E472B500252F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04809CFC22E472B700252F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04809CFF22E472B700252F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,7 +145,7 @@
 		04809D1A22E4734A00252F74 /* PrimitiveTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimitiveTypes.swift; sourceTree = "<group>"; };
 		04809D1B22E4734A00252F74 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		04809D1C22E4734A00252F74 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		04809D1D22E4734A00252F74 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		04809D1D22E4734A00252F74 /* UITextField+DropDownIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+DropDownIndicator.swift"; sourceTree = "<group>"; };
 		04809D1E22E4734A00252F74 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		04809D1F22E4734A00252F74 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		04809D2022E4734A00252F74 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,10 @@
 		04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgroPartnerships.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1520C822F6058800C99BEF /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		AD44342122FF721F00D09F42 /* UITextField+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ErrorHandling.swift"; sourceTree = "<group>"; };
+		AD44342322FF732900D09F42 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		AD677D7A22FFF51C00F4C149 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		AD677D7C23000BFA00F4C149 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		AD99088D22F8588800FAB197 /* Terms_of_use.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Terms_of_use.html; sourceTree = "<group>"; };
 		AD99088E22F8588800FAB197 /* Cookie_Policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Cookie_Policy.html; sourceTree = "<group>"; };
 		AD99088F22F8588900FAB197 /* Privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Privacy.html; sourceTree = "<group>"; };
@@ -252,6 +260,7 @@
 		04359C7222F619290047A2B5 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				04809CF922E472B500252F74 /* Main.storyboard */,
 				04359C7322F619460047A2B5 /* OnboardingStepOne.xib */,
 				04230F1922F6205E008813F9 /* OnboardingStepTwo.xib */,
 				04230F1F22F632F5008813F9 /* OnboardingStepThree.xib */,
@@ -293,8 +302,7 @@
 				04809D1522E4734A00252F74 /* Extensions */,
 				04BB36C022F38CC700F266ED /* Font */,
 				04809CF522E472B500252F74 /* AppDelegate.swift */,
-				04809CF722E472B500252F74 /* LandingViewController.swift */,
-				04809CF922E472B500252F74 /* Main.storyboard */,
+				04809CF722E472B500252F74 /* LoginLandingViewController.swift */,
 				04809CFC22E472B700252F74 /* Assets.xcassets */,
 				04809CFE22E472B700252F74 /* LaunchScreen.storyboard */,
 				04809D0122E472B700252F74 /* Info.plist */,
@@ -331,12 +339,13 @@
 				04809D1A22E4734A00252F74 /* PrimitiveTypes.swift */,
 				04809D1B22E4734A00252F74 /* UITableView.swift */,
 				04809D1C22E4734A00252F74 /* Alamofire.swift */,
-				04809D1D22E4734A00252F74 /* UITextField.swift */,
+				04809D1D22E4734A00252F74 /* UITextField+DropDownIndicator.swift */,
 				04809D1E22E4734A00252F74 /* UIButton.swift */,
 				04809D1F22E4734A00252F74 /* UIImage.swift */,
 				04809D2022E4734A00252F74 /* UIViewController.swift */,
 				04809D2122E4734A00252F74 /* UIFont.swift */,
 				04809D2222E4734A00252F74 /* UILabel.swift */,
+				AD44342122FF721F00D09F42 /* UITextField+ErrorHandling.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +414,7 @@
 				04809D5C22E473A900252F74 /* StringIdentifiers.swift */,
 				04809D5D22E473A900252F74 /* SaveAllLogger.swift */,
 				AD99089322F85B6000FAB197 /* FileUtils.swift */,
+				AD44342322FF732900D09F42 /* Validator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -421,6 +431,7 @@
 		04809D6122E473A900252F74 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				AD1707AA22FF3C9E00DB8A01 /* Dashboard */,
 				04359C6D22F617000047A2B5 /* Onboarding */,
 				04809D6222E473A900252F74 /* SignUp */,
 				04809D8622E473A900252F74 /* Login */,
@@ -516,6 +527,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD1707AA22FF3C9E00DB8A01 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				AD677D7E23000C0600F4C149 /* Xibs */,
+				AD677D7C23000BFA00F4C149 /* LandingViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		AD677D7E23000C0600F4C149 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				AD677D7A22FFF51C00F4C149 /* Dashboard.storyboard */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		ADB10BD822FEE07300A4CCAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +622,7 @@
 				AD99089122F8588900FAB197 /* Cookie_Policy.html in Resources */,
 				AD99089022F8588900FAB197 /* Terms_of_use.html in Resources */,
 				04BB36F422F38CC700F266ED /* SF-Pro-Text-BoldItalic.otf in Resources */,
+				AD677D7B22FFF51D00F4C149 /* Dashboard.storyboard in Resources */,
 				04BB36DF22F38CC700F266ED /* SF-Pro-Display-Thin.otf in Resources */,
 				04BB36F622F38CC700F266ED /* SF-Pro-Text-Semibold.otf in Resources */,
 				04BB36E122F38CC700F266ED /* SF-Pro-Text-Heavy.otf in Resources */,
@@ -642,12 +671,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AgroPartnerships/Pods-AgroPartnerships-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Paystack/Paystack.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyOnboard/SwiftyOnboard.framework",
@@ -658,12 +689,14 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVReflection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Paystack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyOnboard.framework",
@@ -718,8 +751,9 @@
 				04809DC222E4A71000252F74 /* AgroFilledActionButton.swift in Sources */,
 				04BB36B322EA5CD400F266ED /*  InitializeInvestmentResponse.swift in Sources */,
 				04809D4522E4734B00252F74 /* UIViewController.swift in Sources */,
-				04809CF822E472B500252F74 /* LandingViewController.swift in Sources */,
+				04809CF822E472B500252F74 /* LoginLandingViewController.swift in Sources */,
 				04BB36AD22EA57F600F266ED /* ApiService.swift in Sources */,
+				AD44342422FF732900D09F42 /* Validator.swift in Sources */,
 				04BB36AF22EA5C4600F266ED /* AvailableCommoditiesResponse.swift in Sources */,
 				04809DBF22E4A71000252F74 /* DropDownTextField.swift in Sources */,
 				04809D5622E4734B00252F74 /* ApiConstants.swift in Sources */,
@@ -748,12 +782,13 @@
 				04809D3E22E4734B00252F74 /* UIColor.swift in Sources */,
 				AD1520C922F6058800C99BEF /* TermsAndConditionsViewController.swift in Sources */,
 				04BB36B922EA5EAB00F266ED /* ProfileUpdateResponse.swift in Sources */,
+				AD677D7D23000BFA00F4C149 /* LandingViewController.swift in Sources */,
 				04809DBE22E4A71000252F74 /* AgroActionButton.swift in Sources */,
 				04809D9022E473A900252F74 /* LocalStorage.swift in Sources */,
 				04809D1222E472F900252F74 /* BaseUIViewController+BaseView.swift in Sources */,
 				04BB36B122EA5CA800F266ED /* DashboardInformationResponse.swift in Sources */,
 				ADB10BDA22FEE0BC00A4CCAA /* UITextView.swift in Sources */,
-				04809D4222E4734B00252F74 /* UITextField.swift in Sources */,
+				04809D4222E4734B00252F74 /* UITextField+DropDownIndicator.swift in Sources */,
 				04BB36BA22EA5EAB00F266ED /* ProofOfPaymentResponse.swift in Sources */,
 				04809D4022E4734B00252F74 /* UITableView.swift in Sources */,
 				04809D5322E4734B00252F74 /* TransactionsResponse.swift in Sources */,
@@ -762,6 +797,7 @@
 				04809D1022E472F900252F74 /* BaseViewController.swift in Sources */,
 				04230F1E22F62964008813F9 /* OnboardingStepThree.swift in Sources */,
 				04359C7022F617000047A2B5 /* OnboardingViewController.swift in Sources */,
+				AD44342222FF721F00D09F42 /* UITextField+ErrorHandling.swift in Sources */,
 				04359C7622F61DCA0047A2B5 /* OnboardingStepOne.swift in Sources */,
 				04BB36BF22EA604100F266ED /* PaymentMethod.swift in Sources */,
 				04809DC022E4A71000252F74 /* Modal.swift in Sources */,

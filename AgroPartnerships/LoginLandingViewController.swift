@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LandingViewController : UIViewController {
+class LoginLandingViewController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

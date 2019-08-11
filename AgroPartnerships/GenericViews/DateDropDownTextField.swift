@@ -3,7 +3,7 @@ import UIKit
 class DateDropDownTextField: AgroTextField, UITextFieldDelegate{
 
     private var datePicker: UIDatePicker!
-    private var selectedDate: String!
+    var selectedDate: String!
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

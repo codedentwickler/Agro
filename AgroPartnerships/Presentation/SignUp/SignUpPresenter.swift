@@ -1,8 +1,10 @@
 
-import Foundation
+import SwiftyJSON
 
 protocol SignUpView: BaseView {
     func showDashBoard()
+    
+    func showValidationError(validation: FormValidation)
 }
 
 class SignUpPresenter: BasePresenter {
@@ -19,22 +21,11 @@ class SignUpPresenter: BasePresenter {
         self.view = nil
     }
     
-    @IBOutlet weak var fullnameTextField: AgroTextField!
-    @IBOutlet weak var titleTextField: DropDownTextField!
-    @IBOutlet weak var emailTextField: AgroTextField!
-    @IBOutlet weak var passwordTextField: AgroTextField!
-    @IBOutlet weak var phoneTextField: AgroTextField!
-    @IBOutlet weak var dailingCodeTextField: DropDownTextField!
-    @IBOutlet weak var referralCodeTextField: AgroTextField!
-    @IBOutlet weak var dobTextField: DateDropDownTextField!
-    
-    
     func signUp(fullname: String,
                 title: String,
                 email: String,
                 phone: String,
                 password: String,
-                dialingCode: String,
                 dob: String,
                 referralCode: String) {
         
@@ -49,16 +40,45 @@ class SignUpPresenter: BasePresenter {
                           dob: dob) { (responseJSON) in
                             
             self.view?.dismissLoading()
-                
+                 
             guard let response = responseJSON else {
                 self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
-    
-            AgroLogger.log("SIGN UP RESPONSE \(response)")
-            let token = response[ApiConstants.Token].string
-            let status = response[ApiConstants.Status].string
-            LocalStorage.shared.persistString(string: token, key: PersistenceIDs.AccessToken)
+            
+            if response[ApiConstants.Status].string == ApiConstants.Success {
+                let token = response[ApiConstants.Token].string
+                LocalStorage.shared.persistString(string: token, key: PersistenceIDs.AccessToken)
+                self.view?.showError(message: "Signup Successful")
+            } else if response[ApiConstants.Status].string == ApiConstants.Error {
+               
+                let status = response[ApiConstants.Data][ApiConstants.ErrorType].string
+                
+                if status == ApiConstants.Validation {
+                    self.handleValidationErrors(response)
+                }
+            }
         }
     }
+    
+    private func handleValidationErrors(_ response: JSON) {
+        
+        if let emailMessage = response[ApiConstants.Email].string {
+            self.view?.showValidationError(validation: .email(message: emailMessage))
+        }
+        
+        if let passwordMessage = response[ApiConstants.Password].string {
+            self.view?.showValidationError(validation: .password(message: passwordMessage))
+        }
+        
+        if let titleMessage = response[ApiConstants.Title].string {
+            self.view?.showValidationError(validation: .title(message: titleMessage))
+        }
+    }
+}
+
+enum FormValidation {
+    case email(message: String)
+    case password(message: String)
+    case title(message: String)
 }

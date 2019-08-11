@@ -11,6 +11,13 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //         Only allowing in DEBUG mode
+        #if DEBUG
+        emailTextField.text = "opeyemi@check-dc.com"
+        passwordTextField.text = "eee123"
+        #endif
+
+        
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
@@ -23,13 +30,7 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction func signInWasPressed(_ sender: Any) {
-                
-//         Only allowing in DEBUG mode
-        #if DEBUG
-        emailTextField.text = "opeyemi@check-dc.com"
-        passwordTextField.text = "eee123"
-        #endif
-
+        
         if !validate() {
             return
         }
@@ -52,6 +53,10 @@ class LoginViewController: BaseViewController {
 
 extension LoginViewController: LoginView {
     
+    func showDashBoard() {
+        let storyboard = UIStoryboard(name: StoryBoardIdentifiers.Dashboard, bundle: nil)
+        self.present(storyboard.instantiateInitialViewController()!, animated: true, completion: nil)
+    }
 }
 
 public typealias Closure = () -> Void

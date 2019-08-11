@@ -2,6 +2,7 @@
 import Foundation
 
 protocol LoginView: BaseView {
+    func showDashBoard()
 }
 
 class LoginPresenter: BasePresenter {
@@ -37,7 +38,7 @@ class LoginPresenter: BasePresenter {
             
             LocalStorage.shared.persistString(string: response.token, key: PersistenceIDs.AccessToken)
             AgroLogger.log("TOKEN \(response.token)")
-            self.view?.showError(message: "LOGIN SUCCESSFUL")
+            self.view?.showDashBoard()
         }
     }
 }

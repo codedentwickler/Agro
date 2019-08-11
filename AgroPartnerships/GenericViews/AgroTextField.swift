@@ -38,7 +38,6 @@ class AgroTextField : UITextField {
     func showError(message: String) {
         errorLabel.text = message
         errorLabel.isHidden = false
-        borderColor = UIColor.desireRed
     }
     
     func hideErrorLabel() {

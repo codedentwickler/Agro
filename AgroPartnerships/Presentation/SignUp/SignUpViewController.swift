@@ -17,15 +17,31 @@ class SignUpViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //         Only allowing in DEBUG mode
+        #if DEBUG
+        fullnameTextField.text = "Kanyinsola Fapohunda"
+        titleTextField.text = "Mr"
+        emailTextField.text = "opeyemi@check-dc.com"
+        passwordTextField.text = "password"
+        dailingCodeTextField.text = "+234"
+        phoneTextField.text = "8072914184"
+        dobTextField.text = "1970-07-07"
+        dobTextField.selectedDate = "1970-07-07"
+        #endif
+        
         presenter  = SignUpPresenter(apiService: ApiServiceImplementation.shared,
-                                    view: self)
+                                     view: self)
         setup()
     }
     
     private func setup() {
-        titleTextField.dropDownData = StringLiterals.SAMPLE
-        dailingCodeTextField.dropDownData = StringLiterals.SAMPLE
-
+        setDelegateOfTextfields(views:fullnameTextField,titleTextField,emailTextField,
+                                passwordTextField,dailingCodeTextField,phoneTextField,
+                                dobTextField,referralCodeTextField)
+        
+        titleTextField.dropDownData = StringLiterals.Titles
+        dailingCodeTextField.dropDownData = StringLiterals.DialingCodes
+        
         titleTextField.selectionAction = { (index, string) in
             AgroLogger.log("Index\(index) and String \(string) was selected")
         }
@@ -41,17 +57,33 @@ class SignUpViewController: BaseViewController {
         let maximumDate =  Calendar.current.date(byAdding: .year,
                                                  value: -16,
                                                  to: Date())
-
+        
         dobTextField.setupDatePicker(withMinimumDate: minimumDate ?? Date(),
                                      withMaximumDate: maximumDate ?? Date(),
                                      withDefaultDate: maximumDate ?? Date() )
     }
     
     @IBAction func createAccountWasPressed(_ sender: Any) {
-    
+        
         if !validate() {
             return
         }
+        
+        var phone = phoneTextField.text!
+        
+        if phone.starts(with: "0") {
+            phone.removeFirst()
+        }
+        
+        let fullPhone = "\(dailingCodeTextField.text!) \(phoneTextField.text!)"
+        
+        presenter.signUp(fullname: fullnameTextField.text!,
+                         title: titleTextField.text!,
+                         email: emailTextField.text!,
+                         phone: fullPhone,
+                         password: passwordTextField.text!,
+                         dob: dobTextField.selectedDate!,
+                         referralCode: referralCodeTextField.text!)
     }
     
     @IBAction func userPressedTermsAndConditionsButton(_ sender: Any) {
@@ -63,21 +95,36 @@ class SignUpViewController: BaseViewController {
         
         for inputTextField in [fullnameTextField, titleTextField, emailTextField,
                                passwordTextField, phoneTextField, dailingCodeTextField,
-                               referralCodeTextField, dobTextField] {
+                               dobTextField] {
             inputTextField?.resignFirstResponder()
             if inputTextField?.text?.isEmpty == true {
-                //                inputTextField.errorColor = UIColor.red
-                //                inputTextField.errorMessage = StringLiterals.FIELD_IS_REQUIRED
+                inputTextField?.setError(StringLiterals.FIELD_IS_REQUIRED, show: true)
                 faulted = true
             }
-        }
+}
         
         return !faulted
     }
 }
 
 extension SignUpViewController: SignUpView {
-    func showDashBoard() {
+    func showValidationError(validation: FormValidation) {
         
+        switch validation {
+        case .email(let message):
+            emailTextField.setError(message, show: true)
+        case .password(let message):
+            passwordTextField.setError(message, show: true)
+        case .title(let message):
+            titleTextField.setError(message, show: true)
+        default:
+            break
+        }
+    }
+    
+    func showDashBoard() {
+        let storyboard = UIStoryboard(name: StoryBoardIdentifiers.Dashboard, bundle: nil)
+        self.present(storyboard.instantiateInitialViewController()!,
+         animated: true, completion: nil)
     }
 }
