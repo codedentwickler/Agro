@@ -63,13 +63,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday 1 February" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDP-eM-bue">
-                                                <rect key="frame" x="16" y="32" width="157" height="20"/>
+                                                <rect key="frame" x="16" y="32" width="164" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-5I-Uq4">
-                                                <rect key="frame" x="16" y="56" width="107" height="47"/>
+                                                <rect key="frame" x="16" y="56" width="115.5" height="48"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="40"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -95,13 +95,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbp-Q9-JMF">
-                                                <rect key="frame" x="32" y="433.5" width="196.5" height="47"/>
+                                                <rect key="frame" x="32" y="431.5" width="200.5" height="48"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keep track of your investment and  watch your money grow" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hir-9g-AF1">
-                                                <rect key="frame" x="32" y="488.5" width="248.5" height="37.5"/>
+                                                <rect key="frame" x="32" y="487.5" width="261.5" height="38.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -172,22 +172,22 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVEST" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m2-et-jwe">
-                                                <rect key="frame" x="32" y="885.5" width="96" height="33"/>
+                                                <rect key="frame" x="32" y="883.5" width="97" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available farms and commodities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqE-0L-JhL">
-                                                <rect key="frame" x="32" y="926.5" width="170.5" height="51.5"/>
+                                                <rect key="frame" x="32" y="925" width="158.5" height="53"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5er-Dt-cdq">
-                                                <rect key="frame" x="277.5" y="941" width="104.5" height="37"/>
+                                                <rect key="frame" x="275" y="941" width="107" height="37"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW ALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1va-qe-Gw8">
-                                                        <rect key="frame" x="12" y="8" width="80.5" height="21"/>
+                                                        <rect key="frame" x="12" y="8" width="83" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -246,19 +246,19 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxY-U1-sAm">
-                                                <rect key="frame" x="32" y="1357.5" width="62" height="27"/>
+                                                <rect key="frame" x="32" y="1356" width="64.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="23"/>
                                                 <color key="textColor" red="0.55294117647058827" green="0.77647058823529413" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGRICULTURE  FOR EVERYONE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2C-Am-5Dj">
-                                                <rect key="frame" x="80" y="1154" width="262" height="65.5"/>
+                                                <rect key="frame" x="80" y="1154" width="262" height="67"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everything you need to know. From who we are to why Agropartnerships and how it works" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE2-k9-gQj">
-                                                <rect key="frame" x="32" y="1392.5" width="350" height="37.5"/>
+                                                <rect key="frame" x="32" y="1391.5" width="350" height="38.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -327,14 +327,15 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELPDESK" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmM-jh-sZi">
-                                                <rect key="frame" x="32" y="1502" width="145" height="33"/>
+                                                <rect key="frame" x="32" y="1502" width="141" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-Lk-9IJ">
-                                                <rect key="frame" x="32" y="1840" width="238" height="42"/>
-                                                <string key="text">Always one message away. Monday – Friday: 9AM – 5PM</string>
+                                                <rect key="frame" x="32" y="1839" width="245.5" height="43"/>
+                                                <string key="text">Always one message away. 
+Monday – Friday: 9AM – 5PM</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -353,7 +354,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWa-cf-Se1">
-                                                <rect key="frame" x="32" y="2108.5" width="82" height="23.5"/>
+                                                <rect key="frame" x="32" y="2108" width="84.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="20"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -426,7 +427,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzi-gy-L0R">
-                                                <rect key="frame" x="32" y="2342.5" width="96" height="23.5"/>
+                                                <rect key="frame" x="32" y="2342" width="101" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="20"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -544,23 +545,93 @@
         <!--Item 1-->
         <scene sceneID="Acd-Ug-C5m">
             <objects>
-                <viewController id="bKn-0B-1Wr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="bKn-0B-1Wr" customClass="DashboardViewController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mPn-t2-WnK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.52156862749999999" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqJ-Y6-aUb" userLabel="topmost guide view">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="L2r-zU-icU"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="Y4w-BB-gwZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIC-V1-etB">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                        <subviews>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW0-z6-elG" userLabel="Card Layout Standin View">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1B-r6-RuG" customClass="CardContentView" customModule="AppStoreInteractiveTransition" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" secondItem="Z1B-r6-RuG" secondAttribute="width" multiplier="435:375" priority="999" id="blH-6z-RSd"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="img1.png"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="uW0-z6-elG" firstAttribute="centerY" secondItem="iIC-V1-etB" secondAttribute="centerY" id="46v-xM-xhh"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z1B-r6-RuG" secondAttribute="trailing" id="C2g-p5-a3u"/>
+                                            <constraint firstItem="uW0-z6-elG" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="JFs-1B-CRd"/>
+                                            <constraint firstAttribute="trailing" secondItem="uW0-z6-elG" secondAttribute="trailing" id="NMf-Hp-Cex"/>
+                                            <constraint firstItem="Z1B-r6-RuG" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="dhx-De-dvc"/>
+                                            <constraint firstItem="Z1B-r6-RuG" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" id="eud-ZJ-hZi"/>
+                                            <constraint firstItem="uW0-z6-elG" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" id="vol-Y6-o0I"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vf9-so-69a" firstAttribute="bottom" secondItem="iIC-V1-etB" secondAttribute="bottom" id="1hp-ah-fap"/>
+                                    <constraint firstItem="Vf9-so-69a" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Z1B-r6-RuG" secondAttribute="bottom" id="3HE-b5-OJo"/>
+                                    <constraint firstItem="Vf9-so-69a" firstAttribute="trailing" secondItem="iIC-V1-etB" secondAttribute="trailing" id="TcI-qh-ul4"/>
+                                    <constraint firstItem="iIC-V1-etB" firstAttribute="top" secondItem="Vf9-so-69a" secondAttribute="top" id="YlH-n4-pjD"/>
+                                    <constraint firstAttribute="bottom" secondItem="iIC-V1-etB" secondAttribute="bottom" id="f6I-X8-gLx"/>
+                                    <constraint firstAttribute="trailing" secondItem="iIC-V1-etB" secondAttribute="trailing" id="lIs-jp-TaI"/>
+                                    <constraint firstItem="iIC-V1-etB" firstAttribute="leading" secondItem="Vf9-so-69a" secondAttribute="leading" id="ll7-qw-G6N"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="Vf9-so-69a"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y4w-BB-gwZ" firstAttribute="leading" secondItem="os8-gG-ir4" secondAttribute="leading" id="8hN-YN-bmm"/>
+                            <constraint firstItem="Y4w-BB-gwZ" firstAttribute="trailing" secondItem="os8-gG-ir4" secondAttribute="trailing" id="JmT-TB-J9t"/>
+                            <constraint firstItem="Y4w-BB-gwZ" firstAttribute="top" secondItem="mPn-t2-WnK" secondAttribute="top" id="P0H-ix-Mb4"/>
+                            <constraint firstAttribute="bottom" secondItem="Y4w-BB-gwZ" secondAttribute="bottom" id="QsC-MJ-tHz"/>
+                            <constraint firstItem="bqJ-Y6-aUb" firstAttribute="top" secondItem="os8-gG-ir4" secondAttribute="top" id="YbI-LH-Cld"/>
+                            <constraint firstItem="Y4w-BB-gwZ" firstAttribute="trailing" secondItem="os8-gG-ir4" secondAttribute="trailing" id="g9e-LX-qpX"/>
+                            <constraint firstItem="bqJ-Y6-aUb" firstAttribute="leading" secondItem="mPn-t2-WnK" secondAttribute="leading" id="hLU-qb-m8L"/>
+                            <constraint firstAttribute="bottom" secondItem="Y4w-BB-gwZ" secondAttribute="bottom" id="oCn-ZY-HHJ"/>
+                            <constraint firstAttribute="trailing" secondItem="bqJ-Y6-aUb" secondAttribute="trailing" id="sj9-ze-2Cy"/>
+                            <constraint firstItem="Y4w-BB-gwZ" firstAttribute="top" secondItem="mPn-t2-WnK" secondAttribute="top" id="uRJ-qX-cm9"/>
+                            <constraint firstItem="Y4w-BB-gwZ" firstAttribute="leading" secondItem="os8-gG-ir4" secondAttribute="leading" id="xey-qF-9r3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="os8-gG-ir4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Ph4-0b-cua"/>
+                    <connections>
+                        <outlet property="cardBottomToRootBottomConstraint" destination="3HE-b5-OJo" id="0ZG-WG-lXg"/>
+                        <outlet property="scrollView" destination="Y4w-BB-gwZ" id="Kje-Eo-f20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3EY-fu-Vpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-515" y="-384"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Dashboard Tab Bar Controller-->
         <scene sceneID="UUd-KF-aQe">
             <objects>
-                <tabBarController storyboardIdentifier="DashboardTabBarController" id="AHJ-PS-Yhb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="DashboardTabBarController" id="AHJ-PS-Yhb" customClass="DashboardTabBarController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vnk-fy-gq6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -575,6 +646,146 @@
             </objects>
             <point key="canvasLocation" x="-1428" y="-62"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="cmO-RA-RNI">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="MTY-5I-VRd" customClass="HomeViewController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QoV-gA-05s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-bD-L3Z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CnZ-7D-T0q">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ax8-iM-BCW">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3fI-JX-3WA" firstAttribute="bottom" secondItem="y3E-bD-L3Z" secondAttribute="bottom" id="2SR-yb-Ook"/>
+                            <constraint firstItem="3fI-JX-3WA" firstAttribute="trailing" secondItem="y3E-bD-L3Z" secondAttribute="trailing" id="hjj-Fg-cBA"/>
+                            <constraint firstItem="y3E-bD-L3Z" firstAttribute="leading" secondItem="3fI-JX-3WA" secondAttribute="leading" id="sH8-c4-Qpo"/>
+                            <constraint firstItem="y3E-bD-L3Z" firstAttribute="top" secondItem="3fI-JX-3WA" secondAttribute="top" id="sj8-rD-2mZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3fI-JX-3WA"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="y3E-bD-L3Z" id="e5c-oB-2de"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyi-l1-2RY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1429" y="-1267"/>
+        </scene>
+        <!--Card Detail View Controller-->
+        <scene sceneID="Nks-D7-Feb">
+            <objects>
+                <viewController storyboardIdentifier="cardDetailVc" id="njK-ZB-ZTS" customClass="CardDetailViewController" customModule="AppStoreInteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="9jt-Oa-5QV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKs-d5-HDh" userLabel="topmost guide view">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="K7D-ed-DlM"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-iv-hYl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dy-AC-JH6" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1155.5"/>
+                                        <subviews>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkU-5U-98F" userLabel="Card Layout Standin View">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="538"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkr-C2-2nE" customClass="DashboardCardContentView" customModule="AgroPartnerships" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="538"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" secondItem="Mkr-C2-2nE" secondAttribute="width" multiplier="1.3:1" priority="999" id="hob-dQ-sXP"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="img1.png"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-Mm-izG">
+                                                <rect key="frame" x="0.0" y="538" width="414" height="617.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="v4P-Mm-izG" secondAttribute="bottom" id="0EG-En-wjz"/>
+                                            <constraint firstItem="v4P-Mm-izG" firstAttribute="leading" secondItem="4dy-AC-JH6" secondAttribute="leading" id="5kg-U0-bK8"/>
+                                            <constraint firstItem="v4P-Mm-izG" firstAttribute="top" secondItem="lkU-5U-98F" secondAttribute="bottom" id="EIN-JI-Zhv"/>
+                                            <constraint firstItem="lkU-5U-98F" firstAttribute="centerX" secondItem="4dy-AC-JH6" secondAttribute="centerX" id="JA9-NN-LWQ"/>
+                                            <constraint firstItem="Mkr-C2-2nE" firstAttribute="top" secondItem="4dy-AC-JH6" secondAttribute="top" priority="999" id="VJS-dd-szD"/>
+                                            <constraint firstItem="lkU-5U-98F" firstAttribute="height" secondItem="Mkr-C2-2nE" secondAttribute="height" id="XoE-OE-LhY"/>
+                                            <constraint firstItem="Mkr-C2-2nE" firstAttribute="leading" secondItem="4dy-AC-JH6" secondAttribute="leading" id="hsU-Eo-IFA"/>
+                                            <constraint firstAttribute="trailing" secondItem="v4P-Mm-izG" secondAttribute="trailing" id="jAZ-pR-zqP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mkr-C2-2nE" secondAttribute="trailing" id="jh0-5K-1Ez"/>
+                                            <constraint firstItem="lkU-5U-98F" firstAttribute="width" secondItem="Mkr-C2-2nE" secondAttribute="width" id="tWU-1h-svW"/>
+                                            <constraint firstItem="lkU-5U-98F" firstAttribute="top" secondItem="4dy-AC-JH6" secondAttribute="top" id="xyk-Mu-XoM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4dy-AC-JH6" secondAttribute="trailing" id="St6-J3-CJf"/>
+                                    <constraint firstItem="4dy-AC-JH6" firstAttribute="top" secondItem="u5b-iv-hYl" secondAttribute="top" id="Y7s-6R-UBJ"/>
+                                    <constraint firstItem="4dy-AC-JH6" firstAttribute="leading" secondItem="u5b-iv-hYl" secondAttribute="leading" id="c19-qr-Ox4"/>
+                                    <constraint firstAttribute="bottom" secondItem="4dy-AC-JH6" secondAttribute="bottom" id="ieV-9c-Hi9"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="91p-o2-nUr"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u5b-iv-hYl" firstAttribute="leading" secondItem="9jt-Oa-5QV" secondAttribute="leading" id="7ay-fF-UuS"/>
+                            <constraint firstItem="Mkr-C2-2nE" firstAttribute="top" relation="lessThanOrEqual" secondItem="vKs-d5-HDh" secondAttribute="top" id="Bog-Rg-T5U"/>
+                            <constraint firstItem="vKs-d5-HDh" firstAttribute="top" secondItem="9jt-Oa-5QV" secondAttribute="top" id="Fer-Pi-Joh"/>
+                            <constraint firstItem="vKs-d5-HDh" firstAttribute="leading" secondItem="9jt-Oa-5QV" secondAttribute="leading" id="HMQ-yM-JbX"/>
+                            <constraint firstAttribute="bottom" secondItem="u5b-iv-hYl" secondAttribute="bottom" id="RMe-GA-rqD"/>
+                            <constraint firstAttribute="trailing" secondItem="vKs-d5-HDh" secondAttribute="trailing" id="To5-qg-06x"/>
+                            <constraint firstAttribute="trailing" secondItem="u5b-iv-hYl" secondAttribute="trailing" id="iDH-bd-hts"/>
+                            <constraint firstItem="4dy-AC-JH6" firstAttribute="width" secondItem="9jt-Oa-5QV" secondAttribute="width" id="k7V-AX-31o"/>
+                            <constraint firstItem="fwY-Sh-nX6" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Mkr-C2-2nE" secondAttribute="bottom" id="med-rk-gO7"/>
+                            <constraint firstItem="u5b-iv-hYl" firstAttribute="top" secondItem="9jt-Oa-5QV" secondAttribute="top" id="oeq-a2-ytY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fwY-Sh-nX6"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardBottomToRootBottomConstraint" destination="med-rk-gO7" id="WQ1-yd-Nc8"/>
+                        <outlet property="cardContentView" destination="Mkr-C2-2nE" id="nNF-vi-UQX"/>
+                        <outlet property="scrollView" destination="u5b-iv-hYl" id="DS3-6J-Nkf"/>
+                        <outlet property="textView" destination="v4P-Mm-izG" id="Un7-dY-r88"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFy-bB-4dz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="-1268"/>
+        </scene>
     </scenes>
     <resources>
         <image name="about-icon" width="42" height="42"/>
@@ -583,6 +794,7 @@
         <image name="dashboard-icon" width="24" height="23"/>
         <image name="helpdesk-card-illustration" width="343" height="412"/>
         <image name="helpdesk-icon" width="44" height="42"/>
+        <image name="img1.png" width="16" height="16"/>
         <image name="invest-card-illustration" width="343" height="412"/>
         <image name="invest-icon" width="52" height="38"/>
         <image name="landing-image-bg" width="750" height="686"/>

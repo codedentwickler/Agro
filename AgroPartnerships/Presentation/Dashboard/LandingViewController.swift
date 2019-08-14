@@ -27,8 +27,8 @@ class LandingViewController: BaseViewController {
     }
     
     private func setupCardsEvents() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "DashboardTabBarController")
-        
-        dashboardCard.shouldPresent(vc, from: self)
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
+//
+//        present(vc!, animated: true, completion: nil)
     }
 }
