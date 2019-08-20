@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,6 +26,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35h-YO-Otl">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-5h-4xX">
+                            <rect key="frame" x="16" y="37" width="343" height="129"/>
+                            <string key="text">A Digital 
+Platform for 
+Agribusiness</string>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
+                            <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple and secure collaborative platform that enables you invest in farms, trade in agricultural commodities  " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg1-IJ-r3A">
                             <rect key="frame" x="16" y="174" width="335" height="54"/>
                             <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
@@ -38,24 +47,15 @@
                                 <constraint firstAttribute="width" secondItem="NBO-yR-RBQ" secondAttribute="height" multiplier="377:353" id="JZg-TZ-KPs"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-5h-4xX">
-                            <rect key="frame" x="16" y="37" width="343" height="129"/>
-                            <string key="text">A Digital 
-Platform for 
-Agribusiness</string>
-                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
-                            <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="Pg1-IJ-r3A" firstAttribute="top" secondItem="35h-YO-Otl" secondAttribute="top" constant="174" id="AiJ-TW-BWa"/>
                         <constraint firstAttribute="trailing" secondItem="oLB-5h-4xX" secondAttribute="trailing" constant="16" id="BH2-z0-kda"/>
                         <constraint firstAttribute="trailing" secondItem="NBO-yR-RBQ" secondAttribute="trailing" id="IGh-3p-eKq"/>
                         <constraint firstItem="NBO-yR-RBQ" firstAttribute="leading" secondItem="35h-YO-Otl" secondAttribute="leading" id="UJr-7a-lIp"/>
                         <constraint firstAttribute="bottom" secondItem="NBO-yR-RBQ" secondAttribute="bottom" id="ddY-Ul-5sG"/>
                         <constraint firstItem="Pg1-IJ-r3A" firstAttribute="top" secondItem="oLB-5h-4xX" secondAttribute="bottom" constant="8" id="dgi-Lf-Grb"/>
+                        <constraint firstItem="oLB-5h-4xX" firstAttribute="top" secondItem="35h-YO-Otl" secondAttribute="top" constant="92" id="fwS-PA-5Ui"/>
                         <constraint firstItem="Pg1-IJ-r3A" firstAttribute="leading" secondItem="35h-YO-Otl" secondAttribute="leading" constant="16" id="oO1-im-2M7"/>
                         <constraint firstAttribute="trailing" secondItem="Pg1-IJ-r3A" secondAttribute="trailing" constant="24" id="pQq-vv-LGC"/>
                         <constraint firstItem="oLB-5h-4xX" firstAttribute="leading" secondItem="35h-YO-Otl" secondAttribute="leading" constant="16" id="xWp-3B-nDe"/>

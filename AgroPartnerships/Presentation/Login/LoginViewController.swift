@@ -54,8 +54,9 @@ class LoginViewController: BaseViewController {
 extension LoginViewController: LoginView {
     
     func showDashBoard() {
-        let storyboard = UIStoryboard(name: StoryBoardIdentifiers.Dashboard, bundle: nil)
-        self.present(storyboard.instantiateViewController(withIdentifier: "HomeViewController"), animated: true, completion: nil)
+        let vc = viewController(type: LandingViewController.self,
+                                from: StoryBoardIdentifiers.Dashboard)
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

@@ -76,7 +76,7 @@ You profit</string>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="EoI-Es-sra" secondAttribute="bottom" id="0Zt-hO-uAa"/>
                         <constraint firstAttribute="trailing" secondItem="lfD-Yv-REW" secondAttribute="trailing" id="4TW-sl-EGF"/>
-                        <constraint firstItem="Le5-HX-Bid" firstAttribute="top" secondItem="xFg-BH-Jhz" secondAttribute="bottom" constant="174" id="6xr-oh-DTL"/>
+                        <constraint firstItem="Le5-HX-Bid" firstAttribute="top" secondItem="xFg-BH-Jhz" secondAttribute="bottom" constant="16" id="6xr-oh-DTL"/>
                         <constraint firstAttribute="bottom" secondItem="oHY-2g-3OC" secondAttribute="bottom" constant="16" id="B56-L2-EK5"/>
                         <constraint firstItem="Le5-HX-Bid" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" constant="16" id="DSS-2u-oep"/>
                         <constraint firstAttribute="trailing" secondItem="xFg-BH-Jhz" secondAttribute="trailing" constant="16" id="Kld-Km-UEM"/>
@@ -87,8 +87,9 @@ You profit</string>
                         <constraint firstAttribute="trailing" secondItem="EoI-Es-sra" secondAttribute="trailing" id="cv9-rT-Xhw"/>
                         <constraint firstItem="EoI-Es-sra" firstAttribute="top" secondItem="VNf-6B-OOg" secondAttribute="top" id="eTl-V5-J7c"/>
                         <constraint firstItem="lfD-Yv-REW" firstAttribute="leading" secondItem="VNf-6B-OOg" secondAttribute="leading" id="gKP-pB-w8x"/>
-                        <constraint firstItem="oHY-2g-3OC" firstAttribute="top" secondItem="lfD-Yv-REW" secondAttribute="bottom" constant="8" id="jtx-GI-IFh"/>
+                        <constraint firstItem="oHY-2g-3OC" firstAttribute="top" secondItem="lfD-Yv-REW" secondAttribute="bottom" constant="12" id="jtx-GI-IFh"/>
                         <constraint firstAttribute="trailing" secondItem="Le5-HX-Bid" secondAttribute="trailing" constant="24" id="mEh-id-5Ue"/>
+                        <constraint firstItem="xFg-BH-Jhz" firstAttribute="top" secondItem="VNf-6B-OOg" secondAttribute="top" constant="80" id="nfU-6A-QYu"/>
                     </constraints>
                 </view>
             </subviews>

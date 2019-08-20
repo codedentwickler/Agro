@@ -53,7 +53,7 @@ extension BaseViewController {
         navigationItem.title = nil
         navigationItem.title = StringLiterals.BACK
     }
-    
+
     func push<T: UIViewController>(viewController: T.Type,
                                    from storyBoardName: String = StoryBoardIdentifiers.Main) {
         let vc = self.viewController(type: viewController,

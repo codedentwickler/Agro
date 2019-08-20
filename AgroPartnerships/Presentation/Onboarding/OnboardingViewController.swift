@@ -18,6 +18,7 @@ class OnboardingViewController: BaseViewController {
         
         swiftyOnboard.dataSource = self
         swiftyOnboard.delegate = self
+        swiftyOnboard.fadePages = false
     }
     
     @objc func handleSkip() {
@@ -60,12 +61,14 @@ extension OnboardingViewController: SwiftyOnboardDelegate {
     
     func swiftyOnboardOverlayForPosition(_ swiftyOnboard: SwiftyOnboard, overlay: SwiftyOnboardOverlay, for position: Double) {
         let overlay = overlay as! OnboardingOverlay
-        let currentPage = round(position)
-        overlay.pageControl.currentPage = Int(currentPage)
-        if currentPage == 0.0 || currentPage == 1.0 {
+        let currentPage = Int(position)
+        overlay.contentControl.currentPage = currentPage
+        if currentPage == 0 || currentPage == 1 {
             overlay.skip.isHidden = false
+            overlay.contentControl.currentPageIndicatorTintColor = UIColor.white
         } else {
             overlay.skip.isHidden = true
+            overlay.contentControl.currentPageIndicatorTintColor = UIColor(hex: "#1D3B2D")
         }
     }
 }

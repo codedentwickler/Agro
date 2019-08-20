@@ -89,9 +89,12 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil);
     }
     
-    func createActionSheet(title: String! = "", message: String! = StringLiterals.CHOOSE_ONE, ltrActions: [UIAlertAction]! = [] ,
+    func createActionSheet(title: String! = nil, message: String! = nil,
+                           ltrActions: [UIAlertAction]! = [] ,
                            preferredActionPosition: Int = 0, sender: UIView? = nil ){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.actionSheet);
+        
+        alertController.view.tintColor = UIColor.appGreen1
         
         if(ltrActions.count == 0){
             let defaultAction = UIAlertAction(title: StringLiterals.OK, style: .default, handler: nil);
@@ -115,7 +118,7 @@ extension UIViewController {
     
     func creatAlertAction(_ title: String! = StringLiterals.OK,
                           style: UIAlertAction.Style = .default,
-                          clicked: ((_ action: UIAlertAction) -> Void)?) -> UIAlertAction! {
+                          clicked: ((_ action: UIAlertAction) -> Void)?) -> UIAlertAction {
         return UIAlertAction(title: title, style: style, handler: clicked)
     }
 }

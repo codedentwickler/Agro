@@ -123,8 +123,8 @@ extension SignUpViewController: SignUpView {
     }
     
     func showDashBoard() {
-        let storyboard = UIStoryboard(name: StoryBoardIdentifiers.Dashboard, bundle: nil)
-        self.present(storyboard.instantiateInitialViewController()!,
-         animated: true, completion: nil)
+        let vc = viewController(type: LandingViewController.self,
+                                from: StoryBoardIdentifiers.Dashboard)
+        self.present(vc, animated: true, completion: nil)
     }
 }

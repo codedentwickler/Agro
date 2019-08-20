@@ -27,8 +27,15 @@ class LandingViewController: BaseViewController {
     }
     
     private func setupCardsEvents() {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController")
-//
-//        present(vc!, animated: true, completion: nil)
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(showDashboard))
+        dashboardCard.isUserInteractionEnabled = true
+        dashboardCard.addGestureRecognizer(tap)
+    }
+    
+    @objc func showDashboard() {
+        let vc = viewController(type: DashboardTabBarController.self,
+                                from: StoryBoardIdentifiers.Dashboard)
+        present(vc, animated: true, completion: nil)
     }
 }
