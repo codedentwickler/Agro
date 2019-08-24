@@ -50,8 +50,14 @@ class ApiServiceImplementation : ApiService {
         Network.shared.request(ApiEndPoints.getAvailableCommodities(limitToNumber: limit), completion: completion)
     }
     
-    func getDashboardInformation(completion: @escaping (DashboardInformationResponse?) -> Void) {
-        Network.shared.request(ApiEndPoints.getDashboardInformation(), completion: completion)
+    func getDashboardInformation(completion: @escaping (DashboardResponse?) -> Void) {
+        Network.shared.request(ApiEndPoints.getDashboardInformation()) { (response) in
+            if let response = response {
+                completion(DashboardResponse(response))
+            } else {
+                completion(nil)
+            }
+        }
     }
     
     func initializeInvestment(item: String,

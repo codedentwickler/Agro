@@ -27,7 +27,7 @@ protocol ApiService {
     func getAvailableCommodities(limitToNumber limit: Int,
                                  completion: @escaping (_ response: AvailableCommoditiesResponse? ) -> Void)
     
-    func getDashboardInformation(completion: @escaping (_ response: DashboardInformationResponse? ) -> Void)
+    func getDashboardInformation(completion: @escaping (_ response: DashboardResponse? ) -> Void)
     
     func initializeInvestment(item: String,
                               units: Int,

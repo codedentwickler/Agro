@@ -592,41 +592,53 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYk-It-geS">
-                                                <rect key="frame" x="16" y="357.5" width="200.5" height="48"/>
+                                                <rect key="frame" x="16" y="359.5" width="196.5" height="47"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-oe-fGx">
-                                                <rect key="frame" x="16" y="417.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="418.5" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239726024" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="L7n-Rh-4sD"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keep track of your investment and  watch your money grow" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Lb-6TW">
-                                                <rect key="frame" x="16" y="425.5" width="261.5" height="38.5"/>
+                                                <rect key="frame" x="16" y="426.5" width="248.5" height="37.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vjp-ou-Egt">
-                                                <rect key="frame" x="16" y="492" width="382" height="34"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zM-Px-2NS">
+                                                <rect key="frame" x="0.0" y="480" width="414" height="65"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vjp-ou-Egt">
+                                                        <rect key="frame" x="24" y="16" width="366" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="bUT-73-Kmu"/>
+                                                        </constraints>
+                                                        <segments>
+                                                            <segment title="Portfolio"/>
+                                                            <segment title="Wallet"/>
+                                                            <segment title="Referrals"/>
+                                                        </segments>
+                                                        <color key="tintColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="userChangedPagerValue:" destination="bKn-0B-1Wr" eventType="valueChanged" id="iWO-I5-1AQ"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.95294117647058818" green="1" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="33" id="bUT-73-Kmu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vjp-ou-Egt" secondAttribute="bottom" constant="16" id="BA6-W6-eOz"/>
+                                                    <constraint firstItem="vjp-ou-Egt" firstAttribute="top" secondItem="0zM-Px-2NS" secondAttribute="top" constant="16" id="GJH-1D-M2l"/>
+                                                    <constraint firstItem="vjp-ou-Egt" firstAttribute="leading" secondItem="0zM-Px-2NS" secondAttribute="leading" constant="24" id="jbP-60-46f"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vjp-ou-Egt" secondAttribute="trailing" constant="24" id="qt4-O8-pMR"/>
                                                 </constraints>
-                                                <segments>
-                                                    <segment title="Portfolio"/>
-                                                    <segment title="Wallet"/>
-                                                    <segment title="Referrals"/>
-                                                </segments>
-                                                <color key="tintColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="userChangedPagerValue:" destination="bKn-0B-1Wr" eventType="valueChanged" id="iWO-I5-1AQ"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-uJ-ZYe" userLabel="Wallet Stack View">
-                                                <rect key="frame" x="0.0" y="537" width="414" height="171"/>
+                                            </view>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-uJ-ZYe" userLabel="Wallet Stack View">
+                                                <rect key="frame" x="0.0" y="545" width="414" height="171"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-YI-Q0K">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -646,7 +658,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="62" width="382" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="All Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-o7-F0g">
-                                                                <rect key="frame" x="0.0" y="3.5" width="224" height="27.5"/>
+                                                                <rect key="frame" x="0.0" y="3.5" width="224" height="27"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -667,25 +679,28 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="userPressedViewAllBreakdown:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="tvO-2G-igk"/>
-                                                                    <action selector="userPressedViewAllReferrals:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="ekY-zu-XYf"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-Xh-igB">
-                                                        <rect key="frame" x="0.0" y="108" width="414" height="63"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-Xh-igB">
+                                                        <rect key="frame" x="16" y="108" width="382" height="63"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="300" id="hBe-1O-Ev6"/>
+                                                        </constraints>
                                                     </tableView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="y7d-V1-svT" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" constant="16" id="286-qC-M1H"/>
-                                                    <constraint firstItem="gYe-Xh-igB" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" id="8qq-1g-r1x"/>
-                                                    <constraint firstAttribute="trailing" secondItem="gYe-Xh-igB" secondAttribute="trailing" id="Bca-bg-6SZ"/>
+                                                    <constraint firstItem="gYe-Xh-igB" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" constant="16" id="8qq-1g-r1x"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gYe-Xh-igB" secondAttribute="trailing" constant="16" id="Bca-bg-6SZ"/>
                                                     <constraint firstAttribute="trailing" secondItem="y7d-V1-svT" secondAttribute="trailing" constant="16" id="Z9G-VK-f6G"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gYe-Xh-igB" secondAttribute="bottom" id="qN6-ff-NHk"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3vJ-ct-rTg" userLabel="Portfolio Stack View">
-                                                <rect key="frame" x="0.0" y="537" width="414" height="863"/>
+                                                <rect key="frame" x="0.0" y="545" width="414" height="855"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odF-T4-ZmV" customClass="GradientView" customModule="AgroPartnerships" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
@@ -699,7 +714,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have one pending investment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-6i-ggt">
-                                                                <rect key="frame" x="56" y="18" width="210" height="16"/>
+                                                                <rect key="frame" x="56" y="18.5" width="200" height="15.5"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -708,7 +723,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <rect key="frame" x="312" y="12" width="86" height="28"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz8-Mk-K8n">
-                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21.5"/>
+                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21"/>
                                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -772,13 +787,13 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="236" width="382" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Current Investments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-l5-gfI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="180.5" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="50"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldw-iw-IdO">
-                                                                <rect key="frame" x="188.5" y="0.0" width="27.5" height="50"/>
+                                                                <rect key="frame" x="194.5" y="0.0" width="21.5" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4U-EU-H7w" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
@@ -796,8 +811,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="userPressedViewAllBreakdown:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="wT8-LK-3Vn"/>
-                                                                    <action selector="userPressedViewAllReferrals:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="fGZ-bK-DqS"/>
                                                                     <action selector="userPressedViewInvestmentHistory:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="v7Z-xE-DLP"/>
                                                                 </connections>
                                                             </button>
@@ -810,7 +823,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </constraints>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="320" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w9s-tX-cVx">
-                                                        <rect key="frame" x="16" y="298" width="382" height="565"/>
+                                                        <rect key="frame" x="16" y="298" width="382" height="557"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="700" id="jEa-vh-0Tn"/>
@@ -832,7 +845,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </constraints>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Df-Jq-R31" userLabel="Referral Stack View">
-                                                <rect key="frame" x="0.0" y="537" width="414" height="655"/>
+                                                <rect key="frame" x="0.0" y="545" width="414" height="655"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PMp-4g-zNn">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
@@ -852,7 +865,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="172" width="382" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="55f-HS-Hil">
-                                                                <rect key="frame" x="0.0" y="11.5" width="224" height="27.5"/>
+                                                                <rect key="frame" x="0.0" y="11.5" width="224" height="27"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -884,13 +897,13 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="234" width="382" height="97"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REFERRAL CODE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRE-dg-baF">
-                                                                <rect key="frame" x="16" y="20" width="155" height="21.5"/>
+                                                                <rect key="frame" x="16" y="20" width="151.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="REFCODEHERE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Op-uhG">
-                                                                <rect key="frame" x="16" y="45.5" width="350" height="47.5"/>
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="REFCODEHERE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Op-uhG">
+                                                                <rect key="frame" x="16" y="45" width="350" height="48"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="25"/>
@@ -1038,7 +1051,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                     <constraint firstAttribute="trailing" secondItem="PMp-4g-zNn" secondAttribute="trailing" id="WpK-Mp-UeQ"/>
                                                     <constraint firstItem="Dch-P5-Nvs" firstAttribute="leading" secondItem="1Df-Jq-R31" secondAttribute="leading" constant="16" id="ZtL-kq-JcY"/>
                                                     <constraint firstItem="x01-rQ-6oE" firstAttribute="leading" secondItem="1Df-Jq-R31" secondAttribute="leading" constant="16" id="m9t-8N-Jaj"/>
-                                                    <constraint firstAttribute="trailing" secondItem="hfO-dp-SZe" secondAttribute="trailing" id="mKt-wU-Kae"/>
                                                     <constraint firstItem="pBF-d4-DLe" firstAttribute="leading" secondItem="1Df-Jq-R31" secondAttribute="leading" constant="16" id="uG3-Ll-3jD"/>
                                                     <constraint firstItem="ax2-wP-838" firstAttribute="leading" secondItem="1Df-Jq-R31" secondAttribute="leading" constant="16" id="x7X-L0-Jj2"/>
                                                     <constraint firstAttribute="trailing" secondItem="Dch-P5-Nvs" secondAttribute="trailing" constant="16" id="xX5-XK-AOh"/>
@@ -1053,38 +1065,38 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="1" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1Df-Jq-R31" secondAttribute="bottom" id="1yS-ak-pME"/>
                                             <constraint firstItem="5a7-uJ-ZYe" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="33l-wv-zoU"/>
                                             <constraint firstItem="TJh-sV-n9a" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="3mn-2F-eQu"/>
                                             <constraint firstItem="Tvw-YI-Q0K" firstAttribute="height" secondItem="tqJ-oU-X1K" secondAttribute="height" id="5X5-2x-dh9"/>
                                             <constraint firstAttribute="height" constant="1400" id="84s-PE-nxi"/>
+                                            <constraint firstItem="3vJ-ct-rTg" firstAttribute="top" secondItem="0zM-Px-2NS" secondAttribute="bottom" id="AVS-cs-a8F"/>
+                                            <constraint firstItem="5a7-uJ-ZYe" firstAttribute="top" secondItem="0zM-Px-2NS" secondAttribute="bottom" id="CpP-Lq-Fbd"/>
                                             <constraint firstItem="xQb-Lb-6TW" firstAttribute="bottom" secondItem="Vdk-j0-R1p" secondAttribute="bottom" constant="-16" id="DGO-qq-lrh"/>
                                             <constraint firstAttribute="trailing" secondItem="5a7-uJ-ZYe" secondAttribute="trailing" id="DLI-DD-bqu"/>
-                                            <constraint firstItem="5a7-uJ-ZYe" firstAttribute="top" secondItem="vjp-ou-Egt" secondAttribute="bottom" constant="12" id="EDe-4t-OCl"/>
                                             <constraint firstItem="jCP-oe-fGx" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" constant="16" id="ETL-si-jic"/>
                                             <constraint firstItem="TJh-sV-n9a" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" id="HCQ-iG-80a"/>
                                             <constraint firstItem="ZYk-It-geS" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" constant="16" id="IwK-1s-hkN"/>
                                             <constraint firstAttribute="trailing" secondItem="jCP-oe-fGx" secondAttribute="trailing" constant="16" id="K4g-f9-5e1"/>
                                             <constraint firstItem="Hgu-Va-z9b" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" constant="40" id="NI8-9B-826"/>
-                                            <constraint firstAttribute="trailing" secondItem="vjp-ou-Egt" secondAttribute="trailing" constant="16" id="O8G-5I-tWn"/>
                                             <constraint firstAttribute="trailing" secondItem="Vdk-j0-R1p" secondAttribute="trailing" id="OHq-hU-TUk"/>
                                             <constraint firstAttribute="trailing" secondItem="1Df-Jq-R31" secondAttribute="trailing" id="Opf-6q-2XD"/>
                                             <constraint firstItem="Vdk-j0-R1p" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" id="QN2-wg-8x8"/>
                                             <constraint firstItem="jCP-oe-fGx" firstAttribute="top" secondItem="ZYk-It-geS" secondAttribute="bottom" constant="12" id="QTX-eW-2vo"/>
-                                            <constraint firstItem="vjp-ou-Egt" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" constant="16" id="SaG-qB-j2N"/>
-                                            <constraint firstItem="3vJ-ct-rTg" firstAttribute="top" secondItem="vjp-ou-Egt" secondAttribute="bottom" constant="12" id="Wt9-Ln-4mJ"/>
+                                            <constraint firstItem="0zM-Px-2NS" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="S74-Jg-IRq"/>
                                             <constraint firstAttribute="trailing" secondItem="3vJ-ct-rTg" secondAttribute="trailing" id="YP1-5t-cVx"/>
-                                            <constraint firstItem="1Df-Jq-R31" firstAttribute="top" secondItem="vjp-ou-Egt" secondAttribute="bottom" constant="12" id="YcB-nM-wU3"/>
+                                            <constraint firstItem="1Df-Jq-R31" firstAttribute="top" secondItem="0zM-Px-2NS" secondAttribute="bottom" id="av2-Ah-AhA"/>
                                             <constraint firstAttribute="trailing" secondItem="TJh-sV-n9a" secondAttribute="trailing" id="bHp-gY-F1N"/>
                                             <constraint firstItem="Vdk-j0-R1p" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="cmI-Xk-gZK"/>
+                                            <constraint firstAttribute="trailing" secondItem="0zM-Px-2NS" secondAttribute="trailing" id="eat-vJ-SZ5"/>
                                             <constraint firstItem="1Df-Jq-R31" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="gHe-we-bGn"/>
-                                            <constraint firstItem="vjp-ou-Egt" firstAttribute="top" secondItem="Vdk-j0-R1p" secondAttribute="bottom" constant="12" id="gRR-Tp-QW8"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3vJ-ct-rTg" secondAttribute="bottom" id="igQ-oe-Ykb"/>
                                             <constraint firstItem="xQb-Lb-6TW" firstAttribute="top" secondItem="ZYk-It-geS" secondAttribute="bottom" constant="20" id="lnt-3W-fu7"/>
                                             <constraint firstItem="TJh-sV-n9a" firstAttribute="height" secondItem="Vdk-j0-R1p" secondAttribute="height" id="ohB-8C-sEy"/>
                                             <constraint firstItem="3vJ-ct-rTg" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="pWk-pi-T54"/>
+                                            <constraint firstItem="0zM-Px-2NS" firstAttribute="top" secondItem="TJh-sV-n9a" secondAttribute="bottom" id="qTi-Qd-G8V"/>
                                             <constraint firstItem="xQb-Lb-6TW" firstAttribute="leading" secondItem="Vdk-j0-R1p" secondAttribute="leading" constant="16" id="rzg-3j-FIv"/>
                                             <constraint firstItem="Tvw-YI-Q0K" firstAttribute="width" secondItem="tqJ-oU-X1K" secondAttribute="width" id="sfa-2Z-1S8"/>
                                             <constraint firstAttribute="trailing" secondItem="Hgu-Va-z9b" secondAttribute="trailing" constant="16" id="tRQ-an-Vl8"/>
@@ -1129,13 +1141,14 @@ Monday – Friday: 9AM – 5PM</string>
                         <outlet property="referralInputTextfield" destination="ATc-Op-uhG" id="vnL-6W-ixN"/>
                         <outlet property="referralStackView" destination="1Df-Jq-R31" id="pLF-NF-ayL"/>
                         <outlet property="transactionsTableView" destination="gYe-Xh-igB" id="UYZ-jA-GVA"/>
+                        <outlet property="transactionsTableViewHeight" destination="hBe-1O-Ev6" id="dWr-aI-THf"/>
                         <outlet property="walletStackView" destination="5a7-uJ-ZYe" id="MEr-bk-nYv"/>
                         <outlet property="walletsActionsCollectionView" destination="Tvw-YI-Q0K" id="aIO-bJ-MXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3EY-fu-Vpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394.20289855072468" y="-384.375"/>
+            <point key="canvasLocation" x="-804" y="-701"/>
         </scene>
         <!--Investments Table View Controller-->
         <scene sceneID="WNj-jz-5Dl">
@@ -1152,7 +1165,7 @@ Monday – Friday: 9AM – 5PM</string>
                                         <rect key="frame" x="16" y="8" width="382" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="T8T-UO-hVH">
-                                                <rect key="frame" x="0.0" y="11.5" width="346" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="11.5" width="346" height="27"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1202,7 +1215,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEe-GO-95i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="-552"/>
+            <point key="canvasLocation" x="-33" y="-869"/>
         </scene>
         <!--Referral History View Controller-->
         <scene sceneID="zwZ-aF-cxz">
@@ -1227,7 +1240,6 @@ Monday – Friday: 9AM – 5PM</string>
                                         <color key="tintColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="pagerControlSegmentChanged:" destination="8nR-Mn-0y9" eventType="valueChanged" id="ITj-k5-uRK"/>
-                                            <action selector="userChangedPagerValue:" destination="bKn-0B-1Wr" eventType="valueChanged" id="xJ4-y2-C5m"/>
                                         </connections>
                                     </segmentedControl>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-icon" translatesAutoresizingMaskIntoConstraints="NO" id="kvp-af-K90">
@@ -1283,7 +1295,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrN-TL-XXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2439" y="-552"/>
+            <point key="canvasLocation" x="774" y="-869"/>
         </scene>
         <!--Dashboard Tab Bar Controller-->
         <scene sceneID="UUd-KF-aQe">
@@ -1305,7 +1317,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxJ-8E-ZdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2114" y="-124"/>
+            <point key="canvasLocation" x="-3539" y="546"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="MX9-As-xkb">
@@ -1325,7 +1337,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3V-Vn-g4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-515.94202898550725" y="-384.375"/>
+            <point key="canvasLocation" x="-1554" y="-869"/>
         </scene>
         <!--About-->
         <scene sceneID="mcx-2N-jN6">

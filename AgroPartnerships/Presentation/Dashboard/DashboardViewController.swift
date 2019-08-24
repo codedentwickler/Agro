@@ -26,7 +26,8 @@ class DashboardViewController: BaseViewController {
     // Wallets Outlets
     @IBOutlet weak var walletsActionsCollectionView: UICollectionView!
     @IBOutlet weak var transactionsTableView: UITableView!
-    
+    @IBOutlet weak var transactionsTableViewHeight: NSLayoutConstraint!
+
     // Referral Outlets
     @IBOutlet weak var referralActionsCollectionView: UICollectionView!
     @IBOutlet weak var referralInputTextfield: UITextField!
@@ -49,6 +50,7 @@ class DashboardViewController: BaseViewController {
         setupDelegates()
         setupDataSources()
         setupInvestmentsCollectionView()
+        setupTransactionsTableView()
         setupWalletCollectionView()
         setupReferralCollectionView()
         setupCurrentInvestmentsTableView()
@@ -58,10 +60,12 @@ class DashboardViewController: BaseViewController {
     
     private func setupView() {
         currentInvestmentsTableView.reloadData()
+        transactionsTableView.reloadData()
     }
     
     fileprivate func setupDataSources() {
         currentInvestmentsTableView.dataSource = self
+        transactionsTableView.dataSource = self
         portfolioActionsCollectionView.dataSource = self
         walletsActionsCollectionView.dataSource = self
         referralActionsCollectionView.dataSource = self
@@ -69,15 +73,25 @@ class DashboardViewController: BaseViewController {
     
     fileprivate func setupDelegates() {
         currentInvestmentsTableView.delegate = self
+        transactionsTableView.delegate = self
         portfolioActionsCollectionView.delegate = self
         walletsActionsCollectionView.delegate = self
         referralActionsCollectionView.delegate = self
     }
     
+    fileprivate func setupTransactionsTableView(){
+        transactionsTableView.register(UINib(nibName: TransactionsTableViewCell.identifier,
+                                             bundle: nil),
+                                       forCellReuseIdentifier: TransactionsTableViewCell.identifier)
+        
+        transactionsTableViewHeight.constant = CGFloat(128 * 6)
+        transactionsTableViewHeight.isActive = true
+    }
+    
     fileprivate func setupCurrentInvestmentsTableView(){
         currentInvestmentsTableView.register(UINib(nibName: CurrentInvestmentTableViewCell.identifier,
-                                                      bundle: nil),
-                                                forCellReuseIdentifier: CurrentInvestmentTableViewCell.identifier)
+                                                   bundle: nil),
+                                             forCellReuseIdentifier: CurrentInvestmentTableViewCell.identifier)
         
         currentInvestmentsTableViewHeight.constant =
             CGFloat(365 * 2)
@@ -85,19 +99,19 @@ class DashboardViewController: BaseViewController {
     }
     
     fileprivate func setupInvestmentsCollectionView(){
-        portfolioActionsCollectionView.register(UINib(nibName: InvestmentCollectionViewCell.identifier,
+        portfolioActionsCollectionView.register(UINib(nibName: DashboardActionCollectionViewCell.identifier,
                                                       bundle: nil),
-                                                forCellWithReuseIdentifier: InvestmentCollectionViewCell.identifier)
+                                                forCellWithReuseIdentifier: DashboardActionCollectionViewCell.identifier)
         portfolioActionsCollectionView.allowsMultipleSelection = false
     }
     
     fileprivate func setupWalletCollectionView(){
-        walletsActionsCollectionView.register(UINib(nibName: InvestmentCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: InvestmentCollectionViewCell.identifier)
+        walletsActionsCollectionView.register(UINib(nibName: DashboardActionThreeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DashboardActionThreeCollectionViewCell.identifier)
         walletsActionsCollectionView.allowsMultipleSelection = false
     }
     
     fileprivate func setupReferralCollectionView(){
-        referralActionsCollectionView.register(UINib(nibName: InvestmentCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: InvestmentCollectionViewCell.identifier)
+        referralActionsCollectionView.register(UINib(nibName: DashboardActionThreeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DashboardActionThreeCollectionViewCell.identifier)
         referralActionsCollectionView.allowsMultipleSelection = false
     }
     
@@ -121,6 +135,8 @@ class DashboardViewController: BaseViewController {
     private func showWalletTab() {
         hideAllTabs()
         ViewUtils.show(walletStackView)
+        contentViewHeight.constant = 758.0 + (currentInvestmentsTableViewHeight.constant)
+        contentViewHeight.isActive = true
     }
     
     private func showReferralTab() {
@@ -163,7 +179,9 @@ class DashboardViewController: BaseViewController {
     
     // Wallets Actions
     @IBAction func userPressedViewAllBreakdown(_ sender: Any) {
-        
+        let vc = viewController(type: WalletFundingViewController.self,
+                                from: StoryBoardIdentifiers.Wallet)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     // Referral Actions

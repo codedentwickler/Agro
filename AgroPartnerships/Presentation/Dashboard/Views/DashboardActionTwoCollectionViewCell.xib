@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFUIText.ttf">
+            <string>.SFUIText</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashboardActionTwoCollectionViewCell" id="c3R-Eq-Azq" customClass="DashboardActionTwoCollectionViewCell" customModule="AgroPartnerships" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="286" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20X-FU-cYV">
+                        <rect key="frame" x="16" y="0.0" width="270" height="160"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_green_radial_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="z7A-0u-pDW">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="160"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="total_investment-cell-background" translatesAutoresizingMaskIntoConstraints="NO" id="qz9-mq-Jxc">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTN-da-J0C">
+                                <rect key="frame" x="104" y="8" width="150" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW INVESTMENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tb-HU-kqR">
+                                        <rect key="frame" x="12" y="1" width="126" height="19"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                        <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0tb-HU-kqR" secondAttribute="bottom" constant="1" id="Ri8-eg-1jm"/>
+                                    <constraint firstAttribute="height" constant="21" id="e32-Rx-vrT"/>
+                                    <constraint firstItem="0tb-HU-kqR" firstAttribute="top" secondItem="CTN-da-J0C" secondAttribute="top" constant="1" id="fug-5L-Zcs"/>
+                                    <constraint firstItem="0tb-HU-kqR" firstAttribute="leading" secondItem="CTN-da-J0C" secondAttribute="leading" constant="12" id="nFW-8G-yEO"/>
+                                    <constraint firstAttribute="trailing" secondItem="0tb-HU-kqR" secondAttribute="trailing" constant="12" id="weN-Py-uF6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykC-GN-S3q">
+                                <rect key="frame" x="16" y="25" width="41" height="16"/>
+                                <fontDescription key="fontDescription" name=".SFUIText" family=".SF UI Text" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztz-Eb-Dom">
+                                <rect key="frame" x="16" y="45" width="117.5" height="53"/>
+                                <string key="text">Investment 
+Amount</string>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95,000.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8n6-cS-NZP">
+                                <rect key="frame" x="16" y="110" width="80" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ykC-GN-S3q" firstAttribute="leading" secondItem="20X-FU-cYV" secondAttribute="leading" constant="16" id="4IV-V5-dO9"/>
+                            <constraint firstAttribute="trailing" secondItem="CTN-da-J0C" secondAttribute="trailing" constant="16" id="5Dd-pP-IlF"/>
+                            <constraint firstAttribute="bottom" secondItem="z7A-0u-pDW" secondAttribute="bottom" id="7Nf-ru-0ZI"/>
+                            <constraint firstItem="Ztz-Eb-Dom" firstAttribute="top" secondItem="ykC-GN-S3q" secondAttribute="bottom" constant="4" id="ANm-EH-kVU"/>
+                            <constraint firstItem="z7A-0u-pDW" firstAttribute="top" secondItem="20X-FU-cYV" secondAttribute="top" id="CSh-r5-ZSr"/>
+                            <constraint firstAttribute="trailing" secondItem="z7A-0u-pDW" secondAttribute="trailing" id="G1H-Gb-RHY"/>
+                            <constraint firstItem="Ztz-Eb-Dom" firstAttribute="bottom" secondItem="8n6-cS-NZP" secondAttribute="top" constant="-12" id="Jlm-Qr-dVT"/>
+                            <constraint firstItem="ykC-GN-S3q" firstAttribute="top" secondItem="CTN-da-J0C" secondAttribute="bottom" constant="-4" id="Nt0-56-Bb8"/>
+                            <constraint firstItem="CTN-da-J0C" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ykC-GN-S3q" secondAttribute="trailing" constant="51" id="g4a-3t-CD1"/>
+                            <constraint firstItem="z7A-0u-pDW" firstAttribute="leading" secondItem="20X-FU-cYV" secondAttribute="leading" id="iix-PC-SUM"/>
+                            <constraint firstItem="Ztz-Eb-Dom" firstAttribute="leading" secondItem="ykC-GN-S3q" secondAttribute="leading" id="quz-kR-CiS"/>
+                            <constraint firstItem="CTN-da-J0C" firstAttribute="top" secondItem="20X-FU-cYV" secondAttribute="top" constant="8" id="tVC-6a-fTh"/>
+                            <constraint firstItem="Ztz-Eb-Dom" firstAttribute="leading" secondItem="8n6-cS-NZP" secondAttribute="leading" id="wBI-y9-9UP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="20X-FU-cYV" secondAttribute="bottom" id="2kg-Fd-Xd4"/>
+                <constraint firstItem="20X-FU-cYV" firstAttribute="top" secondItem="c3R-Eq-Azq" secondAttribute="top" id="QFH-LP-t8Q"/>
+                <constraint firstItem="20X-FU-cYV" firstAttribute="leading" secondItem="c3R-Eq-Azq" secondAttribute="leading" constant="16" id="T12-5B-lrv"/>
+                <constraint firstAttribute="trailing" secondItem="20X-FU-cYV" secondAttribute="trailing" id="zcU-UR-qw8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="7ce-QZ-hU3"/>
+            <connections>
+                <outlet property="amountLabel" destination="8n6-cS-NZP" id="vt5-mt-4AL"/>
+                <outlet property="backgroundImageView" destination="z7A-0u-pDW" id="rZJ-wb-Gjm"/>
+                <outlet property="newInvestmentButton" destination="CTN-da-J0C" id="aKM-NI-afl"/>
+                <outlet property="titleLabel" destination="Ztz-Eb-Dom" id="Eoz-m5-SQD"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="light_green_radial_gradient" width="540" height="318"/>
+        <image name="total_investment-cell-background" width="540" height="218"/>
+    </resources>
+</document>

@@ -9,7 +9,6 @@
 import UIKit
 
 class TransactionsTableViewCell: UITableViewCell {
-
     @IBOutlet weak var grayDotView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
