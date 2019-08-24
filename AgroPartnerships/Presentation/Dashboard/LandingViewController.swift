@@ -10,6 +10,8 @@ import UIKit
 import Cards
 
 class LandingViewController: BaseViewController {
+    
+    public lazy let dashboardInformation: DashboardResponse?
 
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var profilePictureImageView: UIImageView!

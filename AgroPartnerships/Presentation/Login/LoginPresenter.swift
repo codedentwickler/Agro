@@ -42,7 +42,7 @@ class LoginPresenter: BasePresenter {
         }
     }
     
-    func loadDashboardInformation() {
+    private func loadDashboardInformation() {
         
         apiService.getDashboardInformation { (dashboardResponse) in
             
