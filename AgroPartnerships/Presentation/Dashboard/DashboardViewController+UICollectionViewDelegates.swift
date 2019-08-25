@@ -44,6 +44,8 @@ extension DashboardViewController: UICollectionViewDataSource {
             Amount
             """
             cell.backgroundImageView.image = UIImage(named: "light_green_radial_gradient")
+            let totalInvestment = dashboardInformation.profile?.totalInvestment ?? 0
+            cell.amountLabel.text = totalInvestment.commaSeparatedValue
         } else {
             cell.titleLabel.text = """
             Return on
@@ -51,6 +53,8 @@ extension DashboardViewController: UICollectionViewDataSource {
             """
             cell.backgroundImageView.image = UIImage(named: "deep_green_radial_gradient")
             cell.newInvestmentButton.isHidden = true
+            let totalYield = dashboardInformation.profile?.totalYield ?? 0
+            cell.amountLabel.text = totalYield.commaSeparatedValue
         }
         return cell
     }
@@ -68,9 +72,13 @@ extension DashboardViewController: UICollectionViewDataSource {
             """
             cell.backgroundImageView.image = UIImage(named: "light_green_radial_gradient")
             cell.buttonLabel.text = "FUND WALLET"
+            let withdrawable = dashboardInformation.profile?.wallet?.funds ?? 0
+            let nonWithdrawable = dashboardInformation.profile?.wallet?.bonus?.balance ?? 0
+            let balance = withdrawable + nonWithdrawable
+            cell.amountLabel.text = balance.commaSeparatedValue
             cell.subtitleLabel.text = """
-            Withdrawable:
-            Non withdrawable:
+            Withdrawable: \(withdrawable.commaSeparatedValue)
+            Non withdrawable: \(nonWithdrawable.commaSeparatedValue)
             """
         } else {
             cell.titleLabel.text = """
@@ -80,15 +88,16 @@ extension DashboardViewController: UICollectionViewDataSource {
             cell.backgroundImageView.image = UIImage(named: "deep_green_radial_gradient")
             cell.buttonLabel.text = "REQUEST PAYOUT"
             cell.subtitleLabel.text = """
-            Last Payout: (Date)
+            Last Payout: \(dashboardInformation.lastPayoutDate()?.asDayMonthString ?? "No payout yet")
             """
+            let totalPayouts = dashboardInformation.profile?.totalPayouts ?? 0
+            cell.amountLabel.text = totalPayouts.commaSeparatedValue
         }
         
         cell.buttonView.isHidden = false
         
         return cell
     }
-  
     
     func referralActionsCollectionViewCell(_ collectionView: UICollectionView,
                                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -106,6 +115,8 @@ extension DashboardViewController: UICollectionViewDataSource {
             Non withdrawable.
             To be spent on the platform on an investment
             """
+            let totalRedeemedReferrals = dashboardInformation.totalRedeemedReferrals()
+            cell.amountLabel.text = totalRedeemedReferrals.commaSeparatedValue
         } else {
             cell.backgroundImageView.image = UIImage(named: "deep_green_radial_gradient")
             cell.titleLabel.text =

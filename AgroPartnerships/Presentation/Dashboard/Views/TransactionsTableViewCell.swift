@@ -16,8 +16,15 @@ class TransactionsTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var rootView: UIView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var transaction : Transactions! {
+        didSet {
+            if transaction.category == ApiConstants.PaymentInvestment {
+                rootView.backgroundColor = UIColor(hex: "#F8F8F8", a: 0.08)
+                iconImageView.image = UIImage(named: "red-arrow-down")
+            }
+            amountLabel.text = transaction.amount?.commaSeparatedValue
+            descriptionLabel.text = transaction.description
+            dateLabel.text = transaction.date?.asFullDate(format: "E - d MMM, yyyy")
+        }
     }
 }

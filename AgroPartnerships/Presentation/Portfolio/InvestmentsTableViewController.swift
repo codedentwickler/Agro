@@ -11,6 +11,7 @@ import UIKit
 class InvestmentsTableViewController: BaseViewController {
     
     public var isBeenUsedForPendingInvestments: Bool = false
+    internal var investments: [Portfolio]!
     
     @IBOutlet weak var menuIconImageView: UIImageView!
     @IBOutlet weak var investmentsTableView: UITableView!
@@ -74,18 +75,22 @@ class InvestmentsTableViewController: BaseViewController {
 extension InvestmentsTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return investments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if isBeenUsedForPendingInvestments {
-            return tableView.dequeueReusableCell(withIdentifier: PendingInvestmentTableViewCell.identifier)
+            let cell = tableView.dequeueReusableCell(withIdentifier: PendingInvestmentTableViewCell.identifier)
                 as! PendingInvestmentTableViewCell
+            cell.portfolio = investments[indexPath.row]
+            return cell
         } 
         
-        return tableView.dequeueReusableCell(withIdentifier: InvestmentTableViewCell.identifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: InvestmentTableViewCell.identifier)
             as! InvestmentTableViewCell
+        cell.portfolio = investments[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -33,10 +33,16 @@ struct ApiConstants {
     public static let Dob = "dob"
     public static let Token = "token"
     public static let Status = "status"
+    public static let Active = "active"
     public static let Success = "success"
+    public static let Pending = "pending"
+    
     public static let Data = "data"
     public static let Validation = "validation"
     public static let ErrorType = "errorType"
     public static let Error = "error"
-
+    
+    static let Payout =                            "payout"
+    static let PaymentInvestment =                 "payment-investment"
+    static let FundWallet =                        "fund-wallet"
 }

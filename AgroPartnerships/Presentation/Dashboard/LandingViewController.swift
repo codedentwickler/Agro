@@ -11,7 +11,7 @@ import Cards
 
 class LandingViewController: BaseViewController {
     
-    public lazy let dashboardInformation: DashboardResponse?
+    public var dashboardInformation: DashboardResponse?
 
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var profilePictureImageView: UIImageView!
@@ -25,7 +25,12 @@ class LandingViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
         setupCardsEvents()
+    }
+    
+    private func setupView() {
+        todayDateLabel.text = Date().asDayMonthString
     }
     
     private func setupCardsEvents() {
@@ -38,6 +43,8 @@ class LandingViewController: BaseViewController {
     @objc func showDashboard() {
         let vc = viewController(type: DashboardTabBarController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
+        vc.dashboardInformation = dashboardInformation
+        LoginSession.shared.setDashboardInformation(dashboardInformation: dashboardInformation!)
         present(vc, animated: true, completion: nil)
     }
 }

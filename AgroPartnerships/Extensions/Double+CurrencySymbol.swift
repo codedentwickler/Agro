@@ -10,7 +10,7 @@ import Foundation
 
 public extension Double{
     
-    public func asMoney(withDecimal: Bool = true) -> String {
+     func asMoney(withDecimal: Bool = true) -> String {
         
         let currencyFormatter = NumberFormatter()
         currencyFormatter.usesGroupingSeparator = true

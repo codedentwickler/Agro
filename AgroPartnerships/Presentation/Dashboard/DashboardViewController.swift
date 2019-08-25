@@ -10,6 +10,11 @@ import UIKit
 
 class DashboardViewController: BaseViewController {
     
+    internal var dashboardInformation: DashboardResponse!
+    internal var currentInvestments: [Portfolio] = [Portfolio]()
+    internal var investmentHistory: [Portfolio] = [Portfolio]()
+    internal var pendingInvestments: [Portfolio] = [Portfolio]()
+
     @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet weak var pageControl: UISegmentedControl!
     @IBOutlet weak var closeIconImageView: UIImageView!
@@ -47,6 +52,8 @@ class DashboardViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+        updateSizeOfViews()
         setupDelegates()
         setupDataSources()
         setupInvestmentsCollectionView()
@@ -55,12 +62,34 @@ class DashboardViewController: BaseViewController {
         setupReferralCollectionView()
         setupCurrentInvestmentsTableView()
         setupEventListeners()
-        setupView()
-    }
-    
-    private func setupView() {
+        showPortfolioTab()
         currentInvestmentsTableView.reloadData()
         transactionsTableView.reloadData()
+    }
+    
+    private func updateSizeOfViews() {
+        transactionsTableViewHeight.constant = CGFloat(128 * (dashboardInformation.transactions?.count ?? 0))
+        transactionsTableViewHeight.isActive = true
+
+        currentInvestmentsTableViewHeight.constant =
+            CGFloat(320 * (currentInvestments.count))
+        currentInvestmentsTableViewHeight.isActive = true
+    }
+
+    private func setupView() {
+        dashboardInformation = LoginSession.shared.getDashboardInformation()
+        
+        for investment in dashboardInformation.portfolio! {
+            if investment.status == ApiConstants.Active {
+                currentInvestments.append(investment)
+            } else if investment.status == ApiConstants.Pending {
+                pendingInvestments.append(investment)
+            } else {
+                investmentHistory.append(investment)
+            }
+        }
+        
+        referralInputTextfield.text = dashboardInformation.profile?.refCode
     }
     
     fileprivate func setupDataSources() {
@@ -83,19 +112,12 @@ class DashboardViewController: BaseViewController {
         transactionsTableView.register(UINib(nibName: TransactionsTableViewCell.identifier,
                                              bundle: nil),
                                        forCellReuseIdentifier: TransactionsTableViewCell.identifier)
-        
-        transactionsTableViewHeight.constant = CGFloat(128 * 6)
-        transactionsTableViewHeight.isActive = true
     }
     
     fileprivate func setupCurrentInvestmentsTableView(){
         currentInvestmentsTableView.register(UINib(nibName: CurrentInvestmentTableViewCell.identifier,
                                                    bundle: nil),
                                              forCellReuseIdentifier: CurrentInvestmentTableViewCell.identifier)
-        
-        currentInvestmentsTableViewHeight.constant =
-            CGFloat(365 * 2)
-        currentInvestmentsTableViewHeight.isActive = true
     }
     
     fileprivate func setupInvestmentsCollectionView(){
@@ -135,7 +157,7 @@ class DashboardViewController: BaseViewController {
     private func showWalletTab() {
         hideAllTabs()
         ViewUtils.show(walletStackView)
-        contentViewHeight.constant = 758.0 + (currentInvestmentsTableViewHeight.constant)
+        contentViewHeight.constant = 758.0 + (transactionsTableViewHeight.constant)
         contentViewHeight.isActive = true
     }
     
@@ -156,6 +178,7 @@ class DashboardViewController: BaseViewController {
         let vc = viewController(type: InvestmentsTableViewController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
         vc.isBeenUsedForPendingInvestments = true
+        vc.investments = pendingInvestments
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -201,7 +224,10 @@ class DashboardViewController: BaseViewController {
     
     // Porfolio Actions
     @IBAction func userPressedViewInvestmentHistory(_ sender: Any) {
-        push(viewController: InvestmentsTableViewController.self,
-             from: StoryBoardIdentifiers.Dashboard)
+        let vc = viewController(type: InvestmentsTableViewController.self,
+                                from: StoryBoardIdentifiers.Dashboard)
+        vc.isBeenUsedForPendingInvestments = false
+        vc.investments = investmentHistory
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

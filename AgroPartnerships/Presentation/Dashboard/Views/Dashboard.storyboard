@@ -592,7 +592,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYk-It-geS">
-                                                <rect key="frame" x="16" y="359.5" width="196.5" height="47"/>
+                                                <rect key="frame" x="16" y="358.5" width="382" height="48"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -605,7 +605,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keep track of your investment and  watch your money grow" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Lb-6TW">
-                                                <rect key="frame" x="16" y="426.5" width="248.5" height="37.5"/>
+                                                <rect key="frame" x="16" y="426.5" width="382" height="37.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -638,7 +638,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </constraints>
                                             </view>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-uJ-ZYe" userLabel="Wallet Stack View">
-                                                <rect key="frame" x="0.0" y="545" width="414" height="171"/>
+                                                <rect key="frame" x="0.0" y="545" width="414" height="187"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-YI-Q0K">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -655,36 +655,26 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <cells/>
                                                     </collectionView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-V1-svT">
-                                                        <rect key="frame" x="16" y="62" width="382" height="34"/>
+                                                        <rect key="frame" x="16" y="62" width="382" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="All Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-o7-F0g">
-                                                                <rect key="frame" x="0.0" y="3.5" width="224" height="27"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="All Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-o7-F0g">
+                                                                <rect key="frame" x="8" y="11.5" width="197" height="27.5"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cR-I1-w0K" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="232" y="0.0" width="150" height="34"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="jZq-1Z-s8k"/>
-                                                                </constraints>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cR-I1-w0K" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
+                                                                <rect key="frame" x="213" y="8" width="153" height="34"/>
                                                                 <state key="normal" title="View breakdown"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                                                        <color key="value" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="userPressedViewAllBreakdown:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="tvO-2G-igk"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="16"/>
                                                     </stackView>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-Xh-igB">
-                                                        <rect key="frame" x="16" y="108" width="382" height="63"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-Xh-igB">
+                                                        <rect key="frame" x="16" y="124" width="382" height="63"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="hBe-1O-Ev6"/>
@@ -695,14 +685,13 @@ Monday – Friday: 9AM – 5PM</string>
                                                     <constraint firstItem="y7d-V1-svT" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" constant="16" id="286-qC-M1H"/>
                                                     <constraint firstItem="gYe-Xh-igB" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" constant="16" id="8qq-1g-r1x"/>
                                                     <constraint firstAttribute="trailing" secondItem="gYe-Xh-igB" secondAttribute="trailing" constant="16" id="Bca-bg-6SZ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="y7d-V1-svT" secondAttribute="trailing" constant="16" id="Z9G-VK-f6G"/>
                                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gYe-Xh-igB" secondAttribute="bottom" id="qN6-ff-NHk"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3vJ-ct-rTg" userLabel="Portfolio Stack View">
                                                 <rect key="frame" x="0.0" y="545" width="414" height="855"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odF-T4-ZmV" customClass="GradientView" customModule="AgroPartnerships" customModuleProvider="target">
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odF-T4-ZmV" customClass="GradientView" customModule="AgroPartnerships" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-white" translatesAutoresizingMaskIntoConstraints="NO" id="KbQ-FL-qZV">
@@ -770,7 +759,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-oU-X1K">
-                                                        <rect key="frame" x="0.0" y="64" width="414" height="160"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="160" id="LsT-JB-pKe"/>
@@ -783,47 +772,30 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                     </collectionView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-ck-5aT">
-                                                        <rect key="frame" x="16" y="236" width="382" height="50"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-ck-5aT">
+                                                        <rect key="frame" x="16" y="172" width="382" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Current Investments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-l5-gfI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="50"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Current Investments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-l5-gfI">
+                                                                <rect key="frame" x="8" y="8" width="195" height="34"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldw-iw-IdO">
-                                                                <rect key="frame" x="194.5" y="0.0" width="21.5" height="50"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </view>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4U-EU-H7w" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="224" y="0.0" width="150" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="Z3K-7V-AbU"/>
-                                                                </constraints>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4U-EU-H7w" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
+                                                                <rect key="frame" x="211" y="8" width="155" height="34"/>
                                                                 <state key="normal" title="See History"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                                                        <color key="value" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="userPressedViewInvestmentHistory:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="v7Z-xE-DLP"/>
                                                                 </connections>
                                                             </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uo7-qL-72i">
-                                                                <rect key="frame" x="382" y="0.0" width="0.0" height="50"/>
-                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="ig0-NZ-iyN"/>
                                                         </constraints>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="16"/>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="320" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w9s-tX-cVx">
-                                                        <rect key="frame" x="16" y="298" width="382" height="557"/>
+                                                        <rect key="frame" x="16" y="234" width="382" height="621"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="700" id="jEa-vh-0Tn"/>
@@ -861,29 +833,18 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                     </collectionView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hfO-dp-SZe">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hfO-dp-SZe">
                                                         <rect key="frame" x="16" y="172" width="382" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="55f-HS-Hil">
-                                                                <rect key="frame" x="0.0" y="11.5" width="224" height="27"/>
+                                                                <rect key="frame" x="8" y="8" width="176" height="34"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-Im-iSq" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="232" y="8" width="150" height="34"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="150" id="3yi-ZQ-XkD"/>
-                                                                </constraints>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-Im-iSq" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
+                                                                <rect key="frame" x="192" y="8" width="174" height="34"/>
                                                                 <state key="normal" title="View All Referrals"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
-                                                                        <color key="value" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="userPressedViewAllReferrals:" destination="bKn-0B-1Wr" eventType="touchUpInside" id="5FY-1U-ebP"/>
                                                                 </connections>
@@ -892,18 +853,19 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="cnw-LS-s4Y"/>
                                                         </constraints>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="16"/>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x01-rQ-6oE">
                                                         <rect key="frame" x="16" y="234" width="382" height="97"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REFERRAL CODE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRE-dg-baF">
-                                                                <rect key="frame" x="16" y="20" width="151.5" height="21"/>
+                                                                <rect key="frame" x="16" y="20" width="155" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="REFCODEHERE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Op-uhG">
-                                                                <rect key="frame" x="16" y="45" width="350" height="48"/>
+                                                                <rect key="frame" x="16" y="45.5" width="350" height="47.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="25"/>
@@ -1069,6 +1031,7 @@ Monday – Friday: 9AM – 5PM</string>
                                         <constraints>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1Df-Jq-R31" secondAttribute="bottom" id="1yS-ak-pME"/>
                                             <constraint firstItem="5a7-uJ-ZYe" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="33l-wv-zoU"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZYk-It-geS" secondAttribute="trailing" constant="16" id="3Lf-u1-w7N"/>
                                             <constraint firstItem="TJh-sV-n9a" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="3mn-2F-eQu"/>
                                             <constraint firstItem="Tvw-YI-Q0K" firstAttribute="height" secondItem="tqJ-oU-X1K" secondAttribute="height" id="5X5-2x-dh9"/>
                                             <constraint firstAttribute="height" constant="1400" id="84s-PE-nxi"/>
@@ -1086,6 +1049,7 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="Vdk-j0-R1p" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" id="QN2-wg-8x8"/>
                                             <constraint firstItem="jCP-oe-fGx" firstAttribute="top" secondItem="ZYk-It-geS" secondAttribute="bottom" constant="12" id="QTX-eW-2vo"/>
                                             <constraint firstItem="0zM-Px-2NS" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="S74-Jg-IRq"/>
+                                            <constraint firstAttribute="trailing" secondItem="xQb-Lb-6TW" secondAttribute="trailing" constant="16" id="SvA-qO-bSX"/>
                                             <constraint firstAttribute="trailing" secondItem="3vJ-ct-rTg" secondAttribute="trailing" id="YP1-5t-cVx"/>
                                             <constraint firstItem="1Df-Jq-R31" firstAttribute="top" secondItem="0zM-Px-2NS" secondAttribute="bottom" id="av2-Ah-AhA"/>
                                             <constraint firstAttribute="trailing" secondItem="TJh-sV-n9a" secondAttribute="trailing" id="bHp-gY-F1N"/>
@@ -1165,7 +1129,7 @@ Monday – Friday: 9AM – 5PM</string>
                                         <rect key="frame" x="16" y="8" width="382" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="T8T-UO-hVH">
-                                                <rect key="frame" x="0.0" y="11.5" width="346" height="27"/>
+                                                <rect key="frame" x="0.0" y="11.5" width="346" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>

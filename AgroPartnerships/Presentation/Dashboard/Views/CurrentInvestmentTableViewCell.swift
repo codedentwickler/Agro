@@ -10,16 +10,27 @@ import UIKit
 
 class CurrentInvestmentTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
+    @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var returnsLabel: UILabel!
+    @IBOutlet weak var unitsLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var yieldDateLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+  
+    var portfolio : Portfolio! {
+        didSet {
+            titleLabel.text = portfolio.investment?.title
+            subtitleLabel.text = "\(portfolio.code!) ‒‒ \(portfolio.investment?.price?.commaSeparatedValue ?? "")/unit"
+            returnsLabel.text = "\(portfolio.yield ?? 0)%"
+            unitsLabel.text = portfolio.units?.commaSeparatedValue
+            amountLabel.text = portfolio.amount?.commaSeparatedValue
+            typeLabel.text = portfolio.investment?.type?.capitalizeFirstLetter()
+            startDateLabel.text = portfolio.startDate?.asFullDate(format: "EEEE\nMMM d, yyyy")
+            yieldDateLabel.text = portfolio.endDate?.asFullDate(format: "EEEE\nMMM d, yyyy")
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

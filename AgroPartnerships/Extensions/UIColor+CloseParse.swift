@@ -99,7 +99,7 @@ extension UIColor {
 extension UIColor {
    
     static var appAccent: UIColor {
-        return UIColor(hex: "#FFCD3F", a: 0.15)
+        return UIColor(hex: "FFCD3F", a: 0.15)
     }
     
     static var appAccentThin: UIColor{
@@ -155,7 +155,7 @@ extension UIColor {
     }
     
     static var appGreen2: UIColor{
-        return UIColor(hex: "00B394")
+        return UIColor(hex: "8DC63F")
     }
     
     static var appGrdGreen: UIColor{

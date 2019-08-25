@@ -10,6 +10,11 @@ import UIKit
 
 class WalletFundingViewController: BaseViewController {
     
+    public var transactions: [Transactions]!
+    
+    private var fundingTransactions: [Transactions] = [Transactions]()
+    private var payoutsTransactions: [Transactions] = [Transactions]()
+
     @IBOutlet weak var menuIconImageView: UIImageView!
     @IBOutlet weak var fundingHistoryTableView: UITableView!
     @IBOutlet weak var payoutsHistoryTableView: UITableView!
@@ -94,6 +99,14 @@ class WalletFundingViewController: BaseViewController {
         payoutsHistoryTableView.register(UINib(nibName: TransactionsTableViewCell.identifier,
                                                  bundle: nil),
                                            forCellReuseIdentifier: TransactionsTableViewCell.identifier)
+        
+        for transaction in transactions {
+            if transaction.category == ApiConstants.Payout {
+                payoutsTransactions.append(transaction)
+            } else if transaction.category == ApiConstants.FundWallet {
+                fundingTransactions.append(transaction)
+            }
+        }
     }
     
     @objc private func userTapMenuButton() {
@@ -121,7 +134,7 @@ class WalletFundingViewController: BaseViewController {
 extension WalletFundingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return tableView == fundingHistoryTableView ? fundingTransactions.count : payoutsTransactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,8 +143,9 @@ extension WalletFundingViewController: UITableViewDelegate, UITableViewDataSourc
             as! TransactionsTableViewCell
         
         if tableView == payoutsHistoryTableView {
-            cell.rootView.backgroundColor = UIColor(hex: "#F8F8F8", a: 0.08)
-            cell.iconImageView.image = UIImage(named: "red-arrow-down")
+            cell.transaction = payoutsTransactions[indexPath.row]
+        } else {
+            cell.transaction = fundingTransactions[indexPath.row]
         }
         
         return cell

@@ -15,4 +15,10 @@ extension Date {
         dateFormatter.dateFormat = "HH:mm, MMM dd, yyyy"
         return dateFormatter.string(from: self)
     }
+    
+    var asDayMonthString: String! {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        return dateFormatter.string(from: self)
+    }
 }

@@ -122,10 +122,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-D8-emr">
-                                <rect key="frame" x="112.5" y="142" width="72" height="36"/>
+                                <rect key="frame" x="112.5" y="142" width="39.5" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="RETURNS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQH-w1-aga">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="TYPE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQH-w1-aga">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="18"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -171,7 +171,7 @@
                                 </userDefinedRuntimeAttributes>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Xrz-Dd-QwG">
-                                <rect key="frame" x="192.5" y="232" width="97.5" height="51.5"/>
+                                <rect key="frame" x="160" y="232" width="97.5" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YIELD DATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zun-qf-SRI">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="18"/>
@@ -262,6 +262,18 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="9gK-bZ-qWd"/>
             <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="amountLabel" destination="ArD-2e-fUt" id="CFR-hS-jdK"/>
+                <outlet property="photoImage" destination="9El-XB-9lw" id="rKc-da-Q5c"/>
+                <outlet property="progressView" destination="Nl9-im-Tx2" id="nSM-7s-8dR"/>
+                <outlet property="returnsLabel" destination="jbV-wr-8jY" id="sfn-SZ-gE0"/>
+                <outlet property="startDateLabel" destination="II5-xY-2Vt" id="uLD-DK-0Zh"/>
+                <outlet property="subtitleLabel" destination="tDI-Zd-kVF" id="YFO-S4-hzs"/>
+                <outlet property="titleLabel" destination="e89-MQ-Lb1" id="QL3-Gx-II0"/>
+                <outlet property="typeLabel" destination="O6a-mP-iYO" id="KLR-GH-5EO"/>
+                <outlet property="unitsLabel" destination="S38-BI-1im" id="og8-Qp-QPu"/>
+                <outlet property="yieldDateLabel" destination="z0d-Pq-11D" id="p31-DR-lRE"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>
