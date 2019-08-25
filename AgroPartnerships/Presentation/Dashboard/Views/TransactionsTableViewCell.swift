@@ -18,7 +18,7 @@ class TransactionsTableViewCell: UITableViewCell {
     
     var transaction : Transactions! {
         didSet {
-            if transaction.category == ApiConstants.PaymentInvestment {
+            if transaction.category != ApiConstants.FundWallet {
                 rootView.backgroundColor = UIColor(hex: "#F8F8F8", a: 0.08)
                 iconImageView.image = UIImage(named: "red-arrow-down")
             }

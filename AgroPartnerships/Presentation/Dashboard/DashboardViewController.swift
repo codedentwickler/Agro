@@ -204,6 +204,7 @@ class DashboardViewController: BaseViewController {
     @IBAction func userPressedViewAllBreakdown(_ sender: Any) {
         let vc = viewController(type: WalletFundingViewController.self,
                                 from: StoryBoardIdentifiers.Wallet)
+        vc.transactions = dashboardInformation.transactions
         navigationController?.pushViewController(vc, animated: true)
     }
 
