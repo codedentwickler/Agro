@@ -18,8 +18,6 @@ class AgroActionButton: UIButton {
     }
     
     private func setup() {
-    
-        self.contentHorizontalAlignment = .center
         
         self.hideToastActivity()
         self.clipsToBounds = true

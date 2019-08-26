@@ -29,9 +29,10 @@
         <!--Invest-->
         <scene sceneID="w09-dc-kij">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Oa-Js-m5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lke-hY-kgv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A3k-3d-0sg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="UZh-3a-XDh"/>
@@ -40,7 +41,6 @@
                         <color key="badgeColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Oa-Js-m5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-516" y="546"/>
         </scene>
@@ -592,20 +592,20 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYk-It-geS">
-                                                <rect key="frame" x="16" y="358.5" width="382" height="48"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="40"/>
+                                                <rect key="frame" x="16" y="372" width="382" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-oe-fGx">
-                                                <rect key="frame" x="16" y="418.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="417.5" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239726024" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="L7n-Rh-4sD"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keep track of your investment and  watch your money grow" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Lb-6TW">
-                                                <rect key="frame" x="16" y="426.5" width="382" height="37.5"/>
+                                                <rect key="frame" x="16" y="425.5" width="382" height="38.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -703,7 +703,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have one pending investment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-6i-ggt">
-                                                                <rect key="frame" x="56" y="18.5" width="200" height="15.5"/>
+                                                                <rect key="frame" x="56" y="18" width="210" height="16"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -712,7 +712,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <rect key="frame" x="312" y="12" width="86" height="28"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz8-Mk-K8n">
-                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21"/>
+                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21.5"/>
                                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -1273,10 +1273,7 @@ Monday – Friday: 9AM – 5PM</string>
                     </tabBar>
                     <connections>
                         <segue destination="o3r-lE-JAm" kind="relationship" relationship="viewControllers" id="go9-ZR-qJU"/>
-                        <segue destination="lke-hY-kgv" kind="relationship" relationship="viewControllers" id="QQA-Y9-nGQ"/>
-                        <segue destination="fr9-rh-t5N" kind="relationship" relationship="viewControllers" id="h65-J8-mPB"/>
-                        <segue destination="OJv-Nt-pcN" kind="relationship" relationship="viewControllers" id="JeS-W3-mNR"/>
-                        <segue destination="2xU-CY-iVW" kind="relationship" relationship="viewControllers" id="wDH-mR-aeh"/>
+                        <segue destination="Pm3-bz-Y1c" kind="relationship" relationship="viewControllers" id="YvR-E0-Pyp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxJ-8E-ZdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1308,7 +1305,7 @@ Monday – Friday: 9AM – 5PM</string>
             <objects>
                 <viewController id="fr9-rh-t5N" userLabel="About" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0zm-0r-gom">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="PyY-ca-KVc"/>
@@ -1319,14 +1316,14 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uI9-eE-zTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-516" y="546"/>
+            <point key="canvasLocation" x="-1296" y="546"/>
         </scene>
         <!--Helpdesk-->
         <scene sceneID="tha-9X-96H">
             <objects>
                 <viewController id="OJv-Nt-pcN" userLabel="Helpdesk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0qo-Oo-Xyx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="GG6-c8-Ydb"/>
@@ -1344,7 +1341,7 @@ Monday – Friday: 9AM – 5PM</string>
             <objects>
                 <viewController id="2xU-CY-iVW" userLabel="Profile" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n3q-X5-xjZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="gGn-eR-xQi"/>
@@ -1356,6 +1353,225 @@ Monday – Friday: 9AM – 5PM</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FZ-YK-5BN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="546"/>
+        </scene>
+        <!--Invest-->
+        <scene sceneID="gRU-wQ-4sL">
+            <objects>
+                <viewController storyboardIdentifier="InvestViewController" id="Pm3-bz-Y1c" customClass="InvestViewController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bNl-rz-hqd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1417"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQo-yo-ihM" userLabel="topmost guide view">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="jHj-87-Or8"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="xn9-cX-DhI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1417"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I0-St-csA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invest-illustration" translatesAutoresizingMaskIntoConstraints="NO" id="PlM-L3-bhU">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PlM-L3-bhU" secondAttribute="height" multiplier="375:435" id="mse-1N-In2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awA-tC-dzr" customClass="GradientView" customModule="AgroPartnerships" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVEST" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-Hu-MRR">
+                                                <rect key="frame" x="16" y="350" width="382" height="41"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
+                                                <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joe-ll-ACR">
+                                                <rect key="frame" x="16" y="403" width="382" height="1"/>
+                                                <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Zx5-EM-G7H"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available farms and commodities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3b-aY-aXv">
+                                                <rect key="frame" x="16" y="411" width="382" height="53"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="JHh-na-Uub">
+                                                <rect key="frame" x="366" y="40" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="C8D-kH-Eft"/>
+                                                    <constraint firstAttribute="width" constant="32" id="kMO-pA-0e9"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uhG-bR-oe4">
+                                                <rect key="frame" x="0.0" y="496" width="414" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Investments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dh3-4K-0mJ">
+                                                        <rect key="frame" x="16" y="8" width="320.5" height="34"/>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                        <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0w-il-Pmi" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
+                                                        <rect key="frame" x="344.5" y="8" width="53.5" height="34"/>
+                                                        <state key="normal" title="See All"/>
+                                                        <connections>
+                                                            <action selector="userPressedSeeAllAvailableInvestments:" destination="Pm3-bz-Y1c" eventType="touchUpInside" id="hBE-Jy-PuE"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="e8X-to-dQu"/>
+                                                </constraints>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
+                                            </stackView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RSX-7h-uEQ">
+                                                <rect key="frame" x="0.0" y="554" width="414" height="482"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="482" id="s5u-Xf-Ilw"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vfg-I7-Gcu">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y12-AU-yd4">
+                                                <rect key="frame" x="0.0" y="1056" width="414" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sold Out Investments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-cH-0WK">
+                                                        <rect key="frame" x="16" y="8" width="319" height="34"/>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                        <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOy-cU-ev5" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
+                                                        <rect key="frame" x="343" y="8" width="55" height="34"/>
+                                                        <state key="normal" title="See All"/>
+                                                        <connections>
+                                                            <action selector="userPressedSeeAllSoldOutInvestments:" destination="Pm3-bz-Y1c" eventType="touchUpInside" id="rpv-XK-3hF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kgT-8i-0cA"/>
+                                                </constraints>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="16" bottom="8" trailing="16"/>
+                                            </stackView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="320" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mvk-Lg-1WA">
+                                                <rect key="frame" x="16" y="1114" width="382" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="Bbb-aT-TQN"/>
+                                                </constraints>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="awA-tC-dzr" secondAttribute="trailing" id="0hc-up-qBc"/>
+                                            <constraint firstItem="G3b-aY-aXv" firstAttribute="bottom" secondItem="PlM-L3-bhU" secondAttribute="bottom" constant="-16" id="0xC-WI-U0A"/>
+                                            <constraint firstItem="JHh-na-Uub" firstAttribute="top" secondItem="0I0-St-csA" secondAttribute="top" constant="40" id="2Sm-oY-aUI"/>
+                                            <constraint firstItem="Y12-AU-yd4" firstAttribute="top" secondItem="RSX-7h-uEQ" secondAttribute="bottom" constant="20" id="2pX-IN-NZy"/>
+                                            <constraint firstItem="Mvk-Lg-1WA" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" constant="16" id="3bE-ga-cUh"/>
+                                            <constraint firstAttribute="trailing" secondItem="RSX-7h-uEQ" secondAttribute="trailing" id="3v1-Cd-HqI"/>
+                                            <constraint firstItem="awA-tC-dzr" firstAttribute="height" secondItem="PlM-L3-bhU" secondAttribute="height" id="65F-fK-ANb"/>
+                                            <constraint firstItem="DrP-Hu-MRR" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" constant="16" id="8M4-i2-PEW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mvk-Lg-1WA" secondAttribute="trailing" constant="16" id="8r7-aX-0FC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mvk-Lg-1WA" secondAttribute="trailing" constant="16" id="EqP-Ip-fRz"/>
+                                            <constraint firstItem="Y12-AU-yd4" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" id="Fkn-XX-uah"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y12-AU-yd4" secondAttribute="trailing" id="Ioe-U9-9iN"/>
+                                            <constraint firstAttribute="trailing" secondItem="G3b-aY-aXv" secondAttribute="trailing" constant="16" id="Jen-Cl-LSP"/>
+                                            <constraint firstItem="Mvk-Lg-1WA" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" constant="16" id="Kl5-g5-l1N"/>
+                                            <constraint firstAttribute="trailing" secondItem="JHh-na-Uub" secondAttribute="trailing" constant="16" id="KqN-am-aAY"/>
+                                            <constraint firstAttribute="trailing" secondItem="DrP-Hu-MRR" secondAttribute="trailing" constant="16" id="OjB-aY-USd"/>
+                                            <constraint firstItem="awA-tC-dzr" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" id="RFL-fR-7Ec"/>
+                                            <constraint firstItem="RSX-7h-uEQ" firstAttribute="top" secondItem="uhG-bR-oe4" secondAttribute="bottom" constant="8" id="S4C-77-qSE"/>
+                                            <constraint firstItem="G3b-aY-aXv" firstAttribute="leading" secondItem="PlM-L3-bhU" secondAttribute="leading" constant="16" id="VVY-hs-maV"/>
+                                            <constraint firstItem="PlM-L3-bhU" firstAttribute="top" secondItem="0I0-St-csA" secondAttribute="top" id="XbR-o2-Kt6"/>
+                                            <constraint firstItem="G3b-aY-aXv" firstAttribute="top" secondItem="DrP-Hu-MRR" secondAttribute="bottom" constant="20" id="Xv0-XB-EJD"/>
+                                            <constraint firstAttribute="trailing" secondItem="joe-ll-ACR" secondAttribute="trailing" constant="16" id="Yan-Ko-7ns"/>
+                                            <constraint firstItem="PlM-L3-bhU" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" id="a2g-Ao-NX0"/>
+                                            <constraint firstAttribute="trailing" secondItem="PlM-L3-bhU" secondAttribute="trailing" id="aZY-ed-tdl"/>
+                                            <constraint firstItem="uhG-bR-oe4" firstAttribute="top" secondItem="PlM-L3-bhU" secondAttribute="bottom" constant="16" id="hFr-OZ-cAN"/>
+                                            <constraint firstAttribute="trailing" secondItem="uhG-bR-oe4" secondAttribute="trailing" id="j6G-8h-vS5"/>
+                                            <constraint firstItem="joe-ll-ACR" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" constant="16" id="j9m-Ta-VYW"/>
+                                            <constraint firstItem="uhG-bR-oe4" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" id="mMY-nd-Gdw"/>
+                                            <constraint firstAttribute="height" constant="1500" id="sry-I0-eb4"/>
+                                            <constraint firstItem="joe-ll-ACR" firstAttribute="top" secondItem="DrP-Hu-MRR" secondAttribute="bottom" constant="12" id="ySx-CK-SQm"/>
+                                            <constraint firstItem="awA-tC-dzr" firstAttribute="top" secondItem="0I0-St-csA" secondAttribute="top" id="yUC-Vl-aqk"/>
+                                            <constraint firstItem="Mvk-Lg-1WA" firstAttribute="top" secondItem="Y12-AU-yd4" secondAttribute="bottom" constant="8" id="yhL-V8-p2j"/>
+                                            <constraint firstItem="RSX-7h-uEQ" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" id="ynT-Vb-1xE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0I0-St-csA" secondAttribute="trailing" id="2Ax-TT-Xsl"/>
+                                    <constraint firstItem="0I0-St-csA" firstAttribute="leading" secondItem="xn9-cX-DhI" secondAttribute="leading" id="8Bc-Sr-TzS"/>
+                                    <constraint firstItem="c3K-9b-Cib" firstAttribute="trailing" secondItem="0I0-St-csA" secondAttribute="trailing" id="D4B-Ra-pnF"/>
+                                    <constraint firstItem="0I0-St-csA" firstAttribute="top" secondItem="xn9-cX-DhI" secondAttribute="top" id="F8r-gH-23U"/>
+                                    <constraint firstAttribute="trailing" secondItem="0I0-St-csA" secondAttribute="trailing" id="Fye-dg-XG8"/>
+                                    <constraint firstAttribute="bottom" secondItem="0I0-St-csA" secondAttribute="bottom" id="Mve-nm-42A"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="c3K-9b-Cib"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dQo-yo-ihM" firstAttribute="leading" secondItem="bNl-rz-hqd" secondAttribute="leading" id="0Kt-gf-YcB"/>
+                            <constraint firstItem="xn9-cX-DhI" firstAttribute="leading" secondItem="bNl-rz-hqd" secondAttribute="leading" id="1aK-0c-tfc"/>
+                            <constraint firstItem="xn9-cX-DhI" firstAttribute="trailing" secondItem="bNl-rz-hqd" secondAttribute="trailing" id="Bqo-mr-WV5"/>
+                            <constraint firstAttribute="bottom" secondItem="xn9-cX-DhI" secondAttribute="bottom" id="K6H-1k-a0j"/>
+                            <constraint firstItem="xn9-cX-DhI" firstAttribute="top" secondItem="bNl-rz-hqd" secondAttribute="top" id="kvs-ld-Ntf"/>
+                            <constraint firstAttribute="trailing" secondItem="dQo-yo-ihM" secondAttribute="trailing" id="teT-N3-ILi"/>
+                            <constraint firstItem="dQo-yo-ihM" firstAttribute="top" secondItem="vwu-vv-62T" secondAttribute="top" id="u3o-eu-J2u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vwu-vv-62T"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Invest" image="invest-icon-unselected" landscapeImage="invest-icon-unselected" selectedImage="invest-icon-selected" id="eAc-8j-FmI">
+                        <color key="badgeColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="dFj-6t-P7T"/>
+                    <size key="freeformSize" width="414" height="1500"/>
+                    <connections>
+                        <outlet property="availableInvestmentsCollectionView" destination="RSX-7h-uEQ" id="QmF-8I-hEg"/>
+                        <outlet property="closeIconImageView" destination="JHh-na-Uub" id="FI6-zs-xhB"/>
+                        <outlet property="contentViewHeight" destination="sry-I0-eb4" id="1x7-gL-OBI"/>
+                        <outlet property="soldOutInvestmentsTableView" destination="Mvk-Lg-1WA" id="4Qh-t5-gVg"/>
+                        <outlet property="soldOutInvestmentsTableViewHeight" destination="Bbb-aT-TQN" id="GKo-mf-LBS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Mp-lw-3EY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="156.69642857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -1372,6 +1588,9 @@ Monday – Friday: 9AM – 5PM</string>
         <image name="info-white" width="18" height="18"/>
         <image name="invest-card-illustration" width="343" height="412"/>
         <image name="invest-icon" width="26" height="19"/>
+        <image name="invest-icon-selected" width="26" height="19"/>
+        <image name="invest-icon-unselected" width="26" height="19"/>
+        <image name="invest-illustration" width="750" height="870"/>
         <image name="landing-image-bg" width="750" height="686"/>
         <image name="menu-icon" width="28" height="28"/>
         <image name="profile" width="657" height="657"/>

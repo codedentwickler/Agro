@@ -23,9 +23,13 @@ class WalletFundingViewController: BaseViewController {
     @IBOutlet weak var actionButton: AgroActionButton!
     @IBOutlet weak var pagerControl: UISegmentedControl!
     
+    private var fundWalletPresenter: FundWalletPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fundWalletPresenter = FundWalletPresenter(apiService: ApiServiceImplementation.shared,
+                                                  view: self)
         setupUI()
         setupTableViewDelegates()
     }
@@ -59,16 +63,17 @@ class WalletFundingViewController: BaseViewController {
     @IBAction func userPressedActionButton(_ sender: Any) {
         
         if pagerControl.selectedSegmentIndex == 0 {
-            pushFundWalletController()
+            fundWalletPresenter.getAllCards()
         } else {
             pushRequestPayoutController()
         }
     }
     
-    private func pushFundWalletController() {
+    private func pushFundWalletController(cards: [CreditCard]) {
         
         let vc  = viewController(type: FundWalletViewController.self,
                                  from: StoryBoardIdentifiers.Wallet)
+        vc.cards = cards
         navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -130,7 +135,6 @@ class WalletFundingViewController: BaseViewController {
     }
 }
 
-
 extension WalletFundingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -152,5 +156,12 @@ extension WalletFundingViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+
+extension WalletFundingViewController: FundWalletView {
+    
+    func showFundYourWalletPage(cards: [CreditCard]) {
+        pushFundWalletController(cards: cards)
     }
 }

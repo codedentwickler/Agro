@@ -3,7 +3,7 @@ import Alamofire
 import SwiftyJSON
 
 class ApiServiceImplementation : ApiService {
- 
+  
     static let shared = ApiServiceImplementation()
     
     func login(email : String,
@@ -58,6 +58,28 @@ class ApiServiceImplementation : ApiService {
                 completion(nil)
             }
         }
+    }
+    
+    func getAllCards(completion: @escaping (CardsResponse?) -> Void) {
+        Network.shared.request(ApiEndPoints.cards()) { (response) in
+            if let response = response {
+                completion(CardsResponse(response))
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func deleteCard(signature: String, completion: @escaping (String?) -> Void) {
+        
+        Network.shared.request(ApiEndPoints.cards(), method: .delete,
+                               parameters: ["signature": signature]) { (json) in
+                                completion(json?[ApiConstants.Status].stringValue)
+        }
+    }
+    
+    func addCard(cardRequest: CardRequest, completion: @escaping (CreditCard?) -> Void) {
+        
     }
     
     func initializeInvestment(item: String,

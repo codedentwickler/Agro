@@ -49,4 +49,10 @@ protocol ApiService {
                        phone: String?,
                        title: String?,
                        completion: @escaping (_ response: ProfileUpdateResponse? ) -> Void)
+    
+    func getAllCards(completion: @escaping (_ response: CardsResponse? ) -> Void)
+    
+    func deleteCard(signature: String, completion: @escaping (_ status: String? ) -> Void)
+    
+    func addCard(cardRequest: CardRequest, completion: @escaping (_ response: CreditCard? ) -> Void)
 }

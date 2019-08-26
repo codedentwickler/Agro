@@ -37,4 +37,8 @@ struct ApiEndPoints {
     static func updateProfile() -> String {
         return "\(ApiConstants.BaseUrl)/user/profile"
     }
+    
+    static func cards() -> String {
+        return "\(ApiConstants.BaseUrl)/user/card-authorization"
+    }
 }

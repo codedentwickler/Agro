@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class InvestmentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var photoImage: UIImageView!
