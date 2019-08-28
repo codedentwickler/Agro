@@ -34,16 +34,20 @@ class LandingViewController: BaseViewController {
     }
     
     private func setupCardsEvents() {
-        let tap = UITapGestureRecognizer(target: self,
-                                         action: #selector(showDashboard))
-        dashboardCard.isUserInteractionEnabled = true
-        dashboardCard.addGestureRecognizer(tap)
+        
+        for (index, card) in [dashboardCard, investCard].enumerated() {
+            let tap = UITapGestureRecognizer(target: self,
+                                             action: #selector(showDashboard))
+            dashboardCard.isUserInteractionEnabled = true
+            dashboardCard.addGestureRecognizer(tap)
+        }
     }
     
-    @objc func showDashboard() {
+    @objc func showDashboard(index: Int) {
         let vc = viewController(type: DashboardTabBarController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
         vc.dashboardInformation = dashboardInformation
+        vc.selectedIndex = index
         LoginSession.shared.setDashboardInformation(dashboardInformation: dashboardInformation!)
         present(vc, animated: true, completion: nil)
     }

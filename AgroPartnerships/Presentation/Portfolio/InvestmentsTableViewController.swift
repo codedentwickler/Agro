@@ -13,6 +13,7 @@ class InvestmentsTableViewController: BaseViewController {
     public var isBeenUsedForPendingInvestments: Bool = false
     internal var investments: [Portfolio]!
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var menuIconImageView: UIImageView!
     @IBOutlet weak var investmentsTableView: UITableView!
     
@@ -28,6 +29,10 @@ class InvestmentsTableViewController: BaseViewController {
     }
     
     private func setupView() {
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(userTapMenuButton))
+        menuIconImageView.isUserInteractionEnabled = true
+        menuIconImageView.addGestureRecognizer(tap)
         
         investmentsTableView.delegate = self
         investmentsTableView.dataSource = self
@@ -35,16 +40,16 @@ class InvestmentsTableViewController: BaseViewController {
     }
     
     private func updateUIForPendingInvestments() {
+        titleLabel.text = "Pending Investment(s)"
+
         investmentsTableView.register(UINib(nibName: PendingInvestmentTableViewCell.identifier,
                                             bundle: nil),
                                       forCellReuseIdentifier: PendingInvestmentTableViewCell.identifier)
     }
 
     private func setupUIForInvestmentsHistory() {
-        let tap = UITapGestureRecognizer(target: self,
-                                         action: #selector(userTapMenuButton))
-        menuIconImageView.isUserInteractionEnabled = true
-        menuIconImageView.addGestureRecognizer(tap)
+        
+        titleLabel.text = "Investment History"
         
         investmentsTableView.register(UINib(nibName: InvestmentTableViewCell.identifier,
                                             bundle: nil),
@@ -57,10 +62,10 @@ class InvestmentsTableViewController: BaseViewController {
             creatAlertAction("Sort by Date (Most recent)", style: .default, clicked: { _ in
                 
             }),
-            creatAlertAction("Sort by Amount Invested (Highest)", style: .default, clicked: { _ in
+            creatAlertAction("Sort by Date (Least recent)", style: .default, clicked: { _ in
                 
             }),
-            creatAlertAction("Sort by Units bought (High to low)", style: .default, clicked: { _ in
+            creatAlertAction("Sort by Amount (High to low)", style: .default, clicked: { _ in
                 
             }),
             creatAlertAction("Cancel", style: .cancel, clicked: { _ in

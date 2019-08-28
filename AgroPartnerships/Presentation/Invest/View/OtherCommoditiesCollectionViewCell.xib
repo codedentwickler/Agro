@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OtherCommoditiesCollectionViewCell" id="xb4-yR-ysz" customClass="OtherCommoditiesCollectionViewCell" customModule="AgroPartnerships" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pk2-SB-AP6">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jub-VX-swQ" customClass="Card" customModule="Cards">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cardRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="investment-sample-image"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYS-uA-dpg" userLabel="View Button">
+                                <rect key="frame" x="251" y="216" width="68" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXX-Z0-ARG">
+                                        <rect key="frame" x="16" y="4" width="36" height="20"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                                        <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Drh-NA-PWf"/>
+                                    <constraint firstItem="eXX-Z0-ARG" firstAttribute="top" secondItem="NYS-uA-dpg" secondAttribute="top" constant="4" id="FsP-38-ik1"/>
+                                    <constraint firstItem="eXX-Z0-ARG" firstAttribute="leading" secondItem="NYS-uA-dpg" secondAttribute="leading" constant="16" id="HIH-jR-IXV"/>
+                                    <constraint firstAttribute="trailing" secondItem="eXX-Z0-ARG" secondAttribute="trailing" constant="16" id="ess-TH-20a"/>
+                                    <constraint firstAttribute="bottom" secondItem="eXX-Z0-ARG" secondAttribute="bottom" constant="4" id="xEg-xs-Lx0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJS-Pf-uD2">
+                                <rect key="frame" x="16" y="16" width="60" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="farm-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-ug-A8n">
+                                        <rect key="frame" x="17" y="14" width="26" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="45Y-JB-ZeH"/>
+                                            <constraint firstAttribute="width" secondItem="5Rn-ug-A8n" secondAttribute="height" multiplier="26:32" id="dWV-U4-7g6"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9iu-tB-nnz"/>
+                                    <constraint firstItem="5Rn-ug-A8n" firstAttribute="centerY" secondItem="vJS-Pf-uD2" secondAttribute="centerY" id="MkR-4k-fMD"/>
+                                    <constraint firstItem="5Rn-ug-A8n" firstAttribute="centerX" secondItem="vJS-Pf-uD2" secondAttribute="centerX" id="OmP-Wt-mjm"/>
+                                    <constraint firstAttribute="width" constant="60" id="yNE-Ui-hfx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53x-Y6-Qa5">
+                                <rect key="frame" x="16" y="157" width="303" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="x9S-el-Bb1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₦95,000.00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB2-VW-y6S">
+                                <rect key="frame" x="16" y="174" width="117" height="26.5"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet Potato - 02" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urk-on-HVF">
+                                <rect key="frame" x="16" y="107.5" width="303" height="33.5"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="35% in 7 months" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-TP-KAk">
+                                <rect key="frame" x="16" y="224.5" width="227" height="19.5"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="FARM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-es-iPT">
+                                <rect key="frame" x="16" y="77.5" width="43" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="/UNIT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLz-IJ-116">
+                                <rect key="frame" x="133" y="184.5" width="37" height="16"/>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NYS-uA-dpg" secondAttribute="trailing" constant="16" id="3Om-FU-Ec1"/>
+                            <constraint firstAttribute="bottom" secondItem="NYS-uA-dpg" secondAttribute="bottom" constant="16" id="4OB-8M-PYC"/>
+                            <constraint firstAttribute="bottom" secondItem="Jub-VX-swQ" secondAttribute="bottom" id="60r-iV-lEa"/>
+                            <constraint firstItem="Jub-VX-swQ" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" id="8a7-bD-XsC"/>
+                            <constraint firstItem="NYS-uA-dpg" firstAttribute="leading" secondItem="iAd-TP-KAk" secondAttribute="trailing" constant="8" id="8qZ-yn-7J2"/>
+                            <constraint firstItem="iAd-TP-KAk" firstAttribute="top" secondItem="LB2-VW-y6S" secondAttribute="bottom" constant="24" id="Eh3-9i-SbC"/>
+                            <constraint firstAttribute="trailing" secondItem="Urk-on-HVF" secondAttribute="trailing" constant="16" id="HnP-wE-zks"/>
+                            <constraint firstItem="sLz-IJ-116" firstAttribute="leading" secondItem="LB2-VW-y6S" secondAttribute="trailing" id="J0M-i6-bfh"/>
+                            <constraint firstAttribute="trailing" secondItem="53x-Y6-Qa5" secondAttribute="trailing" constant="16" id="MDg-2h-v9W"/>
+                            <constraint firstItem="LB2-VW-y6S" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="SWP-C3-q4t"/>
+                            <constraint firstItem="Jub-VX-swQ" firstAttribute="top" secondItem="Pk2-SB-AP6" secondAttribute="top" id="Sgr-yP-vef"/>
+                            <constraint firstItem="iAd-TP-KAk" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="WOF-1L-PD6"/>
+                            <constraint firstItem="sLz-IJ-116" firstAttribute="bottom" secondItem="LB2-VW-y6S" secondAttribute="bottom" id="cj6-5C-wkC"/>
+                            <constraint firstItem="LB2-VW-y6S" firstAttribute="top" secondItem="53x-Y6-Qa5" secondAttribute="bottom" constant="16" id="dHC-te-CDf"/>
+                            <constraint firstItem="Urk-on-HVF" firstAttribute="top" secondItem="XeN-es-iPT" secondAttribute="bottom" constant="12" id="fgq-j9-0tX"/>
+                            <constraint firstItem="53x-Y6-Qa5" firstAttribute="top" secondItem="Urk-on-HVF" secondAttribute="bottom" constant="16" id="h9r-Mk-KZO"/>
+                            <constraint firstItem="XeN-es-iPT" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="hYo-97-Wz2"/>
+                            <constraint firstAttribute="bottom" secondItem="iAd-TP-KAk" secondAttribute="bottom" constant="16" id="ivc-qv-q5c"/>
+                            <constraint firstItem="vJS-Pf-uD2" firstAttribute="top" secondItem="Pk2-SB-AP6" secondAttribute="top" constant="16" id="ooZ-3D-7Q4"/>
+                            <constraint firstItem="Urk-on-HVF" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="pbL-Rc-lq9"/>
+                            <constraint firstAttribute="trailing" secondItem="Jub-VX-swQ" secondAttribute="trailing" id="pyS-4j-tgM"/>
+                            <constraint firstItem="53x-Y6-Qa5" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="uHD-qO-xTU"/>
+                            <constraint firstItem="vJS-Pf-uD2" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="yDo-S8-pYW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Pk2-SB-AP6" secondAttribute="trailing" id="NTg-y8-hh3"/>
+                <constraint firstItem="Pk2-SB-AP6" firstAttribute="top" secondItem="xb4-yR-ysz" secondAttribute="top" id="Ocu-nA-avp"/>
+                <constraint firstAttribute="bottom" secondItem="Pk2-SB-AP6" secondAttribute="bottom" id="QbJ-iX-4Dk"/>
+                <constraint firstItem="Pk2-SB-AP6" firstAttribute="leading" secondItem="xb4-yR-ysz" secondAttribute="leading" id="tOU-x8-qEK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="H3i-x2-6e1"/>
+            <connections>
+                <outlet property="amountLabel" destination="LB2-VW-y6S" id="We5-iO-vJm"/>
+                <outlet property="backgroundCard" destination="Jub-VX-swQ" id="ytU-Hb-SAG"/>
+                <outlet property="productNameLabel" destination="Urk-on-HVF" id="kke-CO-t6B"/>
+                <outlet property="typeLabel" destination="XeN-es-iPT" id="l8x-nq-Vjx"/>
+                <outlet property="viewButton" destination="NYS-uA-dpg" id="jhK-HT-fge"/>
+                <outlet property="yieldInMonthsLabel" destination="iAd-TP-KAk" id="nhl-mB-Ks8"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="farm-icon" width="50" height="50"/>
+        <image name="investment-sample-image" width="335" height="450"/>
+    </resources>
+</document>

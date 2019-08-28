@@ -1,23 +1,22 @@
 //
-//  AvailableInvestmentCollectionViewCell.swift
+//  OtherCommoditiesCollectionViewCell.swift
 //  AgroPartnerships
 //
-//  Created by Kanyinsola on 25/08/2019.
+//  Created by Kanyinsola Fapohunda on 28/08/2019.
 //  Copyright © 2019 AgroPartnerships. All rights reserved.
 //
 
 import UIKit
-import Cards
 
-class AvailableInvestmentCollectionViewCell: UICollectionViewCell {
-    
+class OtherCommoditiesCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var viewButton: UIView!
     @IBOutlet var backgroundCard: Card!
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var productNameLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var yieldInMonthsLabel: UILabel!
-
+    
     var investment: Investment! {
         didSet {
             typeLabel.text = investment.type?.capitalizeFirstLetter()
@@ -27,9 +26,5 @@ class AvailableInvestmentCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
 }

@@ -11,7 +11,7 @@ import Foundation
 class LoginSession {
     
     private var dashboardInformation: DashboardResponse?
-    
+
     static let shared = LoginSession()
     
     private init() {}

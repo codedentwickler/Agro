@@ -7,7 +7,13 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class AvailableCommoditiesResponse: BaseResponse {
+struct AvailableCommoditiesResponse {
     
+    let investments: [Investment]?
+    
+    init(_ json: JSON) {
+        investments = json.arrayValue.map { Investment($0) }
+    }
 }
