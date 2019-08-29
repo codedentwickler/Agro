@@ -182,10 +182,6 @@ class DashboardViewController: BaseViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc private func userTapCloseIcon() {
-        self.tabBarController?.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func userChangedPagerValue(_ sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex {

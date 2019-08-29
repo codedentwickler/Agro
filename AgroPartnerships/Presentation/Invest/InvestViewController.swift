@@ -25,6 +25,7 @@ class InvestViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupEventListeners()
         presenter = InvestPresenter(apiService: ApiServiceImplementation.shared,
                                     view: self)
         presenter?.getInvestmentsInformation()
@@ -55,6 +56,12 @@ class InvestViewController: BaseViewController {
                                            bundle: nil),
                                      forCellWithReuseIdentifier: AvailableInvestmentCollectionViewCell.identifier)
         availableInvestmentsCollectionView.allowsMultipleSelection = false
+    }
+    
+    private func setupEventListeners() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userTapCloseIcon))
+        closeIconImageView.isUserInteractionEnabled = true
+        closeIconImageView.addGestureRecognizer(tap)
     }
     
     @IBAction func userPressedSeeAllAvailableInvestments(_ sender: Any) {

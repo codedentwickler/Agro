@@ -13,6 +13,10 @@ class BaseViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    @objc func userTapCloseIcon() {
+        self.tabBarController?.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension BaseViewController: UITextFieldDelegate {

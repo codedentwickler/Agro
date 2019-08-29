@@ -35,20 +35,34 @@ class LandingViewController: BaseViewController {
     
     private func setupCardsEvents() {
         
-        for (index, card) in [dashboardCard, investCard].enumerated() {
-            let tap = UITapGestureRecognizer(target: self,
-                                             action: #selector(showDashboard))
-            dashboardCard.isUserInteractionEnabled = true
-            dashboardCard.addGestureRecognizer(tap)
-        }
+        let tap1 = UITapGestureRecognizer(target: self,
+                                         action: #selector(showDashboard(sender:)))
+        dashboardCard.isUserInteractionEnabled = true
+        dashboardCard.addGestureRecognizer(tap1)
+        
+        
+        let tap2 = UITapGestureRecognizer(target: self,
+                                         action: #selector(showDashboard(sender:)))
+        investCard.isUserInteractionEnabled = true
+        investCard.addGestureRecognizer(tap2)
     }
     
-    @objc func showDashboard(index: Int) {
+    @objc func showDashboard(sender: UIGestureRecognizer) {
         let vc = viewController(type: DashboardTabBarController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
         vc.dashboardInformation = dashboardInformation
-        vc.selectedIndex = index
+        vc.selectedIndex = getIndexOfCard(sender: sender.view)
         LoginSession.shared.setDashboardInformation(dashboardInformation: dashboardInformation!)
         present(vc, animated: true, completion: nil)
+    }
+    
+    private func getIndexOfCard(sender: UIView?) -> Int {
+        if sender == dashboardCard {
+            return 0
+        } else if sender == investCard {
+            return 1
+        }
+        
+        return 0
     }
 }
