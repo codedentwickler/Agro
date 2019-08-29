@@ -20,6 +20,7 @@ use_frameworks!
     pod 'SwiftyJSON', '~> 4.0'
     pod 'SwiftyOnboard'
     pod 'Cards'
+    pod 'FittedSheets'
 
 end
 

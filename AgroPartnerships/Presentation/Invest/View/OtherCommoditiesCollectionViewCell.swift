@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cards
 
 class OtherCommoditiesCollectionViewCell: UICollectionViewCell {
 
@@ -25,6 +26,4 @@ class OtherCommoditiesCollectionViewCell: UICollectionViewCell {
             yieldInMonthsLabel.text = "\(investment.yield!)% in \(investment.duration!) months"
         }
     }
-    
-
 }

@@ -59,7 +59,7 @@ class InvestViewController: BaseViewController {
     
     @IBAction func userPressedSeeAllAvailableInvestments(_ sender: Any) {
         let vc = viewController(type: AvailableInvestmentViewController.self,
-                                from: StoryBoardIdentifiers.Dashboard)
+                                from: StoryBoardIdentifiers.Invest)
         vc.investments = availableinvestments
         vc.isBeenUsedForSoldOutInvestments = false
         navigationController?.pushViewController(vc, animated: true)
@@ -67,7 +67,7 @@ class InvestViewController: BaseViewController {
     
     @IBAction func userPressedSeeAllSoldOutInvestments(_ sender: Any) {
         let vc = viewController(type: AvailableInvestmentViewController.self,
-                                from: StoryBoardIdentifiers.Dashboard)
+                                from: StoryBoardIdentifiers.Invest)
         vc.investments = availableinvestments
         vc.isBeenUsedForSoldOutInvestments = true
         navigationController?.pushViewController(vc, animated: true)
@@ -110,7 +110,9 @@ extension InvestViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         AgroLogger.log("collectionView: UICollectionView, didSelectItemAt \(indexPath.row)")
         let vc = viewController(type: InvestDetailViewController.self,
-                                from: StoryBoardIdentifiers.Dashboard)
+                                from: StoryBoardIdentifiers.Invest)
+        vc.investment = self.availableinvestments[indexPath.row]
+        vc.investments = self.availableinvestments
         navigationController?.pushViewController(vc, animated: true)
     }
 }

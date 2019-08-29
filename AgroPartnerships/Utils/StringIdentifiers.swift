@@ -5,6 +5,7 @@ struct StoryBoardIdentifiers {
     static let Main =                               "Main"
     static let Dashboard =                          "Dashboard"
     static let Wallet =                             "Wallet"
+    static let Invest =                             "Invest"
 }
 
 struct PersistenceIDs {

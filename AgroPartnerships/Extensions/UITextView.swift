@@ -10,9 +10,6 @@ extension UITextView {
             data: modifiedFont.data(using: .unicode, allowLossyConversion: true)!,
             options: [NSAttributedString.DocumentReadingOptionKey.documentType:NSAttributedString.DocumentType.html, NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue],
             documentAttributes: nil)
-        
-        let string = NSAttributedString(string: htmlText)
-        
         self.attributedText = attrStr
     }
 }
