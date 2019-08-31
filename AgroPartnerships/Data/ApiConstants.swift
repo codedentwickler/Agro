@@ -26,6 +26,7 @@ struct ApiConstants {
     public static let Price = "price"
     public static let PaymentMethod = "paymentMethod"
     public static let Credit = "credit"
+    public static let AuthCode = "authCode"
     public static let Investment = "investment"
     public static let Reference = "reference"
 

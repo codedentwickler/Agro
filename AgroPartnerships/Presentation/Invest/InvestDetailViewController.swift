@@ -9,7 +9,7 @@
 import UIKit
 import FittedSheets
 
-class InvestDetailViewController: UIViewController {
+class InvestDetailViewController: BaseViewController {
     
     @IBOutlet weak var investButton: UIView!
     @IBOutlet weak var typeLabel: UILabel!
@@ -28,18 +28,26 @@ class InvestDetailViewController: UIViewController {
     public var investment: Investment!
     public var investments: [Investment]!
     public var otherInvestments = [Investment]()
+    
+    private var investmentDetailPresenter: InvestmentDetailPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupView()
+        investmentDetailPresenter = InvestmentDetailPresenter(apiService: ApiServiceImplementation.shared,
+                                                              view: self)
     }
     
     private func setupView() {
-        typeLabel.text = investment.type?.capitalizeFirstLetter()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userPressedInvest(_:)))
+        investButton.isUserInteractionEnabled = true
+        investButton.addGestureRecognizer(tap)
+        
+        typeLabel.text = investment.type?.uppercased()
         productNameLabel.text = investment.title
-        costPerUnitLabel.text = investment.price?.commaSeparatedValue
+        costPerUnitLabel.text = investment.price?.commaSeparatedNairaValue
         yieldLabel.text = "\(investment.yield!)%"
         statusLabel.text = investment.status?.capitalizeFirstLetter()
         let unitLeft = investment.units ?? 0
@@ -75,8 +83,10 @@ class InvestDetailViewController: UIViewController {
     }
     
     @IBAction func userPressedInvest(_ sender: Any) {
-        let modalVc = viewController(type: ProvideInvestmentDetailsModalViewController.self,
+        let modalVc = viewController(type: ProvideInvestmentDetailsModalStepOneViewController.self,
                                      from: StoryBoardIdentifiers.Invest)
+        modalVc.investment = investment
+        modalVc.delegate = self
         let controller = UINavigationController(rootViewController: modalVc)
         controller.isNavigationBarHidden = true
         let sheetController = SheetViewController(controller: controller,
@@ -86,8 +96,16 @@ class InvestDetailViewController: UIViewController {
         sheetController.topCornersRadius = 0
         present(sheetController, animated: true, completion: nil)
     }
+    //The dynamic stuff are the investment title (Sweet Potato), yield (35%), duration (7) and the code (ASADCE4851).
+    //    And on live it'll be the live URL.
     
     @IBAction func userPressedShareCode(_ sender: Any) {
+        let link = "https://staging.agropartnerships.co/investments/\(investment.code!)"
+        let message = """
+        Invest in Farms. Trade in Commodities. \(investment.title!) at \(investment.yield!)% yield for \(investment.duration!) months. \(link)
+        """
+        
+        shareOnlyText(message)
     }
     
     @IBAction func userPressedReadMore(_ sender: Any) {
@@ -102,6 +120,8 @@ extension InvestDetailViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // refresh entire view and replace current investment
+        self.investment = otherInvestments[indexPath.row]
+        setupView()
     }
 }
 
@@ -127,6 +147,34 @@ extension InvestDetailViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+        return 20.0
+    }
+}
+
+extension InvestDetailViewController: InvestmentDetailView {
+    func showTransactionSuccessfulDialog() {
+        
+        let unit = 0
+        let amount = 0
+        let message = "Your investment for \(unit) units \(amount.commaSeparatedNairaValue) was successful"
+        
+        let confirmAction = creatAlertAction("Confirm", style: .default) { (action) in
+            
+        }
+        
+        createAlertDialog(title: "Investment Successful",
+                          message: message,
+                          ltrActions: [confirmAction])
+    }
+    
+    func showPayForInvestmentPage(cards: [CreditCard]) {
+        
+    }
+}
+
+extension InvestDetailViewController: ProvideInvestmentDetailsDelegate {
+    
+    func userDidProvideInvestmentDetails(initializeTransactionRequest: InitializeInvestmentRequest) {
+        self.investmentDetailPresenter.initializeInvestment(initializeTransactionRequest)
     }
 }

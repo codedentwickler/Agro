@@ -1,15 +1,16 @@
 //
-//  FundWalletViewController.swift
+//  PayInvestmentViewController.swift
 //  AgroPartnerships
 //
-//  Created by Kanyinsola Fapohunda on 24/08/2019.
+//  Created by Kanyinsola Fapohunda on 30/08/2019.
 //  Copyright © 2019 AgroPartnerships. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class FundWalletViewController: BaseViewController {
-
+class PayInvestmentViewController: BaseViewController {
+    
     public var cards: [CreditCard]!
     
     @IBOutlet weak var selectedCardBankNameLabel: UILabel!
@@ -21,15 +22,15 @@ class FundWalletViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-      
+        
         setupView()
         setupCollectionView()
     }
     
     private func setupView() {
-
+        
         let profile = LoginSession.shared.getDashboardInformation()?.profile
         walletBalanceLabel.text = profile?.wallet?.funds?.commaSeparatedNairaValue
     }
@@ -49,13 +50,14 @@ class FundWalletViewController: BaseViewController {
         cardsCollectionView.delegate = self
         cardsCollectionView.dataSource = self
         cardsCollectionView.register(UINib(nibName: CreditCardCollectionViewCell.identifier,
-                                                      bundle: nil),
-                                                forCellWithReuseIdentifier: CreditCardCollectionViewCell.identifier)
+                                           bundle: nil),
+                                     forCellWithReuseIdentifier: CreditCardCollectionViewCell.identifier)
         cardsCollectionView.allowsMultipleSelection = false
     }
+    
 }
 
-extension FundWalletViewController : UICollectionViewDelegate {
+extension PayInvestmentViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let card = cards[indexPath.row]
         selectedCardIconImageView.image = UIImage(named: imageBackgroundForCard(at: indexPath.row))
@@ -64,7 +66,7 @@ extension FundWalletViewController : UICollectionViewDelegate {
     }
 }
 
-extension FundWalletViewController : UICollectionViewDataSource {
+extension PayInvestmentViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
@@ -93,7 +95,7 @@ extension FundWalletViewController : UICollectionViewDataSource {
     }
 }
 
-extension FundWalletViewController: UICollectionViewDelegateFlowLayout {
+extension PayInvestmentViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 270 , height: 160)

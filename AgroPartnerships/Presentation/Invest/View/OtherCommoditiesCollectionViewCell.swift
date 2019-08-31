@@ -20,9 +20,9 @@ class OtherCommoditiesCollectionViewCell: UICollectionViewCell {
     
     var investment: Investment! {
         didSet {
-            typeLabel.text = investment.type?.capitalizeFirstLetter()
+            typeLabel.text = investment.type?.uppercased()
             productNameLabel.text = investment.title
-            amountLabel.text = investment.price?.commaSeparatedValue
+            amountLabel.text = (investment.price ?? 0).commaSeparatedNairaValue
             yieldInMonthsLabel.text = "\(investment.yield!)% in \(investment.duration!) months"
         }
     }

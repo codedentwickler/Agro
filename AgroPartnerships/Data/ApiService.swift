@@ -31,9 +31,10 @@ protocol ApiService {
     
     func initializeInvestment(item: String,
                               units: Int,
-                              price: Decimal,
+                              price: Int,
                               paymentMethod: PaymentMethod,
-                              credit: Decimal?,
+                              credit: Int?,
+                              authCode: String?,
                               completion: @escaping (_ response: InitializeInvestmentResponse? ) -> Void)
     
     func rollbackInvestment(investmentReference: String,

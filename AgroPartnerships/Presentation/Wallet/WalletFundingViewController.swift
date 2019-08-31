@@ -23,6 +23,8 @@ class WalletFundingViewController: BaseViewController {
     @IBOutlet weak var actionButton: AgroActionButton!
     @IBOutlet weak var pagerControl: UISegmentedControl!
     
+    private var currentTableView: UITableView!
+    
     private var fundWalletPresenter: FundWalletPresenter!
     
     override func viewDidLoad() {
@@ -43,6 +45,7 @@ class WalletFundingViewController: BaseViewController {
     }
     
     private func updateOnFundingPressed() {
+        currentTableView = fundingHistoryTableView
         fundingHistoryTableView.isHidden = false
         payoutsHistoryTableView.isHidden = true
         headerLabel.text = """
@@ -52,6 +55,7 @@ class WalletFundingViewController: BaseViewController {
     }
     
     private func updateOnPayoutsPressed() {
+        currentTableView = payoutsHistoryTableView
         fundingHistoryTableView.isHidden = true
         payoutsHistoryTableView.isHidden = false
         headerLabel.text = """

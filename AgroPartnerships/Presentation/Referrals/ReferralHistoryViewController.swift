@@ -13,6 +13,10 @@ class ReferralHistoryViewController: BaseViewController {
     @IBOutlet weak var menuIconImageView: UIImageView!
     @IBOutlet weak var redeemedReferralsTableView: UITableView!
     @IBOutlet weak var pendingReferralsTableView: UITableView!
+
+    private var currentTableView: UITableView!
+
+    var referrals : [Referral]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +29,11 @@ class ReferralHistoryViewController: BaseViewController {
         if sender.selectedSegmentIndex == 0 {
             pendingReferralsTableView.isHidden = true
             redeemedReferralsTableView.isHidden = false
+            currentTableView = redeemedReferralsTableView
         } else {
             redeemedReferralsTableView.isHidden = true
             pendingReferralsTableView.isHidden = false
+            currentTableView = pendingReferralsTableView
         }
     }
     
@@ -38,6 +44,7 @@ class ReferralHistoryViewController: BaseViewController {
         pendingReferralsTableView.dataSource = self
         redeemedReferralsTableView.reloadData()
         pendingReferralsTableView.reloadData()
+        currentTableView = redeemedReferralsTableView
     }
     
     private func setupUI() {
@@ -46,29 +53,36 @@ class ReferralHistoryViewController: BaseViewController {
         menuIconImageView.isUserInteractionEnabled = true
         menuIconImageView.addGestureRecognizer(tap)
         
-        redeemedReferralsTableView.register(UINib(nibName: TransactionsTableViewCell.identifier,
+        redeemedReferralsTableView.register(UINib(nibName: ReferralsTableViewCell.identifier,
                                             bundle: nil),
-                                      forCellReuseIdentifier: TransactionsTableViewCell.identifier)
-        pendingReferralsTableView.register(UINib(nibName: TransactionsTableViewCell.identifier,
+                                      forCellReuseIdentifier: ReferralsTableViewCell.identifier)
+        pendingReferralsTableView.register(UINib(nibName: ReferralsTableViewCell.identifier,
                                                   bundle: nil),
-                                            forCellReuseIdentifier: TransactionsTableViewCell.identifier)
+                                            forCellReuseIdentifier: ReferralsTableViewCell.identifier)
     }
     
     @objc private func userTapMenuButton() {
-        
+        var sortedReferrals = [Referral]()
+
         let actions = [
             creatAlertAction("Sort by Date (Most recent)", style: .default, clicked: { _ in
-                
+                sortedReferrals = self.referrals.sorted(by: {$0.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
+                    == .orderedDescending })
+                self.referrals = sortedReferrals
+                self.currentTableView.reloadData()
             }),
             creatAlertAction("Sort by Date (Least recent)", style: .default, clicked: { _ in
-                
+                sortedReferrals = self.referrals.sorted(by: {$0.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
+                    == .orderedAscending })
+                self.referrals = sortedReferrals
+                self.currentTableView.reloadData()
             }),
             creatAlertAction("Sort by Amount (High to low)", style: .default, clicked: { _ in
-                
+                sortedReferrals = self.referrals.sorted(by: {$0.amount! > $1.amount!})
+                self.referrals = sortedReferrals
+                self.currentTableView.reloadData()
             }),
-            creatAlertAction("Cancel", style: .cancel, clicked: { _ in
-                
-            })
+            creatAlertAction("Cancel", style: .cancel, clicked: nil)
         ]
         
         createActionSheet(ltrActions: actions)
@@ -78,13 +92,13 @@ class ReferralHistoryViewController: BaseViewController {
 extension ReferralHistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return referrals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionsTableViewCell.identifier)
-            as! TransactionsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReferralsTableViewCell.identifier)
+            as! ReferralsTableViewCell
         
         if tableView == pendingReferralsTableView {
             cell.rootView.backgroundColor = UIColor(hex: "#F8F8F8", a: 0.08)
@@ -92,9 +106,17 @@ extension ReferralHistoryViewController: UITableViewDelegate, UITableViewDataSou
             cell.iconImageView.isHidden = true
         }
         
+        let referral = referrals[indexPath.row]
+        
+        cell.dateLabel.text = referral.date?.asFullDate(format: "E - d MMM, yyyy")
+        cell.amountLabel.text = referral.amount?.commaSeparatedNairaValue
+        cell.descriptionLabel.text = "Referral Bonus \(referral.userFullName ?? "")"
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
+
+typealias ReferralsTableViewCell = TransactionsTableViewCell

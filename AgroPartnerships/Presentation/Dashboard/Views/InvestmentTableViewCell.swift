@@ -22,11 +22,11 @@ class InvestmentTableViewCell: UITableViewCell {
     var portfolio : Portfolio! {
         didSet {
             titleLabel.text = portfolio.investment?.title
-            subtitleLabel.text = "\(portfolio.code!) ‒‒ \(portfolio.investment?.price?.commaSeparatedValue ?? "")/unit"
+            subtitleLabel.text = "\(portfolio.code!) ‒‒ \(portfolio.investment?.price?.commaSeparatedNairaValue ?? "")/unit"
             returnsLabel.text = "\(portfolio.yield ?? 0)%"
-            unitsLabel.text = portfolio.units?.commaSeparatedValue
-            amountLabel.text = portfolio.amount?.commaSeparatedValue
-            typeLabel.text = portfolio.investment?.type?.capitalizeFirstLetter()
+            unitsLabel.text = portfolio.units?.commaSeparatedNairaValue
+            amountLabel.text = portfolio.amount?.commaSeparatedNairaValue
+            typeLabel.text = portfolio.investment?.type?.uppercased()
             startDateLabel.text = portfolio.startDate?.asFullDate(format: "EEEE\nMMM d, yyyy")
             yieldDateLabel.text = portfolio.endDate?.asFullDate(format: "EEEE\nMMM d, yyyy")
         }

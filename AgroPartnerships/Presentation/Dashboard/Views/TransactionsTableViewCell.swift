@@ -22,7 +22,7 @@ class TransactionsTableViewCell: UITableViewCell {
                 rootView.backgroundColor = UIColor(hex: "#F8F8F8", a: 0.08)
                 iconImageView.image = UIImage(named: "red-arrow-down")
             }
-            amountLabel.text = transaction.amount?.commaSeparatedValue
+            amountLabel.text = transaction.amount?.commaSeparatedNairaValue
             descriptionLabel.text = transaction.description
             dateLabel.text = transaction.date?.asFullDate(format: "E - d MMM, yyyy")
         }

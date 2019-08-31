@@ -103,7 +103,7 @@ extension InvestmentsTableViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if isBeenUsedForPendingInvestments {
-            return 364.0
+            return 446.0
         } else {
             return 328.0
         }

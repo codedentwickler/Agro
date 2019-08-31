@@ -89,9 +89,10 @@ class ApiServiceImplementation : ApiService {
     
     func initializeInvestment(item: String,
                               units: Int,
-                              price: Decimal,
+                              price: Int,
                               paymentMethod: PaymentMethod,
-                              credit: Decimal?,
+                              credit: Int?,
+                              authCode: String?,
                               completion: @escaping (InitializeInvestmentResponse?) -> Void) {
         
         var parameters: [String : Any] = [ApiConstants.Item : item,
@@ -102,6 +103,11 @@ class ApiServiceImplementation : ApiService {
         if let credit = credit {
             parameters[ApiConstants.Credit] = credit
         }
+        
+        if let authCode = authCode {
+            parameters[ApiConstants.AuthCode] = authCode
+        }
+        
         Network.shared.request(ApiEndPoints.initializeInvestment(),
                         method: .post,
                         parameters: parameters,

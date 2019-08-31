@@ -26,7 +26,7 @@ extension Int {
         return Double(self)
     }
     
-    var commaSeparatedValue : String {
+    var commaSeparatedNairaValue : String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         numberFormatter.maximumFractionDigits = 2

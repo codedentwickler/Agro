@@ -26,7 +26,7 @@ class RequestPayoutViewController: UIViewController {
     private func setupView() {
         let profile = LoginSession.shared.getDashboardInformation()?.profile
         
-        walletBalanceLabel.text = profile?.wallet?.funds?.commaSeparatedValue
+        walletBalanceLabel.text = profile?.wallet?.funds?.commaSeparatedNairaValue
         nameLabel.text = profile?.fullname
         bankNameLabel.text = profile?.bank?.accountName
         accountNumberLabel.text = profile?.bank?.accountNumber

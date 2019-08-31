@@ -113,7 +113,6 @@ extension InvestViewController : InvestView {
 }
 
 extension InvestViewController : UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         AgroLogger.log("collectionView: UICollectionView, didSelectItemAt \(indexPath.row)")
         let vc = viewController(type: InvestDetailViewController.self,

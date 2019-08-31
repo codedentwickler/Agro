@@ -52,7 +52,7 @@ class AvailableInvestmentViewController: BaseViewController {
     }
     
     @objc private func userTapMenuButton() {
-        
+        var sortedInvestments = [Investment]()
         let actions = [
             creatAlertAction("Sort by Date (Most recent)", style: .default, clicked: { _ in
                 

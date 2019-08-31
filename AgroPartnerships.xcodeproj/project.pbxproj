@@ -116,8 +116,9 @@
 		04BB36FA22F38CC700F266ED /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DC22F38CC700F266ED /* SF-Pro-Text-Medium.otf */; };
 		04BB36FB22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DD22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf */; };
 		04BB36FC22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */; };
-		04F545A423173DC7001ECA61 /* ProvideInvestmentDetailsModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalViewController.swift */; };
+		04F545A423173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift */; };
 		5A8194B24C2AD6A4E9B0F38F /* Pods_AgroPartnerships.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */; };
+		AD019CF72317FD3700124DDD /* ProvideInvestmentDetailsModalStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD019CF62317FD3700124DDD /* ProvideInvestmentDetailsModalStepTwoViewController.swift */; };
 		AD1520C922F6058800C99BEF /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1520C822F6058800C99BEF /* TermsAndConditionsViewController.swift */; };
 		AD19AEEA2309F4D80065F6C1 /* UIColor+CloseParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19AEE92309F4D80065F6C1 /* UIColor+CloseParse.swift */; };
 		AD19AEED230A05820065F6C1 /* InvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19AEEB230A05820065F6C1 /* InvestmentTableViewCell.swift */; };
@@ -135,6 +136,10 @@
 		AD3F1842230B5BF6003FDC2C /* TransactionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3F1840230B5BF6003FDC2C /* TransactionsTableViewCell.xib */; };
 		AD44342222FF721F00D09F42 /* UITextField+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44342122FF721F00D09F42 /* UITextField+ErrorHandling.swift */; };
 		AD44342422FF732900D09F42 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD44342322FF732900D09F42 /* Validator.swift */; };
+		AD5406CA23195AFD00DA4CC3 /* InvestmentDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5406C923195AFD00DA4CC3 /* InvestmentDetailPresenter.swift */; };
+		AD5406CC23196F2A00DA4CC3 /* InitializeInvestmentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5406CB23196F2A00DA4CC3 /* InitializeInvestmentRequest.swift */; };
+		AD5406CE231976C500DA4CC3 /* PayInvestmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5406CD231976C500DA4CC3 /* PayInvestmentViewController.swift */; };
+		AD5406D02319A06200DA4CC3 /* Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5406CF2319A06200DA4CC3 /* Referral.swift */; };
 		AD677D7B22FFF51D00F4C149 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD677D7A22FFF51C00F4C149 /* Dashboard.storyboard */; };
 		AD677D7D23000BFA00F4C149 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD677D7C23000BFA00F4C149 /* LandingViewController.swift */; };
 		AD7A2B64230ACBD000ECB36F /* PendingInvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2B62230ACBD000ECB36F /* PendingInvestmentTableViewCell.swift */; };
@@ -254,7 +259,7 @@
 		04809DBC22E4A71000252F74 /* AgroAlertDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgroAlertDialog.swift; sourceTree = "<group>"; };
 		04809DBD22E4A71000252F74 /* AgroAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgroAlert.swift; sourceTree = "<group>"; };
 		04B3032722F5B52B00B10684 /* DateDropDownTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateDropDownTextField.swift; sourceTree = "<group>"; };
-		04B7127D2316DAD000B36042 /* Invest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Invest.storyboard; path = View/Invest.storyboard; sourceTree = "<group>"; };
+		04B7127D2316DAD000B36042 /* Invest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Invest.storyboard; sourceTree = "<group>"; };
 		04BB36AC22EA57F600F266ED /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		04BB36AE22EA5C4600F266ED /* AvailableCommoditiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableCommoditiesResponse.swift; sourceTree = "<group>"; };
 		04BB36B222EA5CD400F266ED /*  InitializeInvestmentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " InitializeInvestmentResponse.swift"; sourceTree = "<group>"; };
@@ -293,8 +298,9 @@
 		04BB36DC22F38CC700F266ED /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		04BB36DD22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
 		04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
-		04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideInvestmentDetailsModalViewController.swift; sourceTree = "<group>"; };
+		04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideInvestmentDetailsModalStepOneViewController.swift; sourceTree = "<group>"; };
 		7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgroPartnerships.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD019CF62317FD3700124DDD /* ProvideInvestmentDetailsModalStepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideInvestmentDetailsModalStepTwoViewController.swift; sourceTree = "<group>"; };
 		AD1520C822F6058800C99BEF /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsAndConditionsViewController.swift; path = ../../TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		AD19AEE92309F4D80065F6C1 /* UIColor+CloseParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+CloseParse.swift"; sourceTree = "<group>"; };
 		AD19AEEB230A05820065F6C1 /* InvestmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -312,6 +318,10 @@
 		AD3F1840230B5BF6003FDC2C /* TransactionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsTableViewCell.xib; sourceTree = "<group>"; };
 		AD44342122FF721F00D09F42 /* UITextField+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ErrorHandling.swift"; sourceTree = "<group>"; };
 		AD44342322FF732900D09F42 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		AD5406C923195AFD00DA4CC3 /* InvestmentDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentDetailPresenter.swift; sourceTree = "<group>"; };
+		AD5406CB23196F2A00DA4CC3 /* InitializeInvestmentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeInvestmentRequest.swift; sourceTree = "<group>"; };
+		AD5406CD231976C500DA4CC3 /* PayInvestmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayInvestmentViewController.swift; sourceTree = "<group>"; };
+		AD5406CF2319A06200DA4CC3 /* Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referral.swift; sourceTree = "<group>"; };
 		AD677D7A22FFF51C00F4C149 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		AD677D7C23000BFA00F4C149 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		AD7A2B62230ACBD000ECB36F /* PendingInvestmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingInvestmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -406,8 +416,10 @@
 				AD7C7B55231470ED002B95FC /* AvailableInvestmentViewController.swift */,
 				AD7C7B5723147508002B95FC /* InvestPresenter.swift */,
 				ADEF800B2315AF4C00671854 /* InvestDetailViewController.swift */,
-				04B7127D2316DAD000B36042 /* Invest.storyboard */,
-				04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalViewController.swift */,
+				04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift */,
+				AD019CF62317FD3700124DDD /* ProvideInvestmentDetailsModalStepTwoViewController.swift */,
+				AD5406C923195AFD00DA4CC3 /* InvestmentDetailPresenter.swift */,
+				AD5406CD231976C500DA4CC3 /* PayInvestmentViewController.swift */,
 			);
 			path = Invest;
 			sourceTree = "<group>";
@@ -415,6 +427,7 @@
 		0435C6792313322000E88CF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04B7127D2316DAD000B36042 /* Invest.storyboard */,
 				AD9A22FA2314282F000919E6 /* SoldOutInvestmentTableViewCell.swift */,
 				AD9A22FB2314282F000919E6 /* SoldOutInvestmentTableViewCell.xib */,
 				0435C67A2313324600E88CF2 /* AvailableInvestmentCollectionViewCell.swift */,
@@ -437,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				044021962313124E009D1711 /* CardRequest.swift */,
+				AD5406CB23196F2A00DA4CC3 /* InitializeInvestmentRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -536,7 +550,6 @@
 				04809D3322E4734B00252F74 /* ApiConstants.swift */,
 				04809D3422E4734B00252F74 /* ApiEndPoints.swift */,
 				04809D3522E4734B00252F74 /* Network.swift */,
-				04809D3622E4734B00252F74 /* Local */,
 				04809D3722E4734B00252F74 /* Model */,
 			);
 			path = Data;
@@ -561,13 +574,6 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
-		04809D3622E4734B00252F74 /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
 		04809D3722E4734B00252F74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +590,7 @@
 				ADEDDD6B23115D460044C8A3 /* Wallet.swift */,
 				04809D3822E4734B00252F74 /* CurrentUser.swift */,
 				04BB36BE22EA604100F266ED /* PaymentMethod.swift */,
+				AD5406CF2319A06200DA4CC3 /* Referral.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1018,15 +1025,17 @@
 				04809D1422E472F900252F74 /* VSTextField.swift in Sources */,
 				ADEF80112316618000671854 /* OtherCommoditiesCollectionViewCell.swift in Sources */,
 				ADBAF23323103BB5007728B7 /* DashboardActionThreeCollectionViewCell.swift in Sources */,
+				AD5406CC23196F2A00DA4CC3 /* InitializeInvestmentRequest.swift in Sources */,
 				0441B1112312E0B00097BABD /* ManageSavedCardsViewController.swift in Sources */,
 				04BB36B822EA5EAB00F266ED /* RollbackInvestmentResponse.swift in Sources */,
 				AD19AEEA2309F4D80065F6C1 /* UIColor+CloseParse.swift in Sources */,
-				04F545A423173DC7001ECA61 /* ProvideInvestmentDetailsModalViewController.swift in Sources */,
+				04F545A423173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift in Sources */,
 				ADEDDD7A23115D470044C8A3 /* Profile.swift in Sources */,
 				ADEDDD7D23115D470044C8A3 /* Transactions.swift in Sources */,
 				04230F1C22F62958008813F9 /* OnboardingStepTwo.swift in Sources */,
 				04809DC422E4A71000252F74 /* AgroAlertDialog.swift in Sources */,
 				04230F2422F63B26008813F9 /* OnboardingOverlay.swift in Sources */,
+				AD5406CA23195AFD00DA4CC3 /* InvestmentDetailPresenter.swift in Sources */,
 				04B3032822F5B52B00B10684 /* DateDropDownTextField.swift in Sources */,
 				AD99089422F85B6000FAB197 /* FileUtils.swift in Sources */,
 				04809D5522E4734B00252F74 /* ApiServiceImplementation.swift in Sources */,
@@ -1061,10 +1070,12 @@
 				AD86634023088F08001024A0 /* UIView+Identifier.swift in Sources */,
 				04809D4322E4734B00252F74 /* UIButton.swift in Sources */,
 				04809D5022E4734B00252F74 /* LoginResponse.swift in Sources */,
+				AD5406D02319A06200DA4CC3 /* Referral.swift in Sources */,
 				AD7C7B5823147508002B95FC /* InvestPresenter.swift in Sources */,
 				ADEF800E2315B07600671854 /* UINavigationBar.swift in Sources */,
 				04809D3D22E4734B00252F74 /* UserDefault.swift in Sources */,
 				ADFD7B2F2312A9DA00EC1E8B /* CreditCardCollectionViewCell.swift in Sources */,
+				AD019CF72317FD3700124DDD /* ProvideInvestmentDetailsModalStepTwoViewController.swift in Sources */,
 				ADE9327D2310A23E00086882 /* AmountInputView.swift in Sources */,
 				AD3F183E230AF941003FDC2C /* ReferralHistoryViewController.swift in Sources */,
 				04809DB022E473A900252F74 /* LoginViewController.swift in Sources */,
@@ -1116,6 +1127,7 @@
 				04809D1022E472F900252F74 /* BaseViewController.swift in Sources */,
 				04230F1E22F62964008813F9 /* OnboardingStepThree.swift in Sources */,
 				04359C7022F617000047A2B5 /* OnboardingViewController.swift in Sources */,
+				AD5406CE231976C500DA4CC3 /* PayInvestmentViewController.swift in Sources */,
 				AD44342222FF721F00D09F42 /* UITextField+ErrorHandling.swift in Sources */,
 				04359C7622F61DCA0047A2B5 /* OnboardingStepOne.swift in Sources */,
 				AD7C7B56231470ED002B95FC /* AvailableInvestmentViewController.swift in Sources */,

@@ -11,4 +11,6 @@ import Foundation
 enum PaymentMethod: String {
     case card = "card"
     case transfer = "transfer"
+    case cardAuth = "card_auth"
+    case wallet = "wallet"
 }

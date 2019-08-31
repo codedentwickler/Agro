@@ -17,7 +17,12 @@ class SoldOutInvestmentTableViewCell: UITableViewCell {
 
     var investment: Investment! {
         didSet {
-            
+            typeLabel.text = investment.type?.uppercased()
+            productNameLabel.text = investment.title
+            descriptionLabel.text = """
+            \((investment.price ?? 0).commaSeparatedNairaValue)
+            \(investment.yield!)% in \(investment.duration!) months
+            """
         }
     }
     

@@ -45,7 +45,7 @@ extension DashboardViewController: UICollectionViewDataSource {
             """
             cell.backgroundImageView.image = UIImage(named: "light_green_radial_gradient")
             let totalInvestment = dashboardInformation.profile?.totalInvestment ?? 0
-            cell.amountLabel.text = totalInvestment.commaSeparatedValue
+            cell.amountLabel.text = totalInvestment.commaSeparatedNairaValue
         } else {
             cell.titleLabel.text = """
             Return on
@@ -54,7 +54,7 @@ extension DashboardViewController: UICollectionViewDataSource {
             cell.backgroundImageView.image = UIImage(named: "deep_green_radial_gradient")
             cell.newInvestmentButton.isHidden = true
             let totalYield = dashboardInformation.profile?.totalYield ?? 0
-            cell.amountLabel.text = totalYield.commaSeparatedValue
+            cell.amountLabel.text = totalYield.commaSeparatedNairaValue
         }
         return cell
     }
@@ -75,10 +75,10 @@ extension DashboardViewController: UICollectionViewDataSource {
             let withdrawable = dashboardInformation.profile?.wallet?.funds ?? 0
             let nonWithdrawable = dashboardInformation.profile?.wallet?.bonus?.balance ?? 0
             let balance = withdrawable + nonWithdrawable
-            cell.amountLabel.text = balance.commaSeparatedValue
+            cell.amountLabel.text = balance.commaSeparatedNairaValue
             cell.subtitleLabel.text = """
-            Withdrawable: \(withdrawable.commaSeparatedValue)
-            Non withdrawable: \(nonWithdrawable.commaSeparatedValue)
+            Withdrawable: \(withdrawable.commaSeparatedNairaValue)
+            Non withdrawable: \(nonWithdrawable.commaSeparatedNairaValue)
             """
         } else {
             cell.titleLabel.text = """
@@ -91,7 +91,7 @@ extension DashboardViewController: UICollectionViewDataSource {
             Last Payout: \(dashboardInformation.lastPayoutDate()?.asDayMonthString ?? "No payout yet")
             """
             let totalPayouts = dashboardInformation.profile?.totalPayouts ?? 0
-            cell.amountLabel.text = totalPayouts.commaSeparatedValue
+            cell.amountLabel.text = totalPayouts.commaSeparatedNairaValue
         }
         
         cell.buttonView.isHidden = false
@@ -116,7 +116,7 @@ extension DashboardViewController: UICollectionViewDataSource {
             To be spent on the platform on an investment
             """
             let totalRedeemedReferrals = dashboardInformation.totalRedeemedReferrals()
-            cell.amountLabel.text = totalRedeemedReferrals.commaSeparatedValue
+            cell.amountLabel.text = totalRedeemedReferrals.commaSeparatedNairaValue
         } else {
             cell.backgroundImageView.image = UIImage(named: "deep_green_radial_gradient")
             cell.titleLabel.text =

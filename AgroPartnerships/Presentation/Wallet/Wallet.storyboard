@@ -183,11 +183,11 @@
             <objects>
                 <viewController storyboardIdentifier="FundWalletViewController" id="ZdT-Mh-rSw" customClass="FundWalletViewController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bNf-us-SRv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjK-vT-ULf">
-                                <rect key="frame" x="0.0" y="12" width="375" height="884"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjK-vT-ULf">
+                                <rect key="frame" x="0.0" y="12" width="414" height="1088"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQb-iQ-wjB">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
@@ -319,15 +319,28 @@
                                                         <color key="textColor" white="0.0" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bat-QP-QDp">
+                                                        <rect key="frame" x="52" y="75" width="330" height="1"/>
+                                                        <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="m8y-T8-M1c"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Bat-QP-QDp" secondAttribute="trailing" id="4QX-et-24l"/>
                                                     <constraint firstItem="8KO-d5-PY5" firstAttribute="centerY" secondItem="qzN-Ol-IIk" secondAttribute="centerY" id="7Cz-C9-wx5"/>
+                                                    <constraint firstItem="Ug0-py-5s3" firstAttribute="leading" secondItem="Bat-QP-QDp" secondAttribute="leading" id="Dts-vR-YH6"/>
                                                     <constraint firstItem="8KO-d5-PY5" firstAttribute="centerY" secondItem="qzN-Ol-IIk" secondAttribute="centerY" id="FIl-CD-vdl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ug0-py-5s3" secondAttribute="trailing" constant="16" id="Lct-b6-Z8u"/>
                                                     <constraint firstAttribute="height" constant="76" id="RAD-7h-qhE"/>
+                                                    <constraint firstItem="4ct-az-JvJ" firstAttribute="trailing" secondItem="Ug0-py-5s3" secondAttribute="trailing" id="ZFo-7Y-xPC"/>
                                                     <constraint firstItem="8KO-d5-PY5" firstAttribute="leading" secondItem="qzN-Ol-IIk" secondAttribute="leading" id="eaN-xj-VbO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Bat-QP-QDp" secondAttribute="bottom" id="h7n-dm-zRX"/>
                                                     <constraint firstItem="Ug0-py-5s3" firstAttribute="top" secondItem="8KO-d5-PY5" secondAttribute="top" constant="-8" id="lQA-cv-vyN"/>
                                                     <constraint firstItem="4ct-az-JvJ" firstAttribute="top" secondItem="Ug0-py-5s3" secondAttribute="bottom" constant="4" id="n0H-eS-JeV"/>
+                                                    <constraint firstItem="4ct-az-JvJ" firstAttribute="leading" secondItem="Bat-QP-QDp" secondAttribute="leading" id="nIA-tl-bSh"/>
                                                     <constraint firstItem="Ug0-py-5s3" firstAttribute="leading" secondItem="8KO-d5-PY5" secondAttribute="trailing" constant="12" id="oqf-OP-UmL"/>
                                                     <constraint firstItem="4ct-az-JvJ" firstAttribute="leading" secondItem="8KO-d5-PY5" secondAttribute="trailing" constant="12" id="wnG-GD-mwq"/>
                                                 </constraints>
@@ -429,12 +442,14 @@
                             <constraint firstAttribute="bottom" secondItem="VjK-vT-ULf" secondAttribute="bottom" id="H4Z-pj-TXR"/>
                             <constraint firstItem="VjK-vT-ULf" firstAttribute="leading" secondItem="bNf-us-SRv" secondAttribute="leading" id="OIk-Hb-ujJ"/>
                             <constraint firstAttribute="trailing" secondItem="VjK-vT-ULf" secondAttribute="trailing" id="Ra8-5F-xsS"/>
+                            <constraint firstItem="HQb-iQ-wjB" firstAttribute="width" secondItem="bNf-us-SRv" secondAttribute="width" id="b1i-T1-HM1"/>
                             <constraint firstItem="HQb-iQ-wjB" firstAttribute="leading" secondItem="VjK-vT-ULf" secondAttribute="leading" id="ccw-Xo-8Qx"/>
                             <constraint firstItem="VjK-vT-ULf" firstAttribute="top" secondItem="bNf-us-SRv" secondAttribute="top" constant="12" id="dEq-sp-jm3"/>
                             <constraint firstItem="HQb-iQ-wjB" firstAttribute="trailing" secondItem="VjK-vT-ULf" secondAttribute="trailing" id="ye2-Em-hnv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vqZ-gK-Bjc"/>
                     </view>
+                    <size key="freeformSize" width="414" height="1100"/>
                     <connections>
                         <outlet property="amountView" destination="QNX-hT-B5F" id="3He-sH-2Ot"/>
                         <outlet property="cardsCollectionView" destination="BYp-GK-llV" id="XY1-Rd-U8m"/>

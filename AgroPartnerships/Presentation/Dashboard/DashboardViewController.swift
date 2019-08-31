@@ -208,6 +208,7 @@ class DashboardViewController: BaseViewController {
     @IBAction func userPressedViewAllReferrals(_ sender: Any) {
         let vc = viewController(type: ReferralHistoryViewController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
+        vc.referrals = dashboardInformation.referrals
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -216,7 +217,9 @@ class DashboardViewController: BaseViewController {
     }
     
     @IBAction func userPressedShareCode(_ sender: Any) {
-        
+        let refCode = dashboardInformation.profile?.refCode ?? ""
+        let message = "Use My referral code, \(refCode) https://agropartnerships.co/sign-up?ref=\(refCode)"
+        shareOnlyText(message)
     }
     
     // Porfolio Actions

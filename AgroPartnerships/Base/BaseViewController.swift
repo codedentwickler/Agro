@@ -53,6 +53,14 @@ extension BaseViewController: UITextFieldDelegate {
 // Common Functionalities Used in various View Controllers
 extension BaseViewController {
     
+    func shareOnlyText(_ text: String) {
+        let textShare = [text]
+        let activityViewController = UIActivityViewController(activityItems: textShare , applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [.saveToCameraRoll]
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func setBackButtonTitleToBack() {
         navigationItem.title = nil
         navigationItem.title = StringLiterals.BACK

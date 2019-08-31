@@ -10,7 +10,7 @@ struct DashboardResponse {
 
 	let portfolio: [Portfolio]?
 	let transactions: [Transactions]?
-	let referrals: [Any]?
+	let referrals: [Referral]?
 	let profile: Profile?
 	let paystackKey: String?
 	let status: String?
@@ -18,7 +18,7 @@ struct DashboardResponse {
 	init(_ json: JSON) {
 		portfolio = json["portfolio"].arrayValue.map { Portfolio($0) }
 		transactions = json["transactions"].arrayValue.map { Transactions($0) }
-		referrals = json["referrals"].arrayValue.map { $0 }
+		referrals = json["referrals"].arrayValue.map { Referral($0) }
 		profile = Profile(json["profile"])
 		paystackKey = json["paystackKey"].stringValue
 		status = json["status"].stringValue
@@ -35,7 +35,7 @@ struct DashboardResponse {
         }
         
         let lastPayoutDate = transactions.filter({ $0.category == ApiConstants.Payout })
-            .sorted(by: {$1.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
+            .sorted(by: {$0.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
                 == .orderedDescending}).first?.date?.dateFromFullString ?? nil
         
         return lastPayoutDate
@@ -58,7 +58,6 @@ struct DashboardResponse {
         return total
     }
     
-    
     public func totalRedeemedReferrals() -> Int {
         
         guard let referrals = referrals else {
@@ -66,6 +65,10 @@ struct DashboardResponse {
         }
         
         var total = 0
+        
+        for referral in referrals {
+            total += referral.amount ?? 0
+        }
         
         return total
     }
