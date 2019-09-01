@@ -9,6 +9,15 @@ extension Double {
     var string: String {
         return String(self)
     }
+    
+    var commaSeparatedNairaValue : String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.maximumFractionDigits = 2
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.currencySymbol = "₦"
+        return "\(numberFormatter.string(from: NSNumber(value: self)) ?? "")"
+    }
 }
 
 extension Float {

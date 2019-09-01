@@ -50,7 +50,8 @@ class RequestPayoutViewController: UIViewController {
             }
             
             if response.status == "success" {
-                
+                self.showAlertDialog(title: "Payout Request Received",
+                                     message: "Your payout request for \(amount.commaSeparatedNairaValue) is being processed. ")
             } else {
                 self.showAlertDialog(message: response.message ?? StringLiterals.GENERIC_NETWORK_ERROR)
             }

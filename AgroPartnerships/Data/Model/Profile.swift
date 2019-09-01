@@ -8,7 +8,7 @@ import SwiftyJSON
 
 struct Profile {
 
-	let wallet: Wallet?
+	var wallet: Wallet?
 	let fullname: String?
 	let title: String?
 	let dob: String?
