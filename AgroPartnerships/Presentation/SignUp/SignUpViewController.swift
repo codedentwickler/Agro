@@ -20,7 +20,7 @@ class SignUpViewController: BaseViewController {
         //         Only allowing in DEBUG mode
         #if DEBUG
         fullnameTextField.text = "Kanyinsola Fapohunda"
-        titleTextField.text = "Mr"
+        titleTextField.text = "Mr."
         emailTextField.text = "opeyemi@check-dc.com"
         passwordTextField.text = "password"
         dailingCodeTextField.text = "+234"
@@ -117,8 +117,6 @@ extension SignUpViewController: SignUpView {
             passwordTextField.setError(message, show: true)
         case .title(let message):
             titleTextField.setError(message, show: true)
-        default:
-            break
         }
     }
     

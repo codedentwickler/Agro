@@ -3,7 +3,7 @@ import Alamofire
 import SwiftyJSON
 
 class ApiServiceImplementation : ApiService {
-  
+    
     static let shared = ApiServiceImplementation()
     
     func login(email : String,
@@ -136,33 +136,28 @@ class ApiServiceImplementation : ApiService {
         
     }
     
-    func updateProfile(dob: String?,
-                       fullname: String?,
-                       phone: String?,
-                       title: String?,
-                       completion: @escaping (ProfileUpdateResponse?) -> Void) {
-        
-        var parameters: [String:String] = [:]
-        
-        if let dob = dob {
-            parameters[ApiConstants.Dob] = dob
-        }
-        
-        if let fullname = fullname {
-            parameters[ApiConstants.FullName] = fullname
-        }
-        
-        if let phone = phone {
-            parameters[ApiConstants.Phone] = phone
-        }
-        
-        if let title = title {
-            parameters[ApiConstants.Title] = title
-        }
-        
+    func updateProfile(parameters: [String:String],
+                       completion: @escaping (JSON?) -> Void) {
         Network.shared.request(ApiEndPoints.updateProfile(),
                         method: .post,
                         parameters: parameters,
                         completion: completion)
     }
+    
+    func fundWalletSavedCard(amount: Double, authCode: String, completion: @escaping (FundWalletResponse?) -> Void) {
+        
+        let parameters: [String : Any] = [ApiConstants.Amount : amount,
+                                          ApiConstants.AuthCode : authCode]
+        
+        Network.shared.request(ApiEndPoints.fundWallet(),
+                               method: .post,
+                               parameters: parameters) { (response) in
+            if let response = response {
+                completion(FundWalletResponse(response))
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
 }

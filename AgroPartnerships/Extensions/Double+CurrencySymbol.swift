@@ -1,10 +1,3 @@
-//
-//  Double.swift
-//  KuwegoDigital
-//
-//  Created by Kanyinsola Fapohunda on 28/04/2019.
-//  Copyright © 2019 Kuwego. All rights reserved.
-//
 
 import Foundation
 

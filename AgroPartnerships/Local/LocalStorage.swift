@@ -14,13 +14,6 @@ final class LocalStorage: NSObject {
         UserDefaults.standard.synchronize();
     }
     
-    public func persistObject(object: NSObject!, key: String) {
-        delete(key: key)
-        let encodedData = NSKeyedArchiver.archivedData(withRootObject: object)
-        UserDefaults.standard.set(encodedData, forKey: key)
-        UserDefaults.standard.synchronize()
-    }
-    
     public func persistDictionary(dictionary: [String: AnyObject], key: String) {
         delete(key: key)
         UserDefaults.standard.set(dictionary, forKey: key)
@@ -61,15 +54,6 @@ final class LocalStorage: NSObject {
     public func getDictionary(key: String) -> [String: AnyObject]? {
         UserDefaults.standard.synchronize()
         return UserDefaults.standard.value(forKey: key) as? [String:AnyObject]
-    }
-    
-    public func getObject(key: String) -> NSObject? {
-        if let data = UserDefaults.standard.data(forKey: key),
-            let object = NSKeyedUnarchiver.unarchiveObject(with: data) as? NSObject  {
-            return object
-        } else {
-            return nil
-        }
     }
     
     public func getData(key: String) -> Data? {

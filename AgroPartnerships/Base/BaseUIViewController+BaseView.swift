@@ -29,11 +29,11 @@ extension UIViewController: BaseView {
         createAlertDialog(title: title, message: text)
     }
     
-    func showError(title: String, message text: String) {
+    func showAlertDialog(title: String, message text: String) {
         createAlertDialog(title: title, message: text)
     }
     
-    func showError(message text: String) {
+    func showAlertDialog(message text: String) {
         debugPrint("showError was called")
         createAlertDialog(message: text)
     }

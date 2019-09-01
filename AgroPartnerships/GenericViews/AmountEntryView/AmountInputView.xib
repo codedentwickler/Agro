@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
         <array key="SF-Pro-Text-Bold.otf">
             <string>SFProText-Bold</string>
         </array>
@@ -31,15 +34,15 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="646"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEv-xo-MCO">
-                            <rect key="frame" x="0.0" y="296.5" width="30.5" height="53"/>
-                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="44"/>
+                            <rect key="frame" x="0.0" y="301.5" width="25" height="43"/>
+                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="36"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" placeholder="0.00" adjustsFontForContentSizeCategory="YES" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="aMp-Cl-iZQ" customClass="CurrencyTextField" customModule="AgroPartnerships" customModuleProvider="target">
-                            <rect key="frame" x="41.5" y="296.5" width="333.5" height="53"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" placeholder="0.00" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="aMp-Cl-iZQ" customClass="CurrencyTextField" customModule="AgroPartnerships" customModuleProvider="target">
+                            <rect key="frame" x="36" y="301.5" width="339" height="43"/>
                             <color key="tintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="textColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="44"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
                             <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                     </subviews>

@@ -1,10 +1,3 @@
-//
-//  String+Commons.swift
-//  KuwegoDigital
-//
-//  Created by Kanyinsola Fapohunda on 23/02/2019.
-//  Copyright © 2019 Kuwego. All rights reserved.
-//
 
 import Foundation
 
@@ -14,6 +7,9 @@ extension String {
         return NSMakeRange(0, count)
     }
 
+    var isAlphanumeric: Bool {
+        return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
+    }
     
     func hasUppercase() -> Bool {
         let capitalLetterRegEx  = ".*[A-Z]+.*"
@@ -28,7 +24,6 @@ extension String {
         guard texttest.evaluate(with: self) else { return false }
         return true
     }
-    
     
     public func replacing(range: CountableClosedRange<Int>, with replacementString: String) -> String {
         let start = index(startIndex, offsetBy: range.lowerBound)
@@ -66,6 +61,12 @@ extension String {
     var dateFromFullString: Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        return dateFormatter.date(from: self)
+    }
+    
+    var dobFromDateString: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter.date(from: self)
     }
 

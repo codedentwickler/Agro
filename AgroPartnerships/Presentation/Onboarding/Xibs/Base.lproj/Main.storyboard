@@ -38,13 +38,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome  back to limitless opportunities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrr-ae-RUU">
-                                        <rect key="frame" x="16" y="112" width="343" height="140"/>
+                                        <rect key="frame" x="16" y="112" width="343" height="143.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="40"/>
                                         <color key="textColor" red="0.11372549019607843" green="0.23137254901960785" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SK8-On-g9x">
-                                        <rect key="frame" x="16" y="268" width="343" height="35"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SK8-On-g9x">
+                                        <rect key="frame" x="16" y="271.5" width="343" height="36"/>
                                         <string key="text">You were automatically logged out 
 because you were inactive for a while.</string>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
@@ -52,7 +52,7 @@ because you were inactive for a while.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-0g-7Mu" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="383" width="335" height="50"/>
+                                        <rect key="frame" x="20" y="387.5" width="335" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="HPS-Zm-kId"/>
                                             <constraint firstAttribute="height" constant="50" id="oMb-Cq-x9J"/>
@@ -74,7 +74,7 @@ because you were inactive for a while.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dy-Ok-C4c">
-                                        <rect key="frame" x="265" y="449" width="66" height="32"/>
+                                        <rect key="frame" x="265" y="453.5" width="66" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="Qmn-WO-pGs"/>
                                         </constraints>
@@ -87,7 +87,7 @@ because you were inactive for a while.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="atX-f9-Jli">
-                                        <rect key="frame" x="20" y="455" width="237" height="20"/>
+                                        <rect key="frame" x="20" y="459.5" width="237" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -160,6 +160,9 @@ because you were inactive for a while.</string>
                     </view>
                     <navigationItem key="navigationItem" id="4Wk-Pa-QV2"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="timeoutLogoutMessageLabel" destination="SK8-On-g9x" id="sfc-Rt-6xt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -485,14 +488,14 @@ because you were inactive for a while.</string>
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-header" translatesAutoresizingMaskIntoConstraints="NO" id="tVR-CM-Orn">
-                                        <rect key="frame" x="153" y="40" width="69" height="16"/>
+                                        <rect key="frame" x="66.5" y="40" width="242" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="56" id="dA9-Ka-8LV"/>
                                             <constraint firstAttribute="width" secondItem="tVR-CM-Orn" secondAttribute="height" multiplier="190:44" id="rUQ-Fy-UVy"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to Your Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJF-Hl-C5E">
-                                        <rect key="frame" x="44.5" y="64" width="286" height="66"/>
+                                        <rect key="frame" x="45.5" y="104" width="284" height="33.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="nQv-aU-7jK"/>
                                         </constraints>
@@ -501,7 +504,7 @@ because you were inactive for a while.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-mS-xD1" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="154" width="343" height="50"/>
+                                        <rect key="frame" x="16" y="161.5" width="343" height="46.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="FN4-27-OMI"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="Xnj-fj-0ZT"/>
@@ -511,13 +514,13 @@ because you were inactive for a while.</string>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-ok-53q" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="220" width="343" height="50"/>
+                                        <rect key="frame" x="16" y="224" width="343" height="46"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="LOGIN WITH TOUCH ID" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeM-aW-8g1">
-                                        <rect key="frame" x="196" y="290" width="163" height="20"/>
+                                        <rect key="frame" x="188" y="290" width="171" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="KaH-eu-TXe"/>
                                         </constraints>

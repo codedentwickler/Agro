@@ -45,15 +45,14 @@ protocol ApiService {
     
     func proofOfInvestment()
     
-    func updateProfile(dob: String?,
-                       fullname: String?,
-                       phone: String?,
-                       title: String?,
-                       completion: @escaping (_ response: ProfileUpdateResponse? ) -> Void)
+    func updateProfile(parameters: [String:String],
+                       completion: @escaping (JSON?) -> Void)
     
     func getAllCards(completion: @escaping (_ response: CardsResponse? ) -> Void)
     
     func deleteCard(signature: String, completion: @escaping (_ status: String? ) -> Void)
     
     func addCard(cardRequest: CardRequest, completion: @escaping (_ response: CreditCard? ) -> Void)
+    
+    func fundWalletSavedCard(amount: Double, authCode: String, completion: @escaping (_ response: FundWalletResponse? ) -> Void)
 }

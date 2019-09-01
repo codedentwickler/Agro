@@ -12,9 +12,9 @@ protocol BaseView: NSObjectProtocol {
     
     func showToast(withMessage message: String, showTimeInSeconds: Float)
     
-    func showError(message text: String)
+    func showAlertDialog(message text: String)
 
-    func showError(title: String, message text: String)
+    func showAlertDialog(title: String, message text: String)
     
     func isNetworkConnected()
 }

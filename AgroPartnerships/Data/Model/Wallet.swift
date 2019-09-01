@@ -17,5 +17,13 @@ struct Wallet {
 		ledger = json["ledger"].intValue
 		bonus = Bonus(json["bonus"])
 	}
+    
+    var walletBalance: Int {
+        let withdrawable = funds ?? 0
+        let nonWithdrawable = bonus?.balance ?? 0
+        let balance = withdrawable + nonWithdrawable
+        
+        return balance
+    }
 
 }

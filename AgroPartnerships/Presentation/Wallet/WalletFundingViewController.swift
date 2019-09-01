@@ -74,7 +74,6 @@ class WalletFundingViewController: BaseViewController {
     }
     
     private func pushFundWalletController(cards: [CreditCard]) {
-        
         let vc  = viewController(type: FundWalletViewController.self,
                                  from: StoryBoardIdentifiers.Wallet)
         vc.cards = cards
@@ -164,6 +163,7 @@ extension WalletFundingViewController: UITableViewDelegate, UITableViewDataSourc
 }
 
 extension WalletFundingViewController: FundWalletView {
+    func walletFundingSuccessful(wallet: Wallet?) {}
     
     func showFundYourWalletPage(cards: [CreditCard]) {
         pushFundWalletController(cards: cards)

@@ -21,7 +21,6 @@ public class Network {
         var headers = ["Content-Type": "application/json"]
 
         if let token = LocalStorage.shared.getAccessToken() {
-            AgroLogger.log("TOKEN \(token)")
             headers[ApiConstants.Authorization] = "Bearer \(token)"
         }
         
@@ -51,7 +50,8 @@ public class Network {
                          headers: getFinalHeaders(headers))
             .debugLog()
             .responseObject {(response: DataResponse<T>) in
-                
+                AgroLogger.log("\(response)")
+
                 switch response.result {
                 case .success:
                     if let data = response.result.value {
@@ -79,7 +79,10 @@ public class Network {
                          parameters: parameters,
                          encoding: JSONEncoding.default,
                          headers: getFinalHeaders(headers))
+            .debugLog()
             .responseJSON { (response) in
+                AgroLogger.log("\(response)")
+                
                 switch response.result {
                     case .success(let value):
                         let json = JSON(value)

@@ -308,13 +308,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug0-py-5s3">
-                                                        <rect key="frame" x="52" y="17" width="0.0" height="0.0"/>
+                                                        <rect key="frame" x="52" y="17" width="314" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ct-az-JvJ">
-                                                        <rect key="frame" x="52" y="21" width="0.0" height="0.0"/>
+                                                        <rect key="frame" x="52" y="21" width="314" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -453,15 +453,19 @@
                     <connections>
                         <outlet property="amountView" destination="QNX-hT-B5F" id="3He-sH-2Ot"/>
                         <outlet property="cardsCollectionView" destination="BYp-GK-llV" id="XY1-Rd-U8m"/>
+                        <outlet property="cardsCollectionViewHeight" destination="wvq-iE-tim" id="uBS-1t-Gen"/>
                         <outlet property="selectedCardBankNameLabel" destination="Ug0-py-5s3" id="fHS-RO-vp3"/>
                         <outlet property="selectedCardIconImageView" destination="8KO-d5-PY5" id="Ddj-yv-jpm"/>
                         <outlet property="selectedCardTypeLabel" destination="4ct-az-JvJ" id="yea-fk-1qU"/>
+                        <outlet property="selectedCardView" destination="qzN-Ol-IIk" id="j0C-SB-4rx"/>
+                        <outlet property="selectedCardViewHeight" destination="RAD-7h-qhE" id="DNU-f7-Siw"/>
+                        <outlet property="useCardLabel" destination="yfL-sZ-6Pa" id="uTv-Bk-Mhs"/>
                         <outlet property="walletBalanceLabel" destination="bw3-LW-x20" id="RbG-yc-yJx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SE-T6-Hu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4448" y="-540"/>
+            <point key="canvasLocation" x="4309" y="-485"/>
         </scene>
         <!--Manage Saved Cards View Controller-->
         <scene sceneID="0R0-l0-DWG">

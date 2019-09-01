@@ -41,4 +41,20 @@ struct ApiEndPoints {
     static func cards() -> String {
         return "\(ApiConstants.BaseUrl)/user/card-authorization"
     }
+    
+    static func helpdesk() -> String {
+        return "\(ApiConstants.BaseUrl)/help-desk"
+    }
+    
+    static func changePassword() -> String {
+        return "\(ApiConstants.BaseUrl)/user/password/change"
+    }
+    
+    static func updateUserBank() -> String {
+        return "\(ApiConstants.BaseUrl)/user/bank"
+    }
+    
+    static func fundWallet() -> String {
+        return "\(ApiConstants.BaseUrl)/user/wallet/fund"
+    }
 }

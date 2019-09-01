@@ -23,21 +23,22 @@ class LoginPresenter: BasePresenter {
         self.view?.showLoading(withMessage: StringLiterals.AUTHENTICATING_USER)
 
         apiService.login(email: email , password: password) { (loginResponse) in
-            AgroLogger.log("RESPONSE \(loginResponse)")
-
+            
             guard let response = loginResponse else {
                 self.view?.dismissLoading()
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
             guard response.isSuccessful() else {
                 self.view?.dismissLoading()
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
+            LoginSession.shared.isUserInSession = true
             LocalStorage.shared.persistString(string: response.token, key: PersistenceIDs.AccessToken)
+            self.loadCards()
             self.loadDashboardInformation()
         }
     }
@@ -48,21 +49,26 @@ class LoginPresenter: BasePresenter {
             
             self.view?.dismissLoading()
         
-            AgroLogger.log("RESPONSE \(dashboardResponse)")
-
             guard let response = dashboardResponse else {
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
             guard response.isSuccessful() else {
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
-            
-//            LocalStorage.shared.persistObject(object: response, key: PersistenceIDs.DashboardInformation)
             self.view?.showDashBoard(dashboardInformation: response)
         }
-        
+    }
+    
+    private func loadCards() {
+        ApiServiceImplementation.shared.getAllCards { (cardResponse) in
+            guard let response = cardResponse else { return }
+            
+            if let cards = response.cards {
+               LoginSession.shared.cards = cards
+            }
+        }
     }
 }

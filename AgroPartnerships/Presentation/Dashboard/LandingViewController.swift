@@ -45,12 +45,21 @@ class LandingViewController: BaseViewController {
                                          action: #selector(showDashboard(sender:)))
         investCard.isUserInteractionEnabled = true
         investCard.addGestureRecognizer(tap2)
+        
+        let tap3 = UITapGestureRecognizer(target: self,
+                                          action: #selector(showDashboard(sender:)))
+        helpdeskCard.isUserInteractionEnabled = true
+        helpdeskCard.addGestureRecognizer(tap3)
+        
+        let tap4 = UITapGestureRecognizer(target: self,
+                                          action: #selector(showDashboard(sender:)))
+        profileCard.isUserInteractionEnabled = true
+        profileCard.addGestureRecognizer(tap4)
     }
     
     @objc func showDashboard(sender: UIGestureRecognizer) {
         let vc = viewController(type: DashboardTabBarController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
-        vc.dashboardInformation = dashboardInformation
         vc.selectedIndex = getIndexOfCard(sender: sender.view)
         LoginSession.shared.setDashboardInformation(dashboardInformation: dashboardInformation!)
         present(vc, animated: true, completion: nil)
@@ -61,6 +70,10 @@ class LandingViewController: BaseViewController {
             return 0
         } else if sender == investCard {
             return 1
+        } else if sender == helpdeskCard {
+            return 2
+        } else if sender == profileCard {
+            return 3
         }
         
         return 0

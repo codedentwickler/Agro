@@ -10,6 +10,8 @@ import Foundation
 
 protocol FundWalletView: BaseView {
     func showFundYourWalletPage(cards: [CreditCard])
+    
+    func walletFundingSuccessful(wallet: Wallet?)
 }
 
 class FundWalletPresenter: BasePresenter {
@@ -33,11 +35,30 @@ class FundWalletPresenter: BasePresenter {
             self.view?.dismissLoading()
             
             guard let response = cardResponse else {
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
             self.view?.showFundYourWalletPage(cards: response.cards!)
         }
+    }
+    
+    func fundWalletSavedCard(amount: Double, authCode: String) {
+        self.view?.showLoading(withMessage: "Adding funds to your wallet . . .")
+        
+        apiService.fundWalletSavedCard(amount: amount, authCode: authCode) { (response) in
+            self.view?.dismissLoading()
+            guard let response = response else {
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                return
+            }
+            
+            if response.status == "success" {
+                self.view?.walletFundingSuccessful(wallet: response.wallet)
+            } else {
+                self.view?.showAlertDialog(message: "Card Charge failure. Please ensure you have enough funds to fund your wallet")
+            }
+        }
+    
     }
 }

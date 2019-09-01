@@ -11,7 +11,7 @@ class SignUpResponse: EVNetworkingObject {
         super.setValue(value, forKey: key)
         
         if key == "status" {
-            status = value as! Bool
+            status = value as! Bool?
         }
     }
 }

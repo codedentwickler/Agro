@@ -32,7 +32,7 @@ extension DashboardViewController: UICollectionViewDataSource {
     }
     
     
-    func portfolioActionsCollectionViewCell(_ collectionView: UICollectionView,
+    private func portfolioActionsCollectionViewCell(_ collectionView: UICollectionView,
                                             cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
             DashboardActionCollectionViewCell.identifier,
@@ -46,6 +46,9 @@ extension DashboardViewController: UICollectionViewDataSource {
             cell.backgroundImageView.image = UIImage(named: "light_green_radial_gradient")
             let totalInvestment = dashboardInformation.profile?.totalInvestment ?? 0
             cell.amountLabel.text = totalInvestment.commaSeparatedNairaValue
+            let tap = UITapGestureRecognizer(target: self, action: #selector(showInvestPage))
+            cell.newInvestmentButton.isUserInteractionEnabled = true
+            cell.newInvestmentButton.addGestureRecognizer(tap)
         } else {
             cell.titleLabel.text = """
             Return on
@@ -59,7 +62,7 @@ extension DashboardViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func walletActionsCollectionViewCell(_ collectionView: UICollectionView,
+    private func walletActionsCollectionViewCell(_ collectionView: UICollectionView,
                                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
             DashboardActionThreeCollectionViewCell.identifier,
@@ -80,6 +83,9 @@ extension DashboardViewController: UICollectionViewDataSource {
             Withdrawable: \(withdrawable.commaSeparatedNairaValue)
             Non withdrawable: \(nonWithdrawable.commaSeparatedNairaValue)
             """
+            let tap = UITapGestureRecognizer(target: self, action: #selector(showfundWallet))
+            cell.buttonView.isUserInteractionEnabled = true
+            cell.buttonView.addGestureRecognizer(tap)
         } else {
             cell.titleLabel.text = """
             Total
@@ -92,6 +98,10 @@ extension DashboardViewController: UICollectionViewDataSource {
             """
             let totalPayouts = dashboardInformation.profile?.totalPayouts ?? 0
             cell.amountLabel.text = totalPayouts.commaSeparatedNairaValue
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(showRequestPayout))
+            cell.buttonView.isUserInteractionEnabled = true
+            cell.buttonView.addGestureRecognizer(tap)
         }
         
         cell.buttonView.isHidden = false
@@ -99,7 +109,7 @@ extension DashboardViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func referralActionsCollectionViewCell(_ collectionView: UICollectionView,
+    private func referralActionsCollectionViewCell(_ collectionView: UICollectionView,
                                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
             DashboardActionThreeCollectionViewCell.identifier,
@@ -132,6 +142,25 @@ extension DashboardViewController: UICollectionViewDataSource {
         }
         
         return cell
+    }
+    
+    @objc private func showfundWallet() {
+        let vc  = viewController(type: FundWalletViewController.self,
+                                 from: StoryBoardIdentifiers.Wallet)
+        if let cards = LoginSession.shared.cards {
+            vc.cards = cards
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func showRequestPayout() {
+        let vc  = viewController(type: RequestPayoutViewController.self,
+                                 from: StoryBoardIdentifiers.Wallet)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func showInvestPage() {
+        self.tabBarController?.selectedIndex = 1
     }
 }
 

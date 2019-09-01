@@ -41,7 +41,7 @@ class InvestmentDetailPresenter: BasePresenter {
                                             
             self.view?.dismissLoading()
             guard let response = response else {
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
@@ -56,7 +56,7 @@ class InvestmentDetailPresenter: BasePresenter {
             self.view?.dismissLoading()
             
             guard let response = cardResponse else {
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             

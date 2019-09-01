@@ -42,14 +42,14 @@ class SignUpPresenter: BasePresenter {
             self.view?.dismissLoading()
                  
             guard let response = responseJSON else {
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
             if response[ApiConstants.Status].string == ApiConstants.Success {
                 let token = response[ApiConstants.Token].string
                 LocalStorage.shared.persistString(string: token, key: PersistenceIDs.AccessToken)
-                self.view?.showError(message: "Signup Successful")
+                self.view?.showAlertDialog(message: "Signup Successful")
             } else if response[ApiConstants.Status].string == ApiConstants.Error {
                
                 let status = response[ApiConstants.Data][ApiConstants.ErrorType].string

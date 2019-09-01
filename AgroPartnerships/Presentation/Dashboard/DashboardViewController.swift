@@ -172,6 +172,16 @@ class DashboardViewController: BaseViewController {
         ViewUtils.hide(portfolioStackView, walletStackView , referralStackView)
     }
     
+    private func loadCards() {
+        ApiServiceImplementation.shared.getAllCards { (cardResponse) in
+            guard let response = cardResponse else { return }
+            
+            if let cards = response.cards {
+                LoginSession.shared.cards = cards
+            }
+        }
+    }
+
     // Actions
     
     @objc private func userTapCheckPendingInvestmentIcon() {

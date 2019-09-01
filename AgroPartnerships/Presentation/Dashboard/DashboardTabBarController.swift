@@ -9,9 +9,6 @@
 import UIKit
 
 class DashboardTabBarController: UITabBarController {
-    
-    public var dashboardInformation: DashboardResponse?
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }

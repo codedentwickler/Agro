@@ -21,4 +21,10 @@ extension Date {
         dateFormatter.dateFormat = "MMM dd, yyyy"
         return dateFormatter.string(from: self)
     }
+    
+    var asDayFullMonthString: String! {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
+        return dateFormatter.string(from: self)
+    }
 }

@@ -1,7 +1,8 @@
+
 import UIKit
 
 @IBDesignable
-class CurrencyTextField : UITextField {
+open class CurrencyTextField : UITextField {
     
     fileprivate let maxDigits = 12
     
@@ -24,12 +25,12 @@ class CurrencyTextField : UITextField {
     }
     
     func initTextField(){
-        AgroLogger.log("CurrencyTextField: INITIALIZING...")
+        NSLog("CurrencyTextField: INITIALIZING...")
         self.keyboardType = UIKeyboardType.decimalPad
         currencyFormattor.numberStyle = .currency
         currencyFormattor.minimumFractionDigits = 2
         currencyFormattor.maximumFractionDigits = 2
-        setAmount(defaultValue)        
+        setAmount(defaultValue)
     }
     
     // MARK: - UITextField Notifications
@@ -42,7 +43,7 @@ class CurrencyTextField : UITextField {
         }
     }
     
-    @objc func textDidChange(_ notification: Notification) {
+    @objc func textDidChange(_ notification: Notification){
         
         //Get the original position of the cursor
         let cursorOffset = getOriginalCursorPosition();
@@ -50,10 +51,10 @@ class CurrencyTextField : UITextField {
         let cleanNumericString : String = getCleanNumberString()
         let textFieldLength = self.text?.count
         
-        if cleanNumericString.count > maxDigits {
+        if cleanNumericString.count > maxDigits{
             self.text = previousValue
         }
-        else {
+        else{
             let textFieldNumber = Double(cleanNumericString)
             if let textFieldNumber = textFieldNumber{
                 let textFieldNewValue = textFieldNumber/100
@@ -69,17 +70,12 @@ class CurrencyTextField : UITextField {
     //MARK: - Custom text field functions
     
     func setAmount (_ amount : Double){
-        if Int(amount) == Int(defaultValue) {
-            textColor = UIColor(hex: "#C7C7CC")
-        } else {
-            textColor = UIColor.black
-        }
         self.text = amount.asMoney()
     }
     
-    func getAmount(asMinor: Bool = true) -> Double {
+    func getAmount(asMinor: Bool = true) -> Double{
         guard let text = text, !text.matches(pattern: "[a-zA-Z|!@#$%^&*()?\":{}|<>\\-]") else {
-            AgroLogger.log("Amount Not Valid")
+            NSLog("Amount Not Valid")
             return 0
         }
         
@@ -93,23 +89,23 @@ class CurrencyTextField : UITextField {
     
     //MARK - helper functions
     fileprivate func getCleanNumberString() -> String {
-        AgroLogger.log("CurrencyTextField: Received Request to get clean NUMBER String... Current text is: \(String(describing: self.text))")
+        NSLog("CurrencyTextField: Received Request to get clean NUMBER String... Current text is: \(String(describing: self.text))")
         var cleanNumericString: String = ""
         let textFieldString = self.text
         if let textFieldString = textFieldString{
             
             //Remove $ sign
-            AgroLogger.log("CurrencyTextField: Separating components by \("\u{20A6}")...")
+            NSLog("CurrencyTextField: Separating components by \("\u{20A6}")...")
             var toArray = textFieldString.components(separatedBy: "\u{20A6}")
-            AgroLogger.log("CurrencyTextField: Separated components by \u{20A6}: RESULT TEXT: \(toArray) ")
+            NSLog("CurrencyTextField: Separated components by \u{20A6}: RESULT TEXT: \(toArray) ")
             cleanNumericString = removeCurrencySymbol(textFieldString)
-            AgroLogger.log("CurrencyTextField: CLEAN NUMERIC STRING BY REMOVING CURRENCY SYMBOL: \(cleanNumericString)")
+            NSLog("CurrencyTextField: CLEAN NUMERIC STRING BY REMOVING CURRENCY SYMBOL: \(cleanNumericString)")
             //Remove periods, commas
             
-            AgroLogger.log("CurrencyTextField: REMOVING Periods AND COMMAS....")
+            NSLog("CurrencyTextField: REMOVING Periods AND COMMAS....")
             toArray = cleanNumericString.components(separatedBy: CharacterSet.punctuationCharacters)
             cleanNumericString = toArray.joined(separator: "")
-            AgroLogger.log("CurrencyTextField: FINAL CLEANED STRING: \(cleanNumericString)")
+            NSLog("CurrencyTextField: FINAL CLEANED STRING: \(cleanNumericString)")
         }
         
         return cleanNumericString

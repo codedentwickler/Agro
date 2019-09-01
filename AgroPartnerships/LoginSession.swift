@@ -10,6 +10,8 @@ import Foundation
 
 class LoginSession {
     
+    var isUserInSession = false
+    var cards : [CreditCard]?
     private var dashboardInformation: DashboardResponse?
 
     static let shared = LoginSession()
@@ -22,5 +24,10 @@ class LoginSession {
     
     func getDashboardInformation() -> DashboardResponse! {
          return dashboardInformation
+    }
+    
+    public func logout() {
+        dashboardInformation = nil
+        isUserInSession = false
     }
 }

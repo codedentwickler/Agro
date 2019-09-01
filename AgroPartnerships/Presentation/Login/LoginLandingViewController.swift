@@ -10,6 +10,10 @@ import UIKit
 
 class LoginLandingViewController : UIViewController {
     
+    @IBOutlet weak var timeoutLogoutMessageLabel: UILabel!
+    
+    var logoutReason = LogoutReason.none
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -29,6 +33,9 @@ class LoginLandingViewController : UIViewController {
 //            let names = UIFont.fontNames(forFamilyName: family)
 //            AgroLogger.log("Family: \(family) Font names: \(names)")
 //        }
+        if logoutReason == .timeout {
+            timeoutLogoutMessageLabel.isHidden = false
+        }
     }
 
     @IBAction func userPressedLoginButton(_ sender: UIButton) {

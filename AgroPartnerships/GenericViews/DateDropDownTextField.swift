@@ -30,7 +30,7 @@ class DateDropDownTextField: AgroTextField, UITextFieldDelegate{
         datePicker = UIDatePicker()
         inputView = datePicker
         inputAccessoryView = toolbar
-//        datePicker.addTarget(self, action: #selector(handleDatePicker), for: UIControl.Event.valueChanged)
+        datePicker.addTarget(self, action: #selector(handleDatePicker), for: UIControl.Event.valueChanged)
         datePicker.datePickerMode = .date
     
         delegate = self

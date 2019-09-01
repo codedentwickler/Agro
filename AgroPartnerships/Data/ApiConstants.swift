@@ -5,7 +5,7 @@ struct ApiConstants {
     public static let BaseUrl = "https://staging.agropartnerships.co"
    
     public static let ImageBaseUrl = BaseUrl + "/img/"
-    public static let PaystackPublicKey = "pk_test_a6197c89aac3f3840fa923b99c8cf44d4b8e3823"
+    public static let PaystackPublicKey = "pk_test_29fb86813b279682ccf49baa572ebabe9d6fd248"
     
     // Keys
     public static let Authorization = "Authorization"

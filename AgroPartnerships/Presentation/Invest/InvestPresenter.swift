@@ -33,7 +33,7 @@ class InvestPresenter: BasePresenter {
         apiService.getAvailableCommodities(limitToNumber: 50) { (response) in
             self.view?.dismissLoading()
             guard let response = response else {
-                self.view?.showError(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             

@@ -32,7 +32,7 @@ extension Int {
         numberFormatter.maximumFractionDigits = 2
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.currencySymbol = "₦"
-        return "\(numberFormatter.string(from: NSNumber(value: self))!)"
+        return "\(numberFormatter.string(from: NSNumber(value: self)) ?? "")"
     }
 }
 
