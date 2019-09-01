@@ -57,4 +57,9 @@ struct ApiEndPoints {
     static func fundWallet() -> String {
         return "\(ApiConstants.BaseUrl)/user/wallet/fund"
     }
+    
+    
+    static func payout() -> String {
+        return "\(ApiConstants.BaseUrl)/user/payout"
+    }
 }

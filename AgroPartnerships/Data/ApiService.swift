@@ -55,4 +55,8 @@ protocol ApiService {
     func addCard(cardRequest: CardRequest, completion: @escaping (_ response: CreditCard? ) -> Void)
     
     func fundWalletSavedCard(amount: Double, authCode: String, completion: @escaping (_ response: FundWalletResponse? ) -> Void)
+    
+    func requestPayout(amount: Double, completion: @escaping (_ response: RequestPayoutResponse? ) -> Void)
 }
+
+typealias RequestPayoutResponse = FundWalletResponse

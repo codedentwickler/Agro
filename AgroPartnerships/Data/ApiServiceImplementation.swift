@@ -160,4 +160,19 @@ class ApiServiceImplementation : ApiService {
         }
     }
     
+    func requestPayout(amount: Double, completion: @escaping (RequestPayoutResponse?) -> Void) {
+        
+        let parameters: [String : Any] = [ApiConstants.Amount : amount]
+        
+        Network.shared.request(ApiEndPoints.payout(),
+                               method: .post,
+                               parameters: parameters) { (response) in
+            if let response = response {
+                completion(RequestPayoutResponse(response))
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
 }

@@ -33,6 +33,27 @@ class RequestPayoutViewController: UIViewController {
     }
 
     @IBAction func userPressedPayout(_ sender: Any) {
+        let amount = amountView.amountInputTextField.getAmount(asMinor: false)
+        AgroLogger.log("AMOUNT ENTERED \(amount)")
         
+        if amount < 100 {
+            showAlertDialog(title: "Amount to Small", message: "Minimum allowed amount is ₦100")
+            return
+        }
+        
+        self.showLoading(withMessage: "Requesting payout . . .")
+        ApiServiceImplementation.shared.requestPayout(amount: amount) { (response) in
+            self.dismissLoading()
+            guard let response = response else {
+                self.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                return
+            }
+            
+            if response.status == "success" {
+                
+            } else {
+                self.showAlertDialog(message: response.message ?? StringLiterals.GENERIC_NETWORK_ERROR)
+            }
+        }
     }
 }
