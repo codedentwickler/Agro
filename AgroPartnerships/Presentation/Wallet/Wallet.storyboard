@@ -49,17 +49,17 @@
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpO-as-Jeh">
-                                        <rect key="frame" x="0.0" y="66" width="382" height="100"/>
+                                        <rect key="frame" x="0.0" y="66" width="382" height="115"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-green" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-61-FXq">
-                                                <rect key="frame" x="12" y="38" width="24" height="24"/>
+                                                <rect key="frame" x="12" y="45.5" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="9k5-8K-pIq"/>
                                                     <constraint firstAttribute="height" constant="24" id="W6a-jS-a9D"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8g-L3-lvI">
-                                                <rect key="frame" x="48" y="8" width="334" height="76"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8g-L3-lvI">
+                                                <rect key="frame" x="48" y="8" width="326" height="91"/>
                                                 <string key="text">All payments made directly (as card/online/cash transfers from the farm &amp; commodity page or as reinvestments from a complete investment) would not show up here. Please check “All Transactions”  for direct payments. Only payments made into the wallet would show up here.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                 <color key="textColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,30 +71,30 @@
                                             <constraint firstItem="n8g-L3-lvI" firstAttribute="top" secondItem="fpO-as-Jeh" secondAttribute="top" constant="8" id="8HU-kw-ce7"/>
                                             <constraint firstItem="n8g-L3-lvI" firstAttribute="leading" secondItem="fpO-as-Jeh" secondAttribute="leading" constant="48" id="BlY-lH-8IK"/>
                                             <constraint firstAttribute="bottom" secondItem="n8g-L3-lvI" secondAttribute="bottom" constant="16" id="MMA-eM-pz0"/>
-                                            <constraint firstAttribute="trailing" secondItem="n8g-L3-lvI" secondAttribute="trailing" id="SoH-9d-EWM"/>
+                                            <constraint firstAttribute="trailing" secondItem="n8g-L3-lvI" secondAttribute="trailing" constant="8" id="SoH-9d-EWM"/>
                                             <constraint firstItem="ROH-61-FXq" firstAttribute="leading" secondItem="fpO-as-Jeh" secondAttribute="leading" constant="12" id="W7Q-tA-pKZ"/>
                                             <constraint firstItem="ROH-61-FXq" firstAttribute="centerY" secondItem="fpO-as-Jeh" secondAttribute="centerY" id="tPY-2p-R46"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Funding History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="AkC-Ey-2A1">
-                                        <rect key="frame" x="16" y="182" width="216" height="27"/>
+                                        <rect key="frame" x="16" y="197" width="232" height="27"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-icon" translatesAutoresizingMaskIntoConstraints="NO" id="QVR-Zf-ahd">
-                                        <rect key="frame" x="354" y="182" width="28" height="28"/>
+                                        <rect key="frame" x="354" y="197" width="28" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="34q-uP-Lw4"/>
                                             <constraint firstAttribute="width" secondItem="QVR-Zf-ahd" secondAttribute="height" multiplier="1:1" id="IXm-LU-0n9"/>
                                         </constraints>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cFJ-fW-hoC">
-                                        <rect key="frame" x="0.0" y="234" width="382" height="481"/>
+                                        <rect key="frame" x="0.0" y="249" width="382" height="466"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Aw1-aP-fzZ">
-                                        <rect key="frame" x="0.0" y="234" width="382" height="481"/>
+                                        <rect key="frame" x="0.0" y="249" width="382" height="466"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdH-RK-Oap">
@@ -193,13 +193,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fund your wallet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="fbn-1C-r88">
-                                                <rect key="frame" x="16" y="0.0" width="268.5" height="43"/>
+                                                <rect key="frame" x="16" y="0.0" width="266.5" height="42"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwF-s2-Blr">
-                                                <rect key="frame" x="0.0" y="59" width="414" height="72"/>
+                                                <rect key="frame" x="0.0" y="58" width="414" height="72"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-green" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-bv-dLv">
                                                         <rect key="frame" x="12" y="24" width="24" height="24"/>
@@ -227,27 +227,27 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Saved Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="5Eb-KO-hfT">
-                                                <rect key="frame" x="16" y="147" width="171" height="27"/>
+                                                <rect key="frame" x="16" y="146" width="185" height="27"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9f-48-Lo2" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="272" y="147" width="118" height="34"/>
+                                                <rect key="frame" x="272" y="146" width="118" height="34"/>
                                                 <state key="normal" title="Manage Cards"/>
                                                 <connections>
                                                     <action selector="userPressedManageCards:" destination="ZdT-Mh-rSw" eventType="touchUpInside" id="jyV-oq-HIn"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7u-Kj-61c">
-                                                <rect key="frame" x="16" y="198" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="197" width="382" height="1"/>
                                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="jch-NZ-RVg"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BYp-GK-llV">
-                                                <rect key="frame" x="0.0" y="215" width="414" height="160"/>
+                                                <rect key="frame" x="0.0" y="214" width="414" height="160"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="wvq-iE-tim"/>
@@ -261,10 +261,10 @@
                                                 <cells/>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvB-FI-Lcz">
-                                                <rect key="frame" x="16" y="391" width="382" height="97"/>
+                                                <rect key="frame" x="16" y="390" width="382" height="97"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="WALLET BALANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVp-zD-1O9">
-                                                        <rect key="frame" x="16" y="12" width="164.5" height="21"/>
+                                                        <rect key="frame" x="16" y="12" width="157" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -292,13 +292,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="USE CARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfL-sZ-6Pa">
-                                                <rect key="frame" x="16" y="504" width="90.5" height="21"/>
+                                                <rect key="frame" x="16" y="503" width="90.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzN-Ol-IIk" userLabel="Card Drop Down">
-                                                <rect key="frame" x="16" y="541" width="382" height="76"/>
+                                                <rect key="frame" x="16" y="540" width="382" height="76"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card-bg-one" translatesAutoresizingMaskIntoConstraints="NO" id="8KO-d5-PY5">
                                                         <rect key="frame" x="0.0" y="25" width="40" height="26"/>
@@ -346,32 +346,32 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="AMOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6r-Ka-i95">
-                                                <rect key="frame" x="16" y="633" width="80" height="21"/>
+                                                <rect key="frame" x="16" y="632" width="77.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNX-hT-B5F" userLabel="AMOUNT" customClass="AmountInputView" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="670" width="382" height="76"/>
+                                                <rect key="frame" x="16" y="669" width="382" height="76"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="76" id="PIc-xP-Ow7"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Enter Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jI-cK-Wh4">
-                                                <rect key="frame" x="306.5" y="754" width="91.5" height="20"/>
+                                                <rect key="frame" x="312" y="753" width="86" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paystack" translatesAutoresizingMaskIntoConstraints="NO" id="Lj5-Fk-NGJ">
-                                                <rect key="frame" x="37" y="790" width="340" height="99"/>
+                                                <rect key="frame" x="37" y="789" width="340" height="99"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Lj5-Fk-NGJ" secondAttribute="height" multiplier="340:99" id="Lle-lo-VSc"/>
                                                     <constraint firstAttribute="height" constant="99" id="Qyn-Jj-aZG"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a0-fr-Xjp" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="921" width="382" height="50"/>
+                                                <rect key="frame" x="16" y="920" width="382" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="pTA-OR-fhJ"/>
                                                 </constraints>
@@ -479,7 +479,7 @@
                                 <rect key="frame" x="0.0" y="96" width="414" height="766"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Saved Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-Zs-JrF">
-                                        <rect key="frame" x="16" y="16" width="206" height="27"/>
+                                        <rect key="frame" x="16" y="16" width="222" height="27"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="23"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -499,13 +499,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zenith Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-6y-pLg">
-                                                                    <rect key="frame" x="24" y="8" width="96" height="20"/>
+                                                                    <rect key="frame" x="24" y="8" width="91.5" height="20"/>
                                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zenith Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQd-0s-fXy">
-                                                                    <rect key="frame" x="24" y="34" width="84.5" height="18"/>
+                                                                    <rect key="frame" x="24" y="34" width="81" height="18"/>
                                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                                     <color key="textColor" white="0.0" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -579,7 +579,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="840"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeW-id-Zty">
-                                                <rect key="frame" x="0.0" y="67" width="414" height="54"/>
+                                                <rect key="frame" x="0.0" y="66" width="414" height="54"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info-green" translatesAutoresizingMaskIntoConstraints="NO" id="hqc-Gp-N1O">
                                                         <rect key="frame" x="12" y="15" width="24" height="24"/>
@@ -607,29 +607,29 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request Payout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-fL-LSp">
-                                                <rect key="frame" x="16" y="0.0" width="257.5" height="43"/>
+                                                <rect key="frame" x="16" y="0.0" width="257" height="42"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="ACCOUNT DETAILS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f4-34-eGK">
-                                                <rect key="frame" x="16" y="262" width="172" height="22"/>
+                                                <rect key="frame" x="16" y="261" width="163.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuB-Ym-i5I">
-                                                <rect key="frame" x="16" y="299" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="298" width="382" height="1"/>
                                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="dil-eS-6IM"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-rA-mFh" userLabel="Wallet Balance View">
-                                                <rect key="frame" x="16" y="141" width="382" height="97"/>
+                                                <rect key="frame" x="16" y="140" width="382" height="97"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="WALLET BALANCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KC-8o-WnG">
-                                                        <rect key="frame" x="16" y="12" width="164.5" height="21"/>
+                                                        <rect key="frame" x="16" y="12" width="157" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -657,13 +657,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Full name of Recipient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y19-Ah-6f9">
-                                                <rect key="frame" x="32" y="324" width="167" height="19"/>
+                                                <rect key="frame" x="32" y="323" width="159.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F1-8e-AfK">
-                                                <rect key="frame" x="32" y="355" width="169" height="19"/>
+                                                <rect key="frame" x="32" y="354" width="163" height="19"/>
                                                 <string key="text">Bank Account Number
 </string>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
@@ -671,39 +671,39 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmy-mi-FfA">
-                                                <rect key="frame" x="16" y="417" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="416" width="382" height="1"/>
                                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="LUe-hj-xPS"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bank Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-d0-QY3">
-                                                <rect key="frame" x="32" y="382" width="86" height="19"/>
+                                                <rect key="frame" x="32" y="381" width="84" height="19"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="AMOUNT TO BE PAID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avf-Hp-f8O">
-                                                <rect key="frame" x="16" y="466" width="183.5" height="21"/>
+                                                <rect key="frame" x="16" y="465" width="179.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCL-DP-zFp" userLabel="AMOUNT" customClass="AmountInputView" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="491" width="382" height="76"/>
-                                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="16" y="490" width="382" height="76"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="76" id="Ukh-Gd-cEI"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Enter Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7C-Y1-ePY">
-                                                <rect key="frame" x="306.5" y="579" width="91.5" height="20"/>
+                                                <rect key="frame" x="312" y="578" width="86" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-Fm-a6g" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="623" width="366" height="50"/>
+                                                <rect key="frame" x="24" y="622" width="366" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="0CZ-Zp-ogE"/>
                                                 </constraints>

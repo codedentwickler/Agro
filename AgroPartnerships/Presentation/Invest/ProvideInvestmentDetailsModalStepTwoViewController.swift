@@ -51,7 +51,7 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
         let totalCost = totalUnitSelected * (investment.price ?? 0)
         subTotalAmountLabel.text = totalCost.commaSeparatedNairaValue
         
-        let profile = LoginSession.shared.getDashboardInformation()?.profile
+        let profile = LoginSession.shared.dashboardInformation?.profile
         let withdrawable = profile?.wallet?.funds ?? 0
         let nonWithdrawable = profile?.wallet?.bonus?.balance ?? 0
         let balance = withdrawable + nonWithdrawable

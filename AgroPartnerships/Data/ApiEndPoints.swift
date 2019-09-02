@@ -14,7 +14,7 @@ struct ApiEndPoints {
         return "\(ApiConstants.BaseUrl)/investments/recent?limit=\(limit)"
     }
     
-    static func getDashboardInformation() -> String {
+    static func dashboardInformation() -> String {
         return "\(ApiConstants.BaseUrl)/user/dashboard"
     }
     

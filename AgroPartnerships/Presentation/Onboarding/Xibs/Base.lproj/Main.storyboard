@@ -74,7 +74,7 @@ because you were inactive for a while.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dy-Ok-C4c">
-                                        <rect key="frame" x="265" y="453.5" width="66" height="33"/>
+                                        <rect key="frame" x="265" y="455" width="66" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="Qmn-WO-pGs"/>
                                         </constraints>
@@ -87,7 +87,7 @@ because you were inactive for a while.</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don’t have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="atX-f9-Jli">
-                                        <rect key="frame" x="20" y="459.5" width="237" height="20"/>
+                                        <rect key="frame" x="46" y="461.5" width="211" height="20"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -120,19 +120,19 @@ because you were inactive for a while.</string>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="atX-f9-Jli" firstAttribute="top" secondItem="cJv-0g-7Mu" secondAttribute="bottom" constant="22" id="4m8-18-Ehy"/>
+                                    <constraint firstItem="7dy-Ok-C4c" firstAttribute="centerY" secondItem="atX-f9-Jli" secondAttribute="centerY" id="6eU-Nk-oXk"/>
                                     <constraint firstAttribute="trailing" secondItem="zpN-27-5ga" secondAttribute="trailing" constant="20" id="6rH-bY-uXu"/>
                                     <constraint firstItem="cJv-0g-7Mu" firstAttribute="top" relation="lessThanOrEqual" secondItem="SK8-On-g9x" secondAttribute="bottom" constant="100" id="7ej-9X-QhD"/>
+                                    <constraint firstItem="atX-f9-Jli" firstAttribute="top" secondItem="cJv-0g-7Mu" secondAttribute="bottom" constant="24" id="8kq-71-bmT"/>
                                     <constraint firstItem="7dy-Ok-C4c" firstAttribute="trailing" secondItem="cJv-0g-7Mu" secondAttribute="trailing" constant="-24" id="CsH-Tg-gz6"/>
                                     <constraint firstItem="7dy-Ok-C4c" firstAttribute="leading" secondItem="atX-f9-Jli" secondAttribute="trailing" constant="8" id="DVE-C9-kUK"/>
                                     <constraint firstItem="zpN-27-5ga" firstAttribute="leading" secondItem="mAn-ng-yVx" secondAttribute="leading" constant="20" id="Ipt-sT-nGa"/>
                                     <constraint firstItem="Zrr-ae-RUU" firstAttribute="centerX" secondItem="mAn-ng-yVx" secondAttribute="centerX" id="Jaw-1A-OmE"/>
-                                    <constraint firstItem="atX-f9-Jli" firstAttribute="leading" secondItem="cJv-0g-7Mu" secondAttribute="leading" id="Pdb-Z1-sQi"/>
+                                    <constraint firstItem="atX-f9-Jli" firstAttribute="centerX" secondItem="mAn-ng-yVx" secondAttribute="centerX" constant="-36" id="O40-yP-NQT"/>
                                     <constraint firstItem="cJv-0g-7Mu" firstAttribute="leading" secondItem="mAn-ng-yVx" secondAttribute="leading" constant="20" id="T2k-37-Mp6"/>
                                     <constraint firstItem="cJv-0g-7Mu" firstAttribute="top" secondItem="SK8-On-g9x" secondAttribute="bottom" constant="80" id="Wto-Kv-7oi"/>
                                     <constraint firstItem="hG8-WY-RWT" firstAttribute="leading" secondItem="mAn-ng-yVx" secondAttribute="leading" constant="67" id="XE3-qQ-7GR"/>
                                     <constraint firstAttribute="trailing" secondItem="cJv-0g-7Mu" secondAttribute="trailing" constant="20" id="bjC-Nf-1Vr"/>
-                                    <constraint firstItem="7dy-Ok-C4c" firstAttribute="top" secondItem="cJv-0g-7Mu" secondAttribute="bottom" constant="16" id="cRd-5I-XSn"/>
                                     <constraint firstItem="Zrr-ae-RUU" firstAttribute="leading" secondItem="mAn-ng-yVx" secondAttribute="leading" constant="16" id="cpq-4M-emF"/>
                                     <constraint firstItem="zpN-27-5ga" firstAttribute="top" secondItem="hG8-WY-RWT" secondAttribute="bottom" constant="16" id="dQo-lE-Bu0"/>
                                     <constraint firstAttribute="trailing" secondItem="hG8-WY-RWT" secondAttribute="trailing" constant="67" id="egA-Ne-jhb"/>

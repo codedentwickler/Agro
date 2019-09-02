@@ -56,7 +56,7 @@ class ApiServiceImplementation : ApiService {
     }
     
     func getDashboardInformation(completion: @escaping (DashboardResponse?) -> Void) {
-        Network.shared.request(ApiEndPoints.getDashboardInformation()) { (response) in
+        Network.shared.request(ApiEndPoints.dashboardInformation()) { (response) in
             if let response = response {
                 completion(DashboardResponse(response))
             } else {

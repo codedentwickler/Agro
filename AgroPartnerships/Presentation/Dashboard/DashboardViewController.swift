@@ -77,7 +77,7 @@ class DashboardViewController: BaseViewController {
     }
 
     private func setupView() {
-        dashboardInformation = LoginSession.shared.getDashboardInformation()
+        dashboardInformation = LoginSession.shared.dashboardInformation
         
         for investment in dashboardInformation.portfolio! {
             if investment.status == ApiConstants.Active {
@@ -223,7 +223,8 @@ class DashboardViewController: BaseViewController {
     }
     
     @IBAction func userPresedCopyReferralCode(_ sender: Any) {
-        
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = dashboardInformation.profile?.refCode
     }
     
     @IBAction func userPressedShareCode(_ sender: Any) {

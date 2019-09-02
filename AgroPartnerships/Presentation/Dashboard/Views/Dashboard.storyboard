@@ -2566,11 +2566,31 @@ Lagos. Nigeria</string>
                                                     <constraint firstAttribute="height" constant="1" id="VI2-ZR-ORZ"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEL-6R-tj1" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="1599" width="350" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="NC7-Di-fPa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                <state key="normal" title="Logout"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                        <color key="value" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="userPressedSLogout" destination="lIF-20-cGb" eventType="touchUpInside" id="r1T-q7-bIV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="jbl-Iq-4vV" secondAttribute="trailing" constant="16" id="006-Ff-7FU"/>
                                             <constraint firstItem="cde-hX-QUT" firstAttribute="trailing" secondItem="Pyd-bN-oqa" secondAttribute="trailing" id="149-7j-e8l"/>
+                                            <constraint firstItem="TEL-6R-tj1" firstAttribute="leading" secondItem="jWU-di-Ak2" secondAttribute="leading" id="1c5-4Q-Hlf"/>
                                             <constraint firstAttribute="trailing" secondItem="rBh-Qq-ETk" secondAttribute="trailing" constant="16" id="1ov-kg-8dn"/>
                                             <constraint firstItem="cde-hX-QUT" firstAttribute="leading" secondItem="Pyd-bN-oqa" secondAttribute="leading" id="2rm-Nq-CYk"/>
                                             <constraint firstAttribute="trailing" secondItem="Ldt-Sg-LxM" secondAttribute="trailing" id="9C4-p2-7KT"/>
@@ -2578,6 +2598,7 @@ Lagos. Nigeria</string>
                                             <constraint firstItem="Ldt-Sg-LxM" firstAttribute="top" secondItem="zda-ao-l7j" secondAttribute="top" id="BSk-0K-4XI"/>
                                             <constraint firstAttribute="trailing" secondItem="OrN-bQ-VGg" secondAttribute="trailing" id="BxK-v9-erR"/>
                                             <constraint firstAttribute="height" constant="1700" id="CHz-1y-gk7"/>
+                                            <constraint firstItem="TEL-6R-tj1" firstAttribute="height" secondItem="jWU-di-Ak2" secondAttribute="height" id="E4i-2U-JOY"/>
                                             <constraint firstItem="jTd-ln-ULl" firstAttribute="centerY" secondItem="mgT-d9-QKD" secondAttribute="centerY" id="Fz2-Dp-UCP"/>
                                             <constraint firstItem="RaF-k1-lUz" firstAttribute="top" secondItem="AIx-O0-jLu" secondAttribute="bottom" constant="24" id="HwL-5C-uYm"/>
                                             <constraint firstItem="jTd-ln-ULl" firstAttribute="trailing" secondItem="COL-nD-4e8" secondAttribute="leading" constant="-12" id="Jyd-hs-FuZ"/>
@@ -2588,6 +2609,7 @@ Lagos. Nigeria</string>
                                             <constraint firstAttribute="trailing" secondItem="Crm-Op-L8o" secondAttribute="trailing" constant="16" id="P07-U6-gp6"/>
                                             <constraint firstItem="mgT-d9-QKD" firstAttribute="top" secondItem="Pyd-bN-oqa" secondAttribute="bottom" constant="16" id="QKN-LL-f4K"/>
                                             <constraint firstItem="fWY-E9-bAD" firstAttribute="leading" secondItem="Ldt-Sg-LxM" secondAttribute="leading" constant="16" id="R5Q-bp-Loq"/>
+                                            <constraint firstItem="TEL-6R-tj1" firstAttribute="trailing" secondItem="jWU-di-Ak2" secondAttribute="trailing" id="SvJ-6L-IDZ"/>
                                             <constraint firstItem="COL-nD-4e8" firstAttribute="centerY" secondItem="mgT-d9-QKD" secondAttribute="centerY" id="TNZ-rE-pl0"/>
                                             <constraint firstItem="cde-hX-QUT" firstAttribute="top" secondItem="mgT-d9-QKD" secondAttribute="bottom" constant="16" id="Vo1-qd-xy6"/>
                                             <constraint firstItem="Ldt-Sg-LxM" firstAttribute="height" secondItem="OrN-bQ-VGg" secondAttribute="height" id="WDi-7c-NVQ"/>
@@ -2601,6 +2623,7 @@ Lagos. Nigeria</string>
                                             <constraint firstItem="AIx-O0-jLu" firstAttribute="leading" secondItem="zda-ao-l7j" secondAttribute="leading" constant="16" id="gg6-Ad-Ms5"/>
                                             <constraint firstItem="LOD-of-7wi" firstAttribute="top" secondItem="RaF-k1-lUz" secondAttribute="bottom" constant="29.5" id="h57-Te-nKt"/>
                                             <constraint firstItem="RaF-k1-lUz" firstAttribute="leading" secondItem="zda-ao-l7j" secondAttribute="leading" constant="16" id="hfF-hr-abe"/>
+                                            <constraint firstItem="TEL-6R-tj1" firstAttribute="top" secondItem="cde-hX-QUT" secondAttribute="bottom" constant="24" id="iDo-RD-adi"/>
                                             <constraint firstItem="Pyd-bN-oqa" firstAttribute="top" secondItem="qwB-iq-CAW" secondAttribute="bottom" constant="16" id="ilH-nc-7cB"/>
                                             <constraint firstAttribute="trailing" secondItem="EGh-x1-gA1" secondAttribute="trailing" constant="16" id="j7o-Uj-nwR"/>
                                             <constraint firstItem="fWY-E9-bAD" firstAttribute="bottom" secondItem="Ldt-Sg-LxM" secondAttribute="bottom" constant="-16" id="jyM-vK-9pa"/>

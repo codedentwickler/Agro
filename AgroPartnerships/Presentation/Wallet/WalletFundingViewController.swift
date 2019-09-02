@@ -51,7 +51,8 @@ class WalletFundingViewController: BaseViewController {
         headerLabel.text = """
         All payments made directly (as card/online/cash transfers from the farm & commodity page or as reinvestments from a complete investment) would not show up here. Please check “All Transactions”  for direct payments. Only payments made into the wallet would show up here.
         """
-        actionButton.titleLabel?.text = "Fund Wallet"
+        
+        actionButton.setTitle("Fund Wallet", for: .normal)
     }
     
     private func updateOnPayoutsPressed() {
@@ -61,7 +62,7 @@ class WalletFundingViewController: BaseViewController {
         headerLabel.text = """
         All debit payments made directly (as card/online/cash transfers from the farm & commodity page or as reinvestments) would not show up here. Please check “All Transactions” for direct debit payments. Only payments from your wallet to your registered bank account would show up here.
         """
-        actionButton.titleLabel?.text = "Request Payout"
+        actionButton.setTitle("Request Payout", for: .normal)
     }
     
     @IBAction func userPressedActionButton(_ sender: Any) {

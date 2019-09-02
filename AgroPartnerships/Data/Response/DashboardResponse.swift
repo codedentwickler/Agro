@@ -11,7 +11,7 @@ struct DashboardResponse {
 	let portfolio: [Portfolio]?
 	let transactions: [Transactions]?
 	let referrals: [Referral]?
-	let profile: Profile?
+	var profile: Profile?
 	let paystackKey: String?
 	let status: String?
 

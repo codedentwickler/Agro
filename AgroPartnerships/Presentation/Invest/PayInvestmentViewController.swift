@@ -31,7 +31,7 @@ class PayInvestmentViewController: BaseViewController {
     
     private func setupView() {
         
-        let profile = LoginSession.shared.getDashboardInformation()?.profile
+        let profile = LoginSession.shared.dashboardInformation?.profile
         walletBalanceLabel.text = profile?.wallet?.funds?.commaSeparatedNairaValue
     }
     

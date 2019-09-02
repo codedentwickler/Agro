@@ -42,7 +42,7 @@ class SupportViewController: UIViewController {
     private func submit() {
         let subject = subjectTextView.text ?? ""
         let message = bodyTextView.text ?? ""
-        let email = LoginSession.shared.getDashboardInformation()?.profile?.email ?? ""
+        let email = LoginSession.shared.dashboardInformation?.profile?.email ?? ""
         
         if subject.count < 5 || message.count < 5 {
             showAlertDialog(message: "Please enter a subject with at least 2 words and a message with at least 3 words")

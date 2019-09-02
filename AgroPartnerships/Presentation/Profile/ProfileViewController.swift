@@ -58,7 +58,7 @@ class ProfileViewController: BaseViewController {
    
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.appGreen1], for: .selected)
         
-        let profile = LoginSession.shared.getDashboardInformation()?.profile
+        let profile = LoginSession.shared.dashboardInformation?.profile
         // Set existing values.
         titleTextField.text = profile?.title
         fullnameTextField.text = profile?.fullname
@@ -187,6 +187,11 @@ class ProfileViewController: BaseViewController {
                 self.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
             }
         }
+    }
+    
+    @IBAction func userPressedSLogout() {
+        AppDelegate.applicationDidLogout(with: .none)
+        LoginSession.shared.logout()
     }
 
     private func showSuccessAlert(title: String, message: String) {

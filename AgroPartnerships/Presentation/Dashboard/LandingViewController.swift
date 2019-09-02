@@ -61,7 +61,7 @@ class LandingViewController: BaseViewController {
         let vc = viewController(type: DashboardTabBarController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
         vc.selectedIndex = getIndexOfCard(sender: sender.view)
-        LoginSession.shared.setDashboardInformation(dashboardInformation: dashboardInformation!)
+        LoginSession.shared.dashboardInformation = dashboardInformation
         present(vc, animated: true, completion: nil)
     }
     

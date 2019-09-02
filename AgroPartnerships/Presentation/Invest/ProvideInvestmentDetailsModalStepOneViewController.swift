@@ -49,7 +49,7 @@ class ProvideInvestmentDetailsModalStepOneViewController: UIViewController {
         // MARK - TODO : ASK QUESTION ABOUT UNITS AND TOTAL UNITS
         quantityStepper.maximumValue = Double(investment.units ?? 0)
         
-        let profile = LoginSession.shared.getDashboardInformation()?.profile
+        let profile = LoginSession.shared.dashboardInformation?.profile
         let withdrawable = profile?.wallet?.funds ?? 0
         let nonWithdrawable = profile?.wallet?.bonus?.balance ?? 0
         let balance = withdrawable + nonWithdrawable

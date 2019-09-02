@@ -50,7 +50,7 @@ class FundWalletViewController: BaseViewController {
             cardsCollectionViewHeight.constant = 0;
         }
 
-        let profile = LoginSession.shared.getDashboardInformation()?.profile
+        let profile = LoginSession.shared.dashboardInformation?.profile
         walletBalanceLabel.text = profile?.wallet?.walletBalance.commaSeparatedNairaValue
     }
     
@@ -163,7 +163,7 @@ extension FundWalletViewController: FundWalletView {
         self.showAlertDialog(title: "Wallet Fund Successful",
                                    message: "Your wallet fund was successful. Your new wallet balance is \(newBalance)")
         self.walletBalanceLabel.text = newBalance
-        LoginSession.shared.getDashboardInformation()?.profile?.wallet = wallet
+        LoginSession.shared.dashboardInformation?.profile?.wallet = wallet
     }
 }
 

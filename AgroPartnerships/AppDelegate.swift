@@ -63,8 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-import Foundation
-
 public enum LogoutReason {
     case unauthorized
     case timeout
