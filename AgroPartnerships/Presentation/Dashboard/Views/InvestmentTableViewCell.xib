@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -54,15 +54,15 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eHt-vq-fkA">
-                                <rect key="frame" x="84" y="23" width="201.5" height="38.5"/>
+                                <rect key="frame" x="84" y="23" width="220" height="38.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cashew Nuts - 02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOC-M2-EAf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cashew Nuts - 02" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOC-M2-EAf">
                                         <rect key="frame" x="0.0" y="0.0" width="149.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASB9252942 — ₦95,000.00/unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXH-7m-dGr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASB9252942 — ₦95,000.00/unit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yXH-7m-dGr">
                                         <rect key="frame" x="0.0" y="22.5" width="201.5" height="16"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="0.48766588179999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -202,6 +202,7 @@
                             <constraint firstItem="tSd-9K-zEr" firstAttribute="top" secondItem="mrk-FY-nvw" secondAttribute="top" id="BFA-fK-tqn"/>
                             <constraint firstItem="aoU-5S-Ck2" firstAttribute="top" secondItem="zbd-md-zMS" secondAttribute="top" id="DGM-ag-gRq"/>
                             <constraint firstItem="eF6-Hn-mOL" firstAttribute="top" secondItem="jxC-U3-WKr" secondAttribute="top" constant="12" id="Fzf-x5-YAf"/>
+                            <constraint firstAttribute="trailing" secondItem="eHt-vq-fkA" secondAttribute="trailing" constant="16" id="GUX-Yx-GmJ"/>
                             <constraint firstItem="bkS-hT-d7e" firstAttribute="leading" secondItem="tdw-1s-B4l" secondAttribute="leading" id="RcL-Wg-wSw"/>
                             <constraint firstItem="bkS-hT-d7e" firstAttribute="top" secondItem="tdw-1s-B4l" secondAttribute="bottom" constant="16" id="Wro-MB-xLv"/>
                             <constraint firstItem="tdw-1s-B4l" firstAttribute="top" secondItem="zbd-md-zMS" secondAttribute="bottom" constant="16" id="YZx-EV-qqF"/>

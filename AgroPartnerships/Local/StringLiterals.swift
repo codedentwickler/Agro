@@ -14,7 +14,7 @@ struct StringLiterals {
     static let CREATING_NEW_CUSTOMER_ACCOUNT =  "Setting up your new account . . ."
     
     // In app strings
-    static let GENERIC_NETWORK_ERROR =          "An unexpected network error occurred. please try again"
+    static let GENERIC_NETWORK_ERROR =          "An unexpected network error occurred. please ensure you have internet connection "
     static let BACK =                           "Back"
     static let SIGN_IN =                        "Sign In"
     static let PLEASE_CHOOSE_ONE =              "Please Choose One"
@@ -59,6 +59,6 @@ struct StringLiterals {
     
     
     static let SAMPLE =                         ["Item 1","Item 2","Item 3","Item 4","Item 5","Item 6","Item 7","Item 8"]
-    static let Titles =                         ["Mr", "Mrs", "Miss"]
+    static let Titles =                         ["Mr.", "Mrs.", "Ms."]
     static let DialingCodes =                   ["+234"]
 }

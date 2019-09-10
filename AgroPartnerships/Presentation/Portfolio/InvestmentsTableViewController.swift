@@ -45,6 +45,10 @@ class InvestmentsTableViewController: BaseViewController {
         investmentsTableView.register(UINib(nibName: PendingInvestmentTableViewCell.identifier,
                                             bundle: nil),
                                       forCellReuseIdentifier: PendingInvestmentTableViewCell.identifier)
+        
+        if investments.count == 0 {
+            investmentsTableView.setEmptyMessage("No pending investment")
+        }
     }
 
     private func setupUIForInvestmentsHistory() {
@@ -54,6 +58,10 @@ class InvestmentsTableViewController: BaseViewController {
         investmentsTableView.register(UINib(nibName: InvestmentTableViewCell.identifier,
                                             bundle: nil),
                                       forCellReuseIdentifier: InvestmentTableViewCell.identifier)
+        
+        if investments.count == 0 {
+            investmentsTableView.setEmptyMessage("No investment history")
+        }
     }
     
     @objc private func userTapMenuButton() {

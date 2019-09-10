@@ -13,11 +13,13 @@ struct FundWalletResponse {
     
     let wallet: Wallet?
     let transactionId: String?
+    let payment: VerifyPaymentResponse?
     let status: String?
     let message: String?
 
     init(_ json: JSON) {
         wallet = Wallet(json["wallet"])
+        payment = VerifyPaymentResponse(json["payment"])
         transactionId = json["transactionId"].stringValue
         status = json["status"].stringValue
         message = json["message"].stringValue

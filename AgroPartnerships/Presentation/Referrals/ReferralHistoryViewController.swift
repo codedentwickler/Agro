@@ -59,6 +59,11 @@ class ReferralHistoryViewController: BaseViewController {
         pendingReferralsTableView.register(UINib(nibName: ReferralsTableViewCell.identifier,
                                                   bundle: nil),
                                             forCellReuseIdentifier: ReferralsTableViewCell.identifier)
+        
+        if referrals.count == 0 {
+            pendingReferralsTableView.setEmptyMessage("No current referrals")
+            redeemedReferralsTableView.setEmptyMessage("No current referrals")
+        }
     }
     
     @objc private func userTapMenuButton() {

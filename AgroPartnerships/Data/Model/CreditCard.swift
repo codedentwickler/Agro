@@ -19,7 +19,8 @@ struct CreditCard {
 	let bin: String?
 	let bank: String?
 	let signature: String?
-	let status: String?
+    let status: String?
+    let message: String?
 	let created: String?
 	let updated: String?
 
@@ -34,7 +35,8 @@ struct CreditCard {
 		bin = json["bin"].stringValue
 		bank = json["bank"].stringValue
 		signature = json["signature"].stringValue
-		status = json["status"].stringValue
+        status = json["status"].stringValue
+        message = json["message"].stringValue
 		created = json["created"].stringValue
 		updated = json["updated"].stringValue
 	}

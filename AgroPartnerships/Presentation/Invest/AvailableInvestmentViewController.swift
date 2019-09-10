@@ -45,10 +45,18 @@ class AvailableInvestmentViewController: BaseViewController {
     
     private func updateUIForSoldOutInvestments() {
         titleLabel.text = "Sold Out Investments"
+        
+        if investments.count == 0 {
+            investmentsTableView.setEmptyMessage("No sold out investment")
+        }
     }
     
     private func setupUIForAvailableInvestments() {
         titleLabel.text = "Available Investments"
+        
+        if investments.count == 0 {
+            investmentsTableView.setEmptyMessage("No available investment at the moment")
+        }
     }
     
     @objc private func userTapMenuButton() {

@@ -26,7 +26,7 @@ class PendingInvestmentTableViewCell: UITableViewCell {
             titleLabel.text = portfolio.investment?.title
             subtitleLabel.text = "\(portfolio.code!) ‒‒ \(portfolio.investment?.price?.commaSeparatedNairaValue ?? "")/unit"
             returnsLabel.text = "\(portfolio.yield ?? 0)%"
-            unitsLabel.text = portfolio.units?.commaSeparatedNairaValue
+            unitsLabel.text = portfolio.units?.string
             amountLabel.text = portfolio.amount?.commaSeparatedNairaValue
             typeLabel.text = portfolio.investment?.type?.uppercased()
             startDateLabel.text = portfolio.startDate?.asFullDate(format: "EEEE\nMMM d, yyyy")

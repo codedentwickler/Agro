@@ -9,7 +9,10 @@
 import UIKit
 
 class DashboardTabBarController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hidesBottomBarWhenPushed = true
     }
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 enum PaymentMethod: String {
+    case none = "none"
     case card = "card"
     case transfer = "transfer"
     case cardAuth = "card_auth"

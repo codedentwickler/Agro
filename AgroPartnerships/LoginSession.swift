@@ -11,7 +11,7 @@ import Foundation
 class LoginSession {
     
     var isUserInSession = false
-    var cards : [CreditCard]?
+    var cards : [CreditCard] = [CreditCard]()
     var dashboardInformation: DashboardResponse?
 
     static let shared = LoginSession()

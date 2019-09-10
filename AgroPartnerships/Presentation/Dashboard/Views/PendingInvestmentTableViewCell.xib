@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -54,15 +54,15 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pqE-px-zJj">
-                                <rect key="frame" x="84" y="22.5" width="201.5" height="40"/>
+                                <rect key="frame" x="84" y="22.5" width="220" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cashew Nuts - 02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e89-MQ-Lb1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cashew Nuts - 02" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e89-MQ-Lb1">
                                         <rect key="frame" x="0.0" y="0.0" width="149.5" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASB9252942 — ₦95,000.00/unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDI-Zd-kVF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASB9252942 — ₦95,000.00/unit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tDI-Zd-kVF">
                                         <rect key="frame" x="0.0" y="24" width="201.5" height="16"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="0.48766588179999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,6 +239,7 @@
                             <constraint firstAttribute="trailing" secondItem="Nl9-im-Tx2" secondAttribute="trailing" constant="16" id="Bsk-yI-uDO"/>
                             <constraint firstItem="Sie-1S-dfD" firstAttribute="bottom" secondItem="Xrz-Dd-QwG" secondAttribute="bottom" id="CNf-Dg-ece"/>
                             <constraint firstItem="vDU-0C-7zd" firstAttribute="leading" secondItem="t2G-d8-oL5" secondAttribute="trailing" constant="32" id="Can-lp-oqA"/>
+                            <constraint firstAttribute="trailing" secondItem="pqE-px-zJj" secondAttribute="trailing" constant="16" id="K0u-kf-He3"/>
                             <constraint firstItem="ert-Om-AmU" firstAttribute="top" secondItem="Uql-fr-P0s" secondAttribute="top" constant="12" id="K2T-9f-XEQ"/>
                             <constraint firstItem="cls-0y-ppO" firstAttribute="leading" secondItem="E7B-k1-8K0" secondAttribute="leading" id="Mm8-2Z-4cu"/>
                             <constraint firstItem="t2G-d8-oL5" firstAttribute="centerY" secondItem="vDU-0C-7zd" secondAttribute="centerY" id="NaN-V2-cTK"/>

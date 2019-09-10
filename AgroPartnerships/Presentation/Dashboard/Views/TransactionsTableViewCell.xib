@@ -79,8 +79,8 @@
                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Referral Bonus ( {{Full name of Referral }} )" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNY-aS-H3P">
-                                <rect key="frame" x="16" y="76" width="261" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QNY-aS-H3P">
+                                <rect key="frame" x="16" y="76" width="350" height="0.0"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                 <color key="textColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -91,6 +91,7 @@
                             <constraint firstItem="QNY-aS-H3P" firstAttribute="leading" secondItem="5f9-a8-hWq" secondAttribute="leading" id="0S3-8g-cmQ"/>
                             <constraint firstItem="QNY-aS-H3P" firstAttribute="top" secondItem="5f9-a8-hWq" secondAttribute="bottom" constant="4" id="0h7-Dr-nt5"/>
                             <constraint firstAttribute="height" constant="112" id="4mr-BQ-c1Q"/>
+                            <constraint firstAttribute="trailing" secondItem="QNY-aS-H3P" secondAttribute="trailing" constant="16" id="Fy6-bK-oZU"/>
                             <constraint firstItem="ZFa-GY-DuA" firstAttribute="top" secondItem="DoY-y8-gE4" secondAttribute="top" constant="16" id="M5j-in-Pg4"/>
                             <constraint firstItem="5f9-a8-hWq" firstAttribute="top" secondItem="ZFa-GY-DuA" secondAttribute="bottom" constant="8" id="QJg-0e-pnA"/>
                             <constraint firstItem="ZFa-GY-DuA" firstAttribute="leading" secondItem="DoY-y8-gE4" secondAttribute="leading" constant="16" id="ZgR-f1-Jd2"/>

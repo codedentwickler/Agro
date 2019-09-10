@@ -9,14 +9,20 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Paystack
+import Firebase
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    // *************************************************************************************************
+    // TODO : Step 0: Add Keychain Sharing entitlements to your app
+    // *************************************************************************************************
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
         let navigationBarAppearance = UINavigationBar.appearance()
+        
         navigationBarAppearance.tintColor = UIColor.appGreen1
         
         Paystack.setDefaultPublicKey(ApiConstants.PaystackPublicKey)
@@ -28,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             name: .appTimeout,
             object: nil
         )
+        FirebaseApp.configure()
+        LocalStorage.shared.loadCountryCodesJSON()
 
         // Override point for customization after application launch.
         return true

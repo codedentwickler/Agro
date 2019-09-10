@@ -15,6 +15,9 @@ protocol ApiService {
                password: String,
                completion: @escaping (_ response: LoginResponse? ) -> Void)
     
+    func forgotPassword(email: String,
+                        completion: @escaping (_ response: JSON? ) -> Void)
+    
     func signUp(title: String,
                 fullname: String,
                 email: String,
@@ -41,7 +44,7 @@ protocol ApiService {
                             completion: @escaping (_ response: RollbackInvestmentResponse? ) -> Void)
     
     func verifyInvestmentTransaction(investmentReference: String,
-                                     completion: @escaping (_ response: VerifyInvestmentTransactionResponse? ) -> Void)
+                                     completion: @escaping (_ response: VerifyPaymentResponse? ) -> Void)
     
     func proofOfInvestment()
     
@@ -56,7 +59,11 @@ protocol ApiService {
     
     func fundWalletSavedCard(amount: Double, authCode: String, completion: @escaping (_ response: FundWalletResponse? ) -> Void)
     
+    func verifyWalletPayment(reference: String,
+                             completion: @escaping (_ response: FundWalletResponse? ) -> Void)
+    
     func requestPayout(amount: Double, completion: @escaping (_ response: RequestPayoutResponse? ) -> Void)
 }
 
 typealias RequestPayoutResponse = FundWalletResponse
+typealias CardRequest = Authorization

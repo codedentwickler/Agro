@@ -11,6 +11,8 @@ import SwiftyOnboard
 
 class OnboardingStepThree: SwiftyOnboardPage {
     
+    @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var getStartedButton: AgroActionButton!
     
     required init?(coder aDecoder: NSCoder) {

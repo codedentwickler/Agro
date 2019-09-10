@@ -12,4 +12,9 @@ extension UITextView {
             documentAttributes: nil)
         self.attributedText = attrStr
     }
+    
+    func textExceedBoundsOfTextView() -> Bool {
+        let textHeight = contentSize.height
+        return textHeight > bounds.height
+    }
 }

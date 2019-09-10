@@ -13,7 +13,6 @@ use_frameworks!
     pod 'MBProgressHUD', '~> 1.1.0'
     pod 'EVReflection/Alamofire'
     pod 'IQKeyboardManagerSwift'
-    pod 'SkyFloatingLabelTextField', '~> 3.0'
     pod 'DropDown'
     pod 'Toast-Swift', '~> 3.0.1'
     pod 'Kingfisher', '~> 4.0'
@@ -22,6 +21,8 @@ use_frameworks!
     pod 'SwiftyOnboard'
     pod 'Cards'
     pod 'FittedSheets'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Messaging'
 
 end
 

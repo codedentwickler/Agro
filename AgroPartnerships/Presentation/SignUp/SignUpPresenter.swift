@@ -49,7 +49,7 @@ class SignUpPresenter: BasePresenter {
             if response[ApiConstants.Status].string == ApiConstants.Success {
                 let token = response[ApiConstants.Token].string
                 LocalStorage.shared.persistString(string: token, key: PersistenceIDs.AccessToken)
-                self.view?.showAlertDialog(message: "Signup Successful")
+                self.view?.showAlertDialog( title: "Signup Successful", message: "")
             } else if response[ApiConstants.Status].string == ApiConstants.Error {
                
                 let status = response[ApiConstants.Data][ApiConstants.ErrorType].string

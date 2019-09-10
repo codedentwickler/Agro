@@ -24,7 +24,6 @@
 //  THE SOFTWARE.
 
 import UIKit
-import SkyFloatingLabelTextField
 
 public enum TextFieldFormatting {
     case uuid
@@ -34,7 +33,7 @@ public enum TextFieldFormatting {
     case noFormatting
 }
 
-public class VSTextField: SkyFloatingLabelTextField {
+public class VSTextField: UITextField {
     
     /**
      Set a formatting pattern for a number and define a replacement string. For example: If formattingPattern would be "##-##-AB-##" and

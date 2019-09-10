@@ -37,14 +37,16 @@ class ProfileViewController: BaseViewController {
         
         setupView()
         setupEventListeners()
-        if LoginSession.shared.cards == nil {
-            loadCards()
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        if LoginSession.shared.cards.isEmpty {
+            loadCards()
+        } else {
+            cards = LoginSession.shared.cards
+        }
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
@@ -77,7 +79,7 @@ class ProfileViewController: BaseViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(userTapCloseIcon))
         closeIconImageView.isUserInteractionEnabled = true
         closeIconImageView.addGestureRecognizer(tap)
-        
+    
         for view in changePasswordGroup {
             let tap1 = UITapGestureRecognizer(target: self,
                                               action: #selector(userPressedChangePassword))
@@ -108,7 +110,6 @@ class ProfileViewController: BaseViewController {
     private func setup() {
         
         titleTextField.dropDownData = StringLiterals.Titles
-        
         titleTextField.selectionAction = { (index, string) in
             AgroLogger.log("Index\(index) and String \(string) was selected")
         }

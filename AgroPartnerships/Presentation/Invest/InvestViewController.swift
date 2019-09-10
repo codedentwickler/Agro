@@ -58,6 +58,10 @@ class InvestViewController: BaseViewController {
         availableInvestmentsCollectionView.allowsMultipleSelection = false
     }
     
+    private func updateSizeOfViews() {
+        
+    }
+
     private func setupEventListeners() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(userTapCloseIcon))
         closeIconImageView.isUserInteractionEnabled = true
@@ -108,42 +112,58 @@ extension InvestViewController : InvestView {
         soldOutInvestmentsTableView.reloadData()
         availableInvestmentsCollectionView.reloadData()
         soldOutInvestmentsTableViewHeight.constant = CGFloat( 120 *  min(3, soldInvestments.count))
+        
+        contentViewHeight.constant = 1150.0 + (soldOutInvestmentsTableViewHeight.constant)
+        contentViewHeight.isActive = true
+        
+        if soldInvestments.count == 0 {
+            soldOutInvestmentsTableView.setEmptyMessage("No sold out investment")
+        }
     }
 }
 
 extension InvestViewController : UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        AgroLogger.log("collectionView: UICollectionView, didSelectItemAt \(indexPath.row)")
-        let vc = viewController(type: InvestDetailViewController.self,
-                                from: StoryBoardIdentifiers.Invest)
-        vc.investment = self.availableinvestments[indexPath.row]
-        vc.investments = self.availableinvestments
-        navigationController?.pushViewController(vc, animated: true)
-    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }
 
 extension InvestViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
-            AvailableInvestmentCollectionViewCell.identifier,
-                                                      for: indexPath) as! AvailableInvestmentCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: AvailableInvestmentCollectionViewCell.identifier,
+            for: indexPath) as! AvailableInvestmentCollectionViewCell
+        
         cell.investment = availableinvestments[indexPath.row]
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userTapViewInvestment(sender:)))
+        cell.viewButton.isUserInteractionEnabled = true
+        cell.viewButton.tag = indexPath.row
+        cell.viewButton.addGestureRecognizer(tap)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return availableinvestments.count
     }
+    
+    @objc private func userTapViewInvestment(sender: UITapGestureRecognizer) {
+        let row = sender.view!.tag
+        let vc = viewController(type: InvestDetailViewController.self, from: StoryBoardIdentifiers.Invest)
+        vc.investments = self.availableinvestments
+        vc.investment = self.availableinvestments[row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension InvestViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 335 , height: 450)
+        let width = (self.view.frame.size.width - (16 * 3))
+        return CGSize(width: width , height: 450)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+        return 20.0
     }
 }

@@ -25,8 +25,10 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
     var investment: Investment!
     var totalUnitSelected: Int!
     
-    private var paymentLeft = 0
-    private var selectedPaymentMethod: PaymentMethod = .card
+    private var amountLeftToPayAfterWalletDeduction = 0
+    private var walletDeductionAmount = 0
+    private var walletBalance = 0
+    private var selectedPaymentMethod: PaymentMethod = .none
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,13 +56,20 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
         let profile = LoginSession.shared.dashboardInformation?.profile
         let withdrawable = profile?.wallet?.funds ?? 0
         let nonWithdrawable = profile?.wallet?.bonus?.balance ?? 0
-        let balance = withdrawable + nonWithdrawable
+        walletBalance = withdrawable + nonWithdrawable
         
-        walletFundsLabel.text = "Wallet Funds (\(balance.commaSeparatedNairaValue))"
-        walletFundsAmountLabel.text = "- \(balance.commaSeparatedNairaValue)"
+        walletFundsLabel.text = "Wallet Funds (\(walletBalance.commaSeparatedNairaValue))"
+        walletFundsAmountLabel.text = "- \(walletBalance.commaSeparatedNairaValue)"
         
-        paymentLeft = max(0, totalCost - balance)
-        paymentLeftAmountLabel.text = paymentLeft.commaSeparatedNairaValue
+        if totalCost <= walletBalance {
+            amountLeftToPayAfterWalletDeduction = 0
+            walletDeductionAmount = totalCost
+        } else {
+            amountLeftToPayAfterWalletDeduction = totalCost - walletBalance
+            walletDeductionAmount = walletBalance
+        }
+        
+        paymentLeftAmountLabel.text = amountLeftToPayAfterWalletDeduction.commaSeparatedNairaValue
         
     }
     
@@ -74,16 +83,17 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
     
     @IBAction func userPressedInvest(_ sender: Any) {
         
-        if paymentLeft == 0 {
+        if amountLeftToPayAfterWalletDeduction == 0 {
             // Create investment
             selectedPaymentMethod = .wallet
         }
-        let request = InitializeInvestmentRequest(item: investment.code,
+        let request = InitializeInvestmentRequest(item: investment.code!,
                                                   units: totalUnitSelected,
-                                                  price: paymentLeft,
-                                                  credit: nil,
+                                                  price: investment.price!,
+                                                  credit: walletBalance,
                                                   paymentMethod: selectedPaymentMethod,
                                                   authCode: nil)
+        sheetViewController?.dismiss(animated: true)
         delegate?.userDidProvideInvestmentDetails(initializeTransactionRequest: request)
     }
 }
@@ -138,13 +148,13 @@ class PaymentMethodCollectionViewCell: UICollectionViewCell {
     
     fileprivate func setDeselected() {
         UIView.animate(withDuration: 0.25) {
-            self.selectedIndicatorImageView.image = UIImage(named: "payment-method-deselection-icon.pdf")
+            self.selectedIndicatorImageView.image = UIImage(named: "payment_method_deselected_icon")
         }
     }
     
     fileprivate func setSelected() {
         UIView.animate(withDuration: 0.25) {
-            self.selectedIndicatorImageView.image = UIImage(named: "payment-method-selection-icon")
+            self.selectedIndicatorImageView.image = UIImage(named: "payment_method_selected_icon")
         }
     }
 }

@@ -13,7 +13,7 @@ class LoginViewController: BaseViewController {
         
         //         Only allowing in DEBUG mode
         #if DEBUG
-        emailTextField.text = "opeyemi@check-dc.com"
+        emailTextField.text = "ios@check-dc.com"
         passwordTextField.text = "eee123"
         #endif
 
@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func userPressedForgotPassword() {
-        push(viewController: TermsAndConditionsViewController.self)
+        push(viewController: ForgotPasswordViewController.self)
     }
 
     @IBAction func signInWasPressed(_ sender: Any) {

@@ -1,6 +1,5 @@
 import UIKit
 import Foundation
-import SkyFloatingLabelTextField
 
 class BaseViewController: UIViewController {
     
@@ -52,6 +51,10 @@ extension BaseViewController: UITextFieldDelegate {
 
 // Common Functionalities Used in various View Controllers
 extension BaseViewController {
+    
+    func gotoDashboard() {
+        self.tabBarController?.dismiss(animated: true, completion: nil)
+    }
     
     func shareOnlyText(_ text: String) {
         let textShare = [text]

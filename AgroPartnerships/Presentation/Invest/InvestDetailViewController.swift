@@ -21,7 +21,10 @@ class InvestDetailViewController: BaseViewController {
     @IBOutlet weak var investmentCodeLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var yieldLabel: UILabel!
+    @IBOutlet weak var gradientView: GradientView!
+    @IBOutlet weak var readMoreButton: AgroActionButton!
     @IBOutlet weak var investmentDescriptionTextView: UITextView!
+    @IBOutlet weak var investmentDescriptionTextViewHeight: NSLayoutConstraint!
     @IBOutlet weak var otherCommoditiesCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
@@ -36,6 +39,7 @@ class InvestDetailViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         setupView()
+        setupCollectionView()
         investmentDetailPresenter = InvestmentDetailPresenter(apiService: ApiServiceImplementation.shared,
                                                               view: self)
     }
@@ -50,26 +54,42 @@ class InvestDetailViewController: BaseViewController {
         costPerUnitLabel.text = investment.price?.commaSeparatedNairaValue
         yieldLabel.text = "\(investment.yield!)%"
         statusLabel.text = investment.status?.capitalizeFirstLetter()
+        
         let unitLeft = investment.units ?? 0
         let unitsStr = unitLeft <= 1 ? "unit" : "units"
         unitLeftLabel.text = "\(unitLeft) \(unitsStr) left"
+        
         let duration = investment.duration?.intValue ?? 0
         let durationStr = " \(duration) \(duration <= 1 ? "month" : "months")"
         durationLabel.text = durationStr
+        
         investmentCodeLabel.text = investment.code
         locationLabel.text = investment.location
         investmentDescriptionTextView.text = investment.description
         
-        otherCommoditiesCollectionView.delegate = self
-        otherCommoditiesCollectionView.dataSource = self
-        otherCommoditiesCollectionView.register(UINib(nibName: OtherCommoditiesCollectionViewCell.identifier,
-                                                          bundle: nil),
-                                                    forCellWithReuseIdentifier: OtherCommoditiesCollectionViewCell.identifier)
-        otherCommoditiesCollectionView.allowsMultipleSelection = false
+        if investmentDescriptionTextView.textExceedBoundsOfTextView() {
+            readMoreButton.isHidden = false
+            gradientView.isHidden = false
+            investmentDescriptionTextViewHeight.constant = CGFloat(150.0)
+        } else {
+            gradientView.isHidden = true
+            readMoreButton.isHidden = true
+            investmentDescriptionTextViewHeight.constant = investmentDescriptionTextView.contentSize.height + 8
+        }
         
         otherInvestments.removeAll()
         otherInvestments.append(contentsOf: investments)
         otherInvestments.removeAll(where: { $0.code == investment.code })
+        otherCommoditiesCollectionView.reloadData()
+    }
+    
+    private func setupCollectionView() {
+        otherCommoditiesCollectionView.delegate = self
+        otherCommoditiesCollectionView.dataSource = self
+        otherCommoditiesCollectionView.register(UINib(nibName: OtherCommoditiesCollectionViewCell.identifier,
+                                                      bundle: nil),
+                                                forCellWithReuseIdentifier: OtherCommoditiesCollectionViewCell.identifier)
+        otherCommoditiesCollectionView.allowsMultipleSelection = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,10 +107,11 @@ class InvestDetailViewController: BaseViewController {
                                      from: StoryBoardIdentifiers.Invest)
         modalVc.investment = investment
         modalVc.delegate = self
+        
         let controller = UINavigationController(rootViewController: modalVc)
         controller.isNavigationBarHidden = true
         let sheetController = SheetViewController(controller: controller,
-                                                  sizes: [SheetSize.fixed(570.0)])
+                                                  sizes: [SheetSize.fixed(660.0), .fullScreen])
         sheetController.dismissOnBackgroundTap = false
         sheetController.blurBottomSafeArea = false
         sheetController.topCornersRadius = 0
@@ -109,6 +130,10 @@ class InvestDetailViewController: BaseViewController {
     }
     
     @IBAction func userPressedReadMore(_ sender: Any) {
+        let vc = viewController(type: InvestmentDescriptionViewController.self,
+                                from: StoryBoardIdentifiers.Invest)
+        vc.investment = investment
+        navigationController?.pushViewController(vc, animated: true)
     }
  
     @objc func userPressedSeeAllOtherFarmCommodities(_ sender: Any) {
@@ -118,11 +143,7 @@ class InvestDetailViewController: BaseViewController {
 
 extension InvestDetailViewController : UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // refresh entire view and replace current investment
-        self.investment = otherInvestments[indexPath.row]
-        setupView()
-    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }
 
 extension InvestDetailViewController : UICollectionViewDataSource {
@@ -132,49 +153,68 @@ extension InvestDetailViewController : UICollectionViewDataSource {
             OtherCommoditiesCollectionViewCell.identifier,
                                                       for: indexPath) as! OtherCommoditiesCollectionViewCell
         cell.investment = otherInvestments[indexPath.row]
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userTapViewInvestment(sender:)))
+        cell.viewButton.isUserInteractionEnabled = true
+        cell.viewButton.tag = indexPath.row
+        cell.viewButton.addGestureRecognizer(tap)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return otherInvestments.count
     }
+    
+    @objc private func userTapViewInvestment(sender: UITapGestureRecognizer) {
+        let row = sender.view!.tag
+        self.investment = otherInvestments[row]
+        setupView()
+    }
 }
 
 extension InvestDetailViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 335 , height: 450)
+        
+        let width = (self.view.frame.size.width - (16 * 3))
+
+        return CGSize(width: width , height: 260)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20.0
+        return 12.0
     }
 }
 
 extension InvestDetailViewController: InvestmentDetailView {
-    func showTransactionSuccessfulDialog() {
+    
+    func showInvestmentSuccessfulDialog(units: Int, amountPaid: Int) {
+        let message = "Your investment for \(units) units \(amountPaid.commaSeparatedNairaValue) was successful"
         
-        let unit = 0
-        let amount = 0
-        let message = "Your investment for \(unit) units \(amount.commaSeparatedNairaValue) was successful"
-        
-        let confirmAction = creatAlertAction("Confirm", style: .default) { (action) in
-            
-        }
+        let confirmAction = creatAlertAction("Confirm", style: .default, clicked: nil)
         
         createAlertDialog(title: "Investment Successful",
                           message: message,
                           ltrActions: [confirmAction])
-    }
-    
-    func showPayForInvestmentPage(cards: [CreditCard]) {
-        
     }
 }
 
 extension InvestDetailViewController: ProvideInvestmentDetailsDelegate {
     
     func userDidProvideInvestmentDetails(initializeTransactionRequest: InitializeInvestmentRequest) {
-        self.investmentDetailPresenter.initializeInvestment(initializeTransactionRequest)
+        
+        if initializeTransactionRequest.units == 0 {
+            showAlertDialog(title: "Unit too small", message: "Minimum number of unit you can purchase is 1")
+            return
+        }
+        
+        if initializeTransactionRequest.paymentMethod == .wallet {
+            investmentDetailPresenter.initializeInvestment(initializeTransactionRequest)
+        } else {
+            let payVc = viewController(type: PayInvestmentViewController.self, from: StoryBoardIdentifiers.Invest)
+            payVc.initializeTransactionRequest = initializeTransactionRequest
+            navigationController?.pushViewController(payVc, animated: true)
+        }
     }
 }

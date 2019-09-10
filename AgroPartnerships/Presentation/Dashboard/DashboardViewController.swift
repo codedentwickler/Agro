@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class DashboardViewController: BaseViewController {
     
@@ -68,11 +69,11 @@ class DashboardViewController: BaseViewController {
     }
     
     private func updateSizeOfViews() {
-        transactionsTableViewHeight.constant = CGFloat(128 * (dashboardInformation.transactions?.count ?? 0))
+        transactionsTableViewHeight.constant = CGFloat(max(128 * (dashboardInformation.transactions?.count ?? 0) , 20 ))
         transactionsTableViewHeight.isActive = true
 
         currentInvestmentsTableViewHeight.constant =
-            CGFloat(320 * (currentInvestments.count))
+            CGFloat(max(320 * (currentInvestments.count), 20) )
         currentInvestmentsTableViewHeight.isActive = true
     }
 
@@ -90,6 +91,14 @@ class DashboardViewController: BaseViewController {
         }
         
         referralInputTextfield.text = dashboardInformation.profile?.refCode
+        
+        if currentInvestments.count == 0 {
+            currentInvestmentsTableView.setEmptyMessage("No current investment")
+        }
+        
+        if (dashboardInformation.transactions?.count ?? 0) == 0 {
+            transactionsTableView.setEmptyMessage("No investment history")
+        }
     }
     
     fileprivate func setupDataSources() {
@@ -109,8 +118,7 @@ class DashboardViewController: BaseViewController {
     }
     
     fileprivate func setupTransactionsTableView(){
-        transactionsTableView.register(UINib(nibName: TransactionsTableViewCell.identifier,
-                                             bundle: nil),
+        transactionsTableView.register(UINib(nibName: TransactionsTableViewCell.identifier, bundle: nil),
                                        forCellReuseIdentifier: TransactionsTableViewCell.identifier)
     }
     
@@ -150,14 +158,14 @@ class DashboardViewController: BaseViewController {
     private func showPortfolioTab() {
         hideAllTabs()
         ViewUtils.show(portfolioStackView)
-        contentViewHeight.constant = 758.0 + (currentInvestmentsTableViewHeight.constant)
+        contentViewHeight.constant = 780.0 + (currentInvestmentsTableViewHeight.constant)
         contentViewHeight.isActive = true
     }
     
     private func showWalletTab() {
         hideAllTabs()
         ViewUtils.show(walletStackView)
-        contentViewHeight.constant = 758.0 + (transactionsTableViewHeight.constant)
+        contentViewHeight.constant = 780.0 + (transactionsTableViewHeight.constant)
         contentViewHeight.isActive = true
     }
     
@@ -225,6 +233,7 @@ class DashboardViewController: BaseViewController {
     @IBAction func userPresedCopyReferralCode(_ sender: Any) {
         let pasteboard = UIPasteboard.general
         pasteboard.string = dashboardInformation.profile?.refCode
+        showToast(withMessage: "Referral Code Copied")
     }
     
     @IBAction func userPressedShareCode(_ sender: Any) {

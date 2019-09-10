@@ -55,6 +55,11 @@ class LandingViewController: BaseViewController {
                                           action: #selector(showDashboard(sender:)))
         profileCard.isUserInteractionEnabled = true
         profileCard.addGestureRecognizer(tap4)
+        
+        let tap5 = UITapGestureRecognizer(target: self,
+                                          action: #selector(showDashboard(sender:)))
+        settingsCard.isUserInteractionEnabled = true
+        settingsCard.addGestureRecognizer(tap5)
     }
     
     @objc func showDashboard(sender: UIGestureRecognizer) {
@@ -72,7 +77,7 @@ class LandingViewController: BaseViewController {
             return 1
         } else if sender == helpdeskCard {
             return 2
-        } else if sender == profileCard {
+        } else if sender == profileCard || sender == settingsCard {
             return 3
         }
         

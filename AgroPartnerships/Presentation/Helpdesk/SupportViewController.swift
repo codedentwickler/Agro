@@ -65,19 +65,19 @@ class SupportViewController: UIViewController {
         showLoading(withMessage: "Sending your message to support . . .")
         Alamofire.upload(multipartFormData: { (data) in
             if let imageData = imageData {
-                data.append(imageData, withName: "attachment", mimeType: "image/jpeg")
+                data.append(imageData, withName: "attachment\(Date().timeIntervalSince1970.string).jpeg", mimeType: "image/jpeg")
             }
             for (key, value) in parameters {
                 data.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
             }
             
         }, to: ApiEndPoints.helpdesk(), headers: headers) {[unowned self] (result) in
-            self.dismissLoading()
             AgroLogger.log("Result \(result)")
             switch result {
             case .success(let upload, _,_):
                 upload.responseJSON(completionHandler: { (response) in
                     if let result = response.result.value {
+                        self.dismissLoading()
                         let json = JSON(result)
                         if json[ApiConstants.Status].stringValue == ApiConstants.Success {
                             self.createAlertDialog(title: "Message Delivered",
@@ -90,6 +90,7 @@ class SupportViewController: UIViewController {
                     }
                 })
             case .failure(let error):
+                self.dismissLoading()
                 self.showAlertDialog(message: "An error occured, please try again.")
                 AgroLogger.log(error)
             }

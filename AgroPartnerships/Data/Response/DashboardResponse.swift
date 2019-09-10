@@ -14,6 +14,7 @@ struct DashboardResponse {
 	var profile: Profile?
 	let paystackKey: String?
 	let status: String?
+    let message: String?
 
 	init(_ json: JSON) {
 		portfolio = json["portfolio"].arrayValue.map { Portfolio($0) }
@@ -22,6 +23,7 @@ struct DashboardResponse {
 		profile = Profile(json["profile"])
 		paystackKey = json["paystackKey"].stringValue
 		status = json["status"].stringValue
+        message = json["message"].stringValue
 	}
 
     public func isSuccessful() -> Bool {

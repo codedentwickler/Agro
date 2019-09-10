@@ -10,6 +10,10 @@ struct ApiEndPoints {
         return "\(ApiConstants.BaseUrl)/user/signup"
     }
     
+    static func forgotPassword() -> String {
+        return "\(ApiConstants.BaseUrl)/user/reset"
+    }
+    
     static func getAvailableCommodities(limitToNumber limit: Int) -> String {
         return "\(ApiConstants.BaseUrl)/investments/recent?limit=\(limit)"
     }
@@ -58,6 +62,9 @@ struct ApiEndPoints {
         return "\(ApiConstants.BaseUrl)/user/wallet/fund"
     }
     
+    static func verifyWalletPayment() -> String {
+        return "\(ApiConstants.BaseUrl)/user/wallet/fund/verify"
+    }
     
     static func payout() -> String {
         return "\(ApiConstants.BaseUrl)/user/payout"

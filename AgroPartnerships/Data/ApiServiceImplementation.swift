@@ -19,6 +19,13 @@ class ApiServiceImplementation : ApiService {
                         completion: completion)
     }
     
+    func forgotPassword(email: String, completion: @escaping (JSON?) -> Void) {
+        Network.shared.request(ApiEndPoints.forgotPassword(),
+                               method: .post,
+                               parameters: [ApiConstants.Email: email],
+                               completion: completion)
+    }
+    
     func signUp(title: String,
                 fullname: String,
                 email: String,
@@ -77,7 +84,8 @@ class ApiServiceImplementation : ApiService {
     
     func deleteCard(signature: String, completion: @escaping (String?) -> Void) {
         
-        Network.shared.request(ApiEndPoints.cards(), method: .delete,
+        Network.shared.request(ApiEndPoints.cards(),
+                               method: .delete,
                                parameters: ["signature": signature]) { (json) in
                                 completion(json?[ApiConstants.Status].stringValue)
         }
@@ -85,6 +93,15 @@ class ApiServiceImplementation : ApiService {
     
     func addCard(cardRequest: CardRequest, completion: @escaping (CreditCard?) -> Void) {
         
+        Network.shared.request(ApiEndPoints.cards(),
+                               method: .post,
+                               parameters: cardRequest.toDictionary()) { (response) in
+                if let response = response {
+                    completion(CreditCard(response))
+                } else {
+                    completion(nil)
+                }
+        }
     }
     
     func initializeInvestment(item: String,
@@ -98,7 +115,7 @@ class ApiServiceImplementation : ApiService {
         var parameters: [String : Any] = [ApiConstants.Item : item,
                           ApiConstants.Units : units,
                           ApiConstants.Price : price,
-                          ApiConstants.PaymentMethod : paymentMethod]
+                          ApiConstants.PaymentMethod : paymentMethod.rawValue]
         
         if let credit = credit {
             parameters[ApiConstants.Credit] = credit
@@ -109,9 +126,14 @@ class ApiServiceImplementation : ApiService {
         }
         
         Network.shared.request(ApiEndPoints.initializeInvestment(),
-                        method: .post,
-                        parameters: parameters,
-                        completion: completion)
+                               method: .post,
+                               parameters: parameters) { (response) in
+            if let response = response {
+                completion(InitializeInvestmentResponse(response))
+            } else {
+                completion(nil)
+            }
+        }
     }
     
     func rollbackInvestment(investmentReference: String,
@@ -124,12 +146,17 @@ class ApiServiceImplementation : ApiService {
     }
     
     func verifyInvestmentTransaction(investmentReference: String,
-                                     completion: @escaping (VerifyInvestmentTransactionResponse?) -> Void) {
+                                     completion: @escaping (VerifyPaymentResponse?) -> Void) {
         
         Network.shared.request(ApiEndPoints.verifyInvestmentTransaction(),
-                        method: .post,
-                        parameters: [ApiConstants.Reference: investmentReference],
-                        completion: completion)
+                               method: .post, parameters: [ApiConstants.Reference: investmentReference]) { (response) in
+                
+            if let response = response {
+                completion(VerifyPaymentResponse(response))
+            } else {
+                completion(nil)
+            }
+        }
     }
     
     func proofOfInvestment() {
@@ -160,6 +187,20 @@ class ApiServiceImplementation : ApiService {
         }
     }
     
+    func verifyWalletPayment(reference: String, completion: @escaping (FundWalletResponse?) -> Void) {
+        
+        Network.shared.request(ApiEndPoints.verifyWalletPayment(),
+                               method: .post,
+                               parameters: [ApiConstants.Reference: reference]) { (response) in
+                                
+                if let response = response {
+                    completion(FundWalletResponse(response))
+                } else {
+                    completion(nil)
+                }
+        }
+    }
+    
     func requestPayout(amount: Double, completion: @escaping (RequestPayoutResponse?) -> Void) {
         
         let parameters: [String : Any] = [ApiConstants.Amount : amount]
@@ -173,6 +214,5 @@ class ApiServiceImplementation : ApiService {
                 completion(nil)
             }
         }
-    }
-    
+    }    
 }

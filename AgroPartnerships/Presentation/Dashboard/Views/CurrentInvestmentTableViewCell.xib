@@ -54,15 +54,15 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XYf-Cm-KXe">
-                                <rect key="frame" x="84" y="22" width="201.5" height="40"/>
+                                <rect key="frame" x="84" y="22" width="220" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cashew Nuts - 02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-HC-OTp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cashew Nuts - 02" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-HC-OTp">
                                         <rect key="frame" x="0.0" y="0.0" width="149.5" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASB9252942 — ₦95,000.00/unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvV-UM-Rig">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASB9252942 — ₦95,000.00/unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CvV-UM-Rig">
                                         <rect key="frame" x="0.0" y="24" width="201.5" height="16"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="0.48766588179999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,6 +206,7 @@
                             <constraint firstItem="8le-wm-Dhk" firstAttribute="top" secondItem="gZR-Dt-4o4" secondAttribute="bottom" constant="17" id="Gtm-PU-I0Q"/>
                             <constraint firstItem="Kw7-Pi-reB" firstAttribute="top" secondItem="YZA-vm-yDo" secondAttribute="bottom" constant="16" id="Kec-5p-2Uz"/>
                             <constraint firstItem="gZR-Dt-4o4" firstAttribute="top" secondItem="XYf-Cm-KXe" secondAttribute="bottom" constant="26" id="LUJ-Da-sCH"/>
+                            <constraint firstAttribute="trailing" secondItem="XYf-Cm-KXe" secondAttribute="trailing" constant="16" id="MIK-lW-7ht"/>
                             <constraint firstItem="XYf-Cm-KXe" firstAttribute="centerY" secondItem="N2Y-4s-5sp" secondAttribute="centerY" id="MtB-QT-xDr"/>
                             <constraint firstItem="Kw7-Pi-reB" firstAttribute="top" secondItem="zeE-I1-WcN" secondAttribute="top" constant="141" id="Qim-Ka-wuf"/>
                             <constraint firstAttribute="trailing" secondItem="vFY-bT-DXn" secondAttribute="trailing" constant="16" id="Wgy-Pr-Dki"/>

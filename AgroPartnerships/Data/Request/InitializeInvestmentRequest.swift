@@ -10,11 +10,11 @@ import Foundation
 
 struct InitializeInvestmentRequest {
     
-    let item: String?
-    let units: Int?
-    let price: Int?
+    let item: String
+    let units: Int
+    let price: Int
     var credit: Int?
-    var paymentMethod: PaymentMethod?
+    var paymentMethod: PaymentMethod
     var authCode: String?
     
     func toDictionary() -> [String: Any] {

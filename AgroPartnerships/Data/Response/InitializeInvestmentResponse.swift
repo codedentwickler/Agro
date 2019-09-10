@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-class InitializeInvestmentResponse: BaseResponse  {
+struct InitializeInvestmentResponse  {
     
+    let investment: Investment?
+    let status: String?
+    let message: String?
+
+    init(_ json: JSON) {
+        investment = Investment(json["investment"])
+        status = json["status"].stringValue
+        message = json["message"].stringValue
+    }
 }

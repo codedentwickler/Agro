@@ -6,12 +6,10 @@
 //  Copyright © 2019 AgroPartnerships. All rights reserved.
 //
 
-import Foundation
+import Paystack
 
 protocol InvestmentDetailView: BaseView {
-    func showTransactionSuccessfulDialog()
-    
-    func showPayForInvestmentPage(cards: [CreditCard])
+    func showInvestmentSuccessfulDialog(units: Int, amountPaid: Int)
 }
 
 class InvestmentDetailPresenter: BasePresenter {
@@ -32,10 +30,10 @@ class InvestmentDetailPresenter: BasePresenter {
         
         self.view?.showLoading(withMessage: "Initializing Investment . . .")
         
-        apiService.initializeInvestment(item: request.item!,
-                                        units: request.units!,
-                                        price: request.price!,
-                                        paymentMethod: request.paymentMethod!,
+        apiService.initializeInvestment(item: request.item,
+                                        units: request.units,
+                                        price: request.price,
+                                        paymentMethod: request.paymentMethod,
                                         credit: request.credit,
                                         authCode: request.authCode) { (response) in
                                             
@@ -45,22 +43,19 @@ class InvestmentDetailPresenter: BasePresenter {
                 return
             }
             
-            self.view?.showTransactionSuccessfulDialog()
-        }
-    }
-    
-    func getAllCards() {
-        
-        self.view?.showLoading()
-        apiService.getAllCards { (cardResponse) in
-            self.view?.dismissLoading()
-            
-            guard let response = cardResponse else {
-                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
-                return
+            if response.status == ApiConstants.Success {
+                
+                if response.investment?.payment?.status == "paid" {
+                    self.view?.showInvestmentSuccessfulDialog(units: response.investment!.units ?? 0,
+                                                              amountPaid: response.investment!.amount ?? 0)
+                } else {
+                    let message = response.message ?? "An error occurred while trying to process your payment. Please try again later"
+                    self.view?.showAlertDialog(message: message)
+                }
+            } else {
+                let message = "An error occurred while trying to process your payment. Please try again later"
+                self.view?.showAlertDialog(message: message)
             }
-            
-            self.view?.showPayForInvestmentPage(cards: response.cards!)
         }
     }
 }

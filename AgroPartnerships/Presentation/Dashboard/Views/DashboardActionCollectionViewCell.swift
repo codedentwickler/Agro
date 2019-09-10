@@ -1,7 +1,6 @@
 //
 //  CollectionViewCell.swift
 //  
-//
 //  Created by Kanyinsola Fapohunda on 17/08/2019.
 //
 

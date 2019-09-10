@@ -32,7 +32,8 @@ class LoginPresenter: BasePresenter {
             
             guard response.isSuccessful() else {
                 self.view?.dismissLoading()
-                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                self.view?.showAlertDialog(title: "Login Failed",
+                                           message: "Incorrect email or password. Please confirm and try again")
                 return
             }
             

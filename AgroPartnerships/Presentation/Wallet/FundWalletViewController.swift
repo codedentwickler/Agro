@@ -12,7 +12,7 @@ import FittedSheets
 
 class FundWalletViewController: BaseViewController {
 
-    public var cards: [CreditCard] = [CreditCard]()
+    private var cards: [CreditCard]!
     
     @IBOutlet weak var selectedCardBankNameLabel: UILabel!
     @IBOutlet weak var selectedCardTypeLabel: UILabel!
@@ -20,6 +20,7 @@ class FundWalletViewController: BaseViewController {
     @IBOutlet weak var cardsCollectionView: UICollectionView!
     @IBOutlet weak var cardsCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var selectedCardViewHeight: NSLayoutConstraint!
+//    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet weak var selectedCardView: UIView!
     @IBOutlet weak var walletBalanceLabel: UILabel!
     @IBOutlet weak var amountView: AmountInputView!
@@ -35,12 +36,18 @@ class FundWalletViewController: BaseViewController {
         
         fundWalletPresenter = FundWalletPresenter(apiService: ApiServiceImplementation.shared,
                                                   view: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         setupView()
         setupCollectionView()
     }
     
     private func setupView() {
+        
+        cards = LoginSession.shared.cards
         
         if cards.count == 0 {
             cardsCollectionView.isHidden = true
@@ -84,7 +91,7 @@ class FundWalletViewController: BaseViewController {
     @IBAction func userPressedManageCards(_ sender: Any) {
         let vc = viewController(type: ManageSavedCardsViewController.self,
                                 from: StoryBoardIdentifiers.Wallet)
-        vc.cards = cards
+        vc.cards = LoginSession.shared.cards
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -101,10 +108,24 @@ class FundWalletViewController: BaseViewController {
 extension FundWalletViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let card = cards[indexPath.row]
-        selectedCardIconImageView.image = UIImage(named: imageBackgroundForCard(at: indexPath.row))
-        selectedCardBankNameLabel.text = card.bank
+        switch card.cardType?.trim() {
+        case "visa":
+            selectedCardIconImageView.image = UIImage.pstck_visaCard()
+        case "mastercard":
+            selectedCardIconImageView.image = UIImage.pstck_masterCardCard()
+        case "verve":
+            selectedCardIconImageView.image = UIImage.pstck_brandImage(for: .verve)
+        default:
+            selectedCardIconImageView.image = UIImage.pstck_unknownCardCard()
+        }
+        
         selectedCardTypeLabel.text = "\(card.cardType?.capitalizeFirstLetter() ?? "") \u{2022} \( card.last4 ?? "")"
+        selectedCardBankNameLabel.text = card.bank
         selectedCard = card
+        
+        selectedCardView.isHidden = false
+        useCardLabel.isHidden = false
+        selectedCardViewHeight.constant = 76;
     }
 }
 
@@ -145,50 +166,65 @@ extension FundWalletViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 0.0
+        return 20.0
     }
 }
 
 extension FundWalletViewController: ProvideCardInformationDelegate {
     func userProvidedValidCardInfo(cardParams: PSTCKCardParams) {
+        let amount = amountView.amountInputTextField.getAmount(asMinor: false)
         AgroLogger.log("CardParams \(cardParams)")
+        fundWalletPresenter.chargeCardWithPaystack(amount: amount.intValue, cardParams: cardParams, self)
     }
 }
 
 extension FundWalletViewController: FundWalletView {
-    func showFundYourWalletPage(cards: [CreditCard]) {}
     
-    func walletFundingSuccessful(wallet: Wallet?) {
+    func showCardAddedDialog() {
+        
+        self.createAlertDialog(title: "Card Added Successfully",
+                               message: "You can now use this card to pay in the future",
+                               ltrActions: [creatAlertAction("Ok",style: .default, clicked: { _ in
+                                self.gotoDashboard()
+                               })])
+    }
+    
+    func walletFundingSuccessful(wallet: Wallet?, authorization: Authorization?) {
         let newBalance = (wallet?.walletBalance ?? 0).commaSeparatedNairaValue
-        self.showAlertDialog(title: "Wallet Fund Successful",
-                                   message: "Your wallet fund was successful. Your new wallet balance is \(newBalance)")
+        
+        let confirmAction = creatAlertAction("Confirm", style: .default, clicked: { _ in
+            if authorization != nil && authorization?.reusable == true {
+                self.showAddCardAlertSheet(authorization: authorization!)
+            } else {
+                self.gotoDashboard()
+            }
+        })
+        
+        self.createAlertDialog(title: "Wallet Fund Successful",
+                               message: "Your wallet fund was successful. Your new wallet balance is \(newBalance)",
+            ltrActions: [confirmAction])
+      
         self.walletBalanceLabel.text = newBalance
         LoginSession.shared.dashboardInformation?.profile?.wallet = wallet
     }
-}
-
-class PaymentViewController: UIViewController, PSTCKPaymentCardTextFieldDelegate {
     
-    var delegate: ProvideCardInformationDelegate?
-    let paymentTextField = PSTCKPaymentCardTextField()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad();
-        view.backgroundColor = UIColor.white
-        paymentTextField.frame = CGRect(x: 16, y: 16, width: self.view.frame.width , height: 44)
-        paymentTextField.delegate = self
-        view.addSubview(paymentTextField)
+    private func showAddCardAlertSheet(authorization: Authorization) {
+        
+        let actions = [
+            creatAlertAction("Yes", style: .default, clicked: { _ in
+                self.fundWalletPresenter.addCard(authorization: authorization)
+            }),
+            creatAlertAction("No", style: .default, clicked: {  _ in
+                    self.gotoDashboard()
+            }),
+            
+            creatAlertAction("Done", style: .cancel, clicked: {  _ in
+                self.gotoDashboard()
+            })]
+        
+        self.createActionSheet(title: nil, message: "Save card details for future use?",
+                               ltrActions: actions,
+                               preferredActionPosition: 0,
+                               sender: view)
     }
-    
-    func paymentCardTextFieldDidChange(_ textField: PSTCKPaymentCardTextField) {
-        AgroLogger.log("IS CARD VALID ?? \(textField.isValid)")
-        if textField.isValid {
-            delegate?.userProvidedValidCardInfo(cardParams: textField.cardParams)
-            sheetViewController?.dismiss(animated: true)
-        }
-    }
-}
-
-protocol ProvideCardInformationDelegate {
-    func userProvidedValidCardInfo(cardParams: PSTCKCardParams)
 }

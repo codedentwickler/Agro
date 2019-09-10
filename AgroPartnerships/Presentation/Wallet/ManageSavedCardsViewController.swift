@@ -25,17 +25,12 @@ class ManageSavedCardsViewController: UIViewController {
         cardsTableView.delegate = self
         cardsTableView.dataSource = self
         cardsTableView.reloadData()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
         
-        if (previousViewController != nil) && cardsWereEdited {
-            (previousViewController as? FundWalletViewController)?.cards = cards
-            (previousViewController as? PayInvestmentViewController)?.cards = cards
+        if cards.count == 0 {
+            cardsTableView.setEmptyMessage("You have not added a card")
         }
     }
-    
+   
     private func addEditButton() {
         rightButtonItem = UIBarButtonItem(title: "Edit", style: .done,
                         target: self, action: #selector(userPressedEdit))
@@ -62,6 +57,7 @@ class ManageSavedCardsViewController: UIViewController {
                 self.showToast(withMessage: "The card has been removed")
                 self.cards.remove(at: position)
                 self.cardsTableView.deleteRows(at: [IndexPath(row: position, section: 0)], with: .top)
+                LoginSession.shared.cards = self.cards
             }
         }
     }

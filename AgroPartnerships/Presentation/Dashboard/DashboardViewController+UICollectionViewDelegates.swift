@@ -83,7 +83,7 @@ extension DashboardViewController: UICollectionViewDataSource {
             Withdrawable: \(withdrawable.commaSeparatedNairaValue)
             Non withdrawable: \(nonWithdrawable.commaSeparatedNairaValue)
             """
-            let tap = UITapGestureRecognizer(target: self, action: #selector(showfundWallet))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(showFundWallet))
             cell.buttonView.isUserInteractionEnabled = true
             cell.buttonView.addGestureRecognizer(tap)
         } else {
@@ -136,20 +136,16 @@ extension DashboardViewController: UICollectionViewDataSource {
             """
             cell.amountLabel.isHidden = true
             cell.subtitleLabel.text = """
-            Would be available for use when your invites
-            make their first investment
+            Would be available for use when your invites make their first investment
             """
         }
         
         return cell
     }
     
-    @objc private func showfundWallet() {
+    @objc private func showFundWallet() {
         let vc  = viewController(type: FundWalletViewController.self,
                                  from: StoryBoardIdentifiers.Wallet)
-        if let cards = LoginSession.shared.cards {
-            vc.cards = cards
-        }
         navigationController?.pushViewController(vc, animated: true)
     }
     

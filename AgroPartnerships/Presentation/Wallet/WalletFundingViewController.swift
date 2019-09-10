@@ -24,14 +24,10 @@ class WalletFundingViewController: BaseViewController {
     @IBOutlet weak var pagerControl: UISegmentedControl!
     
     private var currentTableView: UITableView!
-    
-    private var fundWalletPresenter: FundWalletPresenter!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fundWalletPresenter = FundWalletPresenter(apiService: ApiServiceImplementation.shared,
-                                                  view: self)
         setupUI()
         setupTableViewDelegates()
     }
@@ -53,6 +49,10 @@ class WalletFundingViewController: BaseViewController {
         """
         
         actionButton.setTitle("Fund Wallet", for: .normal)
+        
+        if fundingTransactions.count == 0 {
+            fundingHistoryTableView.setEmptyMessage("You have not completed any funding transaction")
+        }
     }
     
     private func updateOnPayoutsPressed() {
@@ -63,12 +63,17 @@ class WalletFundingViewController: BaseViewController {
         All debit payments made directly (as card/online/cash transfers from the farm & commodity page or as reinvestments) would not show up here. Please check “All Transactions” for direct debit payments. Only payments from your wallet to your registered bank account would show up here.
         """
         actionButton.setTitle("Request Payout", for: .normal)
+        
+        if payoutsTransactions.count == 0 {
+            fundingHistoryTableView.setEmptyMessage("You have not completed any payout transaction")
+        }
     }
     
     @IBAction func userPressedActionButton(_ sender: Any) {
         
         if pagerControl.selectedSegmentIndex == 0 {
-            fundWalletPresenter.getAllCards()
+            let cards = LoginSession.shared.cards
+            pushFundWalletController(cards: cards)
         } else {
             pushRequestPayoutController()
         }
@@ -77,7 +82,6 @@ class WalletFundingViewController: BaseViewController {
     private func pushFundWalletController(cards: [CreditCard]) {
         let vc  = viewController(type: FundWalletViewController.self,
                                  from: StoryBoardIdentifiers.Wallet)
-        vc.cards = cards
         navigationController?.pushViewController(vc, animated: true)
     }
 
@@ -160,13 +164,5 @@ extension WalletFundingViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-}
-
-extension WalletFundingViewController: FundWalletView {
-    func walletFundingSuccessful(wallet: Wallet?) {}
-    
-    func showFundYourWalletPage(cards: [CreditCard]) {
-        pushFundWalletController(cards: cards)
     }
 }

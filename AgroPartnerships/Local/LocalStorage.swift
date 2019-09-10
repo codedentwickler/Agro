@@ -1,4 +1,5 @@
 import Foundation
+import SwiftyJSON
 
 final class LocalStorage: NSObject {
     
@@ -7,6 +8,8 @@ final class LocalStorage: NSObject {
     }
     
     static let shared = LocalStorage()
+    
+    var countryCodeJSON : [JSON]!
     
     public func persistString(string: String!, key: String){
         delete(key: key);
@@ -113,4 +116,36 @@ final class LocalStorage: NSObject {
         return self.getString(key: PersistenceIDs.AccessToken)
     }
 
+    func loadCountryCodesJSON(finishedClosure:@escaping ((_ jsonObject: [JSON]?,_ error: NSError?) ->Void)) {
+        
+        guard let json = self.countryCodeJSON else{
+            finishedClosure(nil, NSError(domain: "can convert to data", code: 999, userInfo: nil))
+            return
+        }
+        
+        finishedClosure(json, nil)
+    }
+    
+    func loadCountryCodesJSON() {
+        DispatchQueue.global().async {
+            guard let path = Bundle.main.path(forResource: "country_code", ofType: "json") else {
+                AgroLogger.log(NSError(domain: "JSON file don't founded", code: 998, userInfo: nil))
+                return
+            }
+            //Load file data part
+            guard let jsonData = (try? Data(contentsOf: URL(fileURLWithPath: path))) else{
+                AgroLogger.log(NSError(domain: "can convert to data", code: 999, userInfo: nil))
+                return
+            }
+            
+            do {
+                let json = try JSON(data: jsonData)
+                    DispatchQueue.main.async {
+                        self.countryCodeJSON = json.arrayValue
+                    }
+            } catch let error as NSError {
+                AgroLogger.log(error)
+            }
+        }
+    }
 }

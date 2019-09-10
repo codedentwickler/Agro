@@ -11,6 +11,9 @@ class SignUpViewController: BaseViewController {
     @IBOutlet weak var referralCodeTextField: AgroTextField!
     @IBOutlet weak var dobTextField: DateDropDownTextField!
     
+    private var titles: [TitleKeyMap]!
+    private var selectedDialingCode: TitleKeyMap?
+
     private var presenter: SignUpPresenter!
     
     override func viewDidLoad() {
@@ -21,8 +24,8 @@ class SignUpViewController: BaseViewController {
         #if DEBUG
         fullnameTextField.text = "Kanyinsola Fapohunda"
         titleTextField.text = "Mr."
-        emailTextField.text = "opeyemi@check-dc.com"
-        passwordTextField.text = "password"
+        emailTextField.text = "ios@check-dc.com"
+        passwordTextField.text = "eee123"
         dailingCodeTextField.text = "+234"
         phoneTextField.text = "8072914184"
         dobTextField.text = "1970-07-07"
@@ -40,16 +43,10 @@ class SignUpViewController: BaseViewController {
                                 dobTextField,referralCodeTextField)
         
         titleTextField.dropDownData = StringLiterals.Titles
-        dailingCodeTextField.dropDownData = StringLiterals.DialingCodes
-        
         titleTextField.selectionAction = { (index, string) in
             AgroLogger.log("Index\(index) and String \(string) was selected")
         }
-        
-        dailingCodeTextField.selectionAction = { (index, string) in
-            AgroLogger.log("Index\(index) and String \(string) was selected")
-        }
-        
+    
         let minimumDate =  Calendar.current.date(byAdding: .year,
                                                  value: -100,
                                                  to: Date())
@@ -61,11 +58,40 @@ class SignUpViewController: BaseViewController {
         dobTextField.setupDatePicker(withMinimumDate: minimumDate ?? Date(),
                                      withMaximumDate: maximumDate ?? Date(),
                                      withDefaultDate: maximumDate ?? Date() )
+        
+        LocalStorage.shared.loadCountryCodesJSON { (jsonArray, error) in
+            
+            guard error == nil else { return }
+            
+            guard let countries = jsonArray else { return }
+            
+            self.titles = countries.map ({ (json) -> TitleKeyMap in
+                
+                let code = json["text"].stringValue
+                let title = json["description"].stringValue
+                
+                return (code, title)
+            })
+            
+            self.dailingCodeTextField.dropDownData = self.titles.map({ (titleKeyMap) -> String in
+                return "\(titleKeyMap.0) - \(titleKeyMap.1)"
+            })
+            
+            self.dailingCodeTextField.selectionAction = { (index, string) in
+                AgroLogger.log("Index\(index) and String \(string) was selected")
+                self.selectedDialingCode = self.titles[index]
+            }
+        }
     }
     
     @IBAction func createAccountWasPressed(_ sender: Any) {
         
         if !validate() {
+            return
+        }
+        
+        if selectedDialingCode == nil {
+            showAlertDialog(title: "", message: "Please select a valid country code")
             return
         }
         
@@ -75,7 +101,7 @@ class SignUpViewController: BaseViewController {
             phone.removeFirst()
         }
         
-        let fullPhone = "\(dailingCodeTextField.text!) \(phoneTextField.text!)"
+        let fullPhone = "\(selectedDialingCode!.0) \(phoneTextField.text!)"
         
         presenter.signUp(fullname: fullnameTextField.text!,
                          title: titleTextField.text!,
