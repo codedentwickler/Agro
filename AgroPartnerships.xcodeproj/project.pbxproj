@@ -35,7 +35,6 @@
 		04809CF622E472B500252F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809CF522E472B500252F74 /* AppDelegate.swift */; };
 		04809CF822E472B500252F74 /* LoginLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809CF722E472B500252F74 /* LoginLandingViewController.swift */; };
 		04809CFB22E472B500252F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04809CF922E472B500252F74 /* Main.storyboard */; };
-		04809CFD22E472B700252F74 /* payment_method_selected_icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 04809CFC22E472B700252F74 /* payment_method_selected_icon.pdf */; };
 		04809D0022E472B700252F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04809CFE22E472B700252F74 /* LaunchScreen.storyboard */; };
 		04809D1022E472F900252F74 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D0822E472F900252F74 /* BaseViewController.swift */; };
 		04809D1122E472F900252F74 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04809D0922E472F900252F74 /* BaseContract.swift */; };
@@ -149,6 +148,7 @@
 		AD5406D02319A06200DA4CC3 /* Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5406CF2319A06200DA4CC3 /* Referral.swift */; };
 		AD677D7B22FFF51D00F4C149 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD677D7A22FFF51C00F4C149 /* Dashboard.storyboard */; };
 		AD677D7D23000BFA00F4C149 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD677D7C23000BFA00F4C149 /* LandingViewController.swift */; };
+		AD6A69112328704C005C07C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6A691023287049005C07C7 /* Assets.xcassets */; };
 		AD7A2B64230ACBD000ECB36F /* PendingInvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A2B62230ACBD000ECB36F /* PendingInvestmentTableViewCell.swift */; };
 		AD7A2B65230ACBD000ECB36F /* PendingInvestmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD7A2B63230ACBD000ECB36F /* PendingInvestmentTableViewCell.xib */; };
 		AD7C7B56231470ED002B95FC /* AvailableInvestmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C7B55231470ED002B95FC /* AvailableInvestmentViewController.swift */; };
@@ -235,7 +235,6 @@
 		04809CF522E472B500252F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04809CF722E472B500252F74 /* LoginLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLandingViewController.swift; sourceTree = "<group>"; };
 		04809CFA22E472B500252F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04809CFC22E472B700252F74 /* payment_method_selected_icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = payment_method_selected_icon.pdf; path = Assets.xcassets/payment_method_selected_icon.imageset/payment_method_selected_icon.pdf; sourceTree = "<group>"; };
 		04809CFF22E472B700252F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04809D0122E472B700252F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04809D0822E472F900252F74 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -350,6 +349,7 @@
 		AD5406CF2319A06200DA4CC3 /* Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referral.swift; sourceTree = "<group>"; };
 		AD677D7A22FFF51C00F4C149 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		AD677D7C23000BFA00F4C149 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		AD6A691023287049005C07C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD7A2B62230ACBD000ECB36F /* PendingInvestmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingInvestmentTableViewCell.swift; sourceTree = "<group>"; };
 		AD7A2B63230ACBD000ECB36F /* PendingInvestmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PendingInvestmentTableViewCell.xib; sourceTree = "<group>"; };
 		AD7C7B55231470ED002B95FC /* AvailableInvestmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableInvestmentViewController.swift; sourceTree = "<group>"; };
@@ -534,6 +534,7 @@
 		04809CF422E472B500252F74 /* AgroPartnerships */ = {
 			isa = PBXGroup;
 			children = (
+				AD6A691023287049005C07C7 /* Assets.xcassets */,
 				AD967E21232498F9001D4D13 /* AgroPartnerships.entitlements */,
 				ADB10BD822FEE07300A4CCAA /* Resources */,
 				04809D5E22E473A900252F74 /* Local */,
@@ -549,7 +550,6 @@
 				04809CF522E472B500252F74 /* AppDelegate.swift */,
 				04931845231C3E64006750A9 /* TimerApplication.swift */,
 				04931847231C3EBD006750A9 /* main.swift */,
-				04809CFC22E472B700252F74 /* payment_method_selected_icon.pdf */,
 				04809CFE22E472B700252F74 /* LaunchScreen.storyboard */,
 				AD02D42D231D54200000B16D /* GoogleService-Info.plist */,
 				04809D0122E472B700252F74 /* Info.plist */,
@@ -992,6 +992,7 @@
 				04BB36F922F38CC700F266ED /* SF-Pro-Text-LightItalic.otf in Resources */,
 				04359C7422F619460047A2B5 /* OnboardingStepOne.xib in Resources */,
 				04BB36E222F38CC700F266ED /* SF-Pro-Display-RegularItalic.otf in Resources */,
+				AD6A69112328704C005C07C7 /* Assets.xcassets in Resources */,
 				AD7A2B65230ACBD000ECB36F /* PendingInvestmentTableViewCell.xib in Resources */,
 				04BB36F722F38CC700F266ED /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				04BB36FA22F38CC700F266ED /* SF-Pro-Text-Medium.otf in Resources */,
@@ -1010,7 +1011,6 @@
 				04BB36EB22F38CC700F266ED /* SF-Pro-Text-Regular.otf in Resources */,
 				AD02D42E231D54200000B16D /* GoogleService-Info.plist in Resources */,
 				ADBAF230231035B8007728B7 /* DashboardActionTwoCollectionViewCell.xib in Resources */,
-				04809CFD22E472B700252F74 /* payment_method_selected_icon.pdf in Resources */,
 				04BB36E822F38CC700F266ED /* SF-Pro-Display-Heavy.otf in Resources */,
 				AD99089222F8588900FAB197 /* Privacy.html in Resources */,
 				04BB36EC22F38CC700F266ED /* SF-Pro-Text-Bold.otf in Resources */,
