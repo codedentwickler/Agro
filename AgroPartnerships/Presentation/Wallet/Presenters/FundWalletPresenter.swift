@@ -42,6 +42,7 @@ class FundWalletPresenter: BasePresenter {
             
             if response.status == "success" {
                 self.view?.walletFundingSuccessful(wallet: response.wallet, authorization: nil)
+                LoginSession.shared.dashboardInformation?.profile?.wallet = response.wallet
             } else {
                 self.view?.showAlertDialog(message: "Card Charge failure. Please ensure you have enough funds to fund your wallet")
             }
@@ -125,8 +126,8 @@ class FundWalletPresenter: BasePresenter {
             
             AgroLogger.log("AGRO LOGGER \(response)")
             if response.status == ApiConstants.Success {
-                
                 self.view?.walletFundingSuccessful(wallet: response.wallet, authorization: response.payment?.data?.authorization)
+                LoginSession.shared.dashboardInformation?.profile?.wallet = response.wallet
             } else {
                 let message = "An error occurred while trying to process your payment. Please try again later"
                 self.view?.showAlertDialog(message: message)
@@ -141,6 +142,7 @@ class FundWalletPresenter: BasePresenter {
             self.view?.dismissLoading()
             
             guard let card = card else {
+                self.view?.showDashboard()
                 self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
@@ -149,7 +151,8 @@ class FundWalletPresenter: BasePresenter {
                 LoginSession.shared.cards.append(card)
                 self.view?.showCardAddedDialog()
             } else {
-                self.view?.showAlertDialog(title: "Error occured", message: card.message ?? "Couldn't save card details.")
+                self.view?.showDashboard()
+                self.view?.showAlertDialog(title: "Error occured", message: card.message ?? "Couldn't save card details. try again later")
             }
         }
     }

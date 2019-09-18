@@ -15,6 +15,18 @@ protocol ApiService {
                password: String,
                completion: @escaping (_ response: LoginResponse? ) -> Void)
     
+    func loginWithFingerprint(email: String,
+                              key: String,
+                              completion: @escaping (_ response: LoginResponse? ) -> Void)
+    
+    func saveFingerprint(key: String,
+                         completion: @escaping (_ response: JSON? ) -> Void)
+    
+    func updateFingerprint(key: String,
+                           completion: @escaping (_ response: JSON? ) -> Void)
+    
+    func deleteFingerprint(completion: @escaping (_ response: JSON? ) -> Void)
+    
     func forgotPassword(email: String,
                         completion: @escaping (_ response: JSON? ) -> Void)
     
@@ -63,6 +75,8 @@ protocol ApiService {
                              completion: @escaping (_ response: FundWalletResponse? ) -> Void)
     
     func requestPayout(amount: Double, completion: @escaping (_ response: RequestPayoutResponse? ) -> Void)
+    
+    func registerAppToken(token: String, completion: @escaping (_ response: RegisterDeviceTokenResponse? ) -> Void)
 }
 
 typealias RequestPayoutResponse = FundWalletResponse

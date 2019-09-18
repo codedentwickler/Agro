@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RequestPayoutViewController: UIViewController {
+class RequestPayoutViewController: BaseViewController {
 
     @IBOutlet weak var walletBalanceLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!

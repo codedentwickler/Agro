@@ -84,4 +84,32 @@ extension String {
     var digitsOnlyFromCurrency: String {
         return replacingOccurrences(of: "₦", with: "").replacingOccurrences(of: ",", with: "")
     }
+    
+    static func random(length:Int)->String{
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        var randomString = ""
+        
+        while randomString.utf8.count < length{
+            let randomLetter = letters.randomElement()
+            randomString += randomLetter?.description ?? ""
+        }
+        return randomString
+    }
+    
+    
+    func fromBase64() -> String? {
+        guard let data = Data(base64Encoded: self, options: Data.Base64DecodingOptions(rawValue: 0)) else {
+            return nil
+        }
+        
+        return String(data: data as Data, encoding: String.Encoding.utf8)
+    }
+    
+    func toBase64() -> String? {
+        guard let data = self.data(using: String.Encoding.utf8) else {
+            return nil
+        }
+        
+        return data.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+    } 
 }

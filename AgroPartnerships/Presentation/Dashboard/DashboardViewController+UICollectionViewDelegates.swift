@@ -10,8 +10,7 @@ import UIKit
 
 extension DashboardViewController : UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }
 
 extension DashboardViewController: UICollectionViewDataSource {

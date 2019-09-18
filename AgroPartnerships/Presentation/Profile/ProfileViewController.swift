@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import LocalAuthentication
+import KeychainAccess
 
 class ProfileViewController: BaseViewController {
 
@@ -23,6 +25,13 @@ class ProfileViewController: BaseViewController {
     @IBOutlet var changePasswordGroup: [UIView]!
     @IBOutlet var manageSavedCardsGroup: [UIView]!
     @IBOutlet weak var noOfCardsLabel: UILabel!
+    @IBOutlet weak var profileView: UIView!
+    @IBOutlet weak var settingsView: UIView!
+    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
+    @IBOutlet var enableTouchIDGroup: [UIView]!
+    @IBOutlet weak var enableTouchIdSwitch: UISwitch!
+    
+    private var shouldShowSettings: Bool = false
     
     private var cards : [CreditCard] = [CreditCard]() {
         didSet {
@@ -34,6 +43,8 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        shouldShowSettings = (tabBarController as! DashboardTabBarController).showSettings
         
         setupView()
         setupEventListeners()
@@ -58,6 +69,11 @@ class ProfileViewController: BaseViewController {
 
     private func setupView() {
    
+        if shouldShowSettings {
+            segmentedControl.selectedSegmentIndex = 1
+            userChangedControls(segmentedControl)
+        }
+        
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.appGreen1], for: .selected)
         
         let profile = LoginSession.shared.dashboardInformation?.profile
@@ -92,6 +108,120 @@ class ProfileViewController: BaseViewController {
                                               action: #selector(userPressedManageCards))
             view.isUserInteractionEnabled = true
             view.addGestureRecognizer(tap1)
+        }
+    }
+    
+    @IBAction func userChangedTouchIDToggle(_ sender: UISwitch) {
+        if sender.isOn {
+            setupTouchID()
+        } else {
+            showRemoveTouchIDLoginDialog()
+        }
+    }
+    
+    private func showRemoveTouchIDLoginDialog() {
+        
+        createAlertDialog(title: "Remove Touch ID Login",
+                          message: "Are you sure you want to disable touch id login? You will not be able to login with touch id",
+                          ltrActions: [
+                            
+                creatAlertAction("Cancel", style: .cancel, clicked: { _ in
+                    self.enableTouchIdSwitch.isOn = true
+                }),
+                creatAlertAction("Disable Touch ID", style: .destructive, clicked: { _ in
+                    self.removeTouchIDLogin()
+                })
+            ])
+    }
+    
+    private func removeTouchIDLogin() {
+        
+        showLoading(withMessage: "Removing touch id . . .")
+        
+        ApiServiceImplementation.shared.deleteFingerprint(completion: { (responseJSON) in
+            self.dismissLoading()
+
+            guard let response = responseJSON else {
+                self.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                return
+            }
+            
+            if response[ApiConstants.Status].string == ApiConstants.Success {
+                LocalStorage.shared.persistBool(value: false , key: PersistenceIDs.BiometricsEnabled)
+                let keychain = Keychain(service: "com.agropartnerships.AgroPartnerships")
+                
+                try? keychain.remove(PersistenceIDs.BiometricsKey)
+                try? keychain.remove(PersistenceIDs.Email)
+            } else {
+                self.showAlertDialog(title: "", message: response["message"].string ??
+                    "An error occurred while setting up touch id auth. please try again later")
+            }
+        })
+    }
+    
+    @objc private func setupTouchID() {
+        
+        let context = LAContext()
+        var error: NSError?
+        
+        // check if Touch ID is available
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            
+            let reason = "Authenticate with Touch ID"
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply:
+                {(success, error) in
+                    
+                    DispatchQueue.main.async {
+                        if success {
+                            context.invalidate()
+                            self.generateFingerprintKeyAndSavedInKeychain()
+                        } else {
+                            self.enableTouchIdSwitch.isOn = false
+                            self.createAlertDialog(title: "", message: "Touch ID Authentication Failed")
+                        }
+                    }
+            })
+        }
+        else {
+            DispatchQueue.main.async {
+                self.enableTouchIdSwitch.isOn = false
+                self.createAlertDialog(title: "", message: "Touch ID not available")
+            }
+        }
+    }
+    
+    private func generateFingerprintKeyAndSavedInKeychain() {
+        
+        let key = String.random(length: 256)
+        enableTouchID(key: key)
+    }
+    
+    private func enableTouchID(key: String) {
+        
+        showLoading(withMessage: "Setting up Touch ID Auth . . .")
+        // Send email and key to server
+        ApiServiceImplementation.shared.saveFingerprint(key: key) { (responseJSON) in
+            self.dismissLoading()
+            AgroLogger.log("enableTouchID WITH \(key)")
+
+            guard let response = responseJSON else {
+                self.enableTouchIdSwitch.isOn = false
+                self.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                return
+            }
+            
+            if response[ApiConstants.Status].string == ApiConstants.Success {
+                LocalStorage.shared.persistBool(value: true , key: PersistenceIDs.BiometricsEnabled)
+                let keychain = Keychain(service: "com.agropartnerships.AgroPartnerships")
+                let email = LoginSession.shared.dashboardInformation?.profile?.email
+                let encoded = key.toBase64() ?? key
+                
+                keychain[PersistenceIDs.BiometricsKey] = encoded
+                keychain[PersistenceIDs.Email] = email
+            } else {
+                self.enableTouchIdSwitch.isOn = false
+                self.showAlertDialog(title: "", message: response["message"].string ?? "An error occurred while setting up touch id auth. please try again later")
+            }
         }
     }
     
@@ -160,6 +290,30 @@ class ProfileViewController: BaseViewController {
         }
     }
     
+    @IBAction func userChangedControls(_ sender: UISegmentedControl) {
+        if (sender.selectedSegmentIndex == 0) {
+            showProfile()
+        } else {
+            showSettings()
+        }
+    }
+    
+    private func showProfile(){
+        profileView.isHidden = false
+        settingsView.isHidden = true
+        contentViewHeight.constant = CGFloat(1700.0)
+    }
+    
+    private func showSettings(){
+        if LocalStorage.shared.getBoolean(key: PersistenceIDs.BiometricsEnabled) == true {
+            enableTouchIdSwitch.isOn = true
+        }
+        
+        profileView.isHidden = true
+        settingsView.isHidden = false
+        contentViewHeight.constant = CGFloat(500.0)
+    }
+    
     @IBAction func userPressedSaveBasicInformation() {
         // Validate input.
         let title = titleTextField.text ?? ""
@@ -190,7 +344,7 @@ class ProfileViewController: BaseViewController {
         }
     }
     
-    @IBAction func userPressedSLogout() {
+    @IBAction func userPressedLogout() {
         AppDelegate.applicationDidLogout(with: .none)
         LoginSession.shared.logout()
     }

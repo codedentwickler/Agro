@@ -1,5 +1,6 @@
 
 import Foundation
+import FirebaseMessaging
 
 protocol LoginView: BaseView {
     func showDashBoard(dashboardInformation: DashboardResponse)
@@ -19,29 +20,41 @@ class LoginPresenter: BasePresenter {
         self.view = nil
     }
     
+    func loginWithFingerprint(email: String, key: String) {
+        self.view?.showLoading(withMessage: StringLiterals.AUTHENTICATING_USER)
+        
+        apiService.loginWithFingerprint(email: email, key: key) { (loginResponse) in
+            self.handleLogin(loginResponse: loginResponse)
+        }
+    }
+    
     func login(email: String, password: String) {
         self.view?.showLoading(withMessage: StringLiterals.AUTHENTICATING_USER)
 
         apiService.login(email: email , password: password) { (loginResponse) in
-            
-            guard let response = loginResponse else {
-                self.view?.dismissLoading()
-                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
-                return
-            }
-            
-            guard response.isSuccessful() else {
-                self.view?.dismissLoading()
-                self.view?.showAlertDialog(title: "Login Failed",
-                                           message: "Incorrect email or password. Please confirm and try again")
-                return
-            }
-            
-            LoginSession.shared.isUserInSession = true
-            LocalStorage.shared.persistString(string: response.token, key: PersistenceIDs.AccessToken)
-            self.loadCards()
-            self.loadDashboardInformation()
+            self.handleLogin(loginResponse: loginResponse)
         }
+    }
+    
+    private func handleLogin(loginResponse: LoginResponse?) {
+        guard let response = loginResponse else {
+            self.view?.dismissLoading()
+            self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+            return
+        }
+        
+        guard response.isSuccessful() else {
+            self.view?.dismissLoading()
+            self.view?.showAlertDialog(title: "Login Failed",
+                                       message: "Incorrect email or password. Please confirm and try again")
+            return
+        }
+        
+        LoginSession.shared.isUserInSession = true
+        LocalStorage.shared.persistString(string: response.token, key: PersistenceIDs.AccessToken)
+        self.loadCards()
+        self.loadDashboardInformation()
+        self.registerToken()
     }
     
     private func loadDashboardInformation() {
@@ -70,6 +83,18 @@ class LoginPresenter: BasePresenter {
             if let cards = response.cards {
                LoginSession.shared.cards = cards
             }
+        }
+    }
+    
+    private func registerToken() {
+        if let token =  Messaging.messaging().fcmToken {
+            // token is current fcmToken
+            AgroLogger.log("registerToken Firebase  token: \(token)")
+        
+            apiService.registerAppToken(token: token, completion: { response in
+
+                AgroLogger.log("RegisterAppToken \(response)")
+            })
         }
     }
 }

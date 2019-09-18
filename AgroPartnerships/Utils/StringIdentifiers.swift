@@ -13,4 +13,8 @@ struct PersistenceIDs {
     static let DashboardInformation =              "dashboard_info"
     static let IsAFirstTimer =                     "is_a_first_timer"
     static let User =                              "user"
+    static let Email =                             "email"
+    static let FCMToken =                          "fcmToken"
+    static let BiometricsEnabled =                 "biometricsenabled"
+    static let BiometricsKey =                     "biometricskey"
 }

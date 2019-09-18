@@ -10,6 +10,8 @@ import UIKit
 
 class DashboardTabBarController: UITabBarController {
     
+    public var showSettings = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

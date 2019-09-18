@@ -18,6 +18,7 @@ class LoginSession {
     private init() {}
 
     public func logout() {
+        LocalStorage.shared.logout()
         dashboardInformation = nil
         isUserInSession = false
     }

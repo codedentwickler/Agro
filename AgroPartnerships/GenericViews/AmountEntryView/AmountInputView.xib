@@ -41,7 +41,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" placeholder="0.00" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="aMp-Cl-iZQ" customClass="CurrencyTextField" customModule="AgroPartnerships" customModuleProvider="target">
                             <rect key="frame" x="36" y="301.5" width="339" height="43"/>
                             <color key="tintColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="0.0" alpha="0.30039597602739726" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="36"/>
                             <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>

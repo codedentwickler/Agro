@@ -38,23 +38,9 @@ class DashboardViewController: BaseViewController {
     @IBOutlet weak var referralActionsCollectionView: UICollectionView!
     @IBOutlet weak var referralInputTextfield: UITextField!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
-        updateSizeOfViews()
         setupDelegates()
         setupDataSources()
         setupInvestmentsCollectionView()
@@ -64,8 +50,25 @@ class DashboardViewController: BaseViewController {
         setupCurrentInvestmentsTableView()
         setupEventListeners()
         showPortfolioTab()
-        currentInvestmentsTableView.reloadData()
-        transactionsTableView.reloadData()
+        setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        setup()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    private func setup() {
+        setupView()
+        updateSizeOfViews()
     }
     
     private func updateSizeOfViews() {
@@ -99,6 +102,9 @@ class DashboardViewController: BaseViewController {
         if (dashboardInformation.transactions?.count ?? 0) == 0 {
             transactionsTableView.setEmptyMessage("No investment history")
         }
+        
+        currentInvestmentsTableView.reloadData()
+        transactionsTableView.reloadData()
     }
     
     fileprivate func setupDataSources() {

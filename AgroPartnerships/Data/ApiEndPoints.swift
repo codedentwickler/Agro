@@ -6,6 +6,14 @@ struct ApiEndPoints {
         return "\(ApiConstants.BaseUrl)/user/signin"
     }
     
+    static func loginFingerprint() -> String {
+        return "\(ApiConstants.BaseUrl)/user/login/touch-id"
+    }
+    
+    static func fingerprint() -> String {
+        return "\(ApiConstants.BaseUrl)/user/fingerprint"
+    }
+    
     static func signUp() -> String {
         return "\(ApiConstants.BaseUrl)/user/signup"
     }
@@ -68,5 +76,9 @@ struct ApiEndPoints {
     
     static func payout() -> String {
         return "\(ApiConstants.BaseUrl)/user/payout"
+    }
+    
+    static func registerFirebaseToken() -> String {
+        return "\(ApiConstants.BaseUrl)/user/app-token"
     }
 }

@@ -19,7 +19,8 @@ class SignUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        setup()
+
         //         Only allowing in DEBUG mode
         #if DEBUG
         fullnameTextField.text = "Kanyinsola Fapohunda"
@@ -27,6 +28,7 @@ class SignUpViewController: BaseViewController {
         emailTextField.text = "ios@check-dc.com"
         passwordTextField.text = "eee123"
         dailingCodeTextField.text = "+234"
+        dailingCodeTextField.doSelection(index: 0)
         phoneTextField.text = "8072914184"
         dobTextField.text = "1970-07-07"
         dobTextField.selectedDate = "1970-07-07"
@@ -34,7 +36,6 @@ class SignUpViewController: BaseViewController {
         
         presenter  = SignUpPresenter(apiService: ApiServiceImplementation.shared,
                                      view: self)
-        setup()
     }
     
     private func setup() {
@@ -134,6 +135,13 @@ class SignUpViewController: BaseViewController {
 }
 
 extension SignUpViewController: SignUpView {
+    func showDashBoard(dashboardInformation: DashboardResponse) {
+        let vc = viewController(type: LandingViewController.self,
+                                from: StoryBoardIdentifiers.Dashboard)
+        vc.dashboardInformation = dashboardInformation
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     func showValidationError(validation: FormValidation) {
         
         switch validation {
@@ -143,6 +151,12 @@ extension SignUpViewController: SignUpView {
             passwordTextField.setError(message, show: true)
         case .title(let message):
             titleTextField.setError(message, show: true)
+        case .phone(let message):
+            phoneTextField.setError(message, show: true)
+        case .fullname(let message):
+            fullnameTextField.setError(message, show: true)
+        case .referral(let message):
+            referralCodeTextField.setError(message, show: true)
         }
     }
     

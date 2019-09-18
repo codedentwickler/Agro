@@ -11,6 +11,7 @@ import FittedSheets
 
 class InvestDetailViewController: BaseViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var investButton: UIView!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -137,7 +138,6 @@ class InvestDetailViewController: BaseViewController {
     }
  
     @objc func userPressedSeeAllOtherFarmCommodities(_ sender: Any) {
-
     }
 }
 
@@ -170,6 +170,7 @@ extension InvestDetailViewController : UICollectionViewDataSource {
         let row = sender.view!.tag
         self.investment = otherInvestments[row]
         setupView()
+        scrollView.scrollToTop()
     }
 }
 
@@ -183,7 +184,7 @@ extension InvestDetailViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 12.0
+        return 16.0
     }
 }
 
@@ -193,7 +194,8 @@ extension InvestDetailViewController: InvestmentDetailView {
         let message = "Your investment for \(units) units \(amountPaid.commaSeparatedNairaValue) was successful"
         
         let confirmAction = creatAlertAction("Confirm", style: .default, clicked: nil)
-        
+        refreshDashboardInformation()
+
         createAlertDialog(title: "Investment Successful",
                           message: message,
                           ltrActions: [confirmAction])

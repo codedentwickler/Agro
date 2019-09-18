@@ -70,6 +70,12 @@ open class CurrencyTextField : UITextField {
     //MARK: - Custom text field functions
     
     func setAmount (_ amount : Double){
+        if amount == defaultValue {
+            textColor = UIColor.black.withAlphaComponent(0.3)
+        } else {
+            textColor = UIColor.black
+        }
+        
         self.text = amount.asMoney()
     }
     

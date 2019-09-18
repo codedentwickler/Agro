@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SupportViewController: UIViewController {
+class SupportViewController: BaseViewController {
 
     @IBOutlet weak var subjectTextView: UITextView!
     @IBOutlet weak var bodyTextView: UITextView!

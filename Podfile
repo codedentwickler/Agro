@@ -23,6 +23,8 @@ use_frameworks!
     pod 'FittedSheets'
     pod 'Firebase/Analytics'
     pod 'Firebase/Messaging'
+    pod 'KeychainAccess'
+    pod 'FBSDKLoginKit'
 
 end
 

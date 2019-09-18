@@ -17,6 +17,12 @@ final class LocalStorage: NSObject {
         UserDefaults.standard.synchronize();
     }
     
+    public func persistBool(value: Bool, key: String){
+        delete(key: key);
+        UserDefaults.standard.setValue(value, forKey: key);
+        UserDefaults.standard.synchronize();
+    }
+    
     public func persistDictionary(dictionary: [String: AnyObject], key: String) {
         delete(key: key)
         UserDefaults.standard.set(dictionary, forKey: key)
@@ -52,6 +58,11 @@ final class LocalStorage: NSObject {
     public func getString(key: String) -> String? {
         UserDefaults.standard.synchronize()
         return UserDefaults.standard.value(forKey: key) as? String
+    }
+    
+    public func getBoolean(key: String) -> Bool? {
+        UserDefaults.standard.synchronize()
+        return UserDefaults.standard.value(forKey: key) as? Bool
     }
     
     public func getDictionary(key: String) -> [String: AnyObject]? {
@@ -98,22 +109,12 @@ final class LocalStorage: NSObject {
         UserDefaults.standard.synchronize()
     }
     
-    public func currentUser() -> CurrentUser? {
-        if let data = LocalStorage.shared.getData(key: PersistenceIDs.User)  {
-            do {
-                let usr = try JSONDecoder().decode(CurrentUser.self, from: data)
-                return usr
-            }
-            catch {
-                AgroLogger.log(error.localizedDescription)
-            }
-        }
-        
-        return nil
-    }
-    
     public func getAccessToken() -> String? {
         return self.getString(key: PersistenceIDs.AccessToken)
+    }
+    
+    public func logout() {
+        self.delete(key: PersistenceIDs.AccessToken)
     }
 
     func loadCountryCodesJSON(finishedClosure:@escaping ((_ jsonObject: [JSON]?,_ error: NSError?) ->Void)) {

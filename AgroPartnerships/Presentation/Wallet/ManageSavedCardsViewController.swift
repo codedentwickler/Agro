@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManageSavedCardsViewController: UIViewController {
+class ManageSavedCardsViewController: BaseViewController {
 
     public var cards: [CreditCard]!
     @IBOutlet weak var cardsTableView: UITableView!

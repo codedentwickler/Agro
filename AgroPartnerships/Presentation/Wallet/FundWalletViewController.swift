@@ -17,32 +17,57 @@ class FundWalletViewController: BaseViewController {
     @IBOutlet weak var selectedCardBankNameLabel: UILabel!
     @IBOutlet weak var selectedCardTypeLabel: UILabel!
     @IBOutlet weak var selectedCardIconImageView: UIImageView!
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var cardsCollectionView: UICollectionView!
     @IBOutlet weak var cardsCollectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var selectedCardViewHeight: NSLayoutConstraint!
-//    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet weak var selectedCardView: UIView!
     @IBOutlet weak var walletBalanceLabel: UILabel!
     @IBOutlet weak var amountView: AmountInputView!
     @IBOutlet weak var useCardLabel: UILabel!
     
-    private var selectedCard : CreditCard?
+    private var selectedCard : CreditCard? = nil {
+        didSet {
+            if let selectedCard = selectedCard {
+                switch selectedCard.cardType?.trim() {
+                case "visa":
+                    selectedCardIconImageView.image = UIImage.pstck_visaCard()
+                case "mastercard":
+                    selectedCardIconImageView.image = UIImage.pstck_masterCardCard()
+                case "verve":
+                    selectedCardIconImageView.image = UIImage.pstck_brandImage(for: .verve)
+                default:
+                    selectedCardIconImageView.image = UIImage.pstck_unknownCardCard()
+                }
+                selectedCardTypeLabel.text = "\(selectedCard.cardType?.capitalizeFirstLetter() ?? "") \u{2022} \( selectedCard.last4 ?? "")"
+                selectedCardBankNameLabel.text = selectedCard.bank
+                selectedCardView.isHidden = false
+                useCardLabel.isHidden = false
+                selectedCardViewHeight.constant = 76
+                cardView.isHidden = false
+            } else {
+                hideSelectedCardView()
+            }
+        }
+    }
+        
     private var fundWalletPresenter: FundWalletPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        setupCollectionView()
         fundWalletPresenter = FundWalletPresenter(apiService: ApiServiceImplementation.shared,
                                                   view: self)
+        hideSelectedCardView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         setupView()
-        setupCollectionView()
     }
     
     private func setupView() {
@@ -55,10 +80,21 @@ class FundWalletViewController: BaseViewController {
             useCardLabel.isHidden = true
             selectedCardViewHeight.constant = 0;
             cardsCollectionViewHeight.constant = 0;
+            hideSelectedCardView()
         }
 
         let profile = LoginSession.shared.dashboardInformation?.profile
         walletBalanceLabel.text = profile?.wallet?.walletBalance.commaSeparatedNairaValue
+    }
+    
+    private func hideSelectedCardView() {
+        selectedCardIconImageView.image = UIImage.pstck_unknownCardCard()
+        selectedCardTypeLabel.text = nil
+        selectedCardBankNameLabel.text = nil
+        selectedCardView.isHidden = true
+        useCardLabel.isHidden = true
+        selectedCardViewHeight.constant = 0
+        cardView.isHidden = true
     }
     
     @IBAction func userPressedFundWallet(_ sender: Any) {
@@ -101,31 +137,17 @@ class FundWalletViewController: BaseViewController {
         cardsCollectionView.register(UINib(nibName: CreditCardCollectionViewCell.identifier,
                                            bundle: nil),
                                      forCellWithReuseIdentifier: CreditCardCollectionViewCell.identifier)
-        cardsCollectionView.allowsMultipleSelection = false
+        cardsCollectionView.allowsMultipleSelection = true
     }
 }
 
 extension FundWalletViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let card = cards[indexPath.row]
-        switch card.cardType?.trim() {
-        case "visa":
-            selectedCardIconImageView.image = UIImage.pstck_visaCard()
-        case "mastercard":
-            selectedCardIconImageView.image = UIImage.pstck_masterCardCard()
-        case "verve":
-            selectedCardIconImageView.image = UIImage.pstck_brandImage(for: .verve)
-        default:
-            selectedCardIconImageView.image = UIImage.pstck_unknownCardCard()
-        }
-        
-        selectedCardTypeLabel.text = "\(card.cardType?.capitalizeFirstLetter() ?? "") \u{2022} \( card.last4 ?? "")"
-        selectedCardBankNameLabel.text = card.bank
-        selectedCard = card
-        
-        selectedCardView.isHidden = false
-        useCardLabel.isHidden = false
-        selectedCardViewHeight.constant = 76;
+        selectedCard = cards[indexPath.row]
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        selectedCard = nil
     }
 }
 

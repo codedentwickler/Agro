@@ -14,6 +14,7 @@ struct InitializeInvestmentRequest {
     let units: Int
     let price: Int
     var credit: Int?
+    let amountLeft: Int
     var paymentMethod: PaymentMethod
     var authCode: String?
     

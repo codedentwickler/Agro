@@ -29,6 +29,7 @@ struct ApiConstants {
     public static let AuthCode = "authCode"
     public static let Investment = "investment"
     public static let Reference = "reference"
+    public static let Signature = "signature"
 
     public static let Amount = "amount"
     public static let Dob = "dob"
@@ -42,7 +43,7 @@ struct ApiConstants {
     public static let Validation = "validation"
     public static let ErrorType = "errorType"
     public static let Error = "error"
-    
+
     static let Payout =                            "payout"
     static let PaymentInvestment =                 "payment-investment"
     static let FundWallet =                        "fund-wallet"

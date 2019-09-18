@@ -9,11 +9,18 @@
 import UIKit
 
 class CreditCardCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var selectedIndicatorImageView: UIImageView!
     @IBOutlet weak var cardbackgroud: UIImageView!
     @IBOutlet weak var cardTypeLabel: UILabel!
     @IBOutlet weak var cardNumberLabel: UILabel!
     @IBOutlet weak var logoImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setDeselected()
+    }
     
     var card: CreditCard! {
         didSet {

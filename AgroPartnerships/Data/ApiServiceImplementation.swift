@@ -19,6 +19,19 @@ class ApiServiceImplementation : ApiService {
                         completion: completion)
     }
     
+    func loginWithFingerprint(email: String,
+                              key: String, completion: @escaping (LoginResponse?) -> Void) {
+        
+        let parameters = [ApiConstants.Email : email ,
+                          ApiConstants.Signature : key,
+                          "deviceType": "ios"]
+        
+        Network.shared.request(ApiEndPoints.loginFingerprint(),
+                               method: .post,
+                               parameters: parameters,
+                               completion: completion)
+    }
+    
     func forgotPassword(email: String, completion: @escaping (JSON?) -> Void) {
         Network.shared.request(ApiEndPoints.forgotPassword(),
                                method: .post,
@@ -214,5 +227,47 @@ class ApiServiceImplementation : ApiService {
                 completion(nil)
             }
         }
-    }    
+    }
+    
+    func registerAppToken(token: String, completion: @escaping (RegisterDeviceTokenResponse?) -> Void) {
+        let parameters = [ApiConstants.Token : token, "deviceType": "ios"]
+
+        Network.shared.request(ApiEndPoints.registerFirebaseToken(),
+                               method: .post,
+                               parameters: parameters) { (response) in
+                if let response = response {
+                    completion(RegisterDeviceTokenResponse(response))
+                } else {
+                    completion(nil)
+                }
+        }
+    }
+    func saveFingerprint(key: String, completion: @escaping (JSON?) -> Void) {
+        
+        let parameters = [ApiConstants.Signature : key, "deviceType": "ios"]
+        
+        Network.shared.request(ApiEndPoints.fingerprint(),
+                               method: .post,
+                               parameters: parameters,
+                               completion: completion)
+    }
+    
+    func updateFingerprint(key: String, completion: @escaping (JSON?) -> Void) {
+        let parameters = [ApiConstants.Signature : key, "deviceType": "ios"]
+        
+        Network.shared.request(ApiEndPoints.fingerprint(),
+                               method: .put,
+                               parameters: parameters,
+                               completion: completion)
+    }
+    
+    func deleteFingerprint(completion: @escaping (JSON?) -> Void) {
+        let parameters = ["deviceType": "ios"]
+
+        Network.shared.request(ApiEndPoints.fingerprint(),
+                               method: .delete,
+                               parameters: parameters,
+                               completion: completion)
+    }
+    
 }

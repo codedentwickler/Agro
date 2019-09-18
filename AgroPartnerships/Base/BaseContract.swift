@@ -17,6 +17,8 @@ protocol BaseView: NSObjectProtocol {
     func showAlertDialog(title: String, message text: String)
     
     func isNetworkConnected()
+
+    func showDashboard()
 }
 
 protocol BasePresenter {}

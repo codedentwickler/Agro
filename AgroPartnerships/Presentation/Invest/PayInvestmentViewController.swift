@@ -12,7 +12,6 @@ import FittedSheets
 
 class PayInvestmentViewController: BaseViewController {
     
-    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet weak var selectedCardBankNameLabel: UILabel!
     @IBOutlet weak var selectedCardTypeLabel: UILabel!
     @IBOutlet weak var selectedCardIconImageView: UIImageView!
@@ -22,6 +21,7 @@ class PayInvestmentViewController: BaseViewController {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var selectedCardView: UIView!
     @IBOutlet weak var selectedCardViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var useCardLabel: UILabel!
 
     public var initializeTransactionRequest: InitializeInvestmentRequest!
     
@@ -43,12 +43,10 @@ class PayInvestmentViewController: BaseViewController {
                 selectedCardBankNameLabel.text = selectedCard.bank
                 selectedCardTypeLabel.text = "\(selectedCard.cardType?.capitalizeFirstLetter() ?? "") \u{2022} \( selectedCard.last4 ?? "")"
                 selectedCardView.isHidden = false
-                selectedCardViewHeight.constant = CGFloat(112.0)
-            
-                if oldValue == nil {
-                    contentViewHeight.constant = contentViewHeight.constant + selectedCardViewHeight.constant
-                    contentViewHeight.isActive = true
-                }
+                selectedCardViewHeight.constant = 114
+                selectedCardView.isHidden = false
+            } else {
+                hideSelectedCardView()
             }
         }
     }
@@ -77,13 +75,25 @@ class PayInvestmentViewController: BaseViewController {
             cardsCollectionView.isHidden = true
             cardsCollectionViewHeight.constant = 0
             cardsCollectionViewHeight.isActive = true
-             contentViewHeight.constant = CGFloat(600.0)
-            contentViewHeight.isActive = true
+            selectedCardView.isHidden = true
+            useCardLabel.isHidden = true
+            selectedCardViewHeight.constant = 0;
+            hideSelectedCardView()
         }
 
-        let amountString = initializeTransactionRequest?.price.commaSeparatedNairaValue ?? ""
+        let amountString = initializeTransactionRequest?.amountLeft.commaSeparatedNairaValue ?? ""
         amountLabel.text = amountString
         unitsLabel.text = initializeTransactionRequest?.units.string ?? ""
+    }
+    
+    private func hideSelectedCardView() {
+        selectedCardIconImageView.image = UIImage.pstck_unknownCardCard()
+        selectedCardTypeLabel.text = nil
+        selectedCardBankNameLabel.text = nil
+        selectedCardView.isHidden = true
+        useCardLabel.isHidden = true
+        selectedCardViewHeight.constant = 0
+        selectedCardView.isHidden = true
     }
     
     @IBAction func userPressedFundWallet(_ sender: Any) {
@@ -110,7 +120,7 @@ class PayInvestmentViewController: BaseViewController {
         cardsCollectionView.register(UINib(nibName: CreditCardCollectionViewCell.identifier,
                                            bundle: nil),
                                      forCellWithReuseIdentifier: CreditCardCollectionViewCell.identifier)
-        cardsCollectionView.allowsMultipleSelection = false
+        cardsCollectionView.allowsMultipleSelection = true
     }
     
     private func enterNewCardInformationModal() {
@@ -127,6 +137,10 @@ class PayInvestmentViewController: BaseViewController {
 extension PayInvestmentViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedCard = cards[indexPath.row]
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        selectedCard = nil
     }
 }
 
@@ -191,6 +205,8 @@ extension PayInvestmentViewController: PayInvestmentView {
                 self.gotoDashboard()
             }
         })
+        
+        refreshDashboardInformation()
         
         createAlertDialog(title: "Investment Successful",
                           message: message,

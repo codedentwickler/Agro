@@ -20,6 +20,7 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
     @IBOutlet weak var paymentLeftLabel: UILabel!
     @IBOutlet weak var paymentLeftAmountLabel: UILabel!
     @IBOutlet weak var paymentMethodCollectionView: UICollectionView!
+    @IBOutlet weak var paymentCollectionViewHeight: NSLayoutConstraint!
     
     var delegate: ProvideInvestmentDetailsDelegate?
     var investment: Investment!
@@ -69,6 +70,11 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
             walletDeductionAmount = walletBalance
         }
         
+        if amountLeftToPayAfterWalletDeduction == 0 {
+            paymentMethodCollectionView.isHidden = true
+            paymentCollectionViewHeight.constant = CGFloat(0)
+        }
+        
         paymentLeftAmountLabel.text = amountLeftToPayAfterWalletDeduction.commaSeparatedNairaValue
         
     }
@@ -91,6 +97,7 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
                                                   units: totalUnitSelected,
                                                   price: investment.price!,
                                                   credit: walletBalance,
+                                                  amountLeft: amountLeftToPayAfterWalletDeduction,
                                                   paymentMethod: selectedPaymentMethod,
                                                   authCode: nil)
         sheetViewController?.dismiss(animated: true)

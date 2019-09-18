@@ -3,7 +3,7 @@ import MBProgressHUD
 import Toast_Swift
 
 // Mark - Generic View Setup 
-extension UIViewController: BaseView {
+extension BaseViewController: BaseView {
     
     func showToast(withMessage message: String, showTimeInSeconds: Float) {
         self.view.makeToast(message, duration: TimeInterval(showTimeInSeconds), completion: nil)
@@ -39,6 +39,10 @@ extension UIViewController: BaseView {
     }
     
     func isNetworkConnected() {}
+    
+    func showDashboard() {
+        gotoDashboard()
+    }
 }
 
 // Mark - Common View Actions
@@ -69,7 +73,7 @@ extension UIViewController {
         self.title = title;
     }
     
-    func createAlertDialog(title: String! = "Oops!",
+    func createAlertDialog(title: String! = "Invalid Entry!",
                            message: String! = StringLiterals.GENERIC_NETWORK_ERROR,
                            ltrActions: [UIAlertAction]! = []) {
         

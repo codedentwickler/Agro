@@ -20,6 +20,6 @@ struct Referral {
         Id = json["_id"].stringValue
         userFullName = json["user"]["fullname"].stringValue
         date = json["date"].stringValue
-        amount = json["amount"].intValue
+        amount = json["amount"].int
     }
 }

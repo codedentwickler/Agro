@@ -56,11 +56,16 @@ extension UITextField {
         label.text = string
         label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 15)
-        label.backgroundColor = .black
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.backgroundColor = .transparent
         label.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 250), for: .horizontal)
         label.translatesAutoresizingMaskIntoConstraints = false
-        container.addSubview(label)
+        
+        let labelContainer = UIView()
+        labelContainer.backgroundColor = UIColor.black
+        labelContainer.translatesAutoresizingMaskIntoConstraints = false
+        labelContainer.addSubview(label)
+        container.addSubview(labelContainer)
 
         // Set constraints for triangle
         triagle.heightAnchor.constraint(equalToConstant: 10).isActive = true
@@ -73,16 +78,24 @@ extension UITextField {
         line.topAnchor.constraint(equalTo: triagle.bottomAnchor, constant: 0).isActive = true
         line.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 0).isActive = true
         line.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: 0).isActive = true
+        
+        // Set constraints for label container
+        labelContainer.topAnchor.constraint(equalTo: line.bottomAnchor, constant: 0).isActive = true
+        labelContainer.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: 0).isActive = true
+        labelContainer.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 0).isActive = true
+        labelContainer.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: 0).isActive = true
 
         // Set constraints for label
-        label.topAnchor.constraint(equalTo: line.bottomAnchor, constant: 0).isActive = true
-        label.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: 0).isActive = true
-        label.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 0).isActive = true
-        label.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: 0).isActive = true
+        label.topAnchor.constraint(equalTo: labelContainer.topAnchor, constant: 0).isActive = true
+        label.bottomAnchor.constraint(equalTo: labelContainer.bottomAnchor, constant: 0).isActive = true
+        label.leadingAnchor.constraint(equalTo: labelContainer.leadingAnchor, constant: 4).isActive = true
+        label.trailingAnchor.constraint(equalTo: labelContainer.trailingAnchor, constant: -4).isActive = true
 
         if !show {
             container.isHidden = true
         }
+        
+        container.cornerRadius = CGFloat(2.0)
         
         self.addSubview(container)
 
