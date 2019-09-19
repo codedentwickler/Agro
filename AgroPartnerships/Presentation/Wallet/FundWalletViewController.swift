@@ -27,6 +27,7 @@ class FundWalletViewController: BaseViewController {
     @IBOutlet weak var amountView: AmountInputView!
     @IBOutlet weak var useCardLabel: UILabel!
     
+    private var selectedIndexPath : IndexPath?
     private var selectedCard : CreditCard? = nil {
         didSet {
             if let selectedCard = selectedCard {
@@ -142,7 +143,17 @@ class FundWalletViewController: BaseViewController {
 }
 
 extension FundWalletViewController : UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if let selectedIndexPath = selectedIndexPath {
+            collectionView.deselectItem(at: selectedIndexPath, animated: true)
+        }
+        
+        return true
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
         selectedCard = cards[indexPath.row]
     }
     

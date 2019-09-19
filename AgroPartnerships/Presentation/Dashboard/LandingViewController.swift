@@ -11,8 +11,6 @@ import Cards
 
 class LandingViewController: BaseViewController {
     
-    public var dashboardInformation: DashboardResponse?
-
     @IBOutlet weak var todayDateLabel: UILabel!
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var dashboardCard: Card!
@@ -67,7 +65,6 @@ class LandingViewController: BaseViewController {
                                 from: StoryBoardIdentifiers.Dashboard)
         vc.selectedIndex = getIndexOfCard(sender: sender.view)
         vc.showSettings = sender.view == settingsCard
-        LoginSession.shared.dashboardInformation = dashboardInformation
         present(vc, animated: true, completion: nil)
     }
     

@@ -138,7 +138,7 @@ extension SignUpViewController: SignUpView {
     func showDashBoard(dashboardInformation: DashboardResponse) {
         let vc = viewController(type: LandingViewController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
-        vc.dashboardInformation = dashboardInformation
+        LoginSession.shared.dashboardInformation = dashboardInformation
         self.present(vc, animated: true, completion: nil)
     }
     

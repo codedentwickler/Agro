@@ -81,6 +81,11 @@ class DashboardViewController: BaseViewController {
     }
 
     private func setupView() {
+        AgroLogger.log("setupView was called")
+        currentInvestments.removeAll()
+        pendingInvestments.removeAll()
+        investmentHistory.removeAll()
+
         dashboardInformation = LoginSession.shared.dashboardInformation
         
         for investment in dashboardInformation.portfolio! {
@@ -102,7 +107,7 @@ class DashboardViewController: BaseViewController {
         if (dashboardInformation.transactions?.count ?? 0) == 0 {
             transactionsTableView.setEmptyMessage("No investment history")
         }
-        
+        userChangedPagerValue(pageControl)
         currentInvestmentsTableView.reloadData()
         transactionsTableView.reloadData()
     }

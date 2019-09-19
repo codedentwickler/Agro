@@ -80,6 +80,7 @@ class SupportViewController: BaseViewController {
                         self.dismissLoading()
                         let json = JSON(result)
                         if json[ApiConstants.Status].stringValue == ApiConstants.Success {
+                            self.resetViews()
                             self.createAlertDialog(title: "Message Delivered",
                                                    message: "A Help Desk personel would get across to you either by mail or phone",
                                                    ltrActions: [self.creatAlertAction("Done", style: .default, clicked: nil)])
@@ -95,6 +96,12 @@ class SupportViewController: BaseViewController {
                 AgroLogger.log(error)
             }
         }
+    }
+    
+    private func resetViews() {
+        self.subjectTextView.text = nil
+        self.bodyTextView.text = nil
+        userPressedRemoveAttachedment(attachmentAddedView)
     }
     
     @objc private func chooseImage() {

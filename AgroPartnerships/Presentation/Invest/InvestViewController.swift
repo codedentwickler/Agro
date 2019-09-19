@@ -79,7 +79,7 @@ class InvestViewController: BaseViewController {
     @IBAction func userPressedSeeAllSoldOutInvestments(_ sender: Any) {
         let vc = viewController(type: AvailableInvestmentViewController.self,
                                 from: StoryBoardIdentifiers.Invest)
-        vc.investments = availableinvestments
+        vc.investments = soldInvestments
         vc.isBeenUsedForSoldOutInvestments = true
         navigationController?.pushViewController(vc, animated: true)
     }

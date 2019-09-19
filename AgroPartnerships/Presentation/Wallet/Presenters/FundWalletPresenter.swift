@@ -41,8 +41,10 @@ class FundWalletPresenter: BasePresenter {
             }
             
             if response.status == "success" {
-                self.view?.walletFundingSuccessful(wallet: response.wallet, authorization: nil)
                 LoginSession.shared.dashboardInformation?.profile?.wallet = response.wallet
+                AgroLogger.log("DashboardInformation was set \(LoginSession.shared.dashboardInformation)")
+
+                self.view?.walletFundingSuccessful(wallet: response.wallet, authorization: nil)
             } else {
                 self.view?.showAlertDialog(message: "Card Charge failure. Please ensure you have enough funds to fund your wallet")
             }

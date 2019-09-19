@@ -335,6 +335,7 @@ class ProfileViewController: BaseViewController {
                 if response[ApiConstants.Status].stringValue == ApiConstants.Success {
                     self.showSuccessAlert(title: "Update Successful",
                                           message: "You profile has been updated.")
+                    self.refreshDashboardInformation()
                 } else {
                     self.showAlertDialog(message: "An Error occured. Please check your profile information and try again.")
                 }

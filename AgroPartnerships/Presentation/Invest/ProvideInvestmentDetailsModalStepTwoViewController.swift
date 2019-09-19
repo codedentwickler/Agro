@@ -59,7 +59,7 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
         let nonWithdrawable = profile?.wallet?.bonus?.balance ?? 0
         walletBalance = withdrawable + nonWithdrawable
         
-        walletFundsLabel.text = "Wallet Funds (\(walletBalance.commaSeparatedNairaValue))"
+//        walletFundsLabel.text = "Wallet Funds (\(walletBalance.commaSeparatedNairaValue))"
         walletFundsAmountLabel.text = "- \(walletBalance.commaSeparatedNairaValue)"
         
         if totalCost <= walletBalance {

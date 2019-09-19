@@ -24,8 +24,9 @@ class PayInvestmentViewController: BaseViewController {
     @IBOutlet weak var useCardLabel: UILabel!
 
     public var initializeTransactionRequest: InitializeInvestmentRequest!
-    
     private var payInvestmentPresenter: PayInvestmentPresenter!
+    
+    private var selectedIndexPath : IndexPath?
     private var selectedCard : CreditCard? = nil {
         didSet {
             if let selectedCard = selectedCard {
@@ -135,7 +136,17 @@ class PayInvestmentViewController: BaseViewController {
 }
 
 extension PayInvestmentViewController : UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if let selectedIndexPath = selectedIndexPath {
+            collectionView.deselectItem(at: selectedIndexPath, animated: true)
+        }
+        
+        return true
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
         selectedCard = cards[indexPath.row]
     }
     

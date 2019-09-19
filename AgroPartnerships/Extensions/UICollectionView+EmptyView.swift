@@ -26,5 +26,10 @@ extension UICollectionView {
     func restore() {
         self.backgroundView = nil
     }
+    
+    func deselectAllItems(animated: Bool) {
+        guard let selectedItems = indexPathsForSelectedItems else { return }
+        for indexPath in selectedItems { deselectItem(at: indexPath, animated: animated) }
+    }
 }
 

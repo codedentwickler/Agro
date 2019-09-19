@@ -135,6 +135,7 @@ extension UIViewController {
         self.view.endEditing(true)
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         hud.label.text = message
+        hud.label.numberOfLines = 0
         hud.mode = MBProgressHUDMode.indeterminate
         hud.isUserInteractionEnabled = false
         showNetworkIndicator(status: true)
