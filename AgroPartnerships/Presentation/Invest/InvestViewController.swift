@@ -99,7 +99,9 @@ extension InvestViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showInvestmentDetail(investment: soldInvestments[indexPath.row])
+    }
 }
 
 extension InvestViewController : InvestView {
@@ -149,9 +151,13 @@ extension InvestViewController : UICollectionViewDataSource {
     
     @objc private func userTapViewInvestment(sender: UITapGestureRecognizer) {
         let row = sender.view!.tag
+        showInvestmentDetail(investment: availableinvestments[row])
+    }
+    
+    private func showInvestmentDetail(investment: Investment) {
         let vc = viewController(type: InvestDetailViewController.self, from: StoryBoardIdentifiers.Invest)
         vc.investments = self.availableinvestments
-        vc.investment = self.availableinvestments[row]
+        vc.investment = investment
         navigationController?.pushViewController(vc, animated: true)
     }
 }

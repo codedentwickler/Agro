@@ -49,35 +49,38 @@ class SupportViewController: BaseViewController {
             return
         }
         
-        let parameters = ["email": email,
-                          "subject": subject,
-                          "message": subject]
+        let parameters = ["email": email, "subject": subject, "message": message]
         
         var imageData: Data? = nil
         if image != nil {
             let compressionRatio = CGFloat(image?.getImageSizeCompressionRatio() ?? 0)
-            
+            AgroLogger.log(":IMAGE RATIO \(compressionRatio)")
             imageData = image?.jpegData(compressionQuality: compressionRatio)
         }
        
-        let headers = ["Content-Type": "application/x-www-form-urlencoded"]
-
+        let headers = ["Content-type": "multipart/form-data",
+                   "Content-Disposition" : "form-data"]
+        
         showLoading(withMessage: "Sending your message to support . . .")
         Alamofire.upload(multipartFormData: { (data) in
             if let imageData = imageData {
-                data.append(imageData, withName: "attachment\(Date().timeIntervalSince1970.string).jpeg", mimeType: "image/jpeg")
+                AgroLogger.log(":IMAGE DATA \(imageData)")
+                data.append(imageData, withName: "attachment", fileName: UUID.init().uuidString,
+                    mimeType: "image/jpeg")
             }
             for (key, value) in parameters {
                 data.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
             }
             
-        }, to: ApiEndPoints.helpdesk(), headers: headers) {[unowned self] (result) in
+        }, to: ApiEndPoints.helpdesk(),
+           headers: headers) {[unowned self] (result) in
             AgroLogger.log("Result \(result)")
             switch result {
             case .success(let upload, _,_):
                 upload.responseJSON(completionHandler: { (response) in
+                    self.dismissLoading()
+
                     if let result = response.result.value {
-                        self.dismissLoading()
                         let json = JSON(result)
                         if json[ApiConstants.Status].stringValue == ApiConstants.Success {
                             self.resetViews()

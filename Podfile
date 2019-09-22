@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 inhibit_all_warnings!
 
 target 'AgroPartnerships' do
@@ -15,7 +15,7 @@ use_frameworks!
     pod 'IQKeyboardManagerSwift'
     pod 'DropDown'
     pod 'Toast-Swift', '~> 3.0.1'
-    pod 'Kingfisher', '~> 4.0'
+    pod 'Kingfisher', '~> 5.0'
     pod 'Paystack'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'SwiftyOnboard'

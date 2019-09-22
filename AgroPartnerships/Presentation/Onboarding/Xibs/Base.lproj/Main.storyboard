@@ -232,7 +232,7 @@ because you were inactive for a while.</string>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-2K-LcM" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-2K-LcM" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="77.5" y="168" width="281.5" height="46"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

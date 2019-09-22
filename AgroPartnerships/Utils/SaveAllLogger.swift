@@ -9,6 +9,7 @@
 import Foundation
 
 class AgroLogger {
+    private init(){}
     public static func log(_ items: Any...) {
         // Only allowing in DEBUG mode
         #if DEBUG

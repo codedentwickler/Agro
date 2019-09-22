@@ -8,9 +8,11 @@
 
 import UIKit
 import FittedSheets
+import Kingfisher
 
 class InvestDetailViewController: BaseViewController {
     
+    @IBOutlet weak var investmentImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var investButton: UIView!
     @IBOutlet weak var typeLabel: UILabel!
@@ -27,7 +29,6 @@ class InvestDetailViewController: BaseViewController {
     @IBOutlet weak var investmentDescriptionTextView: UITextView!
     @IBOutlet weak var investmentDescriptionTextViewHeight: NSLayoutConstraint!
     @IBOutlet weak var otherCommoditiesCollectionView: UICollectionView!
-    @IBOutlet weak var backgroundImageView: UIImageView!
     
     public var investment: Investment!
     public var investments: [Investment]!
@@ -39,6 +40,7 @@ class InvestDetailViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadImage()
         setupView()
         setupCollectionView()
         investmentDetailPresenter = InvestmentDetailPresenter(apiService: ApiServiceImplementation.shared,
@@ -54,7 +56,7 @@ class InvestDetailViewController: BaseViewController {
         productNameLabel.text = investment.title
         costPerUnitLabel.text = investment.price?.commaSeparatedNairaValue
         yieldLabel.text = "\(investment.yield!)%"
-        statusLabel.text = investment.status?.capitalizeFirstLetter()
+        statusLabel.text = investment.status?.capitalized
         
         let unitLeft = investment.units ?? 0
         let unitsStr = unitLeft <= 1 ? "unit" : "units"
@@ -82,6 +84,30 @@ class InvestDetailViewController: BaseViewController {
         otherInvestments.append(contentsOf: investments)
         otherInvestments.removeAll(where: { $0.code == investment.code })
         otherCommoditiesCollectionView.reloadData()
+    }
+    
+    private func loadImage() {
+        let url = URL(string: investment.picture!)
+        let processor = DownsamplingImageProcessor(size: investmentImageView.frame.size)
+        investmentImageView.kf.indicatorType = .activity
+        investmentImageView.kf.setImage(
+            with: url,
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                self.investmentImageView.backgroundColor = UIColor.clear
+                AgroLogger.log("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                AgroLogger.log("Job failed: \(error.localizedDescription)")
+            }
+        }
     }
     
     private func setupCollectionView() {
@@ -194,7 +220,6 @@ extension InvestDetailViewController: InvestmentDetailView {
         let message = "Your investment for \(units) units \(amountPaid.commaSeparatedNairaValue) was successful"
         
         let confirmAction = creatAlertAction("Confirm", style: .default, clicked: nil)
-        refreshDashboardInformation()
 
         createAlertDialog(title: "Investment Successful",
                           message: message,

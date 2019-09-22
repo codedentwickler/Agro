@@ -6,6 +6,7 @@
 //  Copyright © 2019 AgroPartnerships. All rights reserved.
 //
 
+import Kingfisher
 import UIKit
 
 class ProvideInvestmentDetailsModalStepOneViewController: UIViewController {
@@ -37,6 +38,31 @@ class ProvideInvestmentDetailsModalStepOneViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupView()
+        loadImage()
+    }
+    
+    private func loadImage() {
+        let url = URL(string: investment.picture!)
+        let processor = DownsamplingImageProcessor(size: iconImageView.frame.size) >> RoundCornerImageProcessor(cornerRadius: 10)
+
+        iconImageView.kf.indicatorType = .activity
+        iconImageView.kf.setImage(
+            with: url,
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+        ]){
+            result in
+            switch result {
+            case .success(let value):
+                self.iconImageView.backgroundColor = UIColor.clear
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
     }
     
     private func setupView() {

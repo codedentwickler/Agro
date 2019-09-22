@@ -102,7 +102,7 @@ class SignUpViewController: BaseViewController {
             phone.removeFirst()
         }
         
-        let fullPhone = "\(selectedDialingCode!.0) \(phoneTextField.text!)"
+        let fullPhone = "\(selectedDialingCode!.0)\(phoneTextField.text!)"
         
         presenter.signUp(fullname: fullnameTextField.text!,
                          title: titleTextField.text!,

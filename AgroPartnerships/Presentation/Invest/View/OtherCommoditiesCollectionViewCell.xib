@@ -35,19 +35,32 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pk2-SB-AP6">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jub-VX-swQ" customClass="Card" customModule="Cards">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PkQ-7W-G71">
                                 <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
-                                        <real key="value" value="18"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cardRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="investment-sample-image"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9L-Ft-UKT" customClass="GradientView" customModule="AgroPartnerships" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYS-uA-dpg" userLabel="View Button">
@@ -99,67 +112,70 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53x-Y6-Qa5">
-                                <rect key="frame" x="16" y="169" width="303" height="1"/>
+                                <rect key="frame" x="16" y="173" width="303" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="x9S-el-Bb1"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₦95,000.00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB2-VW-y6S">
-                                <rect key="frame" x="16" y="182" width="117" height="26.5"/>
+                                <rect key="frame" x="16" y="186" width="117" height="26.5"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet Potato - 02" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urk-on-HVF">
-                                <rect key="frame" x="16" y="90" width="227" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet Potato - 02" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Urk-on-HVF">
+                                <rect key="frame" x="16" y="127.5" width="303" height="33.5"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="35% in 7 months" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-TP-KAk">
-                                <rect key="frame" x="16" y="224.5" width="227.5" height="19.5"/>
+                                <rect key="frame" x="16" y="224.5" width="125" height="19.5"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="FARM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-es-iPT">
-                                <rect key="frame" x="16" y="64" width="43" height="18"/>
+                                <rect key="frame" x="16" y="101.5" width="43" height="18"/>
                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="/UNIT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLz-IJ-116">
-                                <rect key="frame" x="133" y="192.5" width="37" height="16"/>
+                                <rect key="frame" x="133" y="196.5" width="37" height="16"/>
                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NYS-uA-dpg" secondAttribute="trailing" constant="16" id="3Om-FU-Ec1"/>
                             <constraint firstAttribute="bottom" secondItem="NYS-uA-dpg" secondAttribute="bottom" constant="16" id="4OB-8M-PYC"/>
-                            <constraint firstItem="NYS-uA-dpg" firstAttribute="leading" secondItem="iAd-TP-KAk" secondAttribute="trailing" constant="8" id="8qZ-yn-7J2"/>
-                            <constraint firstItem="iAd-TP-KAk" firstAttribute="top" secondItem="LB2-VW-y6S" secondAttribute="bottom" constant="16" id="Eh3-9i-SbC"/>
-                            <constraint firstAttribute="trailing" secondItem="Urk-on-HVF" secondAttribute="trailing" constant="92" id="HnP-wE-zks"/>
+                            <constraint firstAttribute="bottom" secondItem="PkQ-7W-G71" secondAttribute="bottom" id="4W2-bT-t2v"/>
+                            <constraint firstAttribute="trailing" secondItem="NYS-uA-dpg" secondAttribute="trailing" constant="16" id="9Ad-Ab-LqM"/>
+                            <constraint firstItem="Z9L-Ft-UKT" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" id="BKp-7z-rxl"/>
+                            <constraint firstItem="iAd-TP-KAk" firstAttribute="top" secondItem="LB2-VW-y6S" secondAttribute="bottom" constant="12" id="Eh3-9i-SbC"/>
+                            <constraint firstAttribute="trailing" secondItem="Urk-on-HVF" secondAttribute="trailing" constant="16" id="HnP-wE-zks"/>
                             <constraint firstItem="sLz-IJ-116" firstAttribute="leading" secondItem="LB2-VW-y6S" secondAttribute="trailing" id="J0M-i6-bfh"/>
+                            <constraint firstAttribute="trailing" secondItem="PkQ-7W-G71" secondAttribute="trailing" id="LfN-Xw-5zX"/>
+                            <constraint firstItem="PkQ-7W-G71" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" id="LxJ-88-5LQ"/>
                             <constraint firstAttribute="trailing" secondItem="53x-Y6-Qa5" secondAttribute="trailing" constant="16" id="MDg-2h-v9W"/>
                             <constraint firstItem="LB2-VW-y6S" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="SWP-C3-q4t"/>
                             <constraint firstItem="iAd-TP-KAk" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="WOF-1L-PD6"/>
-                            <constraint firstItem="Jub-VX-swQ" firstAttribute="top" secondItem="Pk2-SB-AP6" secondAttribute="top" id="YaL-Qz-INT"/>
+                            <constraint firstItem="PkQ-7W-G71" firstAttribute="top" secondItem="Pk2-SB-AP6" secondAttribute="top" id="arf-Ux-LxA"/>
                             <constraint firstItem="sLz-IJ-116" firstAttribute="bottom" secondItem="LB2-VW-y6S" secondAttribute="bottom" id="cj6-5C-wkC"/>
                             <constraint firstItem="LB2-VW-y6S" firstAttribute="top" secondItem="53x-Y6-Qa5" secondAttribute="bottom" constant="12" id="dHC-te-CDf"/>
+                            <constraint firstItem="Z9L-Ft-UKT" firstAttribute="top" secondItem="Pk2-SB-AP6" secondAttribute="top" id="ede-UD-FHc"/>
                             <constraint firstItem="Urk-on-HVF" firstAttribute="top" secondItem="XeN-es-iPT" secondAttribute="bottom" constant="8" id="fgq-j9-0tX"/>
+                            <constraint firstAttribute="trailing" secondItem="Z9L-Ft-UKT" secondAttribute="trailing" id="fi0-Wo-hj7"/>
                             <constraint firstItem="53x-Y6-Qa5" firstAttribute="top" secondItem="Urk-on-HVF" secondAttribute="bottom" constant="12" id="h9r-Mk-KZO"/>
                             <constraint firstItem="XeN-es-iPT" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="hYo-97-Wz2"/>
                             <constraint firstAttribute="bottom" secondItem="iAd-TP-KAk" secondAttribute="bottom" constant="16" id="ivc-qv-q5c"/>
-                            <constraint firstAttribute="bottom" secondItem="Jub-VX-swQ" secondAttribute="bottom" id="nPp-No-uaR"/>
                             <constraint firstItem="vJS-Pf-uD2" firstAttribute="top" secondItem="Pk2-SB-AP6" secondAttribute="top" constant="16" id="ooZ-3D-7Q4"/>
                             <constraint firstItem="Urk-on-HVF" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="pbL-Rc-lq9"/>
-                            <constraint firstAttribute="trailing" secondItem="Jub-VX-swQ" secondAttribute="trailing" id="pyS-4j-tgM"/>
-                            <constraint firstItem="Jub-VX-swQ" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" id="uAH-Op-2XN"/>
                             <constraint firstItem="53x-Y6-Qa5" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="uHD-qO-xTU"/>
                             <constraint firstItem="vJS-Pf-uD2" firstAttribute="leading" secondItem="Pk2-SB-AP6" secondAttribute="leading" constant="16" id="yDo-S8-pYW"/>
+                            <constraint firstAttribute="bottom" secondItem="Z9L-Ft-UKT" secondAttribute="bottom" id="zvL-5o-4Of"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -178,7 +194,7 @@
             <viewLayoutGuide key="safeArea" id="H3i-x2-6e1"/>
             <connections>
                 <outlet property="amountLabel" destination="LB2-VW-y6S" id="We5-iO-vJm"/>
-                <outlet property="backgroundCard" destination="Jub-VX-swQ" id="ytU-Hb-SAG"/>
+                <outlet property="imageView" destination="PkQ-7W-G71" id="y8Q-3K-OrF"/>
                 <outlet property="productNameLabel" destination="Urk-on-HVF" id="kke-CO-t6B"/>
                 <outlet property="typeLabel" destination="XeN-es-iPT" id="l8x-nq-Vjx"/>
                 <outlet property="viewButton" destination="NYS-uA-dpg" id="jhK-HT-fge"/>
@@ -188,6 +204,5 @@
     </objects>
     <resources>
         <image name="farm-icon" width="50" height="50"/>
-        <image name="investment-sample-image" width="335" height="450"/>
     </resources>
 </document>

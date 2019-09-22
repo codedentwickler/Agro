@@ -216,9 +216,7 @@ extension PayInvestmentViewController: PayInvestmentView {
                 self.gotoDashboard()
             }
         })
-        
-        refreshDashboardInformation()
-        
+                
         createAlertDialog(title: "Investment Successful",
                           message: message,
                           ltrActions: [confirmAction])

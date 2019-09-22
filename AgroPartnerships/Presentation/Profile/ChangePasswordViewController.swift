@@ -110,7 +110,7 @@ class ChangePasswordViewController: BaseViewController {
     
     func showSuccessDialogAndMoveToLogin(title: String, message: String ) {
         
-        let okAction: UIAlertAction = self.creatAlertAction(StringLiterals.OK, style: .default, clicked: {[unowned self] (action) in
+        let okAction: UIAlertAction = self.creatAlertAction(StringLiterals.OK, style: .default, clicked: { (action) in
             
             AppDelegate.applicationDidLogout(with: .none)
             LoginSession.shared.logout()

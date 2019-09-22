@@ -50,6 +50,8 @@ class RequestPayoutViewController: BaseViewController {
             }
             
             if response.status == "success" {
+                LoginSession.shared.dashboardInformation?.profile?.wallet = response.wallet
+                self.walletBalanceLabel.text = response.wallet?.funds?.commaSeparatedNairaValue
                 self.showAlertDialog(title: "Payout Request Received",
                                      message: "Your payout request for \(amount.commaSeparatedNairaValue) is being processed. ")
             } else {

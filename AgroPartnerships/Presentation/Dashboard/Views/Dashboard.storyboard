@@ -604,20 +604,20 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYk-It-geS">
-                                                <rect key="frame" x="16" y="373.5" width="382" height="33"/>
+                                                <rect key="frame" x="16" y="372" width="382" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-oe-fGx">
-                                                <rect key="frame" x="16" y="418.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="417.5" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239726024" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="L7n-Rh-4sD"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keep track of your investment and  watch your money grow" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Lb-6TW">
-                                                <rect key="frame" x="16" y="426.5" width="382" height="37.5"/>
+                                                <rect key="frame" x="16" y="425.5" width="382" height="38.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -650,14 +650,11 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </constraints>
                                             </view>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-uJ-ZYe" userLabel="Wallet Stack View">
-                                                <rect key="frame" x="0.0" y="545" width="414" height="185"/>
+                                                <rect key="frame" x="0.0" y="545" width="414" height="55"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-YI-Q0K">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="15"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="160" id="e2w-nv-Smw"/>
-                                                        </constraints>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="8Hi-Iu-0ba">
                                                             <size key="itemSize" width="50" height="50"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -667,10 +664,10 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <cells/>
                                                     </collectionView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-V1-svT">
-                                                        <rect key="frame" x="16" y="62" width="382" height="48"/>
+                                                        <rect key="frame" x="16" y="27" width="382" height="16"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="All Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-o7-F0g">
-                                                                <rect key="frame" x="8" y="8" width="230" height="32"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="All Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-o7-F0g">
+                                                                <rect key="frame" x="8" y="8" width="230" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -678,8 +675,8 @@ Monday – Friday: 9AM – 5PM</string>
                                                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                 </variation>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cR-I1-w0K" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="246" y="8" width="120" height="32"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cR-I1-w0K" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
+                                                                <rect key="frame" x="246" y="8" width="120" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <state key="normal" title="View breakdown"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -693,10 +690,10 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="16"/>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-Xh-igB">
-                                                        <rect key="frame" x="16" y="122" width="382" height="63"/>
+                                                        <rect key="frame" x="16" y="55" width="382" height="0.0"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="300" id="hBe-1O-Ev6"/>
+                                                            <constraint firstAttribute="height" id="ON9-Oh-VHk"/>
                                                         </constraints>
                                                     </tableView>
                                                 </subviews>
@@ -722,7 +719,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have one pending investment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-6i-ggt">
-                                                                <rect key="frame" x="56" y="18.5" width="200" height="15.5"/>
+                                                                <rect key="frame" x="56" y="18" width="210" height="16"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -731,7 +728,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <rect key="frame" x="312" y="12" width="86" height="28"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz8-Mk-K8n">
-                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21"/>
+                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21.5"/>
                                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -795,7 +792,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="172" width="382" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Current Investments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-l5-gfI">
-                                                                <rect key="frame" x="8" y="8" width="181" height="34"/>
+                                                                <rect key="frame" x="8" y="8" width="169.5" height="34"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -804,7 +801,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </variation>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4U-EU-H7w" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="197" y="8" width="169" height="34"/>
+                                                                <rect key="frame" x="185.5" y="8" width="180.5" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <state key="normal" title="See History"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -863,7 +860,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="172" width="382" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55f-HS-Hil">
-                                                                <rect key="frame" x="8" y="8" width="120" height="34"/>
+                                                                <rect key="frame" x="8" y="8" width="111" height="34"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -872,7 +869,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </variation>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-Im-iSq" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="136" y="8" width="230" height="34"/>
+                                                                <rect key="frame" x="127" y="8" width="239" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <state key="normal" title="View All Referrals"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -892,13 +889,13 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="234" width="382" height="97"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REFERRAL CODE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRE-dg-baF">
-                                                                <rect key="frame" x="16" y="20" width="151.5" height="21"/>
+                                                                <rect key="frame" x="16" y="20" width="155" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="REFCODEHERE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Op-uhG">
-                                                                <rect key="frame" x="16" y="45" width="350" height="48"/>
+                                                                <rect key="frame" x="16" y="45.5" width="350" height="47.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="25"/>
@@ -1052,13 +1049,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                     <constraint firstItem="Quu-sP-SSn" firstAttribute="leading" secondItem="1Df-Jq-R31" secondAttribute="leading" constant="16" id="yur-zu-C5y"/>
                                                 </constraints>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-Va-z9b">
-                                                <rect key="frame" x="366" y="40" width="32" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="ThB-Y2-GT4"/>
-                                                    <constraint firstAttribute="width" constant="32" id="f6x-dp-eAA"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1066,7 +1056,6 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="5a7-uJ-ZYe" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="33l-wv-zoU"/>
                                             <constraint firstAttribute="trailing" secondItem="ZYk-It-geS" secondAttribute="trailing" constant="16" id="3Lf-u1-w7N"/>
                                             <constraint firstItem="TJh-sV-n9a" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" id="3mn-2F-eQu"/>
-                                            <constraint firstItem="Tvw-YI-Q0K" firstAttribute="height" secondItem="tqJ-oU-X1K" secondAttribute="height" id="5X5-2x-dh9"/>
                                             <constraint firstAttribute="height" constant="1400" id="84s-PE-nxi"/>
                                             <constraint firstItem="3vJ-ct-rTg" firstAttribute="top" secondItem="0zM-Px-2NS" secondAttribute="bottom" id="AVS-cs-a8F"/>
                                             <constraint firstItem="5a7-uJ-ZYe" firstAttribute="top" secondItem="0zM-Px-2NS" secondAttribute="bottom" id="CpP-Lq-Fbd"/>
@@ -1076,7 +1065,6 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="TJh-sV-n9a" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" id="HCQ-iG-80a"/>
                                             <constraint firstItem="ZYk-It-geS" firstAttribute="leading" secondItem="iIC-V1-etB" secondAttribute="leading" constant="16" id="IwK-1s-hkN"/>
                                             <constraint firstAttribute="trailing" secondItem="jCP-oe-fGx" secondAttribute="trailing" constant="16" id="K4g-f9-5e1"/>
-                                            <constraint firstItem="Hgu-Va-z9b" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" constant="40" id="NI8-9B-826"/>
                                             <constraint firstAttribute="trailing" secondItem="Vdk-j0-R1p" secondAttribute="trailing" id="OHq-hU-TUk"/>
                                             <constraint firstAttribute="trailing" secondItem="1Df-Jq-R31" secondAttribute="trailing" id="Opf-6q-2XD"/>
                                             <constraint firstItem="Vdk-j0-R1p" firstAttribute="top" secondItem="iIC-V1-etB" secondAttribute="top" id="QN2-wg-8x8"/>
@@ -1096,7 +1084,6 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="0zM-Px-2NS" firstAttribute="top" secondItem="TJh-sV-n9a" secondAttribute="bottom" id="qTi-Qd-G8V"/>
                                             <constraint firstItem="xQb-Lb-6TW" firstAttribute="leading" secondItem="Vdk-j0-R1p" secondAttribute="leading" constant="16" id="rzg-3j-FIv"/>
                                             <constraint firstItem="Tvw-YI-Q0K" firstAttribute="width" secondItem="tqJ-oU-X1K" secondAttribute="width" id="sfa-2Z-1S8"/>
-                                            <constraint firstAttribute="trailing" secondItem="Hgu-Va-z9b" secondAttribute="trailing" constant="16" id="tRQ-an-Vl8"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1110,10 +1097,19 @@ Monday – Friday: 9AM – 5PM</string>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="Vf9-so-69a"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="Hgu-Va-z9b">
+                                <rect key="frame" x="366" y="40" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ThB-Y2-GT4"/>
+                                    <constraint firstAttribute="width" constant="32" id="f6x-dp-eAA"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Y4w-BB-gwZ" firstAttribute="leading" secondItem="mPn-t2-WnK" secondAttribute="leading" id="8hN-YN-bmm"/>
+                            <constraint firstItem="Hgu-Va-z9b" firstAttribute="top" secondItem="Y4w-BB-gwZ" secondAttribute="top" constant="40" id="FRu-E2-7rd"/>
+                            <constraint firstItem="Hgu-Va-z9b" firstAttribute="trailing" secondItem="Y4w-BB-gwZ" secondAttribute="trailing" constant="-16" id="I4w-uI-JSR"/>
                             <constraint firstItem="bqJ-Y6-aUb" firstAttribute="top" secondItem="os8-gG-ir4" secondAttribute="top" id="YbI-LH-Cld"/>
                             <constraint firstItem="Y4w-BB-gwZ" firstAttribute="trailing" secondItem="mPn-t2-WnK" secondAttribute="trailing" id="g9e-LX-qpX"/>
                             <constraint firstItem="bqJ-Y6-aUb" firstAttribute="leading" secondItem="mPn-t2-WnK" secondAttribute="leading" id="hLU-qb-m8L"/>
@@ -1138,14 +1134,14 @@ Monday – Friday: 9AM – 5PM</string>
                         <outlet property="referralInputTextfield" destination="ATc-Op-uhG" id="vnL-6W-ixN"/>
                         <outlet property="referralStackView" destination="1Df-Jq-R31" id="pLF-NF-ayL"/>
                         <outlet property="transactionsTableView" destination="gYe-Xh-igB" id="UYZ-jA-GVA"/>
-                        <outlet property="transactionsTableViewHeight" destination="hBe-1O-Ev6" id="dWr-aI-THf"/>
+                        <outlet property="transactionsTableViewHeight" destination="ON9-Oh-VHk" id="5u3-Ex-VR6"/>
                         <outlet property="walletStackView" destination="5a7-uJ-ZYe" id="MEr-bk-nYv"/>
                         <outlet property="walletsActionsCollectionView" destination="Tvw-YI-Q0K" id="aIO-bJ-MXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3EY-fu-Vpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-804" y="-701"/>
+            <point key="canvasLocation" x="-986" y="-430"/>
         </scene>
         <!--Investments Table View Controller-->
         <scene sceneID="WNj-jz-5Dl">
@@ -1338,7 +1334,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3V-Vn-g4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1554" y="-869"/>
+            <point key="canvasLocation" x="-2023" y="-870"/>
         </scene>
         <!--Invest View Controller-->
         <scene sceneID="gRU-wQ-4sL">
@@ -1349,7 +1345,7 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQo-yo-ihM" userLabel="topmost guide view">
-                                <rect key="frame" x="0.0" y="64" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="jHj-87-Or8"/>
@@ -1388,31 +1384,24 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVEST" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-Hu-MRR">
-                                                <rect key="frame" x="16" y="352.5" width="382" height="40"/>
+                                                <rect key="frame" x="16" y="350" width="382" height="41"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joe-ll-ACR">
-                                                <rect key="frame" x="16" y="404.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="403" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Zx5-EM-G7H"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available farms and commodities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3b-aY-aXv">
-                                                <rect key="frame" x="16" y="412.5" width="382" height="51.5"/>
+                                                <rect key="frame" x="16" y="411" width="382" height="53"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="JHh-na-Uub">
-                                                <rect key="frame" x="366" y="40" width="32" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="C8D-kH-Eft"/>
-                                                    <constraint firstAttribute="width" constant="32" id="kMO-pA-0e9"/>
-                                                </constraints>
-                                            </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uhG-bR-oe4">
                                                 <rect key="frame" x="0.0" y="496" width="398" height="50"/>
                                                 <subviews>
@@ -1449,7 +1438,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                     <size key="itemSize" width="50" height="50"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells/>
                                             </collectionView>
@@ -1491,7 +1480,6 @@ Monday – Friday: 9AM – 5PM</string>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="awA-tC-dzr" secondAttribute="trailing" id="0hc-up-qBc"/>
                                             <constraint firstItem="G3b-aY-aXv" firstAttribute="bottom" secondItem="PlM-L3-bhU" secondAttribute="bottom" constant="-16" id="0xC-WI-U0A"/>
-                                            <constraint firstItem="JHh-na-Uub" firstAttribute="top" secondItem="0I0-St-csA" secondAttribute="top" constant="40" id="2Sm-oY-aUI"/>
                                             <constraint firstItem="Y12-AU-yd4" firstAttribute="top" secondItem="RSX-7h-uEQ" secondAttribute="bottom" constant="20" id="2pX-IN-NZy"/>
                                             <constraint firstItem="Mvk-Lg-1WA" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" constant="16" id="3bE-ga-cUh"/>
                                             <constraint firstAttribute="trailing" secondItem="RSX-7h-uEQ" secondAttribute="trailing" id="3v1-Cd-HqI"/>
@@ -1503,7 +1491,6 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstAttribute="trailing" secondItem="Y12-AU-yd4" secondAttribute="trailing" constant="16" id="Ioe-U9-9iN"/>
                                             <constraint firstAttribute="trailing" secondItem="G3b-aY-aXv" secondAttribute="trailing" constant="16" id="Jen-Cl-LSP"/>
                                             <constraint firstItem="Mvk-Lg-1WA" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" constant="16" id="Kl5-g5-l1N"/>
-                                            <constraint firstAttribute="trailing" secondItem="JHh-na-Uub" secondAttribute="trailing" constant="16" id="KqN-am-aAY"/>
                                             <constraint firstAttribute="trailing" secondItem="DrP-Hu-MRR" secondAttribute="trailing" constant="16" id="OjB-aY-USd"/>
                                             <constraint firstItem="awA-tC-dzr" firstAttribute="leading" secondItem="0I0-St-csA" secondAttribute="leading" id="RFL-fR-7Ec"/>
                                             <constraint firstItem="RSX-7h-uEQ" firstAttribute="top" secondItem="uhG-bR-oe4" secondAttribute="bottom" constant="8" id="S4C-77-qSE"/>
@@ -1533,14 +1520,23 @@ Monday – Friday: 9AM – 5PM</string>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="c3K-9b-Cib"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="JHh-na-Uub">
+                                <rect key="frame" x="366" y="40" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="C8D-kH-Eft"/>
+                                    <constraint firstAttribute="width" constant="32" id="kMO-pA-0e9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dQo-yo-ihM" firstAttribute="leading" secondItem="bNl-rz-hqd" secondAttribute="leading" id="0Kt-gf-YcB"/>
                             <constraint firstItem="xn9-cX-DhI" firstAttribute="leading" secondItem="bNl-rz-hqd" secondAttribute="leading" id="1aK-0c-tfc"/>
+                            <constraint firstItem="JHh-na-Uub" firstAttribute="trailing" secondItem="xn9-cX-DhI" secondAttribute="trailing" constant="-16" id="9pv-Fq-Lbf"/>
                             <constraint firstItem="xn9-cX-DhI" firstAttribute="trailing" secondItem="bNl-rz-hqd" secondAttribute="trailing" id="Bqo-mr-WV5"/>
                             <constraint firstAttribute="bottom" secondItem="xn9-cX-DhI" secondAttribute="bottom" id="K6H-1k-a0j"/>
                             <constraint firstItem="xn9-cX-DhI" firstAttribute="top" secondItem="bNl-rz-hqd" secondAttribute="top" id="kvs-ld-Ntf"/>
+                            <constraint firstItem="JHh-na-Uub" firstAttribute="top" secondItem="xn9-cX-DhI" secondAttribute="top" constant="40" id="nS3-KH-TY7"/>
                             <constraint firstItem="0I0-St-csA" firstAttribute="width" secondItem="bNl-rz-hqd" secondAttribute="width" id="tAJ-CA-6b8"/>
                             <constraint firstAttribute="trailing" secondItem="dQo-yo-ihM" secondAttribute="trailing" id="teT-N3-ILi"/>
                             <constraint firstItem="dQo-yo-ihM" firstAttribute="top" secondItem="vwu-vv-62T" secondAttribute="top" id="u3o-eu-J2u"/>
@@ -1559,18 +1555,17 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Mp-lw-3EY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4425" y="-668"/>
+            <point key="canvasLocation" x="4425" y="-668.66197183098598"/>
         </scene>
         <!--Invest-->
         <scene sceneID="bK1-y0-SJT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JGb-gj-vUM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="JGb-gj-vUM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Invest" image="invest-icon-unselected" landscapeImage="invest-icon-unselected" selectedImage="invest-icon-selected" id="eAc-8j-FmI">
                         <color key="badgeColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dhe-WX-orz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1591,7 +1586,7 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-0n-REI" userLabel="topmost guide view">
-                                <rect key="frame" x="0.0" y="64" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="MwI-OW-DRq"/>
@@ -1630,42 +1625,35 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELPDESK" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHl-ZT-wys">
-                                                <rect key="frame" x="16" y="362" width="382" height="40"/>
+                                                <rect key="frame" x="16" y="360" width="382" height="41"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYA-11-pYe">
-                                                <rect key="frame" x="16" y="414" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="413" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="co7-nu-bkn"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruy-jh-XoH">
-                                                <rect key="frame" x="16" y="422" width="382" height="42"/>
+                                                <rect key="frame" x="16" y="421" width="382" height="43"/>
                                                 <string key="text">Always one message away. 
 Monday – Friday: 9AM – 5PM</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="UKB-X3-hKT">
-                                                <rect key="frame" x="366" y="40" width="32" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="32" id="3J1-Nu-hjR"/>
-                                                    <constraint firstAttribute="height" constant="32" id="StQ-30-39t"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFr-8f-wgv">
-                                                <rect key="frame" x="16" y="504" width="87" height="28"/>
+                                                <rect key="frame" x="16" y="504" width="382" height="29"/>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfM-Ga-36c">
-                                                <rect key="frame" x="24" y="556" width="366" height="56"/>
+                                                <rect key="frame" x="24" y="557" width="366" height="56"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oPA-3w-1LO">
                                                         <rect key="frame" x="16" y="18" width="20" height="20"/>
@@ -1675,7 +1663,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyK-O0-Hex">
-                                                        <rect key="frame" x="60" y="18" width="128.5" height="20"/>
+                                                        <rect key="frame" x="60" y="18" width="137.5" height="20"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Send us a Message">
                                                                 <attributes>
@@ -1713,42 +1701,28 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kqp-lk-QC1">
-                                                <rect key="frame" x="16" y="644" width="165" height="28"/>
+                                                <rect key="frame" x="16" y="645" width="382" height="29"/>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-icon" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-5U-qYp">
-                                                <rect key="frame" x="32" y="696" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="698" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="UTJ-pz-uLA"/>
                                                     <constraint firstAttribute="height" constant="20" id="XBf-hZ-Jr3"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHz-uy-MdP">
-                                                <rect key="frame" x="72" y="696" width="100.5" height="20"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="0809-811-1113">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.55686000000000002" green="0.55686000000000002" blue="0.57647000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <font key="NSFont" size="15" name="SFProText-Semibold"/>
-                                                            <real key="NSKern" value="-0.25"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="20" maximumLineHeight="20" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-icon" translatesAutoresizingMaskIntoConstraints="NO" id="paG-To-kb2">
-                                                <rect key="frame" x="32" y="736" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="738" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Dem-iI-BFW"/>
                                                     <constraint firstAttribute="width" constant="20" id="IKU-1W-XHg"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMb-l5-NSd">
-                                                <rect key="frame" x="72" y="736" width="100.5" height="20"/>
+                                                <rect key="frame" x="72" y="738" width="322" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0809-811-1114">
                                                         <attributes>
@@ -1762,14 +1736,14 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-icon" translatesAutoresizingMaskIntoConstraints="NO" id="yUb-Lu-dhY">
-                                                <rect key="frame" x="32" y="776" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="778" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Zjr-yC-cOq"/>
                                                     <constraint firstAttribute="width" constant="20" id="chJ-P2-xgu"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44Q-D2-VFk">
-                                                <rect key="frame" x="72" y="776" width="100.5" height="20"/>
+                                                <rect key="frame" x="72" y="778" width="322" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0903-000-0395">
                                                         <attributes>
@@ -1783,14 +1757,14 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inbox-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-dh-wLN">
-                                                <rect key="frame" x="32" y="816" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="818" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Exp-5K-93e"/>
                                                     <constraint firstAttribute="width" constant="20" id="tZc-EI-evd"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLo-DJ-0Sb">
-                                                <rect key="frame" x="72" y="816" width="178" height="20"/>
+                                                <rect key="frame" x="72" y="818" width="322" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="info@agropartnerships.com">
                                                         <attributes>
@@ -1804,21 +1778,21 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYR-9s-j7T">
-                                                <rect key="frame" x="24" y="868" width="88.5" height="28"/>
+                                                <rect key="frame" x="24" y="870" width="382" height="29"/>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Aq2-Gq-YzI">
-                                                <rect key="frame" x="32" y="920" width="20" height="20"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Aq2-Gq-YzI">
+                                                <rect key="frame" x="32" y="923" width="32" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="Hrw-cH-VfM"/>
-                                                    <constraint firstAttribute="height" constant="20" id="U2U-nK-dxy"/>
+                                                    <constraint firstAttribute="width" constant="32" id="Hrw-cH-VfM"/>
+                                                    <constraint firstAttribute="height" constant="32" id="U2U-nK-dxy"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wFJ-nx-kmZ" userLabel="Plot 8, Rock Drive, CBD, Lekki Phase 1,  Lagos. Nigeria">
-                                                <rect key="frame" x="72" y="920" width="318" height="40"/>
+                                                <rect key="frame" x="72" y="923" width="318" height="40"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Plot 8, Rock Drive, CBD, Lekki Phase 1,  Lagos. Nigeria">
                                                         <attributes>
@@ -1826,6 +1800,20 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <font key="NSFont" size="15" name="SFProText-Semibold"/>
                                                             <real key="NSKern" value="-0.25"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" minimumLineHeight="20" maximumLineHeight="20" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHz-uy-MdP">
+                                                <rect key="frame" x="72" y="698" width="322" height="20"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="0809-811-1113">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.55686000000000002" green="0.55686000000000002" blue="0.57647000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <font key="NSFont" size="15" name="SFProText-Semibold"/>
+                                                            <real key="NSKern" value="-0.25"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="20" maximumLineHeight="20" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -1848,7 +1836,6 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="Aq2-Gq-YzI" firstAttribute="leading" secondItem="Ng9-dh-wLN" secondAttribute="leading" id="F8g-qX-52j"/>
                                             <constraint firstItem="Ng9-dh-wLN" firstAttribute="top" secondItem="yUb-Lu-dhY" secondAttribute="bottom" constant="20" id="H11-IJ-QIC"/>
                                             <constraint firstItem="wFJ-nx-kmZ" firstAttribute="leading" secondItem="tLo-DJ-0Sb" secondAttribute="leading" id="IOH-Dt-xEC"/>
-                                            <constraint firstAttribute="trailing" secondItem="UKB-X3-hKT" secondAttribute="trailing" constant="16" id="IWG-5f-dYc"/>
                                             <constraint firstItem="paG-To-kb2" firstAttribute="top" secondItem="MoA-5U-qYp" secondAttribute="bottom" constant="20" id="JhN-hB-81T"/>
                                             <constraint firstItem="KAf-vp-XAg" firstAttribute="top" secondItem="3Cu-P0-tyZ" secondAttribute="top" id="K9m-1W-loA"/>
                                             <constraint firstItem="yUb-Lu-dhY" firstAttribute="top" secondItem="paG-To-kb2" secondAttribute="bottom" constant="20" id="KL5-LB-MVF"/>
@@ -1859,9 +1846,11 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="iFr-8f-wgv" firstAttribute="top" secondItem="KAf-vp-XAg" secondAttribute="bottom" constant="24" id="RYd-kZ-SBY"/>
                                             <constraint firstItem="lYA-11-pYe" firstAttribute="leading" secondItem="3Cu-P0-tyZ" secondAttribute="leading" constant="16" id="Rvm-EN-Kjb"/>
                                             <constraint firstItem="zYR-9s-j7T" firstAttribute="leading" secondItem="3Cu-P0-tyZ" secondAttribute="leading" constant="24" id="Ubq-3g-E0Y"/>
+                                            <constraint firstItem="Kqp-lk-QC1" firstAttribute="width" secondItem="iFr-8f-wgv" secondAttribute="width" id="WZQ-sz-KcO"/>
                                             <constraint firstItem="fxX-LY-hiJ" firstAttribute="top" secondItem="3Cu-P0-tyZ" secondAttribute="top" id="Wo3-TC-mlJ"/>
                                             <constraint firstItem="UHz-uy-MdP" firstAttribute="centerY" secondItem="MoA-5U-qYp" secondAttribute="centerY" id="XlG-Mu-Atk"/>
                                             <constraint firstAttribute="trailing" secondItem="KAf-vp-XAg" secondAttribute="trailing" id="Yd9-3b-eKg"/>
+                                            <constraint firstAttribute="trailing" secondItem="UHz-uy-MdP" secondAttribute="trailing" constant="20" id="Zcs-8v-gex"/>
                                             <constraint firstItem="tLo-DJ-0Sb" firstAttribute="leading" secondItem="Ng9-dh-wLN" secondAttribute="trailing" constant="20" id="c53-Cv-PHy"/>
                                             <constraint firstItem="pfM-Ga-36c" firstAttribute="top" secondItem="iFr-8f-wgv" secondAttribute="bottom" constant="24" id="dqC-Ym-tft"/>
                                             <constraint firstItem="MoA-5U-qYp" firstAttribute="top" secondItem="Kqp-lk-QC1" secondAttribute="bottom" constant="24" id="eqX-hP-Y40"/>
@@ -1871,17 +1860,21 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="ruy-jh-XoH" firstAttribute="top" secondItem="CHl-ZT-wys" secondAttribute="bottom" constant="20" id="iaR-U6-5Ek"/>
                                             <constraint firstItem="zYR-9s-j7T" firstAttribute="top" secondItem="tLo-DJ-0Sb" secondAttribute="bottom" constant="32" id="jQy-RD-jgA"/>
                                             <constraint firstItem="CHl-ZT-wys" firstAttribute="leading" secondItem="3Cu-P0-tyZ" secondAttribute="leading" constant="16" id="k4j-VM-irQ"/>
-                                            <constraint firstItem="UKB-X3-hKT" firstAttribute="top" secondItem="3Cu-P0-tyZ" secondAttribute="top" constant="40" id="kRa-9F-6oC"/>
                                             <constraint firstItem="ruy-jh-XoH" firstAttribute="leading" secondItem="KAf-vp-XAg" secondAttribute="leading" constant="16" id="lA0-1O-QuV"/>
                                             <constraint firstItem="iFr-8f-wgv" firstAttribute="leading" secondItem="3Cu-P0-tyZ" secondAttribute="leading" constant="16" id="mm5-xM-SQd"/>
+                                            <constraint firstAttribute="trailing" secondItem="iFr-8f-wgv" secondAttribute="trailing" constant="16" id="oNf-8k-bSb"/>
                                             <constraint firstItem="ruy-jh-XoH" firstAttribute="bottom" secondItem="KAf-vp-XAg" secondAttribute="bottom" constant="-16" id="omc-lV-Sph"/>
                                             <constraint firstItem="Ng9-dh-wLN" firstAttribute="leading" secondItem="yUb-Lu-dhY" secondAttribute="leading" id="q7p-Bq-hiE"/>
                                             <constraint firstItem="tLo-DJ-0Sb" firstAttribute="centerY" secondItem="Ng9-dh-wLN" secondAttribute="centerY" id="rNU-G1-1uv"/>
+                                            <constraint firstItem="tLo-DJ-0Sb" firstAttribute="width" secondItem="44Q-D2-VFk" secondAttribute="width" id="tOM-qC-bI4"/>
                                             <constraint firstAttribute="trailing" secondItem="wFJ-nx-kmZ" secondAttribute="trailing" constant="24" id="uE1-Re-CrL"/>
+                                            <constraint firstItem="zYR-9s-j7T" firstAttribute="width" secondItem="Kqp-lk-QC1" secondAttribute="width" id="wEr-OL-4mL"/>
                                             <constraint firstItem="Kqp-lk-QC1" firstAttribute="leading" secondItem="3Cu-P0-tyZ" secondAttribute="leading" constant="16" id="xN7-3S-JFs"/>
                                             <constraint firstItem="yUb-Lu-dhY" firstAttribute="leading" secondItem="paG-To-kb2" secondAttribute="leading" id="xrZ-9K-wcM"/>
+                                            <constraint firstItem="PMb-l5-NSd" firstAttribute="width" secondItem="UHz-uy-MdP" secondAttribute="width" id="yZN-c5-cNc"/>
                                             <constraint firstItem="Aq2-Gq-YzI" firstAttribute="top" secondItem="zYR-9s-j7T" secondAttribute="bottom" constant="24" id="z3C-n4-4ep"/>
                                             <constraint firstItem="UHz-uy-MdP" firstAttribute="leading" secondItem="MoA-5U-qYp" secondAttribute="trailing" constant="20" id="z6k-bM-GBw"/>
+                                            <constraint firstItem="44Q-D2-VFk" firstAttribute="width" secondItem="PMb-l5-NSd" secondAttribute="width" id="z8r-7t-VrG"/>
                                             <constraint firstItem="fxX-LY-hiJ" firstAttribute="leading" secondItem="3Cu-P0-tyZ" secondAttribute="leading" id="zo7-qd-2eE"/>
                                         </constraints>
                                     </view>
@@ -1896,24 +1889,39 @@ Monday – Friday: 9AM – 5PM</string>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="bYR-1F-IsH"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="UKB-X3-hKT">
+                                <rect key="frame" x="366" y="40" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="3J1-Nu-hjR"/>
+                                    <constraint firstAttribute="height" constant="32" id="StQ-30-39t"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="gGd-uL-vML" secondAttribute="bottom" id="0I3-20-hgD"/>
                             <constraint firstItem="gGd-uL-vML" firstAttribute="leading" secondItem="Oki-Zg-CgA" secondAttribute="leading" id="1Sm-kK-4xK"/>
+                            <constraint firstItem="UKB-X3-hKT" firstAttribute="top" secondItem="gGd-uL-vML" secondAttribute="top" constant="40" id="6R7-q4-bKk"/>
                             <constraint firstItem="gGd-uL-vML" firstAttribute="top" secondItem="Oki-Zg-CgA" secondAttribute="top" id="CWS-Yi-hPk"/>
                             <constraint firstItem="Sqf-0n-REI" firstAttribute="top" secondItem="xlj-3M-Nyo" secondAttribute="top" id="Hux-Pa-VKX"/>
                             <constraint firstItem="gGd-uL-vML" firstAttribute="trailing" secondItem="Oki-Zg-CgA" secondAttribute="trailing" id="IL4-bR-Q8T"/>
                             <constraint firstAttribute="trailing" secondItem="Sqf-0n-REI" secondAttribute="trailing" id="Yyq-jb-6Qt"/>
                             <constraint firstItem="Sqf-0n-REI" firstAttribute="leading" secondItem="Oki-Zg-CgA" secondAttribute="leading" id="eHQ-ku-lQC"/>
+                            <constraint firstItem="UKB-X3-hKT" firstAttribute="trailing" secondItem="gGd-uL-vML" secondAttribute="trailing" constant="-16" id="hDL-X8-rkE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xlj-3M-Nyo"/>
                     </view>
                     <navigationItem key="navigationItem" id="5dd-i1-dUh"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="addressLabel" destination="wFJ-nx-kmZ" id="Hbe-Vs-pl0"/>
                         <outlet property="closeIconImageView" destination="UKB-X3-hKT" id="gb4-Va-VBo"/>
+                        <outlet property="emailSupportLabel" destination="tLo-DJ-0Sb" id="bzy-LW-Dx2"/>
+                        <outlet property="locationIcon" destination="Aq2-Gq-YzI" id="3OY-Qd-I2R"/>
                         <outlet property="sendMessageButton" destination="pfM-Ga-36c" id="CMA-dq-juz"/>
+                        <outletCollection property="contactPhoneNumbersLabels" destination="UHz-uy-MdP" collectionClass="NSMutableArray" id="1pl-VE-r5b"/>
+                        <outletCollection property="contactPhoneNumbersLabels" destination="PMb-l5-NSd" collectionClass="NSMutableArray" id="4nF-Ja-w9c"/>
+                        <outletCollection property="contactPhoneNumbersLabels" destination="44Q-D2-VFk" collectionClass="NSMutableArray" id="BHc-WG-aTg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4t-Bj-bB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1949,7 +1957,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XlV-kD-fJR">
-                                                <rect key="frame" x="16" y="65" width="58" height="18"/>
+                                                <rect key="frame" x="16" y="65" width="284" height="18"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="SUBJECT">
                                                         <attributes>
@@ -1977,7 +1985,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-ov-FLJ">
-                                                <rect key="frame" x="16" y="165" width="85" height="18"/>
+                                                <rect key="frame" x="16" y="165" width="284" height="18"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="DESCRIPTION">
                                                         <attributes>
@@ -2100,8 +2108,10 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="DA7-mY-AbU" firstAttribute="top" secondItem="XlV-kD-fJR" secondAttribute="bottom" constant="16" id="Gn8-4v-baw"/>
                                             <constraint firstAttribute="trailing" secondItem="9AU-Gx-IAw" secondAttribute="trailing" constant="32" id="KJh-0a-7oG"/>
                                             <constraint firstItem="0yD-hB-rgB" firstAttribute="top" secondItem="wGm-gF-mn9" secondAttribute="top" id="Lfi-HP-z8r"/>
+                                            <constraint firstItem="nvb-ov-FLJ" firstAttribute="width" secondItem="XlV-kD-fJR" secondAttribute="width" id="Mo4-zz-IvB"/>
                                             <constraint firstAttribute="trailing" secondItem="RFz-kb-GJj" secondAttribute="trailing" constant="16" id="NDn-eD-XSO"/>
                                             <constraint firstItem="maX-nd-XN4" firstAttribute="leading" secondItem="wGm-gF-mn9" secondAttribute="leading" constant="16" id="OeR-fa-qJ5"/>
+                                            <constraint firstAttribute="trailing" secondItem="XlV-kD-fJR" secondAttribute="trailing" constant="20" id="QWO-6e-7KQ"/>
                                             <constraint firstItem="XlV-kD-fJR" firstAttribute="top" secondItem="0yD-hB-rgB" secondAttribute="bottom" constant="24" id="VOB-tQ-LW1"/>
                                             <constraint firstItem="0QV-pl-0hw" firstAttribute="top" secondItem="RFz-kb-GJj" secondAttribute="bottom" constant="24" id="XRG-PZ-hPf"/>
                                             <constraint firstItem="nvb-ov-FLJ" firstAttribute="leading" secondItem="wGm-gF-mn9" secondAttribute="leading" constant="16" id="f67-7f-sHN"/>
@@ -2161,13 +2171,12 @@ Monday – Friday: 9AM – 5PM</string>
         <!--Helpdesk-->
         <scene sceneID="YE3-ry-iaz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ykd-bQ-sDr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ykd-bQ-sDr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Helpdesk" image="helpdesk-unselected-icon" landscapeImage="helpdesk-unselected-icon" largeContentSizeImage="helpdesk-unselected-icon" selectedImage="helpdesk-selected-icon" id="sIk-dP-PJ1">
                         <color key="badgeColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="30D-go-jqh">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2188,7 +2197,7 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-jD-agK" userLabel="topmost guide view">
-                                <rect key="frame" x="0.0" y="64" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ChE-Hp-BLY"/>
@@ -2226,13 +2235,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="EGh-x1-gA1">
-                                                <rect key="frame" x="366" y="40" width="32" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="1sx-6z-ZfK"/>
-                                                    <constraint firstAttribute="width" constant="32" id="CKO-L9-SFz"/>
-                                                </constraints>
-                                            </imageView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-E9-bAD">
                                                 <rect key="frame" x="16" y="288.5" width="382" height="41"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2248,6 +2250,81 @@ Monday – Friday: 9AM – 5PM</string>
                                                     <action selector="userChangedControls:" destination="lIF-20-cGb" eventType="valueChanged" id="Rwm-N7-kVb"/>
                                                 </connections>
                                             </segmentedControl>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-Hg-Nid">
+                                                <rect key="frame" x="0.0" y="360.5" width="414" height="200"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmQ-iG-srn">
+                                                        <rect key="frame" x="16" y="16" width="128" height="41"/>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Settings">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.114" green="0.23100000000000001" blue="0.17599999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="34" name="SFProDisplay-Bold"/>
+                                                                    <real key="NSKern" value="0.40000000000000002"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="41" maximumLineHeight="41" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-bZ-O6T">
+                                                        <rect key="frame" x="16" y="85" width="28" height="28"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touch-id" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-ta-yRT">
+                                                                <rect key="frame" x="6" y="6" width="16" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="16" id="w0N-yB-zDn"/>
+                                                                    <constraint firstAttribute="width" constant="16" id="wOH-qQ-k52"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstItem="7Xu-ta-yRT" firstAttribute="centerY" secondItem="TdX-bZ-O6T" secondAttribute="centerY" id="2gv-h2-NCG"/>
+                                                            <constraint firstItem="7Xu-ta-yRT" firstAttribute="centerX" secondItem="TdX-bZ-O6T" secondAttribute="centerX" id="Dii-5u-Ve5"/>
+                                                            <constraint firstAttribute="height" constant="28" id="ar0-cK-2JR"/>
+                                                            <constraint firstAttribute="width" constant="28" id="lyB-jU-dJD"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBt-cV-znv">
+                                                        <rect key="frame" x="60" y="88" width="117" height="22"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Enable Touch ID">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <font key="NSFont" size="17" name="SFProText-Regular"/>
+                                                                    <real key="NSKern" value="-0.45000000000000001"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="22" maximumLineHeight="22" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hwy-4M-gA7">
+                                                        <rect key="frame" x="349" y="83.5" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="userChangedTouchIDToggle:" destination="lIF-20-cGb" eventType="valueChanged" id="rVh-qS-D1T"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="wBt-cV-znv" firstAttribute="centerY" secondItem="TdX-bZ-O6T" secondAttribute="centerY" id="2Cc-0U-ipX"/>
+                                                    <constraint firstItem="hwy-4M-gA7" firstAttribute="centerY" secondItem="wBt-cV-znv" secondAttribute="centerY" id="6Qd-Kd-mA3"/>
+                                                    <constraint firstItem="EmQ-iG-srn" firstAttribute="top" secondItem="pk4-Hg-Nid" secondAttribute="top" constant="16" id="89n-v0-Txe"/>
+                                                    <constraint firstAttribute="height" constant="200" id="IFI-wI-GLR"/>
+                                                    <constraint firstItem="TdX-bZ-O6T" firstAttribute="leading" secondItem="pk4-Hg-Nid" secondAttribute="leading" constant="16" id="JR1-8O-wNm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hwy-4M-gA7" secondAttribute="trailing" constant="16" id="cfP-gL-APE"/>
+                                                    <constraint firstItem="TdX-bZ-O6T" firstAttribute="top" secondItem="EmQ-iG-srn" secondAttribute="bottom" constant="28" id="eIG-JT-e6O"/>
+                                                    <constraint firstItem="EmQ-iG-srn" firstAttribute="leading" secondItem="pk4-Hg-Nid" secondAttribute="leading" constant="16" id="gXR-Nt-g8t"/>
+                                                    <constraint firstItem="wBt-cV-znv" firstAttribute="leading" secondItem="TdX-bZ-O6T" secondAttribute="trailing" constant="16" id="p3O-ZO-oHN"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xb-wa-deu" userLabel="Profile View">
                                                 <rect key="frame" x="0.0" y="368.5" width="414" height="1331.5"/>
                                                 <subviews>
@@ -2270,7 +2347,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="0.0" y="65" width="398" height="450"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQI-sK-1Am">
-                                                                <rect key="frame" x="16" y="16" width="71.5" height="18"/>
+                                                                <rect key="frame" x="16" y="16" width="366" height="18"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="FULL NAME">
                                                                         <attributes>
@@ -2283,7 +2360,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="YZj-CN-ovv" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="YZj-CN-ovv" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                                 <rect key="frame" x="112" y="46" width="270" height="46"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="textColor"/>
@@ -2302,7 +2379,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhk-GE-Wp6">
-                                                                <rect key="frame" x="16" y="104" width="101.5" height="18"/>
+                                                                <rect key="frame" x="16" y="104" width="366" height="18"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="EMAIL ADDRESS">
                                                                         <attributes>
@@ -2326,7 +2403,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3U-zd-yk4">
-                                                                <rect key="frame" x="16" y="192" width="103.5" height="18"/>
+                                                                <rect key="frame" x="16" y="192" width="366" height="18"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="PHONE NUMBER">
                                                                         <attributes>
@@ -2347,7 +2424,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrG-5A-b0x">
-                                                                <rect key="frame" x="16" y="280" width="93" height="18"/>
+                                                                <rect key="frame" x="16" y="280" width="366" height="18"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="DATE OF BIRTH">
                                                                         <attributes>
@@ -2394,8 +2471,12 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <constraint firstItem="Lfr-AD-vxR" firstAttribute="trailing" secondItem="l7b-Ba-3LS" secondAttribute="trailing" id="0Yn-mW-d2V"/>
                                                             <constraint firstItem="q3U-zd-yk4" firstAttribute="leading" secondItem="l7b-Ba-3LS" secondAttribute="leading" id="5FG-lC-5k0"/>
                                                             <constraint firstAttribute="height" constant="450" id="5rZ-yM-kix"/>
+                                                            <constraint firstItem="rhk-GE-Wp6" firstAttribute="width" secondItem="hQI-sK-1Am" secondAttribute="width" id="8bQ-uD-zzX"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hQI-sK-1Am" secondAttribute="trailing" constant="16" id="BdD-Ms-aNO"/>
                                                             <constraint firstItem="Lfr-AD-vxR" firstAttribute="leading" secondItem="q3U-zd-yk4" secondAttribute="leading" id="ByB-CC-p4S"/>
+                                                            <constraint firstItem="HrG-5A-b0x" firstAttribute="width" secondItem="q3U-zd-yk4" secondAttribute="width" id="CC2-ax-b5k"/>
                                                             <constraint firstItem="l7b-Ba-3LS" firstAttribute="trailing" secondItem="YZj-CN-ovv" secondAttribute="trailing" id="CZ4-5g-fgU"/>
+                                                            <constraint firstItem="q3U-zd-yk4" firstAttribute="width" secondItem="rhk-GE-Wp6" secondAttribute="width" id="CkW-C6-1jJ"/>
                                                             <constraint firstItem="q3U-zd-yk4" firstAttribute="top" secondItem="l7b-Ba-3LS" secondAttribute="bottom" constant="12" id="HBZ-pd-VPV"/>
                                                             <constraint firstItem="gi6-u9-oqq" firstAttribute="top" secondItem="HrG-5A-b0x" secondAttribute="bottom" constant="12" id="IPv-Ke-bCt"/>
                                                             <constraint firstItem="gi6-u9-oqq" firstAttribute="leading" secondItem="HrG-5A-b0x" secondAttribute="leading" id="IXW-Qm-ekT"/>
@@ -2427,7 +2508,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIx-O0-jLu">
-                                                        <rect key="frame" x="16" y="531" width="219" height="41"/>
+                                                        <rect key="frame" x="16" y="531" width="382" height="41"/>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Bank Account">
@@ -2445,7 +2526,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="0.0" y="596" width="398" height="435"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ys-gI-iwd">
-                                                                <rect key="frame" x="16" y="16" width="161" height="18"/>
+                                                                <rect key="frame" x="16" y="16" width="366" height="18"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="FULL NAME OF RECIPIENT">
                                                                         <attributes>
@@ -2469,7 +2550,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="name"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXl-rv-U6o">
-                                                                <rect key="frame" x="16" y="104" width="121.5" height="18"/>
+                                                                <rect key="frame" x="16" y="104" width="366" height="18"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="ACCOUNT NUMBER">
                                                                         <attributes>
@@ -2483,7 +2564,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmC-eP-B5w">
-                                                                <rect key="frame" x="16" y="192" width="75.5" height="18"/>
+                                                                <rect key="frame" x="16" y="192" width="366" height="18"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="BANK NAME">
                                                                         <attributes>
@@ -2542,6 +2623,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <constraint firstItem="gpV-U6-pw2" firstAttribute="top" secondItem="jWU-di-Ak2" secondAttribute="bottom" constant="20" id="0v8-8V-jCh"/>
                                                             <constraint firstItem="1ys-gI-iwd" firstAttribute="top" secondItem="RaF-k1-lUz" secondAttribute="top" constant="16" id="4zc-kR-waH"/>
                                                             <constraint firstAttribute="trailing" secondItem="o9d-Mq-VNO" secondAttribute="trailing" constant="16" id="88R-Ci-FQX"/>
+                                                            <constraint firstItem="MXl-rv-U6o" firstAttribute="width" secondItem="1ys-gI-iwd" secondAttribute="width" id="AFW-fU-IW8"/>
                                                             <constraint firstItem="MXl-rv-U6o" firstAttribute="leading" secondItem="o9d-Mq-VNO" secondAttribute="leading" id="ENS-om-RFF"/>
                                                             <constraint firstItem="PPU-iX-KKn" firstAttribute="leading" secondItem="MXl-rv-U6o" secondAttribute="leading" id="F09-DH-3ee"/>
                                                             <constraint firstItem="dmC-eP-B5w" firstAttribute="leading" secondItem="PPU-iX-KKn" secondAttribute="leading" id="Fmk-c4-nWB"/>
@@ -2554,6 +2636,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <constraint firstItem="kUn-jX-WgU" firstAttribute="trailing" secondItem="PPU-iX-KKn" secondAttribute="trailing" id="Vpo-o5-iwx"/>
                                                             <constraint firstItem="kUn-jX-WgU" firstAttribute="top" secondItem="dmC-eP-B5w" secondAttribute="bottom" constant="12" id="W6Z-zf-nez"/>
                                                             <constraint firstItem="1ys-gI-iwd" firstAttribute="leading" secondItem="RaF-k1-lUz" secondAttribute="leading" constant="16" id="Wbw-Ks-mbi"/>
+                                                            <constraint firstItem="MXl-rv-U6o" firstAttribute="width" secondItem="dmC-eP-B5w" secondAttribute="width" id="YZE-zG-WgV"/>
                                                             <constraint firstItem="dmC-eP-B5w" firstAttribute="top" secondItem="PPU-iX-KKn" secondAttribute="bottom" constant="12" id="bzm-lS-r4O"/>
                                                             <constraint firstItem="o9d-Mq-VNO" firstAttribute="leading" secondItem="1ys-gI-iwd" secondAttribute="leading" id="dMT-ov-bu4"/>
                                                             <constraint firstItem="jWU-di-Ak2" firstAttribute="top" secondItem="kUn-jX-WgU" secondAttribute="bottom" constant="24" id="f2C-tF-7Bd"/>
@@ -2695,89 +2778,16 @@ Monday – Friday: 9AM – 5PM</string>
                                                     <constraint firstItem="Pyd-bN-oqa" firstAttribute="leading" secondItem="qwB-iq-CAW" secondAttribute="leading" id="k8f-mP-R6W"/>
                                                     <constraint firstItem="Crm-Op-L8o" firstAttribute="top" secondItem="7xb-wa-deu" secondAttribute="top" id="kSc-dN-sgu"/>
                                                     <constraint firstItem="cde-hX-QUT" firstAttribute="trailing" secondItem="Pyd-bN-oqa" secondAttribute="trailing" id="m8S-JR-J6G"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AIx-O0-jLu" secondAttribute="trailing" constant="16" id="nw7-9g-d7M"/>
                                                     <constraint firstItem="Crm-Op-L8o" firstAttribute="leading" secondItem="7xb-wa-deu" secondAttribute="leading" constant="16" id="og2-yg-ubZ"/>
                                                     <constraint firstItem="TEL-6R-tj1" firstAttribute="top" secondItem="cde-hX-QUT" secondAttribute="bottom" constant="24" id="qhM-YP-VhL"/>
                                                     <constraint firstAttribute="trailing" secondItem="jbl-Iq-4vV" secondAttribute="trailing" constant="16" id="rE4-Hb-aD0"/>
+                                                    <constraint firstItem="dmC-eP-B5w" firstAttribute="width" secondItem="hQI-sK-1Am" secondAttribute="width" id="rNj-MC-TX2"/>
                                                     <constraint firstItem="qwB-iq-CAW" firstAttribute="top" secondItem="LOD-of-7wi" secondAttribute="bottom" constant="24" id="rTa-jQ-jye"/>
                                                     <constraint firstAttribute="trailing" secondItem="Pyd-bN-oqa" secondAttribute="trailing" id="tfU-qx-dZw"/>
                                                     <constraint firstItem="Pyd-bN-oqa" firstAttribute="top" secondItem="qwB-iq-CAW" secondAttribute="bottom" constant="16" id="x15-wK-atK"/>
                                                     <constraint firstItem="cde-hX-QUT" firstAttribute="top" secondItem="mgT-d9-QKD" secondAttribute="bottom" constant="16" id="xIb-nH-fwj"/>
                                                     <constraint firstItem="rBh-Qq-ETk" firstAttribute="leading" secondItem="7xb-wa-deu" secondAttribute="leading" id="xVS-Fo-gci"/>
-                                                </constraints>
-                                            </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pk4-Hg-Nid">
-                                                <rect key="frame" x="0.0" y="360.5" width="414" height="200"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmQ-iG-srn">
-                                                        <rect key="frame" x="16" y="16" width="128" height="41"/>
-                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Settings">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.114" green="0.23100000000000001" blue="0.17599999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="34" name="SFProDisplay-Bold"/>
-                                                                    <real key="NSKern" value="0.40000000000000002"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="41" maximumLineHeight="41" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-bZ-O6T">
-                                                        <rect key="frame" x="16" y="85" width="28" height="28"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touch-id" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-ta-yRT">
-                                                                <rect key="frame" x="6" y="6" width="16" height="16"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="16" id="w0N-yB-zDn"/>
-                                                                    <constraint firstAttribute="width" constant="16" id="wOH-qQ-k52"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstItem="7Xu-ta-yRT" firstAttribute="centerY" secondItem="TdX-bZ-O6T" secondAttribute="centerY" id="2gv-h2-NCG"/>
-                                                            <constraint firstItem="7Xu-ta-yRT" firstAttribute="centerX" secondItem="TdX-bZ-O6T" secondAttribute="centerX" id="Dii-5u-Ve5"/>
-                                                            <constraint firstAttribute="height" constant="28" id="ar0-cK-2JR"/>
-                                                            <constraint firstAttribute="width" constant="28" id="lyB-jU-dJD"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBt-cV-znv">
-                                                        <rect key="frame" x="60" y="88" width="117" height="22"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Enable Touch ID">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <font key="NSFont" size="17" name="SFProText-Regular"/>
-                                                                    <real key="NSKern" value="-0.45000000000000001"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="22" maximumLineHeight="22" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hwy-4M-gA7">
-                                                        <rect key="frame" x="349" y="83.5" width="51" height="31"/>
-                                                        <connections>
-                                                            <action selector="userChangedTouchIDToggle:" destination="lIF-20-cGb" eventType="valueChanged" id="rVh-qS-D1T"/>
-                                                        </connections>
-                                                    </switch>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="wBt-cV-znv" firstAttribute="centerY" secondItem="TdX-bZ-O6T" secondAttribute="centerY" id="2Cc-0U-ipX"/>
-                                                    <constraint firstItem="hwy-4M-gA7" firstAttribute="centerY" secondItem="wBt-cV-znv" secondAttribute="centerY" id="6Qd-Kd-mA3"/>
-                                                    <constraint firstItem="EmQ-iG-srn" firstAttribute="top" secondItem="pk4-Hg-Nid" secondAttribute="top" constant="16" id="89n-v0-Txe"/>
-                                                    <constraint firstAttribute="height" constant="200" id="IFI-wI-GLR"/>
-                                                    <constraint firstItem="TdX-bZ-O6T" firstAttribute="leading" secondItem="pk4-Hg-Nid" secondAttribute="leading" constant="16" id="JR1-8O-wNm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="hwy-4M-gA7" secondAttribute="trailing" constant="16" id="cfP-gL-APE"/>
-                                                    <constraint firstItem="TdX-bZ-O6T" firstAttribute="top" secondItem="EmQ-iG-srn" secondAttribute="bottom" constant="28" id="eIG-JT-e6O"/>
-                                                    <constraint firstItem="EmQ-iG-srn" firstAttribute="leading" secondItem="pk4-Hg-Nid" secondAttribute="leading" constant="16" id="gXR-Nt-g8t"/>
-                                                    <constraint firstItem="wBt-cV-znv" firstAttribute="leading" secondItem="TdX-bZ-O6T" secondAttribute="trailing" constant="16" id="p3O-ZO-oHN"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -2799,10 +2809,8 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstAttribute="trailing" secondItem="7xb-wa-deu" secondAttribute="trailing" id="aFV-tb-iUB"/>
                                             <constraint firstItem="OrN-bQ-VGg" firstAttribute="leading" secondItem="zda-ao-l7j" secondAttribute="leading" id="eJy-s5-GjT"/>
                                             <constraint firstItem="Ldt-Sg-LxM" firstAttribute="leading" secondItem="zda-ao-l7j" secondAttribute="leading" id="eSg-Hi-y1y"/>
-                                            <constraint firstAttribute="trailing" secondItem="EGh-x1-gA1" secondAttribute="trailing" constant="16" id="j7o-Uj-nwR"/>
                                             <constraint firstItem="fWY-E9-bAD" firstAttribute="bottom" secondItem="Ldt-Sg-LxM" secondAttribute="bottom" constant="-16" id="jyM-vK-9pa"/>
                                             <constraint firstItem="7xb-wa-deu" firstAttribute="top" secondItem="Ldt-Sg-LxM" secondAttribute="bottom" constant="24" id="vyd-gg-0MP"/>
-                                            <constraint firstItem="EGh-x1-gA1" firstAttribute="top" secondItem="zda-ao-l7j" secondAttribute="top" constant="40" id="zJv-oq-InG"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2816,11 +2824,20 @@ Monday – Friday: 9AM – 5PM</string>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="ejY-ZA-sZU"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Close" translatesAutoresizingMaskIntoConstraints="NO" id="EGh-x1-gA1">
+                                <rect key="frame" x="366" y="40" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1sx-6z-ZfK"/>
+                                    <constraint firstAttribute="width" constant="32" id="CKO-L9-SFz"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oP5-jD-agK" firstAttribute="top" secondItem="MG4-Eo-6mV" secondAttribute="top" id="46l-ea-Xqm"/>
                             <constraint firstItem="gYv-KO-cVX" firstAttribute="top" secondItem="12F-J1-Zsy" secondAttribute="top" id="KJH-qc-lZX"/>
+                            <constraint firstItem="EGh-x1-gA1" firstAttribute="trailing" secondItem="gYv-KO-cVX" secondAttribute="trailing" constant="-16" id="OGH-EP-9CA"/>
+                            <constraint firstItem="EGh-x1-gA1" firstAttribute="top" secondItem="gYv-KO-cVX" secondAttribute="top" constant="40" id="PSc-x9-a4p"/>
                             <constraint firstItem="oP5-jD-agK" firstAttribute="leading" secondItem="12F-J1-Zsy" secondAttribute="leading" id="c7A-PL-hhu"/>
                             <constraint firstAttribute="trailing" secondItem="oP5-jD-agK" secondAttribute="trailing" id="igv-KT-YMk"/>
                             <constraint firstItem="gYv-KO-cVX" firstAttribute="trailing" secondItem="12F-J1-Zsy" secondAttribute="trailing" id="ozn-R6-O6M"/>
@@ -2889,7 +2906,7 @@ Monday – Friday: 9AM – 5PM</string>
                                         <rect key="frame" x="16" y="76" width="288" height="366"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qF-bS-k5w">
-                                                <rect key="frame" x="16" y="16" width="136.5" height="18"/>
+                                                <rect key="frame" x="16" y="16" width="256" height="18"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="CURRENT PASSWORD">
                                                         <attributes>
@@ -2921,7 +2938,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfl-KH-cp0">
-                                                <rect key="frame" x="16" y="104" width="104.5" height="18"/>
+                                                <rect key="frame" x="16" y="104" width="256" height="18"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="NEW PASSWORD">
                                                         <attributes>
@@ -2935,7 +2952,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfB-be-I4H">
-                                                <rect key="frame" x="16" y="192" width="167.5" height="18"/>
+                                                <rect key="frame" x="16" y="192" width="256" height="18"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="CONFIRM NEW PASSWORD">
                                                         <attributes>
@@ -3002,6 +3019,7 @@ Monday – Friday: 9AM – 5PM</string>
                                         <constraints>
                                             <constraint firstItem="RqO-Tq-t1j" firstAttribute="leading" secondItem="sOk-mv-MpU" secondAttribute="leading" id="0IK-3w-6xo"/>
                                             <constraint firstItem="4qF-bS-k5w" firstAttribute="top" secondItem="fee-9e-KPs" secondAttribute="top" constant="16" id="3V5-RJ-AXB"/>
+                                            <constraint firstItem="pfl-KH-cp0" firstAttribute="width" secondItem="4qF-bS-k5w" secondAttribute="width" id="3xD-Cs-oPf"/>
                                             <constraint firstItem="sOk-mv-MpU" firstAttribute="trailing" secondItem="zJJ-JJ-RIg" secondAttribute="trailing" id="7gG-7M-MYn"/>
                                             <constraint firstItem="RNw-PN-EHu" firstAttribute="top" secondItem="zfB-be-I4H" secondAttribute="bottom" constant="12" id="CBh-h4-Crf"/>
                                             <constraint firstAttribute="trailing" secondItem="zJJ-JJ-RIg" secondAttribute="trailing" constant="16" id="CNg-bS-Zr4"/>
@@ -3013,12 +3031,14 @@ Monday – Friday: 9AM – 5PM</string>
                                             <constraint firstItem="RqO-Tq-t1j" firstAttribute="trailing" secondItem="sOk-mv-MpU" secondAttribute="trailing" id="Ymw-y0-eqb"/>
                                             <constraint firstItem="RNw-PN-EHu" firstAttribute="leading" secondItem="sOk-mv-MpU" secondAttribute="leading" id="b5Z-yI-FFF"/>
                                             <constraint firstItem="zJJ-JJ-RIg" firstAttribute="leading" secondItem="4qF-bS-k5w" secondAttribute="leading" id="bYE-bF-FwN"/>
+                                            <constraint firstItem="zfB-be-I4H" firstAttribute="width" secondItem="pfl-KH-cp0" secondAttribute="width" id="cIH-Us-n58"/>
                                             <constraint firstItem="zfB-be-I4H" firstAttribute="leading" secondItem="sOk-mv-MpU" secondAttribute="leading" id="cme-wG-peW"/>
                                             <constraint firstItem="tdh-SN-Rhd" firstAttribute="centerY" secondItem="zJJ-JJ-RIg" secondAttribute="centerY" id="d8L-gQ-dCU"/>
                                             <constraint firstItem="4qF-bS-k5w" firstAttribute="leading" secondItem="fee-9e-KPs" secondAttribute="leading" constant="16" id="h5S-yQ-3Tq"/>
                                             <constraint firstAttribute="height" constant="366" id="iFq-yD-Obi"/>
                                             <constraint firstItem="RqO-Tq-t1j" firstAttribute="top" secondItem="RNw-PN-EHu" secondAttribute="bottom" constant="24" id="jej-8V-zhI"/>
                                             <constraint firstItem="RNw-PN-EHu" firstAttribute="height" secondItem="sOk-mv-MpU" secondAttribute="height" id="joR-o6-3cP"/>
+                                            <constraint firstAttribute="trailing" secondItem="4qF-bS-k5w" secondAttribute="trailing" constant="16" id="lPA-6l-Gcu"/>
                                             <constraint firstItem="sOk-mv-MpU" firstAttribute="leading" secondItem="pfl-KH-cp0" secondAttribute="leading" id="mi2-rb-nOd"/>
                                             <constraint firstItem="sOk-mv-MpU" firstAttribute="height" secondItem="zJJ-JJ-RIg" secondAttribute="height" id="nz5-8z-cVs"/>
                                             <constraint firstItem="RNw-PN-EHu" firstAttribute="leading" secondItem="zfB-be-I4H" secondAttribute="leading" id="pgJ-S3-4ei"/>
@@ -3071,13 +3091,12 @@ Monday – Friday: 9AM – 5PM</string>
         <!--Profile-->
         <scene sceneID="75w-Lb-9Vt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fSE-pS-nGe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fSE-pS-nGe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="profile-unselected-icon" landscapeImage="profile-unselected-icon" largeContentSizeImage="profile-unselected-icon" selectedImage="profile-selected-icon" id="9Z3-gP-4J4">
                         <color key="badgeColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hqA-KM-2d1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

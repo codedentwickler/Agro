@@ -35,19 +35,31 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWO-vS-p5Z">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="450"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pls-3o-bWL" customClass="Card" customModule="Cards">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Q-Mo-eXi">
                                 <rect key="frame" x="0.0" y="0.0" width="335" height="450"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="investment-sample-image"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
-                                        <real key="value" value="18"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZB-2i-yo3" customClass="GradientView" customModule="AgroPartnerships" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="450"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cardRadius">
-                                        <real key="value" value="10"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -141,7 +153,10 @@
                         <constraints>
                             <constraint firstItem="8Ie-YB-P8I" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" constant="16" id="2Y8-Jd-AEj"/>
                             <constraint firstItem="HlS-uw-g2F" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" constant="16" id="583-nV-ntA"/>
+                            <constraint firstAttribute="bottom" secondItem="Q7Q-Mo-eXi" secondAttribute="bottom" id="64c-ih-mPM"/>
+                            <constraint firstAttribute="bottom" secondItem="dZB-2i-yo3" secondAttribute="bottom" id="6wW-t6-dGS"/>
                             <constraint firstAttribute="bottom" secondItem="laL-5Q-NvA" secondAttribute="bottom" constant="16" id="B0d-9E-epx"/>
+                            <constraint firstAttribute="trailing" secondItem="dZB-2i-yo3" secondAttribute="trailing" id="EB8-7q-muI"/>
                             <constraint firstItem="qJS-36-Y7x" firstAttribute="leading" secondItem="laL-5Q-NvA" secondAttribute="trailing" constant="8" id="EYn-dw-aYc"/>
                             <constraint firstItem="xs7-lj-Mjo" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" constant="16" id="FSE-Qo-pNv"/>
                             <constraint firstAttribute="trailing" secondItem="qJS-36-Y7x" secondAttribute="trailing" constant="16" id="GWQ-dL-MYy"/>
@@ -149,17 +164,18 @@
                             <constraint firstAttribute="trailing" secondItem="8Ie-YB-P8I" secondAttribute="trailing" constant="16" id="KhQ-zd-gN6"/>
                             <constraint firstItem="tpo-dM-UN7" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" constant="16" id="O1y-3U-2mi"/>
                             <constraint firstItem="8Ie-YB-P8I" firstAttribute="top" secondItem="xs7-lj-Mjo" secondAttribute="bottom" constant="16" id="WMa-d9-RSU"/>
-                            <constraint firstItem="Pls-3o-bWL" firstAttribute="top" secondItem="TWO-vS-p5Z" secondAttribute="top" id="ZDF-Iw-fiD"/>
+                            <constraint firstAttribute="trailing" secondItem="Q7Q-Mo-eXi" secondAttribute="trailing" id="aFC-Bl-Dco"/>
                             <constraint firstItem="xs7-lj-Mjo" firstAttribute="top" secondItem="tpo-dM-UN7" secondAttribute="bottom" constant="12" id="aYG-Iy-zCR"/>
                             <constraint firstItem="5Az-gk-DNh" firstAttribute="top" secondItem="8Ie-YB-P8I" secondAttribute="bottom" constant="16" id="aqY-Ny-25G"/>
+                            <constraint firstItem="Q7Q-Mo-eXi" firstAttribute="top" secondItem="TWO-vS-p5Z" secondAttribute="top" id="bLN-mF-K8W"/>
                             <constraint firstItem="HlS-uw-g2F" firstAttribute="top" secondItem="TWO-vS-p5Z" secondAttribute="top" constant="16" id="bMW-Xu-Hav"/>
                             <constraint firstItem="w9t-QL-7W9" firstAttribute="bottom" secondItem="5Az-gk-DNh" secondAttribute="bottom" id="daC-2b-IhO"/>
-                            <constraint firstItem="Pls-3o-bWL" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" id="gPw-J0-xRe"/>
                             <constraint firstItem="w9t-QL-7W9" firstAttribute="leading" secondItem="5Az-gk-DNh" secondAttribute="trailing" id="iaQ-vK-Avd"/>
+                            <constraint firstItem="dZB-2i-yo3" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" id="lxL-sM-0Re"/>
+                            <constraint firstItem="dZB-2i-yo3" firstAttribute="top" secondItem="TWO-vS-p5Z" secondAttribute="top" id="nIl-ae-BbH"/>
                             <constraint firstItem="5Az-gk-DNh" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" constant="16" id="nZb-Vc-yFL"/>
-                            <constraint firstAttribute="bottom" secondItem="Pls-3o-bWL" secondAttribute="bottom" id="rmn-Bi-UV6"/>
+                            <constraint firstItem="Q7Q-Mo-eXi" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" id="unD-EG-NkZ"/>
                             <constraint firstAttribute="trailing" secondItem="xs7-lj-Mjo" secondAttribute="trailing" constant="16" id="v7A-yB-QwZ"/>
-                            <constraint firstAttribute="trailing" secondItem="Pls-3o-bWL" secondAttribute="trailing" id="yA8-MD-e3Y"/>
                             <constraint firstItem="laL-5Q-NvA" firstAttribute="top" secondItem="5Az-gk-DNh" secondAttribute="bottom" constant="24" id="ySN-4d-6hA"/>
                             <constraint firstItem="laL-5Q-NvA" firstAttribute="leading" secondItem="TWO-vS-p5Z" secondAttribute="leading" constant="16" id="zNf-nG-lZc"/>
                         </constraints>
@@ -175,7 +191,7 @@
             <viewLayoutGuide key="safeArea" id="zHx-vh-nMW"/>
             <connections>
                 <outlet property="amountLabel" destination="5Az-gk-DNh" id="aJa-HP-otC"/>
-                <outlet property="backgroundCard" destination="Pls-3o-bWL" id="9PB-mU-hBn"/>
+                <outlet property="imageView" destination="Q7Q-Mo-eXi" id="jfJ-6o-DTK"/>
                 <outlet property="productNameLabel" destination="xs7-lj-Mjo" id="hiS-Pi-szC"/>
                 <outlet property="typeLabel" destination="tpo-dM-UN7" id="g1D-qj-tQT"/>
                 <outlet property="viewButton" destination="qJS-36-Y7x" id="jEw-8U-vYu"/>
@@ -185,6 +201,5 @@
     </objects>
     <resources>
         <image name="farm-icon" width="50" height="50"/>
-        <image name="investment-sample-image" width="335" height="450"/>
     </resources>
 </document>

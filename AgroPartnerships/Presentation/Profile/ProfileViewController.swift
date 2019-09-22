@@ -46,13 +46,14 @@ class ProfileViewController: BaseViewController {
         
         shouldShowSettings = (tabBarController as! DashboardTabBarController).showSettings
         
-        setupView()
         setupEventListeners()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        setupView()
+
         if LoginSession.shared.cards.isEmpty {
             loadCards()
         } else {
@@ -65,6 +66,13 @@ class ProfileViewController: BaseViewController {
         super.viewWillDisappear(animated)
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    private func showReviewInfoDialog() {
+        let title = "Profile Update in Review"
+        let message = "You recently requested to change your bank details. The requested details are being reviewed."
+        
+        self.showAlertDialog(title: title, message: message)
     }
 
     private func setupView() {
@@ -89,6 +97,13 @@ class ProfileViewController: BaseViewController {
         bankAccountNameTextField.text = profile?.bank?.accountName
         bankAccountNumberTextField.text = profile?.bank?.accountNumber
         bankNameTextField.text = profile?.bank?.bankName
+
+        if profile?.bank?.review != nil {
+            let deadlineTime = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: { [unowned self] in
+                self.showReviewInfoDialog()
+            })
+        }
     }
     
     private func setupEventListeners() {
@@ -276,15 +291,19 @@ class ProfileViewController: BaseViewController {
         
         Network.shared.request(ApiEndPoints.updateUserBank(),
                                method: .post, parameters: parameters ) {[unowned self]  (response) in
-            self.dismissLoading()
             if let response = response {
                 if response[ApiConstants.Status].stringValue == ApiConstants.Success {
-                    self.showSuccessAlert(title: "Account Update Received",
-                                          message: "You bank details are being reviewed.")
+                    self.refreshDashboardInformation {
+                        self.dismissLoading()
+                        self.showSuccessAlert(title: "Account Update Received",
+                                              message: "You bank details are being reviewed.")
+                    }
                 } else {
+                    self.dismissLoading()
                     self.showAlertDialog(message: "An Error occured. Please check your bank details and try again.")
                 }
             } else {
+                self.dismissLoading()
                 self.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
             }
         }
@@ -330,16 +349,19 @@ class ProfileViewController: BaseViewController {
         
         Network.shared.request(ApiEndPoints.updateProfile(),
                                method: .post, parameters: parameters ) {[unowned self]  (response) in
-            self.dismissLoading()
             if let response = response {
                 if response[ApiConstants.Status].stringValue == ApiConstants.Success {
-                    self.showSuccessAlert(title: "Update Successful",
-                                          message: "You profile has been updated.")
-                    self.refreshDashboardInformation()
+                    self.refreshDashboardInformation {
+                        self.dismissLoading()
+                        self.showSuccessAlert(title: "Update Successful",
+                                              message: "You profile has been updated.")
+                    }
                 } else {
+                    self.dismissLoading()
                     self.showAlertDialog(message: "An Error occured. Please check your profile information and try again.")
                 }
             } else {
+                self.dismissLoading()
                 self.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
             }
         }

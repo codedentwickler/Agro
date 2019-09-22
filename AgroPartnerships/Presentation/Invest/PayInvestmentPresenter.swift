@@ -40,23 +40,29 @@ class PayInvestmentPresenter: BasePresenter {
                                         credit: request.credit,
                                         authCode: request.authCode) { (response) in
                                             
-                self.view?.dismissLoading()
                 guard let response = response else {
+                    self.view?.dismissLoading()
                     self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                     return
                 }
                 
                 if response.status == ApiConstants.Success {
                     
-                    if response.investment?.payment?.status == "paid" {
-                        self.view?.showInvestmentSuccessfulDialog(units: response.investment!.units ?? 0,
-                                                                  amountPaid: response.investment!.amount ?? 0,
-                                                                  authorization: nil)
-                    } else {
-                        let message = response.message ?? "An error occurred while trying to process your payment. Please try again later"
-                        self.view?.showAlertDialog(message: message)
+                    self.refreshDashboardInformation {
+                        self.view?.dismissLoading()
+
+                        if response.investment?.payment?.status == "paid" {
+                            
+                            self.view?.showInvestmentSuccessfulDialog(units: response.investment!.units ?? 0,
+                                                                      amountPaid: response.investment!.amount ?? 0,
+                                                                      authorization: nil)
+                        } else {
+                            let message = response.message ?? "An error occurred while trying to process your payment. Please try again later"
+                            self.view?.showAlertDialog(message: message)
+                        }
                     }
                 } else {
+                    self.view?.dismissLoading()
                     let message = "An error occurred while trying to process your payment. Please try again later"
                     self.view?.showAlertDialog(message: message)
                 }
@@ -75,26 +81,26 @@ class PayInvestmentPresenter: BasePresenter {
                                         credit: request.credit,
                                         authCode: nil) { (response) in
                                             
-                                            guard let response = response else {
-                                                self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
-                                                return
-                                            }
-                                            
-                                            if response.status == ApiConstants.Success {
-                                                
-                                                if response.investment?.payment?.status == "pending" {
-                                                    
-                                                    if let paystackKey = response.investment?.payment?.key {
-                                                        Paystack.setDefaultPublicKey(paystackKey)
-                                                    }
-                                                    self.chargeCardWithPaystack(investment: response.investment!, cardParams: cardParams, viewcontroller )
-                                                    
-                                                }
-                                            } else {
-                                                self.view?.dismissLoading()
-                                                let message = "An error occurred while trying to process your payment. Please try again later"
-                                                self.view?.showAlertDialog(message: message)
-                                            }
+                guard let response = response else {
+                    self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                    return
+                }
+                
+                if response.status == ApiConstants.Success {
+                    
+                    if response.investment?.payment?.status == "pending" {
+                        
+                        if let paystackKey = response.investment?.payment?.key {
+                            Paystack.setDefaultPublicKey(paystackKey)
+                        }
+                        self.chargeCardWithPaystack(investment: response.investment!, cardParams: cardParams, viewcontroller )
+                        
+                    }
+                } else {
+                    self.view?.dismissLoading()
+                    let message = "An error occurred while trying to process your payment. Please try again later"
+                    self.view?.showAlertDialog(message: message)
+                }
         }
     }
     
@@ -158,18 +164,23 @@ class PayInvestmentPresenter: BasePresenter {
     private func verifyInvestmentPayment(reference: String, investment: Investment) {
         
         apiService.verifyInvestmentTransaction(investmentReference: reference) { (response) in
-            self.view?.dismissLoading()
             
             guard let response = response else {
+                self.view?.dismissLoading()
                 self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
             if response.status == ApiConstants.Success {
-                self.view?.showInvestmentSuccessfulDialog(units: investment.units ?? 0,
-                                                          amountPaid: investment.amount ?? 0,
-                                                          authorization: response.data?.authorization)
+                self.refreshDashboardInformation {
+                    self.view?.dismissLoading()
+                    self.view?.showInvestmentSuccessfulDialog(units: investment.units ?? 0,
+                                                              amountPaid: investment.amount ?? 0,
+                                                              authorization: response.data?.authorization)
+                }
+               
             } else {
+                self.view?.dismissLoading()
                 let message = "An error occurred while trying to process your payment. Please try again later"
                 self.view?.showAlertDialog(message: message)
             }

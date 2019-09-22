@@ -1417,13 +1417,13 @@
 				CODE_SIGN_ENTITLEMENTS = AgroPartnerships/AgroPartnerships.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJX8H544L7;
+				DEVELOPMENT_TEAM = 44WM7BTB59;
 				INFOPLIST_FILE = AgroPartnerships/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnershipsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnerships;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -1439,13 +1439,13 @@
 				CODE_SIGN_ENTITLEMENTS = AgroPartnerships/AgroPartnerships.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJX8H544L7;
+				DEVELOPMENT_TEAM = 44WM7BTB59;
 				INFOPLIST_FILE = AgroPartnerships/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnershipsApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnerships;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

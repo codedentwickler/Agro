@@ -18,6 +18,7 @@ struct Investment {
     let amount: Int?
 	let price: Int?
     let payment: Payment?
+    let date: String?
 	let status: String?
 	let title: String?
 	let totalUnits: Int?
@@ -44,5 +45,6 @@ struct Investment {
 		units = json["units"].intValue
 		yield = json["yield"].intValue
         user = User(json["user"])
+        date = json["date"].stringValue
 	}
 }

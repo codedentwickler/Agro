@@ -52,7 +52,9 @@ class ApiServiceImplementation : ApiService {
                           ApiConstants.FullName : fullname,
                           ApiConstants.Email : email,
                           ApiConstants.Password : password,
-                          ApiConstants.Phone : phone ]
+                          ApiConstants.Phone : phone,
+                          ApiConstants.Dob: dob
+        ]
         
         if let referral = referral {
             parameters[ApiConstants.Referral] = referral

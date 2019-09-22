@@ -37,22 +37,26 @@ class InvestmentDetailPresenter: BasePresenter {
                                         credit: request.credit,
                                         authCode: request.authCode) { (response) in
                                             
-            self.view?.dismissLoading()
             guard let response = response else {
+                self.view?.dismissLoading()
                 self.view?.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
                 return
             }
             
             if response.status == ApiConstants.Success {
-                
                 if response.investment?.payment?.status == "paid" {
-                    self.view?.showInvestmentSuccessfulDialog(units: response.investment!.units ?? 0,
-                                                              amountPaid: response.investment!.amount ?? 0)
+                    self.refreshDashboardInformation {
+                        self.view?.dismissLoading()
+                        self.view?.showInvestmentSuccessfulDialog(units: response.investment!.units ?? 0,
+                                                                  amountPaid: response.investment!.amount ?? 0)
+                    }
                 } else {
+                    self.view?.dismissLoading()
                     let message = response.message ?? "An error occurred while trying to process your payment. Please try again later"
                     self.view?.showAlertDialog(message: message)
                 }
             } else {
+                self.view?.dismissLoading()
                 let message = "An error occurred while trying to process your payment. Please try again later"
                 self.view?.showAlertDialog(message: message)
             }

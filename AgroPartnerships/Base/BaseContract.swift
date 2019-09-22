@@ -22,3 +22,18 @@ protocol BaseView: NSObjectProtocol {
 }
 
 protocol BasePresenter {}
+
+extension BasePresenter {
+    
+    func refreshDashboardInformation( completion: @escaping () -> Void) {
+        
+        ApiServiceImplementation.shared.getDashboardInformation { (dashboardResponse) in
+            completion()
+            guard dashboardResponse?.isSuccessful() == true else {
+                return
+            }
+            
+            LoginSession.shared.dashboardInformation = dashboardResponse
+        }
+    }
+}

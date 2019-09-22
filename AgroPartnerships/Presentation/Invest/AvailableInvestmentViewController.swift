@@ -11,7 +11,7 @@ import UIKit
 class AvailableInvestmentViewController: BaseViewController {
     
     public var isBeenUsedForSoldOutInvestments: Bool = false
-    internal var investments: [Investment]!
+    var investments: [Investment] = [Investment]()
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var menuIconImageView: UIImageView!
@@ -61,22 +61,30 @@ class AvailableInvestmentViewController: BaseViewController {
     
     @objc private func userTapMenuButton() {
         var sortedInvestments = [Investment]()
-        let actions = [
-            creatAlertAction("Sort by Date (Most recent)", style: .default, clicked: { _ in
-                
-            }),
-            creatAlertAction("Sort by Amount Invested (Highest)", style: .default, clicked: { _ in
-                
-            }),
-            creatAlertAction("Sort by Units bought (High to low)", style: .default, clicked: { _ in
-                
-            }),
-            creatAlertAction("Cancel", style: .cancel, clicked: { _ in
-                
-            })
-        ]
+        var actions = [UIAlertAction]()
+        actions.append(creatAlertAction("Sort by Cost (High to low)", style: .default, clicked: { _ in
+            sortedInvestments = self.investments.sorted(by: {$0.price! > $1.price!})
+            self.updateListOnSortingOrderChanged(sortedInvestments: sortedInvestments)
+        }))
+        actions.append(creatAlertAction("Sort by Date (Most recent)", style: .default, clicked: { _ in
+//            sortedInvestments = self.investments.sorted(by: {$0.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
+//                == .orderedDescending })
+            self.updateListOnSortingOrderChanged(sortedInvestments: sortedInvestments)
+        }))
+        actions.append(creatAlertAction("Sort by Date (Least recent)", style: .default, clicked: { _ in
+//            sortedInvestments = self.investments.sorted(by: {$0.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
+//                == .orderedAscending })
+            self.updateListOnSortingOrderChanged(sortedInvestments: sortedInvestments)
+        }))
         
+        actions.append(creatAlertAction("Cancel", style: .cancel, clicked: nil))
+
         createActionSheet(ltrActions: actions)
+    }
+    
+    private func updateListOnSortingOrderChanged(sortedInvestments: [Investment]) {
+        self.investments = sortedInvestments
+        investmentsTableView.reloadData()
     }
 }
 
@@ -95,5 +103,13 @@ extension AvailableInvestmentViewController: UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showInvestmentDetail(investment: investments[indexPath.row])
+    }
+    
+    private func showInvestmentDetail(investment: Investment) {
+        let vc = viewController(type: InvestDetailViewController.self, from: StoryBoardIdentifiers.Invest)
+        vc.investments = investments
+        vc.investment = investment
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

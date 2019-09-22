@@ -16,18 +16,6 @@ class BaseViewController: UIViewController {
     @objc func userTapCloseIcon() {
         self.tabBarController?.dismiss(animated: true, completion: nil)
     }
-    
-    func refreshDashboardInformation() {
-        
-        ApiServiceImplementation.shared.getDashboardInformation { (dashboardResponse) in
-            
-            guard dashboardResponse?.isSuccessful() == true else {
-                return
-            }
-            
-            LoginSession.shared.dashboardInformation = dashboardResponse
-        }
-    }
 }
 
 extension BaseViewController: UITextFieldDelegate {

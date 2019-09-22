@@ -38,7 +38,7 @@
                                         <rect key="frame" x="16" y="8" width="288" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-z0-wfg">
-                                                <rect key="frame" x="0.0" y="8.5" width="252" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="8.5" width="252" height="33"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omi-YL-dCM">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1650"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="investment-sample-image" translatesAutoresizingMaskIntoConstraints="NO" id="UWB-RL-WYQ">
+                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UWB-RL-WYQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UWB-RL-WYQ" secondAttribute="height" multiplier="375:366" id="cx5-go-uSf"/>
@@ -139,10 +139,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chN-yl-VNX" userLabel="View Button">
-                                                <rect key="frame" x="316" y="360" width="82" height="28"/>
+                                                <rect key="frame" x="318" y="360" width="80" height="28"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-aP-eBa">
-                                                        <rect key="frame" x="16" y="4" width="50" height="20"/>
+                                                        <rect key="frame" x="16" y="4" width="48" height="20"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -163,20 +163,20 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWT-0z-7MK">
-                                                <rect key="frame" x="16" y="306.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="307.5" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="P5N-Yc-4WR"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet Potato - 02" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLT-Bm-FPQ">
-                                                <rect key="frame" x="16" y="257" width="228.5" height="33.5"/>
+                                                <rect key="frame" x="16" y="258.5" width="227" height="33"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="250 units left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syf-9g-wby">
-                                                <rect key="frame" x="16" y="370" width="150" height="18"/>
+                                                <rect key="frame" x="16" y="370.5" width="150" height="17.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="pzN-po-YsD"/>
                                                 </constraints>
@@ -185,86 +185,86 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="FARM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V8-wI-qxC">
-                                                <rect key="frame" x="16" y="223" width="43" height="18"/>
+                                                <rect key="frame" x="16" y="225" width="41" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="COST" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1F7-ze-ZtQ">
-                                                <rect key="frame" x="16" y="436" width="42.5" height="18"/>
+                                                <rect key="frame" x="16" y="436" width="41" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₦95,000.00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-KN-Eej">
-                                                <rect key="frame" x="16" y="470" width="117" height="26.5"/>
+                                                <rect key="frame" x="16" y="469.5" width="115.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" red="0.65490196079999996" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="/UNIT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APX-A5-ChK">
-                                                <rect key="frame" x="133" y="480.5" width="37" height="16"/>
+                                                <rect key="frame" x="131.5" y="480" width="34" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="13"/>
                                                 <color key="textColor" red="0.65490196079999996" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Available" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbz-Md-NUI">
-                                                <rect key="frame" x="16" y="327.5" width="82.5" height="26.5"/>
+                                                <rect key="frame" x="16" y="328.5" width="88" height="26"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="DURATION" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVb-KR-4ND">
-                                                <rect key="frame" x="16" y="512.5" width="79.5" height="18"/>
+                                                <rect key="frame" x="16" y="511.5" width="75" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 months" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezA-c6-vGW">
-                                                <rect key="frame" x="16" y="546.5" width="86.5" height="26.5"/>
+                                                <rect key="frame" x="16" y="545" width="92.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" red="0.65490196079999996" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="INVESTMENT CODE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqh-87-s70">
-                                                <rect key="frame" x="16" y="589" width="146.5" height="18"/>
+                                                <rect key="frame" x="16" y="587" width="139.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 months" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7X-ez-Gug">
-                                                <rect key="frame" x="16" y="623" width="86.5" height="26.5"/>
+                                                <rect key="frame" x="16" y="620.5" width="92.5" height="26"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" red="0.65490196079999996" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="LOCATION" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQN-bP-Hu5">
-                                                <rect key="frame" x="16" y="665.5" width="78" height="18"/>
+                                                <rect key="frame" x="16" y="662.5" width="74" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 months" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jct-V3-fUI">
-                                                <rect key="frame" x="16" y="699.5" width="382" height="26.5"/>
+                                                <rect key="frame" x="16" y="696" width="382" height="26"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" red="0.65490196079999996" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHE-cF-40g">
-                                                <rect key="frame" x="16" y="750" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="746" width="382" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="5eK-TW-Wjd"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="RETURN" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-Bf-7m5">
-                                                <rect key="frame" x="16" y="782" width="62.5" height="18"/>
+                                                <rect key="frame" x="16" y="778" width="60" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eg-wB-fLi">
-                                                <rect key="frame" x="16" y="816" width="105.5" height="54"/>
+                                                <rect key="frame" x="16" y="811.5" width="107.5" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="CoH-CA-jsw"/>
                                                 </constraints>
@@ -281,7 +281,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-5g-im1" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="898" width="382" height="50"/>
+                                                <rect key="frame" x="16" y="893.5" width="382" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="iYh-PZ-Pt6"/>
                                                 </constraints>
@@ -299,7 +299,7 @@
                                                 </connections>
                                             </button>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVh-ax-thc">
-                                                <rect key="frame" x="0.0" y="980" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="975.5" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="YFu-iw-OHw"/>
@@ -321,20 +321,20 @@
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </toolbar>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwJ-M2-rdB">
-                                                <rect key="frame" x="0.0" y="1034" width="414" height="1"/>
+                                                <rect key="frame" x="0.0" y="1029.5" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.69999999999999996" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="t0p-7Y-JWC"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81A-Fh-yn2">
-                                                <rect key="frame" x="16" y="1059" width="382" height="26.5"/>
+                                                <rect key="frame" x="16" y="1054.5" width="382" height="26"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O9U-ya-vnW">
-                                                <rect key="frame" x="24" y="1097.5" width="366" height="150"/>
+                                                <rect key="frame" x="24" y="1092.5" width="366" height="150"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="udY-U4-4sT"/>
@@ -346,7 +346,7 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpq-7b-qkz" customClass="GradientView" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1142.5" width="414" height="105"/>
+                                                <rect key="frame" x="0.0" y="1137.5" width="414" height="105"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
@@ -364,7 +364,7 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn1-ne-ZQZ" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="139.5" y="1229.5" width="135" height="30"/>
+                                                <rect key="frame" x="139.5" y="1224.5" width="135" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="GS5-EW-iFN"/>
                                                     <constraint firstAttribute="width" constant="135" id="xkK-eu-map"/>
@@ -383,27 +383,27 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-0Y-e43">
-                                                <rect key="frame" x="16" y="1271.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="1266.5" width="382" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ZJ7-lF-LtH"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Farms &amp; Commodities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XDx-bQ-CIC">
-                                                <rect key="frame" x="16" y="1292.5" width="256.5" height="24"/>
+                                                <rect key="frame" x="16" y="1287.5" width="255" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="Qtf-sa-Gko">
-                                                <rect key="frame" x="378" y="1294.5" width="20" height="20"/>
+                                                <rect key="frame" x="378" y="1289.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="ufq-Kv-gNb"/>
                                                     <constraint firstAttribute="height" constant="20" id="yqB-IR-9UC"/>
                                                 </constraints>
                                             </imageView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-vI-s1U">
-                                                <rect key="frame" x="0.0" y="1336.5" width="414" height="260"/>
+                                                <rect key="frame" x="0.0" y="1331" width="414" height="260"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="260" id="g2D-FA-D2n"/>
@@ -526,7 +526,6 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                     <navigationItem key="navigationItem" id="B75-UE-DFs"/>
                     <size key="freeformSize" width="414" height="1650"/>
                     <connections>
-                        <outlet property="backgroundImageView" destination="UWB-RL-WYQ" id="ZlM-cS-2LL"/>
                         <outlet property="costPerUnitLabel" destination="V9e-KN-Eej" id="4ON-AO-XAe"/>
                         <outlet property="durationLabel" destination="ezA-c6-vGW" id="Ufe-Dg-9ng"/>
                         <outlet property="gradientView" destination="Qpq-7b-qkz" id="l7j-pY-eEk"/>
@@ -534,6 +533,7 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                         <outlet property="investmentCodeLabel" destination="B7X-ez-Gug" id="6Ua-bY-lBA"/>
                         <outlet property="investmentDescriptionTextView" destination="O9U-ya-vnW" id="qJQ-xa-oHN"/>
                         <outlet property="investmentDescriptionTextViewHeight" destination="udY-U4-4sT" id="lhU-rP-Ewr"/>
+                        <outlet property="investmentImageView" destination="UWB-RL-WYQ" id="n1W-Xo-EcE"/>
                         <outlet property="locationLabel" destination="jct-V3-fUI" id="dhh-yY-JgT"/>
                         <outlet property="otherCommoditiesCollectionView" destination="a0l-vI-s1U" id="KAd-QJ-E0p"/>
                         <outlet property="productNameLabel" destination="ZLT-Bm-FPQ" id="4d1-0h-GA2"/>
@@ -561,13 +561,13 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                 <rect key="frame" x="0.0" y="32" width="320" height="448"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-qk-DcP">
-                                        <rect key="frame" x="16" y="0.0" width="288" height="26.5"/>
+                                        <rect key="frame" x="16" y="0.0" width="288" height="26"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-Cg-3Mt">
-                                        <rect key="frame" x="16" y="42.5" width="288" height="389.5"/>
+                                        <rect key="frame" x="16" y="42" width="288" height="390"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -641,12 +641,17 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                             <constraint firstAttribute="height" constant="1" id="dTH-Vk-D1i"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-investment-icon" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-cA-r6J">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-cA-r6J">
                                         <rect key="frame" x="16" y="51" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="IA6-pn-esg"/>
                                             <constraint firstAttribute="height" constant="80" id="o2v-Zv-gZZ"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet Potato - 02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6j-sT-dCg">
                                         <rect key="frame" x="108" y="59" width="159" height="21"/>
@@ -928,7 +933,7 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Saved Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="kar-eg-d2Z">
-                                                <rect key="frame" x="16" y="146" width="148.5" height="25"/>
+                                                <rect key="frame" x="16" y="146" width="161" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="UTQ-Jf-ypD"/>
                                                 </constraints>
@@ -969,7 +974,7 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                                 <rect key="frame" x="16" y="380" width="382" height="164"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="AMOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEF-WY-pwt">
-                                                        <rect key="frame" x="16" y="12" width="83" height="21"/>
+                                                        <rect key="frame" x="16" y="12" width="77.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -980,13 +985,13 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="UNITS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka3-zR-6Nh">
-                                                        <rect key="frame" x="16" y="86" width="57" height="21"/>
+                                                        <rect key="frame" x="16" y="86" width="53" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sem-TJ-RQ7">
-                                                        <rect key="frame" x="16" y="111" width="17" height="33"/>
+                                                        <rect key="frame" x="16" y="111" width="16" height="33"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="28"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1205,12 +1210,17 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                             <constraint firstAttribute="height" constant="1" id="tBh-3n-ZV6"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample-investment-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Sqi-XV-4TF">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sqi-XV-4TF">
                                         <rect key="frame" x="16" y="47" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="qHT-ZK-mzB"/>
                                             <constraint firstAttribute="height" constant="80" id="rQe-cm-btk"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet Potato - 02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-oX-6Wv">
                                         <rect key="frame" x="108" y="55" width="159" height="21"/>
@@ -1316,13 +1326,13 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay with" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHo-B4-bH6">
-                                                                    <rect key="frame" x="62" y="8" width="59.5" height="18"/>
+                                                                    <rect key="frame" x="62" y="8" width="57.5" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                                     <color key="textColor" white="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit/Debit card" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBs-Rl-mBM">
-                                                                    <rect key="frame" x="62" y="28" width="127.5" height="18"/>
+                                                                    <rect key="frame" x="62" y="27.5" width="115.5" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -1503,11 +1513,9 @@ Grown by smallholder farmers in Northern Nigeria mainly for export, Sesame Seeds
         <image name="credit-card-bg-one" width="540" height="318"/>
         <image name="disclosure" width="16" height="28"/>
         <image name="info-green" width="36" height="36"/>
-        <image name="investment-sample-image" width="335" height="450"/>
         <image name="menu-icon" width="28" height="28"/>
         <image name="payment_method_deselected_icon" width="24" height="24"/>
         <image name="paystack" width="680" height="198"/>
-        <image name="sample-investment-icon" width="120" height="120"/>
         <image name="wallet-logo" width="68" height="68"/>
     </resources>
 </document>

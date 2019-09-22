@@ -73,7 +73,7 @@ extension UIViewController {
         self.title = title;
     }
     
-    func createAlertDialog(title: String! = "Invalid Entry!",
+    func createAlertDialog(title: String! = "Oops!",
                            message: String! = StringLiterals.GENERIC_NETWORK_ERROR,
                            ltrActions: [UIAlertAction]! = []) {
         
@@ -120,7 +120,7 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil);
     }
     
-    func creatAlertAction(_ title: String! = StringLiterals.OK,
+    func creatAlertAction(_ title: String = StringLiterals.OK,
                           style: UIAlertAction.Style = .default,
                           clicked: ((_ action: UIAlertAction) -> Void)?) -> UIAlertAction {
         return UIAlertAction(title: title, style: style, handler: clicked)
@@ -153,6 +153,21 @@ extension UIViewController {
             [weak self] in
             _ = self.debugDescription
             UIApplication.shared.isNetworkActivityIndicatorVisible = status;
+        }
+    }
+}
+
+extension UIViewController {
+    
+    func refreshDashboardInformation( completion: @escaping () -> Void) {
+        
+        ApiServiceImplementation.shared.getDashboardInformation { (dashboardResponse) in
+            completion()
+            guard dashboardResponse?.isSuccessful() == true else {
+                return
+            }
+            
+            LoginSession.shared.dashboardInformation = dashboardResponse
         }
     }
 }
