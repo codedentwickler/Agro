@@ -180,6 +180,7 @@
 		ADBAF23423103BB5007728B7 /* DashboardActionThreeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADBAF23223103BB5007728B7 /* DashboardActionThreeCollectionViewCell.xib */; };
 		ADBC2F102312894F008B605E /* RightArrowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC2F0F2312894F008B605E /* RightArrowedButton.swift */; };
 		ADD9A7B5230A221600FD1D8D /* InvestmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD9A7B4230A221600FD1D8D /* InvestmentsTableViewController.swift */; };
+		ADE3DE41233805380032B2ED /* BankTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3DE40233805380032B2ED /* BankTransferViewController.swift */; };
 		ADE9327B2310A23E00086882 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE932782310A23E00086882 /* CurrencyTextField.swift */; };
 		ADE9327C2310A23E00086882 /* AmountInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE932792310A23E00086882 /* AmountInputView.xib */; };
 		ADE9327D2310A23E00086882 /* AmountInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9327A2310A23E00086882 /* AmountInputView.swift */; };
@@ -233,7 +234,7 @@
 		0441B10A2312E0AF0097BABD /* RequestPayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestPayoutViewController.swift; path = AgroPartnerships/Presentation/Wallet/RequestPayoutViewController.swift; sourceTree = SOURCE_ROOT; };
 		0441B10B2312E0B00097BABD /* FundWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FundWalletViewController.swift; path = AgroPartnerships/Presentation/Wallet/FundWalletViewController.swift; sourceTree = SOURCE_ROOT; };
 		0441B10C2312E0B00097BABD /* ManageSavedCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageSavedCardsViewController.swift; path = AgroPartnerships/Presentation/Wallet/ManageSavedCardsViewController.swift; sourceTree = SOURCE_ROOT; };
-		0441B10D2312E0B00097BABD /* Wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Wallet.storyboard; path = AgroPartnerships/Presentation/Wallet/Wallet.storyboard; sourceTree = SOURCE_ROOT; };
+		0441B10D2312E0B00097BABD /* Wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Wallet.storyboard; path = AgroPartnerships/Presentation/Wallet/View/Wallet.storyboard; sourceTree = SOURCE_ROOT; };
 		0441B1142312E8BA0097BABD /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		046059E3230143B000697A10 /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 		04658AD223303C2400E9F117 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
@@ -385,6 +386,7 @@
 		ADBAF23223103BB5007728B7 /* DashboardActionThreeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardActionThreeCollectionViewCell.xib; sourceTree = "<group>"; };
 		ADBC2F0F2312894F008B605E /* RightArrowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightArrowedButton.swift; sourceTree = "<group>"; };
 		ADD9A7B4230A221600FD1D8D /* InvestmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsTableViewController.swift; sourceTree = "<group>"; };
+		ADE3DE40233805380032B2ED /* BankTransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTransferViewController.swift; sourceTree = "<group>"; };
 		ADE932782310A23E00086882 /* CurrencyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		ADE932792310A23E00086882 /* AmountInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmountInputView.xib; sourceTree = "<group>"; };
 		ADE9327A2310A23E00086882 /* AmountInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountInputView.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 				AD5406CD231976C500DA4CC3 /* PayInvestmentViewController.swift */,
 				AD967E2D23253F61001D4D13 /* PayInvestmentPresenter.swift */,
 				ADFD54C32327B61500FA8CD8 /* InvestmentDescriptionViewController.swift */,
+				ADE3DE40233805380032B2ED /* BankTransferViewController.swift */,
 			);
 			path = Invest;
 			sourceTree = "<group>";
@@ -541,8 +544,6 @@
 		04809CF422E472B500252F74 /* AgroPartnerships */ = {
 			isa = PBXGroup;
 			children = (
-				AD6A691023287049005C07C7 /* Assets.xcassets */,
-				AD967E21232498F9001D4D13 /* AgroPartnerships.entitlements */,
 				ADB10BD822FEE07300A4CCAA /* Resources */,
 				04809D5E22E473A900252F74 /* Local */,
 				04809D6122E473A900252F74 /* Presentation */,
@@ -553,6 +554,7 @@
 				04809D2322E4734A00252F74 /* Data */,
 				04809D1522E4734A00252F74 /* Extensions */,
 				04BB36C022F38CC700F266ED /* Font */,
+				AD967E21232498F9001D4D13 /* AgroPartnerships.entitlements */,
 				ADEDDD7E2311B8330044C8A3 /* LoginSession.swift */,
 				04809CF522E472B500252F74 /* AppDelegate.swift */,
 				04931845231C3E64006750A9 /* TimerApplication.swift */,
@@ -562,6 +564,7 @@
 				04809D0122E472B700252F74 /* Info.plist */,
 				ADFD54C723280AE200FA8CD8 /* country_code.json */,
 				042B140F232D43220092F047 /* AppDelegate+Notification.swift */,
+				AD6A691023287049005C07C7 /* Assets.xcassets */,
 			);
 			path = AgroPartnerships;
 			sourceTree = "<group>";
@@ -849,7 +852,6 @@
 				0441B10B2312E0B00097BABD /* FundWalletViewController.swift */,
 				0441B10C2312E0B00097BABD /* ManageSavedCardsViewController.swift */,
 				0441B10A2312E0AF0097BABD /* RequestPayoutViewController.swift */,
-				0441B10D2312E0B00097BABD /* Wallet.storyboard */,
 				AD967E1F23247AC4001D4D13 /* PaystackViewController.swift */,
 				0441B1092312E0AF0097BABD /* WalletFundingViewController.swift */,
 				ADFD7B2B2312A9DA00EC1E8B /* View */,
@@ -904,6 +906,7 @@
 		ADFD7B2B2312A9DA00EC1E8B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0441B10D2312E0B00097BABD /* Wallet.storyboard */,
 				ADFD7B2C2312A9DA00EC1E8B /* CreditCardCollectionViewCell.xib */,
 				ADFD7B2D2312A9DA00EC1E8B /* CreditCardCollectionViewCell.swift */,
 			);
@@ -1157,6 +1160,7 @@
 				AD7A2B64230ACBD000ECB36F /* PendingInvestmentTableViewCell.swift in Sources */,
 				ADBAF22F231035B8007728B7 /* DashboardActionTwoCollectionViewCell.swift in Sources */,
 				AD9A22FC2314282F000919E6 /* SoldOutInvestmentTableViewCell.swift in Sources */,
+				ADE3DE41233805380032B2ED /* BankTransferViewController.swift in Sources */,
 				AD967E29232521DB001D4D13 /* VerifyPaymentResponse.swift in Sources */,
 				046059E4230143B000697A10 /* DashboardTabBarController.swift in Sources */,
 				ADEDDD7823115D470044C8A3 /* User.swift in Sources */,
@@ -1417,13 +1421,13 @@
 				CODE_SIGN_ENTITLEMENTS = AgroPartnerships/AgroPartnerships.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44WM7BTB59;
+				DEVELOPMENT_TEAM = SJX8H544L7;
 				INFOPLIST_FILE = AgroPartnerships/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnerships;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnershipsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -1439,13 +1443,13 @@
 				CODE_SIGN_ENTITLEMENTS = AgroPartnerships/AgroPartnerships.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44WM7BTB59;
+				DEVELOPMENT_TEAM = SJX8H544L7;
 				INFOPLIST_FILE = AgroPartnerships/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnerships;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agropartnerships.AgroPartnershipsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
