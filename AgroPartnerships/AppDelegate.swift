@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navigationBarAppearance.tintColor = UIColor.appGreen1
         
-        
         // Register Timeout notification observer
         NotificationCenter.default.addObserver(
             self,
@@ -58,7 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         application.registerForRemoteNotifications()
-        
 
         // Override point for customization after application launch.
         return true
