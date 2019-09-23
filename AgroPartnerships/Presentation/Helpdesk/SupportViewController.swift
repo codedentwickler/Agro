@@ -65,7 +65,7 @@ class SupportViewController: BaseViewController {
         Alamofire.upload(multipartFormData: { (data) in
             if let imageData = imageData {
                 AgroLogger.log(":IMAGE DATA \(imageData)")
-                data.append(imageData, withName: "attachment", fileName: UUID.init().uuidString,
+                data.append(imageData, withName: "attachment", fileName: "\(UUID.init().uuidString).jpg",
                     mimeType: "image/jpg")
             }
             for (key, value) in parameters {

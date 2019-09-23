@@ -26,6 +26,7 @@ struct Investment {
 	let units: Int?
 	let yield: Int?
     let user: User?
+    let invoice: Invoice?
 
 	init(_ json: JSON) {
 		Id = json["_id"].stringValue
@@ -46,5 +47,6 @@ struct Investment {
 		yield = json["yield"].intValue
         user = User(json["user"])
         date = json["date"].stringValue
+        invoice = Invoice(json["invoice"])
 	}
 }

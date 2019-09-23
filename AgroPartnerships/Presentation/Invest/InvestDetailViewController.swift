@@ -205,7 +205,6 @@ extension InvestDetailViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = (self.view.frame.size.width - (16 * 3))
-
         return CGSize(width: width , height: 260)
     }
     
@@ -215,6 +214,12 @@ extension InvestDetailViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension InvestDetailViewController: InvestmentDetailView {
+    
+    func showBankTransferView(investment: Investment) {
+        let transferVc = viewController(type: BankTransferViewController.self, from: StoryBoardIdentifiers.Invest)
+        transferVc.investment = investment
+        navigationController?.pushViewController(transferVc, animated: true)
+    }
     
     func showInvestmentSuccessfulDialog(units: Int, amountPaid: Int) {
         let message = "Your investment for \(units) units \(amountPaid.commaSeparatedNairaValue) was successful"
@@ -237,6 +242,8 @@ extension InvestDetailViewController: ProvideInvestmentDetailsDelegate {
         }
         
         if initializeTransactionRequest.paymentMethod == .wallet {
+            investmentDetailPresenter.initializeInvestment(initializeTransactionRequest)
+        } else if initializeTransactionRequest.paymentMethod == .transfer {
             investmentDetailPresenter.initializeInvestment(initializeTransactionRequest)
         } else {
             let payVc = viewController(type: PayInvestmentViewController.self, from: StoryBoardIdentifiers.Invest)

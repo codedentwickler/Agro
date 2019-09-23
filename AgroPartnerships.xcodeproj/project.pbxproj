@@ -123,6 +123,8 @@
 		04BB36FA22F38CC700F266ED /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DC22F38CC700F266ED /* SF-Pro-Text-Medium.otf */; };
 		04BB36FB22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DD22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf */; };
 		04BB36FC22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */; };
+		04DB6E0E233916DA00385383 /* WalletBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB6E0D233916DA00385383 /* WalletBankAccount.swift */; };
+		04E7282B2339349700049A8F /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7282A2339349700049A8F /* Invoice.swift */; };
 		04F21E02231C4DE40033FF6D /* FundWalletResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F21E01231C4DE40033FF6D /* FundWalletResponse.swift */; };
 		04F545A423173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift */; };
 		5A8194B24C2AD6A4E9B0F38F /* Pods_AgroPartnerships.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */; };
@@ -328,6 +330,8 @@
 		04BB36DC22F38CC700F266ED /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		04BB36DD22F38CC700F266ED /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
 		04BB36DE22F38CC700F266ED /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		04DB6E0D233916DA00385383 /* WalletBankAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletBankAccount.swift; path = ../../../../../Downloads/WalletBankAccount.swift; sourceTree = "<group>"; };
+		04E7282A2339349700049A8F /* Invoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Invoice.swift; path = ../../../../../Downloads/Invoice.swift; sourceTree = "<group>"; };
 		04F21E01231C4DE40033FF6D /* FundWalletResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundWalletResponse.swift; sourceTree = "<group>"; };
 		04F545A323173DC7001ECA61 /* ProvideInvestmentDetailsModalStepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvideInvestmentDetailsModalStepOneViewController.swift; sourceTree = "<group>"; };
 		7C8B46DEC3363630BCC2876F /* Pods_AgroPartnerships.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgroPartnerships.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -622,12 +626,12 @@
 			children = (
 				044021952313123A009D1711 /* Request */,
 				04809D2422E4734B00252F74 /* Response */,
+				04809D3722E4734B00252F74 /* Model */,
 				04BB36AC22EA57F600F266ED /* ApiService.swift */,
 				04809D3222E4734B00252F74 /* ApiServiceImplementation.swift */,
 				04809D3322E4734B00252F74 /* ApiConstants.swift */,
 				04809D3422E4734B00252F74 /* ApiEndPoints.swift */,
 				04809D3522E4734B00252F74 /* Network.swift */,
-				04809D3722E4734B00252F74 /* Model */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -657,6 +661,7 @@
 		04809D3722E4734B00252F74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04E7282A2339349700049A8F /* Invoice.swift */,
 				0441B1142312E8BA0097BABD /* CreditCard.swift */,
 				ADEDDD6D23115D470044C8A3 /* Bank.swift */,
 				ADEDDD6F23115D470044C8A3 /* Bonus.swift */,
@@ -667,6 +672,7 @@
 				ADEDDD7323115D470044C8A3 /* Transactions.swift */,
 				AD967E1D232455D2001D4D13 /* Payment.swift */,
 				AD967E27232521DA001D4D13 /* Authorization.swift */,
+				04DB6E0D233916DA00385383 /* WalletBankAccount.swift */,
 				AD967E26232521DA001D4D13 /* Customer.swift */,
 				AD967E28232521DB001D4D13 /* PaystackData.swift */,
 				ADEDDD6E23115D470044C8A3 /* User.swift */,
@@ -1167,6 +1173,7 @@
 				ADEDDD7B23115D470044C8A3 /* Investment.swift in Sources */,
 				04809D9122E473A900252F74 /* SignUpViewController.swift in Sources */,
 				04809DC222E4A71000252F74 /* AgroFilledActionButton.swift in Sources */,
+				04E7282B2339349700049A8F /* Invoice.swift in Sources */,
 				AD967E1E232455D2001D4D13 /* Payment.swift in Sources */,
 				04BB36B322EA5CD400F266ED /* InitializeInvestmentResponse.swift in Sources */,
 				04809D4522E4734B00252F74 /* UIViewController.swift in Sources */,
@@ -1242,6 +1249,7 @@
 				AD967E2C232521DB001D4D13 /* PaystackData.swift in Sources */,
 				AD22FD4E23087185001AF67A /* DashboardActionCollectionViewCell.swift in Sources */,
 				04809D4222E4734B00252F74 /* UITextField+DropDownIndicator.swift in Sources */,
+				04DB6E0E233916DA00385383 /* WalletBankAccount.swift in Sources */,
 				AD22FD4A2308636A001AF67A /* ViewUtils.swift in Sources */,
 				ADEDDD7923115D470044C8A3 /* Bonus.swift in Sources */,
 				ADFD54C62327FCC400FA8CD8 /* ForgotPasswordViewController.swift in Sources */,

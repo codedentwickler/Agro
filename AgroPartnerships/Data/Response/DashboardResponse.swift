@@ -8,22 +8,26 @@ import SwiftyJSON
 
 struct DashboardResponse {
 
-	let portfolio: [Portfolio]?
+    let portfolio: [Portfolio]?
+    let pendingPortfolio: [Portfolio]?
 	let transactions: [Transactions]?
 	let referrals: [Referral]?
 	var profile: Profile?
+    let walletBankAccount: WalletBankAccount?
 	let paystackKey: String?
 	let status: String?
     let message: String?
 
 	init(_ json: JSON) {
-		portfolio = json["portfolio"].arrayValue.map { Portfolio($0) }
+        portfolio = json["portfolio"].arrayValue.map { Portfolio($0) }
+        pendingPortfolio = json["pendingPortfolio"].arrayValue.map { Portfolio($0) }
 		transactions = json["transactions"].arrayValue.map { Transactions($0) }
 		referrals = json["referrals"].arrayValue.map { Referral($0) }
 		profile = Profile(json["profile"])
 		paystackKey = json["paystackKey"].stringValue
 		status = json["status"].stringValue
         message = json["message"].stringValue
+        walletBankAccount = WalletBankAccount(json["walletBankAccount"])
 	}
 
     public func isSuccessful() -> Bool {

@@ -10,6 +10,8 @@ import Paystack
 
 protocol InvestmentDetailView: BaseView {
     func showInvestmentSuccessfulDialog(units: Int, amountPaid: Int)
+    
+    func showBankTransferView(investment: Investment)
 }
 
 class InvestmentDetailPresenter: BasePresenter {
@@ -44,13 +46,18 @@ class InvestmentDetailPresenter: BasePresenter {
             }
             
             if response.status == ApiConstants.Success {
-                if response.investment?.payment?.status == "paid" {
+                let payment = response.investment?.payment
+                if payment?.status == "paid" {
                     self.refreshDashboardInformation {
                         self.view?.dismissLoading()
                         self.view?.showInvestmentSuccessfulDialog(units: response.investment!.units ?? 0,
                                                                   amountPaid: response.investment!.amount ?? 0)
                     }
-                } else {
+                } else if payment?.status == "pending" && payment?.method == "transfer" {
+                    self.view?.dismissLoading()
+                    self.view?.showBankTransferView(investment: response.investment!)
+                }
+                else {
                     self.view?.dismissLoading()
                     let message = response.message ?? "An error occurred while trying to process your payment. Please try again later"
                     self.view?.showAlertDialog(message: message)
