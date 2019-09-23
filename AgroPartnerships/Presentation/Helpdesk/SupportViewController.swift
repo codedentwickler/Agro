@@ -66,10 +66,10 @@ class SupportViewController: BaseViewController {
             if let imageData = imageData {
                 AgroLogger.log(":IMAGE DATA \(imageData)")
                 data.append(imageData, withName: "attachment", fileName: UUID.init().uuidString,
-                    mimeType: "image/jpeg")
+                    mimeType: "image/jpg")
             }
             for (key, value) in parameters {
-                data.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                data.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
             
         }, to: ApiEndPoints.helpdesk(),
