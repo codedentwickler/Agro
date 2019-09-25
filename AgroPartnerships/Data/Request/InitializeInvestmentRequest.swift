@@ -12,9 +12,9 @@ struct InitializeInvestmentRequest {
     
     let item: String
     let units: Int
-    let price: Int
-    var credit: Int?
-    let amountLeft: Int
+    let price: Double
+    var credit: Double?
+    let amountLeft: Double
     var paymentMethod: PaymentMethod
     var authCode: String?
     

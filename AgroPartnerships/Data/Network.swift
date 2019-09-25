@@ -37,7 +37,7 @@ public class Network {
     
     public func request<T: NSObject>(_ urlString: String,
                                      method: HTTPMethod = .get,
-                                     parameters: Parameters = [:],
+                                     parameters: Parameters? = nil,
                                      headers: HTTPHeaders = [:],
                                      completion: @escaping (_ response: T?) -> Void) where T: EVReflectable {
         
@@ -69,7 +69,7 @@ public class Network {
     
     public func request(_ urlString: String,
                                method: HTTPMethod = .get,
-                               parameters: Parameters = [:],
+                               parameters: Parameters? = nil,
                                headers: HTTPHeaders = [:],
                                completion: @escaping (_ response: JSON?) -> Void) {
         let url = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)!

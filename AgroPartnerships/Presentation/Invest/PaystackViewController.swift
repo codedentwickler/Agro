@@ -9,7 +9,7 @@
 import UIKit
 import Paystack
 
-class PaymentViewController: UIViewController, PSTCKPaymentCardTextFieldDelegate {
+class PaymentViewController: BaseViewController, PSTCKPaymentCardTextFieldDelegate {
     
     var delegate: ProvideCardInformationDelegate?
     let paymentTextField = PSTCKPaymentCardTextField()

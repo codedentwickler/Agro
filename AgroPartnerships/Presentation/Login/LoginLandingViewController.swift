@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginLandingViewController : UIViewController {
+class LoginLandingViewController : BaseViewController {
     
     @IBOutlet weak var timeoutLogoutMessageLabel: UILabel!
     
@@ -33,6 +33,7 @@ class LoginLandingViewController : UIViewController {
 //            let names = UIFont.fontNames(forFamilyName: family)
 //            AgroLogger.log("Family: \(family) Font names: \(names)")
 //        }
+        LocalStorage.shared.logout()
         if logoutReason == .timeout {
             timeoutLogoutMessageLabel.isHidden = false
         }

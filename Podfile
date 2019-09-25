@@ -25,6 +25,7 @@ use_frameworks!
     pod 'Firebase/Messaging'
     pod 'KeychainAccess'
     pod 'FBSDKLoginKit'
+    pod 'TTTAttributedLabel'
 
 end
 

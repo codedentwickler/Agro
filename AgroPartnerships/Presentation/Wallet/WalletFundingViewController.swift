@@ -65,7 +65,7 @@ class WalletFundingViewController: BaseViewController {
         actionButton.setTitle("Request Payout", for: .normal)
         
         if payoutsTransactions.count == 0 {
-            fundingHistoryTableView.setEmptyMessage("You have not completed any payout transaction")
+            payoutsHistoryTableView.setEmptyMessage("You have not completed any payout transaction")
         }
     }
     

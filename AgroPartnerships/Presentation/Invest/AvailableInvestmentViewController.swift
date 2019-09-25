@@ -66,16 +66,6 @@ class AvailableInvestmentViewController: BaseViewController {
             sortedInvestments = self.investments.sorted(by: {$0.price! > $1.price!})
             self.updateListOnSortingOrderChanged(sortedInvestments: sortedInvestments)
         }))
-        actions.append(creatAlertAction("Sort by Date (Most recent)", style: .default, clicked: { _ in
-//            sortedInvestments = self.investments.sorted(by: {$0.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
-//                == .orderedDescending })
-            self.updateListOnSortingOrderChanged(sortedInvestments: sortedInvestments)
-        }))
-        actions.append(creatAlertAction("Sort by Date (Least recent)", style: .default, clicked: { _ in
-//            sortedInvestments = self.investments.sorted(by: {$0.date!.dateFromFullString!.compare($1.date!.dateFromFullString!)
-//                == .orderedAscending })
-            self.updateListOnSortingOrderChanged(sortedInvestments: sortedInvestments)
-        }))
         
         actions.append(creatAlertAction("Cancel", style: .cancel, clicked: nil))
 

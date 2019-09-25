@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
+class ProvideInvestmentDetailsModalStepTwoViewController: BaseViewController {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -120,9 +120,9 @@ class ProvideInvestmentDetailsModalStepTwoViewController: UIViewController {
         }
         let request = InitializeInvestmentRequest(item: investment.code!,
                                                   units: totalUnitSelected,
-                                                  price: investment.price!,
-                                                  credit: walletBalance,
-                                                  amountLeft: amountLeftToPayAfterWalletDeduction,
+                                                  price: investment.price!.doubleValue,
+                                                  credit: walletBalance.doubleValue,
+                                                  amountLeft: amountLeftToPayAfterWalletDeduction.doubleValue,
                                                   paymentMethod: selectedPaymentMethod,
                                                   authCode: nil)
         sheetViewController?.dismiss(animated: true)

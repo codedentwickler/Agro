@@ -93,6 +93,7 @@ PODS:
   - SwiftyJSON (4.3.0)
   - SwiftyOnboard (1.3.8)
   - Toast-Swift (3.0.1)
+  - TTTAttributedLabel (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
@@ -111,6 +112,7 @@ DEPENDENCIES:
   - SwiftyJSON (~> 4.0)
   - SwiftyOnboard
   - Toast-Swift (~> 3.0.1)
+  - TTTAttributedLabel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -140,6 +142,7 @@ SPEC REPOS:
     - SwiftyJSON
     - SwiftyOnboard
     - Toast-Swift
+    - TTTAttributedLabel
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -168,7 +171,8 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 9593a351f1231e7d2102f88c9130e68268089293
+PODFILE CHECKSUM: 83a1fdaa33e483be1b924d7b3253b68f9a32e5de
 
 COCOAPODS: 1.6.0.rc.2

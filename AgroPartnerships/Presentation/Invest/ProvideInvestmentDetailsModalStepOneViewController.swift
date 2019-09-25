@@ -9,7 +9,7 @@
 import Kingfisher
 import UIKit
 
-class ProvideInvestmentDetailsModalStepOneViewController: UIViewController {
+class ProvideInvestmentDetailsModalStepOneViewController: BaseViewController {
 
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!

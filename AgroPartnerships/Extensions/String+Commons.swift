@@ -76,7 +76,7 @@ extension String {
             let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
             NSLog("Text: \(self), Pattern: \(pattern), Matches: \(matches.count)")
             return !matches.isEmpty
-        }catch {
+        } catch {
             return false
         }
     }

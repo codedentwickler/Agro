@@ -46,9 +46,9 @@ protocol ApiService {
     
     func initializeInvestment(item: String,
                               units: Int,
-                              price: Int,
+                              price: Double,
                               paymentMethod: PaymentMethod,
-                              credit: Int?,
+                              credit: Double?,
                               authCode: String?,
                               completion: @escaping (_ response: InitializeInvestmentResponse? ) -> Void)
     

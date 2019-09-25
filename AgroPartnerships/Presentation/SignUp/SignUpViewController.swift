@@ -139,6 +139,7 @@ extension SignUpViewController: SignUpView {
         let vc = viewController(type: LandingViewController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
         LoginSession.shared.dashboardInformation = dashboardInformation
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -163,6 +164,7 @@ extension SignUpViewController: SignUpView {
     func showDashBoard() {
         let vc = viewController(type: LandingViewController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
 }

@@ -4,6 +4,7 @@ import SwiftyJSON
 
 class ApiServiceImplementation : ApiService {
     
+    
     static let shared = ApiServiceImplementation()
     
     func login(email : String,
@@ -121,9 +122,9 @@ class ApiServiceImplementation : ApiService {
     
     func initializeInvestment(item: String,
                               units: Int,
-                              price: Int,
+                              price: Double,
                               paymentMethod: PaymentMethod,
-                              credit: Int?,
+                              credit: Double?,
                               authCode: String?,
                               completion: @escaping (InitializeInvestmentResponse?) -> Void) {
         

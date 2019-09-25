@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gm1-uC-G3i">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gm1-uC-G3i">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,16 +25,16 @@
         <!--Login Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginLandingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginLandingViewController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginLandingViewController" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginLandingViewController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-bg" translatesAutoresizingMaskIntoConstraints="NO" id="9yW-gj-6Sc">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-ng-yVx">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Welcome back to limitless opportunities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrr-ae-RUU">
                                         <rect key="frame" x="16" y="64" width="288" height="143.5"/>
@@ -95,13 +94,13 @@ because you were inactive for a while.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or log in with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="hG8-WY-RWT">
-                                        <rect key="frame" x="114.5" y="440" width="91.5" height="18"/>
+                                        <rect key="frame" x="114.5" y="460" width="91.5" height="18"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpN-27-5ga" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="474" width="280" height="50"/>
+                                        <rect key="frame" x="20" y="494" width="280" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="vWf-n0-EGR"/>
                                         </constraints>
@@ -199,7 +198,7 @@ because you were inactive for a while.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.8" y="633.73313343328346"/>
+            <point key="canvasLocation" x="1898" y="945"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="rd8-rS-7sM">
@@ -232,15 +231,13 @@ because you were inactive for a while.</string>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-2K-LcM" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="77.5" y="168" width="281.5" height="46"/>
-                                                <nil key="textColor"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name (Same as Bank Name)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-2K-LcM" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
+                                                <rect key="frame" x="84.5" y="168" width="274.5" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Zr-Pi-gvG" customClass="DropDownTextField" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="168" width="49.5" height="46"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="16" y="168" width="56.5" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -250,37 +247,31 @@ because you were inactive for a while.</string>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="VA8-6d-4MA"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="zaR-35-TTP"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dialing Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dy-12-FKy" customClass="DropDownTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="276" width="343" height="46"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number (e.g. 8155443322)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oS-K2-YPL" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="330" width="343" height="46"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Referral Code (if any)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDF-fj-wZ3" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="384" width="343" height="46"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7NH-IV-tZx" customClass="DateDropDownTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="438" width="343" height="46"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3t-Bb-Lge" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="492" width="343" height="46"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
@@ -451,7 +442,7 @@ because you were inactive for a while.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tf8-5H-DOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="-192.50374812593705"/>
+            <point key="canvasLocation" x="3158" y="-146"/>
         </scene>
         <!--Terms And Conditions View Controller-->
         <scene sceneID="u9c-Po-wgI">
@@ -462,7 +453,7 @@ because you were inactive for a while.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGQ-PT-xhe">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-header" translatesAutoresizingMaskIntoConstraints="NO" id="EQM-j6-FH6">
                                         <rect key="frame" x="39" y="40" width="242" height="56"/>
@@ -481,7 +472,7 @@ because you were inactive for a while.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-4I-rJa">
-                                        <rect key="frame" x="24" y="161.5" width="272" height="29"/>
+                                        <rect key="frame" x="24" y="161.5" width="272" height="32"/>
                                         <segments>
                                             <segment title="Terms of Use"/>
                                             <segment title="Privacy Policy"/>
@@ -493,7 +484,7 @@ because you were inactive for a while.</string>
                                         </connections>
                                     </segmentedControl>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEg-uA-Sz7">
-                                        <rect key="frame" x="16" y="197.5" width="288" height="350.5"/>
+                                        <rect key="frame" x="16" y="200.5" width="288" height="367.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -538,7 +529,7 @@ because you were inactive for a while.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWL-Gc-NZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4101.6000000000004" y="-252.32383808095955"/>
+            <point key="canvasLocation" x="4136" y="-269"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="gtd-aO-9ys">
@@ -549,7 +540,7 @@ because you were inactive for a while.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RF-cG-3oA">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-header" translatesAutoresizingMaskIntoConstraints="NO" id="tVR-CM-Orn">
                                         <rect key="frame" x="39" y="28" width="242" height="56"/>
@@ -574,7 +565,6 @@ because you were inactive for a while.</string>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="FN4-27-OMI"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="Xnj-fj-0ZT"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                         <variation key="default">
@@ -592,7 +582,6 @@ because you were inactive for a while.</string>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-ok-53q" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                         <rect key="frame" x="16" y="223.5" width="288" height="50"/>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
@@ -713,7 +702,7 @@ because you were inactive for a while.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1Z-sY-zHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2715" y="935"/>
+            <point key="canvasLocation" x="3107" y="945"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="nct-TE-XbY">
@@ -724,7 +713,7 @@ because you were inactive for a while.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-83-6HY">
-                                <rect key="frame" x="16" y="32" width="288" height="520"/>
+                                <rect key="frame" x="16" y="12" width="288" height="540"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-header" translatesAutoresizingMaskIntoConstraints="NO" id="AeT-UJ-UzM">
                                         <rect key="frame" x="23" y="16" width="242" height="56"/>
@@ -749,7 +738,6 @@ because you were inactive for a while.</string>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="3z5-jv-nzh"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="TG7-WO-fJ0"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                         <variation key="default">
@@ -836,15 +824,15 @@ because you were inactive for a while.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTa-C0-xsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676" y="1835.5322338830586"/>
+            <point key="canvasLocation" x="3107" y="1846"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mvd-8V-Azr">
             <objects>
-                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="WfK-GP-FSe" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="WfK-GP-FSe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JYM-Gb-zmN">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -855,7 +843,7 @@ because you were inactive for a while.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gux-E2-nt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="634"/>
+            <point key="canvasLocation" x="251" y="944"/>
         </scene>
     </scenes>
     <resources>

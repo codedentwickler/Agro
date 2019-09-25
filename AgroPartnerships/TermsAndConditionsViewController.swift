@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TermsAndConditionsViewController : UIViewController {
+class TermsAndConditionsViewController : BaseViewController {
     
     @IBOutlet weak var pageSwitch: UISegmentedControl!
     @IBOutlet weak var contentTextView: UITextView!

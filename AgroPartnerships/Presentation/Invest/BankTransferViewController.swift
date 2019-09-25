@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BankTransferViewController: UIViewController {
+class BankTransferViewController: BaseViewController {
     
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var unitsLabel: UILabel!
@@ -32,7 +32,7 @@ class BankTransferViewController: UIViewController {
         
         let invoice = investment.invoice
         
-        reservedAccountNameLabel.text = invoice?.accountName
+        reservedAccountNameLabel.text = invoice?.description
         reservedAccountNumberLabel.text = invoice?.accountNumber
         reservedAccountBankNameLabel.text = invoice?.bankName
         
@@ -40,6 +40,7 @@ class BankTransferViewController: UIViewController {
         let amountString = invoice?.amount?.commaSeparatedNairaValue ?? ""
         amountLabel.text = amountString
         unitsLabel.text = units?.string ?? ""
+        showMonnifyView()
     }
     
     @IBAction func userChangedPager(_ sender: UISegmentedControl) {

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FRW-Bx-SHR">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FRW-Bx-SHR">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="2433"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-NM-LaP">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-NM-LaP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="2433"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2w-Sa-9pp">
@@ -524,6 +523,7 @@ Monday – Friday: 9AM – 5PM</string>
                                 <constraints>
                                     <constraint firstItem="a2w-Sa-9pp" firstAttribute="leading" secondItem="gzP-NM-LaP" secondAttribute="leading" id="3j3-AZ-cxf"/>
                                     <constraint firstAttribute="bottom" secondItem="a2w-Sa-9pp" secondAttribute="bottom" id="3zo-cJ-h4p"/>
+                                    <constraint firstItem="a2w-Sa-9pp" firstAttribute="top" secondItem="gzP-NM-LaP" secondAttribute="top" id="P4b-ti-lOq"/>
                                     <constraint firstItem="a2w-Sa-9pp" firstAttribute="centerX" secondItem="gzP-NM-LaP" secondAttribute="centerX" id="T1O-q2-a6v"/>
                                     <constraint firstAttribute="trailing" secondItem="a2w-Sa-9pp" secondAttribute="trailing" id="WJJ-to-LFR"/>
                                     <constraint firstAttribute="bottom" secondItem="a2w-Sa-9pp" secondAttribute="bottom" id="euV-cy-vgr"/>
@@ -536,6 +536,7 @@ Monday – Friday: 9AM – 5PM</string>
                             <constraint firstAttribute="trailing" secondItem="gzP-NM-LaP" secondAttribute="trailing" id="8Yq-kX-fX4"/>
                             <constraint firstItem="gzP-NM-LaP" firstAttribute="top" secondItem="pqg-eR-B3u" secondAttribute="top" id="C6u-Ju-TZL"/>
                             <constraint firstItem="gzP-NM-LaP" firstAttribute="leading" secondItem="pqg-eR-B3u" secondAttribute="leading" id="Jgo-YF-mw6"/>
+                            <constraint firstItem="gzP-NM-LaP" firstAttribute="top" secondItem="72V-7F-abF" secondAttribute="top" id="YiH-6t-R4j"/>
                             <constraint firstAttribute="bottom" secondItem="gzP-NM-LaP" secondAttribute="bottom" id="qWj-U9-F1z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="72V-7F-abF"/>
@@ -554,7 +555,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24Y-Fe-XTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3991.3043478260875" y="-824.33035714285711"/>
+            <point key="canvasLocation" x="-4489" y="116"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="Acd-Ug-C5m">
@@ -565,7 +566,7 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqJ-Y6-aUb" userLabel="topmost guide view">
-                                <rect key="frame" x="0.0" y="20" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="L2r-zU-icU"/>
@@ -604,20 +605,20 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYk-It-geS">
-                                                <rect key="frame" x="16" y="373.5" width="382" height="33"/>
+                                                <rect key="frame" x="16" y="372" width="382" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-oe-fGx">
-                                                <rect key="frame" x="16" y="418.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="417.5" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239726024" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="L7n-Rh-4sD"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="keep track of your investment and  watch your money grow" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-Lb-6TW">
-                                                <rect key="frame" x="16" y="426.5" width="382" height="37.5"/>
+                                                <rect key="frame" x="16" y="425.5" width="382" height="38.5"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -636,6 +637,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <segment title="Referrals"/>
                                                         </segments>
                                                         <color key="tintColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="selectedSegmentTintColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <action selector="userChangedPagerValue:" destination="bKn-0B-1Wr" eventType="valueChanged" id="iWO-I5-1AQ"/>
                                                         </connections>
@@ -650,10 +652,10 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </constraints>
                                             </view>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5a7-uJ-ZYe" userLabel="Wallet Stack View">
-                                                <rect key="frame" x="0.0" y="545" width="414" height="56.5"/>
+                                                <rect key="frame" x="0.0" y="545" width="414" height="98"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-YI-Q0K">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="8Hi-Iu-0ba">
                                                             <size key="itemSize" width="50" height="50"/>
@@ -663,11 +665,36 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                     </collectionView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwE-11-5vL">
+                                                        <rect key="frame" x="0.0" y="33" width="414" height="21"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fund Wallet via bank transfer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP5-TJ-q6K">
+                                                                <rect key="frame" x="16" y="16" width="262.5" height="24"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
+                                                                <color key="textColor" red="0.16862745098039217" green="0.71372549019607845" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="QP5-TJ-q6K" firstAttribute="leading" secondItem="WwE-11-5vL" secondAttribute="leading" constant="16" id="3ho-ev-I8V"/>
+                                                            <constraint firstAttribute="height" constant="100" id="4KJ-qx-5mJ"/>
+                                                            <constraint firstItem="QP5-TJ-q6K" firstAttribute="top" secondItem="WwE-11-5vL" secondAttribute="top" constant="16" id="BJH-ef-4dK"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-V1-svT">
-                                                        <rect key="frame" x="16" y="28.5" width="382" height="16"/>
+                                                        <rect key="frame" x="16" y="66" width="382" height="20"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="All Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9U-o7-F0g">
-                                                                <rect key="frame" x="8" y="8" width="230" height="0.0"/>
+                                                                <rect key="frame" x="8" y="8" width="230" height="4"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -676,7 +703,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </variation>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cR-I1-w0K" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="246" y="8" width="120" height="0.0"/>
+                                                                <rect key="frame" x="246" y="8" width="120" height="4"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <state key="normal" title="View breakdown"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -690,7 +717,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="16"/>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-Xh-igB">
-                                                        <rect key="frame" x="16" y="56.5" width="382" height="0.0"/>
+                                                        <rect key="frame" x="16" y="98" width="382" height="0.0"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="ON9-Oh-VHk"/>
@@ -699,8 +726,10 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="y7d-V1-svT" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" constant="16" id="286-qC-M1H"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WwE-11-5vL" secondAttribute="trailing" id="2bT-PT-kih"/>
                                                     <constraint firstItem="gYe-Xh-igB" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" constant="16" id="8qq-1g-r1x"/>
                                                     <constraint firstAttribute="trailing" secondItem="gYe-Xh-igB" secondAttribute="trailing" constant="16" id="Bca-bg-6SZ"/>
+                                                    <constraint firstItem="WwE-11-5vL" firstAttribute="leading" secondItem="5a7-uJ-ZYe" secondAttribute="leading" id="kXL-Yo-aGR"/>
                                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gYe-Xh-igB" secondAttribute="bottom" id="qN6-ff-NHk"/>
                                                 </constraints>
                                             </stackView>
@@ -719,7 +748,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have one pending investment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xn-6i-ggt">
-                                                                <rect key="frame" x="56" y="18.5" width="200" height="15.5"/>
+                                                                <rect key="frame" x="56" y="18" width="210" height="16"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -728,7 +757,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <rect key="frame" x="312" y="12" width="86" height="28"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz8-Mk-K8n">
-                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21"/>
+                                                                        <rect key="frame" x="12" y="3.5" width="62" height="21.5"/>
                                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -792,7 +821,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="172" width="382" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Current Investments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxz-l5-gfI">
-                                                                <rect key="frame" x="8" y="8" width="181" height="34"/>
+                                                                <rect key="frame" x="8" y="8" width="169.5" height="34"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -801,7 +830,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </variation>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4U-EU-H7w" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="197" y="8" width="169" height="34"/>
+                                                                <rect key="frame" x="185.5" y="8" width="180.5" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <state key="normal" title="See History"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -860,7 +889,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="172" width="382" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55f-HS-Hil">
-                                                                <rect key="frame" x="8" y="8" width="120" height="34"/>
+                                                                <rect key="frame" x="8" y="8" width="111" height="34"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -869,7 +898,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 </variation>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTY-Im-iSq" customClass="RightArrowedButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                                <rect key="frame" x="136" y="8" width="230" height="34"/>
+                                                                <rect key="frame" x="127" y="8" width="239" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <state key="normal" title="View All Referrals"/>
                                                                 <variation key="heightClass=regular-widthClass=compact">
@@ -889,15 +918,14 @@ Monday – Friday: 9AM – 5PM</string>
                                                         <rect key="frame" x="16" y="234" width="382" height="97"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REFERRAL CODE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRE-dg-baF">
-                                                                <rect key="frame" x="16" y="20" width="151.5" height="21"/>
+                                                                <rect key="frame" x="16" y="20" width="155" height="21.5"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="REFCODEHERE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Op-uhG">
-                                                                <rect key="frame" x="16" y="45" width="350" height="48"/>
+                                                                <rect key="frame" x="16" y="45.5" width="350" height="47.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="25"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -1141,7 +1169,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3EY-fu-Vpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="-430"/>
+            <point key="canvasLocation" x="204" y="-431"/>
         </scene>
         <!--Investments Table View Controller-->
         <scene sceneID="WNj-jz-5Dl">
@@ -1152,13 +1180,13 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCg-f2-KX8">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VZ7-3B-zUp">
                                         <rect key="frame" x="16" y="8" width="288" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="T8T-UO-hVH">
-                                                <rect key="frame" x="0.0" y="10.5" width="252" height="29"/>
+                                                <rect key="frame" x="0.0" y="11" width="252" height="28"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="27"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1179,7 +1207,7 @@ Monday – Friday: 9AM – 5PM</string>
                                         </constraints>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OEf-e8-qYZ">
-                                        <rect key="frame" x="16" y="66" width="288" height="482"/>
+                                        <rect key="frame" x="16" y="66" width="288" height="502"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
@@ -1212,7 +1240,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEe-GO-95i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="-869"/>
+            <point key="canvasLocation" x="1086" y="-869"/>
         </scene>
         <!--Referral History View Controller-->
         <scene sceneID="zwZ-aF-cxz">
@@ -1223,9 +1251,9 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqL-8x-1uP">
-                                <rect key="frame" x="16" y="20" width="288" height="548"/>
+                                <rect key="frame" x="16" y="0.0" width="288" height="568"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GpP-8s-gPj">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GpP-8s-gPj">
                                         <rect key="frame" x="12" y="16" width="264" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="4OL-Cl-BKA"/>
@@ -1247,12 +1275,13 @@ Monday – Friday: 9AM – 5PM</string>
                                         </constraints>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1kY-Ix-Ejj">
-                                        <rect key="frame" x="0.0" y="114" width="288" height="434"/>
+                                        <rect key="frame" x="0.0" y="114" width="288" height="454"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                     <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="128" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AE8-OT-hsb">
-                                        <rect key="frame" x="0.0" y="114" width="288" height="434"/>
+                                        <rect key="frame" x="0.0" y="114" width="288" height="454"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1293,12 +1322,12 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrN-TL-XXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="-869"/>
+            <point key="canvasLocation" x="1913" y="-871"/>
         </scene>
         <!--Dashboard Tab Bar Controller-->
         <scene sceneID="UUd-KF-aQe">
             <objects>
-                <tabBarController storyboardIdentifier="DashboardTabBarController" hidesBottomBarWhenPushed="YES" id="AHJ-PS-Yhb" customClass="DashboardTabBarController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="DashboardTabBarController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="AHJ-PS-Yhb" customClass="DashboardTabBarController" customModule="AgroPartnerships" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="vnk-fy-gq6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1314,7 +1343,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxJ-8E-ZdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2839" y="519"/>
+            <point key="canvasLocation" x="-1279" y="1095"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="MX9-As-xkb">
@@ -1334,7 +1363,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3V-Vn-g4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2023" y="-870"/>
+            <point key="canvasLocation" x="-677" y="-871"/>
         </scene>
         <!--Invest View Controller-->
         <scene sceneID="gRU-wQ-4sL">
@@ -1345,7 +1374,7 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQo-yo-ihM" userLabel="topmost guide view">
-                                <rect key="frame" x="0.0" y="20" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="jHj-87-Or8"/>
@@ -1384,20 +1413,20 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVEST" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-Hu-MRR">
-                                                <rect key="frame" x="16" y="350" width="382" height="41"/>
+                                                <rect key="frame" x="16" y="352.5" width="382" height="40"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joe-ll-ACR">
-                                                <rect key="frame" x="16" y="403" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="404.5" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Zx5-EM-G7H"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available farms and commodities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3b-aY-aXv">
-                                                <rect key="frame" x="16" y="411" width="382" height="53"/>
+                                                <rect key="frame" x="16" y="412.5" width="382" height="51.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1555,7 +1584,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Mp-lw-3EY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4425" y="-668.66197183098598"/>
+            <point key="canvasLocation" x="8717" y="-658"/>
         </scene>
         <!--Invest-->
         <scene sceneID="bK1-y0-SJT">
@@ -1575,7 +1604,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkv-IL-cjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3351" y="-870"/>
+            <point key="canvasLocation" x="7164" y="-1150"/>
         </scene>
         <!--Help Desk View Controller-->
         <scene sceneID="Iee-Rw-FW5">
@@ -1586,7 +1615,7 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-0n-REI" userLabel="topmost guide view">
-                                <rect key="frame" x="0.0" y="20" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="MwI-OW-DRq"/>
@@ -1625,20 +1654,20 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELPDESK" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHl-ZT-wys">
-                                                <rect key="frame" x="16" y="360" width="382" height="41"/>
+                                                <rect key="frame" x="16" y="362" width="382" height="40"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="34"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYA-11-pYe">
-                                                <rect key="frame" x="16" y="413" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="414" width="382" height="1"/>
                                                 <color key="backgroundColor" white="1" alpha="0.14636665239999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="co7-nu-bkn"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruy-jh-XoH">
-                                                <rect key="frame" x="16" y="421" width="382" height="43"/>
+                                                <rect key="frame" x="16" y="422" width="382" height="42"/>
                                                 <string key="text">Always one message away. 
 Monday – Friday: 9AM – 5PM</string>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
@@ -1646,14 +1675,14 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFr-8f-wgv">
-                                                <rect key="frame" x="16" y="504" width="382" height="29"/>
+                                                <rect key="frame" x="16" y="504" width="382" height="28"/>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfM-Ga-36c">
-                                                <rect key="frame" x="24" y="557" width="366" height="56"/>
+                                                <rect key="frame" x="24" y="556" width="366" height="56"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oPA-3w-1LO">
                                                         <rect key="frame" x="16" y="18" width="20" height="20"/>
@@ -1663,7 +1692,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyK-O0-Hex">
-                                                        <rect key="frame" x="60" y="18" width="137.5" height="20"/>
+                                                        <rect key="frame" x="60" y="18" width="128.5" height="20"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Send us a Message">
                                                                 <attributes>
@@ -1701,28 +1730,28 @@ Monday – Friday: 9AM – 5PM</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kqp-lk-QC1">
-                                                <rect key="frame" x="16" y="645" width="382" height="29"/>
+                                                <rect key="frame" x="16" y="644" width="382" height="28"/>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-icon" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-5U-qYp">
-                                                <rect key="frame" x="32" y="698" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="696" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="UTJ-pz-uLA"/>
                                                     <constraint firstAttribute="height" constant="20" id="XBf-hZ-Jr3"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-icon" translatesAutoresizingMaskIntoConstraints="NO" id="paG-To-kb2">
-                                                <rect key="frame" x="32" y="738" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="736" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Dem-iI-BFW"/>
                                                     <constraint firstAttribute="width" constant="20" id="IKU-1W-XHg"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMb-l5-NSd">
-                                                <rect key="frame" x="72" y="738" width="322" height="20"/>
+                                                <rect key="frame" x="72" y="736" width="322" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0809-811-1114">
                                                         <attributes>
@@ -1736,14 +1765,14 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-icon" translatesAutoresizingMaskIntoConstraints="NO" id="yUb-Lu-dhY">
-                                                <rect key="frame" x="32" y="778" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="776" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Zjr-yC-cOq"/>
                                                     <constraint firstAttribute="width" constant="20" id="chJ-P2-xgu"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44Q-D2-VFk">
-                                                <rect key="frame" x="72" y="778" width="322" height="20"/>
+                                                <rect key="frame" x="72" y="776" width="322" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0903-000-0395">
                                                         <attributes>
@@ -1757,14 +1786,14 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inbox-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-dh-wLN">
-                                                <rect key="frame" x="32" y="818" width="20" height="20"/>
+                                                <rect key="frame" x="32" y="816" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Exp-5K-93e"/>
                                                     <constraint firstAttribute="width" constant="20" id="tZc-EI-evd"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLo-DJ-0Sb">
-                                                <rect key="frame" x="72" y="818" width="322" height="20"/>
+                                                <rect key="frame" x="72" y="816" width="322" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="info@agropartnerships.com">
                                                         <attributes>
@@ -1778,21 +1807,21 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYR-9s-j7T">
-                                                <rect key="frame" x="24" y="870" width="382" height="29"/>
+                                                <rect key="frame" x="24" y="868" width="382" height="28"/>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="16"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Aq2-Gq-YzI">
-                                                <rect key="frame" x="32" y="923" width="32" height="32"/>
+                                                <rect key="frame" x="32" y="920" width="32" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="Hrw-cH-VfM"/>
                                                     <constraint firstAttribute="height" constant="32" id="U2U-nK-dxy"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wFJ-nx-kmZ" userLabel="Plot 8, Rock Drive, CBD, Lekki Phase 1,  Lagos. Nigeria">
-                                                <rect key="frame" x="72" y="923" width="318" height="40"/>
+                                                <rect key="frame" x="72" y="920" width="318" height="40"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Plot 8, Rock Drive, CBD, Lekki Phase 1,  Lagos. Nigeria">
                                                         <attributes>
@@ -1806,7 +1835,7 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHz-uy-MdP">
-                                                <rect key="frame" x="72" y="698" width="322" height="20"/>
+                                                <rect key="frame" x="72" y="696" width="322" height="20"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="0809-811-1113">
                                                         <attributes>
@@ -1926,7 +1955,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4t-Bj-bB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3352.1739130434785" y="1325.8928571428571"/>
+            <point key="canvasLocation" x="5546" y="1324"/>
         </scene>
         <!--Support View Controller-->
         <scene sceneID="bps-wJ-hr2">
@@ -1943,7 +1972,7 @@ Monday – Friday: 9AM – 5PM</string>
                                         <rect key="frame" x="0.0" y="20" width="320" height="668"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yD-hB-rgB">
-                                                <rect key="frame" x="16" y="0.0" width="279" height="41"/>
+                                                <rect key="frame" x="16" y="0.0" width="276.5" height="41"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Message Support">
                                                         <attributes>
@@ -2166,7 +2195,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aES-ow-jfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4426.0869565217399" y="1291.7410714285713"/>
+            <point key="canvasLocation" x="6518" y="1165"/>
         </scene>
         <!--Helpdesk-->
         <scene sceneID="YE3-ry-iaz">
@@ -2186,7 +2215,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gah-UM-Kgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="1042"/>
+            <point key="canvasLocation" x="4271" y="1095"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="r6C-wO-Dto">
@@ -2197,7 +2226,7 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP5-jD-agK" userLabel="topmost guide view">
-                                <rect key="frame" x="0.0" y="20" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ChE-Hp-BLY"/>
@@ -2363,7 +2392,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="YZj-CN-ovv" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                                 <rect key="frame" x="112" y="46" width="270" height="46"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
                                                             </textField>
@@ -2374,7 +2402,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                                     <constraint firstAttribute="height" constant="46" id="Xak-cC-bNw"/>
                                                                     <constraint firstAttribute="width" constant="80" id="xvZ-hR-my0"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -2398,7 +2425,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="46" id="M0m-6j-6ZZ"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                                             </textField>
@@ -2419,7 +2445,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number (e.g. 8155443322)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-AD-vxR" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="222" width="366" height="46"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                             </textField>
@@ -2440,7 +2465,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gi6-u9-oqq" customClass="DateDropDownTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="310" width="366" height="46"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -2545,7 +2569,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="46" id="eCP-4D-x4R"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="name"/>
                                                             </textField>
@@ -2580,14 +2603,12 @@ Monday – Friday: 9AM – 5PM</string>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUn-jX-WgU" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="222" width="366" height="46"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-iX-KKn" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="134" width="366" height="46"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -2875,7 +2896,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLK-MG-9WW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873.913043478261" y="2400"/>
+            <point key="canvasLocation" x="4269" y="2729"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="AsM-hg-PO9">
@@ -2886,10 +2907,10 @@ Monday – Friday: 9AM – 5PM</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0U-TS-1sW">
-                                <rect key="frame" x="0.0" y="32" width="320" height="536"/>
+                                <rect key="frame" x="0.0" y="12" width="320" height="556"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAT-ow-0NH">
-                                        <rect key="frame" x="16" y="16" width="186.5" height="28"/>
+                                        <rect key="frame" x="16" y="16" width="185.5" height="28"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Change Password">
                                                 <attributes>
@@ -2925,7 +2946,6 @@ Monday – Friday: 9AM – 5PM</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="myb-ur-QQ6"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
@@ -2968,7 +2988,6 @@ Monday – Friday: 9AM – 5PM</string>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNw-PN-EHu" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="222" width="256" height="46"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
                                             </textField>
@@ -2983,7 +3002,6 @@ Monday – Friday: 9AM – 5PM</string>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sOk-mv-MpU" customClass="AgroTextField" customModule="AgroPartnerships" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="134" width="256" height="46"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.23911065919999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
                                             </textField>
@@ -3086,7 +3104,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXW-ol-jpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3263" y="2537"/>
+            <point key="canvasLocation" x="7478" y="1094"/>
         </scene>
         <!--Profile-->
         <scene sceneID="75w-Lb-9Vt">
@@ -3106,7 +3124,7 @@ Monday – Friday: 9AM – 5PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWJ-WP-999" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="2131"/>
+            <point key="canvasLocation" x="2543" y="2131"/>
         </scene>
     </scenes>
     <resources>

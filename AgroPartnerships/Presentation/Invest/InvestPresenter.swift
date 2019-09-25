@@ -39,17 +39,21 @@ class InvestPresenter: BasePresenter {
             
             var soldInvestments = [Investment]()
             var availableInvestments = [Investment]()
+            var comingSoonInvestments = [Investment]()
 
             for investment in response.investments! {
                 if investment.status == "sold out" {
                     soldInvestments.append(investment)
                 } else if investment.status == "available" {
                     availableInvestments.append(investment)
+                } else if investment.status == "coming soon" {
+                    comingSoonInvestments.append(investment)
                 }
             }
             
             self.view?.showInvestmentsInformation(viewModel: InvestViewModel(soldInvestments: soldInvestments,
-                                                                             availableInvestments: availableInvestments))
+                                                                             availableInvestments: availableInvestments,
+                                                                             comingSoonInvestments: comingSoonInvestments))
         }
     }
 }
@@ -57,4 +61,5 @@ class InvestPresenter: BasePresenter {
 struct InvestViewModel {
     let soldInvestments: [Investment]
     let availableInvestments: [Investment]
+    let comingSoonInvestments: [Investment]
 }

@@ -115,6 +115,7 @@ class SupportViewController: BaseViewController {
                 myPickerController.delegate = self;
                 myPickerController.sourceType = .camera
                 myPickerController.allowsEditing = true
+//                myPickerController.modalPresentationStyle = .fullScreen
                 self.present(myPickerController, animated: true, completion: nil)
             }
         }
@@ -124,6 +125,7 @@ class SupportViewController: BaseViewController {
             pickerController.delegate = self
             pickerController.sourceType = .photoLibrary
             pickerController.allowsEditing = true
+//            pickerController.modalPresentationStyle = .fullScreen
             self.present(pickerController, animated: true, completion: nil)
         }
         

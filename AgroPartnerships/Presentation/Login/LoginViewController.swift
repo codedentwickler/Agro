@@ -20,8 +20,8 @@ class LoginViewController: BaseViewController {
     private func setupView() {
         //         Only allowing in DEBUG mode
         #if DEBUG
-        emailTextField.text = /*"ios@check-dc.com"*/ "opeyemi@check-dc.com"
-        passwordTextField.text = /*"eee123"*/ "eee1234"
+        emailTextField.text = "ios@check-dc.com" //"opeyemi@check-dc.com"
+        passwordTextField.text = "eee123" //"eee1234"
         #else
         let keychain = Keychain(service: "com.agropartnerships.AgroPartnerships")
         let email = keychain[PersistenceIDs.Email]
@@ -125,6 +125,7 @@ extension LoginViewController: LoginView {
         let vc = viewController(type: LandingViewController.self,
                                 from: StoryBoardIdentifiers.Dashboard)
         LoginSession.shared.dashboardInformation = dashboardInformation
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
 }

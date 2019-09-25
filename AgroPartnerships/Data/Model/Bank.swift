@@ -19,7 +19,12 @@ struct Bank {
 		accountNumber = json["accountNumber"].stringValue
 		bankName = json["bankName"].stringValue
 		date = json["date"].stringValue
-		review = Review(json["review"])
+        
+        if (json["review"].exists()) {
+            review = Review(json["review"])
+        } else {
+            review = nil
+        }
 	}
 
 }
