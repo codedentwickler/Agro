@@ -59,15 +59,13 @@ class InvestDetailViewController: BaseViewController {
         if investment.status != "available" {
             investButtonHeight.constant = CGFloat.zero
             investButtonTopSpace.constant = CGFloat.zero
-            investButtonBottomSpace.constant = CGFloat.zero
             investButton.isHidden = true
             investActionButton.isHidden = true
         } else {
             investButton.isHidden = false
             investActionButton.isHidden = false
             investButtonHeight.constant =  CGFloat(50)
-            investButtonTopSpace.constant = CGFloat(16)
-            investButtonBottomSpace.constant = CGFloat(16)
+            investButtonTopSpace.constant = CGFloat(24)
         }
         
         typeLabel.text = investment.type?.uppercased()

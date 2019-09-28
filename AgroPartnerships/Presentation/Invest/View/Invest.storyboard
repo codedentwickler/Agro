@@ -272,7 +272,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-5g-im1" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="818" width="382" height="50"/>
+                                                <rect key="frame" x="16" y="810" width="382" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="iYh-PZ-Pt6"/>
                                                 </constraints>
@@ -290,7 +290,7 @@
                                                 </connections>
                                             </button>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVh-ax-thc">
-                                                <rect key="frame" x="0.0" y="900" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="884" width="414" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="YFu-iw-OHw"/>
@@ -312,20 +312,20 @@
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </toolbar>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwJ-M2-rdB">
-                                                <rect key="frame" x="0.0" y="954" width="414" height="1"/>
+                                                <rect key="frame" x="0.0" y="938" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.69999999999999996" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="t0p-7Y-JWC"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81A-Fh-yn2">
-                                                <rect key="frame" x="16" y="979" width="382" height="26.5"/>
+                                                <rect key="frame" x="16" y="963" width="382" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EU1-fS-5Bo" customClass="ExpandableLabel" customModule="ExpandableLabel">
-                                                <rect key="frame" x="20" y="1012.5" width="374" height="60"/>
+                                                <rect key="frame" x="20" y="996.5" width="374" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ugM-wR-Lcj"/>
                                                 </constraints>
@@ -334,27 +334,27 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-0Y-e43">
-                                                <rect key="frame" x="16" y="1088.5" width="382" height="1"/>
+                                                <rect key="frame" x="16" y="1072.5" width="382" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ZJ7-lF-LtH"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Farms &amp; Commodities" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XDx-bQ-CIC">
-                                                <rect key="frame" x="16" y="1109.5" width="256.5" height="24"/>
+                                                <rect key="frame" x="16" y="1093.5" width="256.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="20"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="Qtf-sa-Gko">
-                                                <rect key="frame" x="378" y="1111.5" width="20" height="20"/>
+                                                <rect key="frame" x="378" y="1095.5" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="ufq-Kv-gNb"/>
                                                     <constraint firstAttribute="height" constant="20" id="yqB-IR-9UC"/>
                                                 </constraints>
                                             </imageView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a0l-vI-s1U">
-                                                <rect key="frame" x="0.0" y="1153.5" width="414" height="260"/>
+                                                <rect key="frame" x="0.0" y="1137.5" width="414" height="260"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="260" id="g2D-FA-D2n"/>
@@ -390,7 +390,7 @@
                                             <constraint firstItem="chN-yl-VNX" firstAttribute="trailing" secondItem="UWB-RL-WYQ" secondAttribute="trailing" constant="-16" id="AMk-4s-I0z"/>
                                             <constraint firstAttribute="trailing" secondItem="KHE-cF-40g" secondAttribute="trailing" constant="16" id="AkU-qX-gfc"/>
                                             <constraint firstAttribute="trailing" secondItem="AWT-0z-7MK" secondAttribute="trailing" constant="16" id="At5-AX-MhT"/>
-                                            <constraint firstItem="qVh-ax-thc" firstAttribute="top" secondItem="qqS-5g-im1" secondAttribute="bottom" constant="32" id="Byb-o5-CPY"/>
+                                            <constraint firstItem="qVh-ax-thc" firstAttribute="top" secondItem="qqS-5g-im1" secondAttribute="bottom" constant="24" id="Byb-o5-CPY"/>
                                             <constraint firstAttribute="trailing" secondItem="0V8-wI-qxC" secondAttribute="trailing" constant="200" id="CBq-p8-Fd5"/>
                                             <constraint firstItem="AWT-0z-7MK" firstAttribute="top" secondItem="ZLT-Bm-FPQ" secondAttribute="bottom" constant="16" id="DXk-yW-vMO"/>
                                             <constraint firstItem="KHE-cF-40g" firstAttribute="top" secondItem="jct-V3-fUI" secondAttribute="bottom" constant="16" id="Dmw-lA-xG6"/>
@@ -438,7 +438,7 @@
                                             <constraint firstItem="S3v-d1-bti" firstAttribute="leading" secondItem="omi-YL-dCM" secondAttribute="leading" id="qTF-gx-5j3"/>
                                             <constraint firstItem="jct-V3-fUI" firstAttribute="top" secondItem="cQN-bP-Hu5" secondAttribute="bottom" constant="8" id="qr7-Hf-aYi"/>
                                             <constraint firstItem="Qtf-sa-Gko" firstAttribute="centerY" secondItem="XDx-bQ-CIC" secondAttribute="centerY" id="qsa-hd-a5X"/>
-                                            <constraint firstItem="qqS-5g-im1" firstAttribute="top" secondItem="0Eg-wB-fLi" secondAttribute="bottom" constant="32" id="rz5-1I-Jsw"/>
+                                            <constraint firstItem="qqS-5g-im1" firstAttribute="top" secondItem="0Eg-wB-fLi" secondAttribute="bottom" constant="24" id="rz5-1I-Jsw"/>
                                             <constraint firstItem="ezA-c6-vGW" firstAttribute="leading" secondItem="hVb-KR-4ND" secondAttribute="leading" id="t6C-fa-RZS"/>
                                             <constraint firstItem="EU1-fS-5Bo" firstAttribute="leading" secondItem="omi-YL-dCM" secondAttribute="leading" constant="20" id="tSI-gi-Lf9"/>
                                             <constraint firstItem="a0l-vI-s1U" firstAttribute="leading" secondItem="omi-YL-dCM" secondAttribute="leading" id="uqY-gg-gMF"/>
