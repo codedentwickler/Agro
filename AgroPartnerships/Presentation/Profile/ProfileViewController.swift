@@ -369,7 +369,6 @@ class ProfileViewController: BaseViewController {
     
     @IBAction func userPressedLogout() {
         AppDelegate.applicationDidLogout(with: .none)
-        LoginSession.shared.logout()
     }
 
     private func showSuccessAlert(title: String, message: String) {

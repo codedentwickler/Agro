@@ -2,7 +2,7 @@ import Foundation
 
 struct ApiConstants {
     
-    public static let BaseUrl = "https://staging.agropartnerships.co"
+    public static let BaseUrl = "https://staging.agropartnerships.co" // "http://23.239.14.141"
    
     public static let ImageBaseUrl = BaseUrl + "/img/"
     public static let PaystackPublicKey = "pk_test_29fb86813b279682ccf49baa572ebabe9d6fd248"

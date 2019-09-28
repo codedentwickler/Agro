@@ -12,6 +12,7 @@ class InvestViewController: BaseViewController {
 
     public var availableinvestments : [Investment] = []
     public var soldInvestments : [Investment] = []
+    public var allInvestments : [Investment] = []
 
     @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet weak var closeIconImageView: UIImageView!
@@ -110,7 +111,8 @@ extension InvestViewController : InvestView {
         
         self.availableinvestments = viewModel.availableInvestments
         self.soldInvestments = viewModel.soldInvestments
-        
+        self.allInvestments = viewModel.investments
+
         soldOutInvestmentsTableView.reloadData()
         availableInvestmentsCollectionView.reloadData()
         soldOutInvestmentsTableViewHeight.constant = CGFloat( 120 *  min(3, soldInvestments.count))
@@ -156,7 +158,7 @@ extension InvestViewController : UICollectionViewDataSource {
     
     private func showInvestmentDetail(investment: Investment) {
         let vc = viewController(type: InvestDetailViewController.self, from: StoryBoardIdentifiers.Invest)
-        vc.investments = self.availableinvestments
+        vc.investments = self.allInvestments
         vc.investment = investment
         navigationController?.pushViewController(vc, animated: true)
     }

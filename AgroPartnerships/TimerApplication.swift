@@ -22,7 +22,7 @@ class TimerApplication: UIApplication {
     // reset the timer because there was user interaction
     @objc private func resetIdleTimer() {
         idleTimer?.invalidate()
-        AgroLogger.log("resetIdleTimer was called ")
+//        AgroLogger.log("resetIdleTimer was called ")
         idleTimer = Timer.scheduledTimer (
             timeInterval: timeoutInSeconds,
             target: self,

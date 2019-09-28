@@ -8,6 +8,7 @@
 
 import UIKit
 import Toast_Swift
+import SwiftyJSON
 
 class DashboardViewController: BaseViewController {
     
@@ -37,6 +38,7 @@ class DashboardViewController: BaseViewController {
     // Referral Outlets
     @IBOutlet weak var referralActionsCollectionView: UICollectionView!
     @IBOutlet weak var referralInputTextfield: UITextField!
+    @IBOutlet weak var viewWalletAccountButton: AgroActionButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +71,7 @@ class DashboardViewController: BaseViewController {
     private func setup() {
         setupView()
         updateSizeOfViews()
+        updateWalletAccountView()
     }
     
     private func updateSizeOfViews() {
@@ -112,7 +115,18 @@ class DashboardViewController: BaseViewController {
         transactionsTableView.reloadData()
     }
     
-    fileprivate func setupDataSources() {
+    private func updateWalletAccountView() {
+        
+        if dashboardInformation.walletBankAccount == nil {
+            viewWalletAccountButton.setTitle("Generate Account Number",
+                                             for: .normal)
+        } else {
+            viewWalletAccountButton.setTitle("View Wallet Account",
+                                             for: .normal)
+        }
+    }
+    
+    private func setupDataSources() {
         currentInvestmentsTableView.dataSource = self
         transactionsTableView.dataSource = self
         portfolioActionsCollectionView.dataSource = self
@@ -120,7 +134,7 @@ class DashboardViewController: BaseViewController {
         referralActionsCollectionView.dataSource = self
     }
     
-    fileprivate func setupDelegates() {
+    private func setupDelegates() {
         currentInvestmentsTableView.delegate = self
         transactionsTableView.delegate = self
         portfolioActionsCollectionView.delegate = self
@@ -128,30 +142,30 @@ class DashboardViewController: BaseViewController {
         referralActionsCollectionView.delegate = self
     }
     
-    fileprivate func setupTransactionsTableView(){
+    private func setupTransactionsTableView(){
         transactionsTableView.register(UINib(nibName: TransactionsTableViewCell.identifier, bundle: nil),
                                        forCellReuseIdentifier: TransactionsTableViewCell.identifier)
     }
     
-    fileprivate func setupCurrentInvestmentsTableView(){
+    private func setupCurrentInvestmentsTableView(){
         currentInvestmentsTableView.register(UINib(nibName: CurrentInvestmentTableViewCell.identifier,
                                                    bundle: nil),
                                              forCellReuseIdentifier: CurrentInvestmentTableViewCell.identifier)
     }
     
-    fileprivate func setupInvestmentsCollectionView(){
+    private func setupInvestmentsCollectionView(){
         portfolioActionsCollectionView.register(UINib(nibName: DashboardActionCollectionViewCell.identifier,
                                                       bundle: nil),
                                                 forCellWithReuseIdentifier: DashboardActionCollectionViewCell.identifier)
         portfolioActionsCollectionView.allowsMultipleSelection = false
     }
     
-    fileprivate func setupWalletCollectionView(){
+    private func setupWalletCollectionView(){
         walletsActionsCollectionView.register(UINib(nibName: DashboardActionThreeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DashboardActionThreeCollectionViewCell.identifier)
         walletsActionsCollectionView.allowsMultipleSelection = false
     }
     
-    fileprivate func setupReferralCollectionView(){
+    private func setupReferralCollectionView(){
         referralActionsCollectionView.register(UINib(nibName: DashboardActionThreeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DashboardActionThreeCollectionViewCell.identifier)
         referralActionsCollectionView.allowsMultipleSelection = false
     }
@@ -247,6 +261,17 @@ class DashboardViewController: BaseViewController {
         showToast(withMessage: "Referral Code Copied")
     }
     
+    @IBAction func userPressedViewWalletAccount(_ sender: Any) {
+        if let walletAccount = dashboardInformation.walletBankAccount {
+            let title = "Wallet Account Details"
+            let message = "Account Number: \(walletAccount.accountNumber ?? "NA")\nAccount Name: \(walletAccount.accountName ?? "NA")\nBank Name: \(walletAccount.bankName ?? "NA")"
+            
+            showAlertDialog(title: title, message: message)
+        } else {
+            generateReservedAccount()
+        }
+    }
+    
     @IBAction func userPressedShareCode(_ sender: Any) {
         let refCode = dashboardInformation.profile?.refCode ?? ""
         let message = "Use My referral code, \(refCode) https://agropartnerships.co/sign-up?ref=\(refCode)"
@@ -260,5 +285,27 @@ class DashboardViewController: BaseViewController {
         vc.isBeenUsedForPendingInvestments = false
         vc.investments = investmentHistory
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func generateReservedAccount() {
+        
+        showLoading(withMessage: "Generating Reserved Account . . .")
+        ApiServiceImplementation.shared.generateReservedAccount { (response) in
+            self.dismissLoading()
+            
+            guard let walletAccount = response else {
+                self.showAlertDialog(message: StringLiterals.GENERIC_NETWORK_ERROR)
+                return
+            }
+            
+            if walletAccount.status == ApiConstants.Success {
+                //Update current login session values.
+                LoginSession.shared.dashboardInformation?.walletBankAccount = walletAccount
+                self.dashboardInformation = LoginSession.shared.dashboardInformation
+                self.updateWalletAccountView()
+            } else {
+                self.showAlertDialog(message: "An unexpected error occured while trying reserve your account.")
+            }
+        }
     }
 }

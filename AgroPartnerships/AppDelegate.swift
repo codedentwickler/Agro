@@ -78,6 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !LoginSession.shared.isUserInSession && reason != .none {
             return
         }
+        LoginSession.shared.logout()
+        LoginManager().logOut()
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         var vc: LoginLandingViewController
@@ -85,7 +87,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navVC = storyBoard.instantiateViewController(withIdentifier: "LoginNavigationController") as! UINavigationController
         vc = navVC.viewControllers.first as! LoginLandingViewController
         vc.logoutReason = reason
-        LoginSession.shared.logout()
         
         window.rootViewController = navVC
         window.makeKeyAndVisible()

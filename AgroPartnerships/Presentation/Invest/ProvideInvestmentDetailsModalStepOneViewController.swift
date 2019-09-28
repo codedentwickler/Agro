@@ -19,13 +19,14 @@ class ProvideInvestmentDetailsModalStepOneViewController: BaseViewController {
     @IBOutlet weak var expectedReturnsAmountLabel: UILabel!
     @IBOutlet weak var walletFundsAmountLabel: UILabel!
     @IBOutlet weak var quantityStepper: UIStepper!
+    @IBOutlet weak var quantityInputView: UITextField!
     
     var investment: Investment!
     var delegate: ProvideInvestmentDetailsDelegate?
 
     var quantity: Int = 0 {
         didSet {
-            quantityLabel.text = "Qty  \(quantity) \(quantity <= 1 ? "unit" : "units")"
+            quantityInputView.text = quantity.string
             let totalCost = quantity * (investment.price ?? 0)
             let profit = totalCost * (investment.yield ?? 0) / 100
             totalCostAmountLabel.text = totalCost.commaSeparatedNairaValue
@@ -81,6 +82,29 @@ class ProvideInvestmentDetailsModalStepOneViewController: BaseViewController {
         let balance = withdrawable + nonWithdrawable
         
         walletFundsAmountLabel.text = balance.commaSeparatedNairaValue
+    }
+    @IBAction func userChangedQuantity(_ sender: UITextField) {
+        if let quantity = quantityInputView.text?.intValue {
+            let maximumUnits = investment.units ?? 0
+            if quantity <= maximumUnits {
+                self.quantity = quantity
+            } else {
+                validateUnitInput()
+                self.quantity = maximumUnits
+            }
+        } else {
+            showAlertDialog(message: "Invalid Entry for Input")
+            quantityInputView.text = "0"
+            quantity = 0
+        }
+        quantityStepper.value = self.quantity.doubleValue
+    }
+    
+    private func validateUnitInput() {
+        let maximumUnits = investment.units ?? 0
+        if quantity > maximumUnits {
+            showAlertDialog(message: "The maximum available unit you can purchase is \(maximumUnits)")
+        }
     }
     
     @IBAction func userChangedStepperValue(_ sender: UIStepper) {

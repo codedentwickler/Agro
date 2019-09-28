@@ -14,6 +14,10 @@ struct ApiEndPoints {
         return "\(ApiConstants.BaseUrl)/user/fingerprint"
     }
     
+    static func fbSignIn() -> String {
+           return "\(ApiConstants.BaseUrl)/user/facebook/signup"
+   }
+    
     static func signUp() -> String {
         return "\(ApiConstants.BaseUrl)/user/signup"
     }
@@ -72,6 +76,10 @@ struct ApiEndPoints {
     
     static func verifyWalletPayment() -> String {
         return "\(ApiConstants.BaseUrl)/user/wallet/fund/verify"
+    }
+    
+    static func createDBA() -> String {
+        return "\(ApiConstants.BaseUrl)/user/wallet/dba"
     }
     
     static func payout() -> String {

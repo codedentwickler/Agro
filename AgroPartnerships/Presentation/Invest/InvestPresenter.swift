@@ -53,7 +53,8 @@ class InvestPresenter: BasePresenter {
             
             self.view?.showInvestmentsInformation(viewModel: InvestViewModel(soldInvestments: soldInvestments,
                                                                              availableInvestments: availableInvestments,
-                                                                             comingSoonInvestments: comingSoonInvestments))
+                                                                             comingSoonInvestments: comingSoonInvestments,
+                                                                             investments: response.investments!))
         }
     }
 }
@@ -62,4 +63,5 @@ struct InvestViewModel {
     let soldInvestments: [Investment]
     let availableInvestments: [Investment]
     let comingSoonInvestments: [Investment]
+    let investments: [Investment]
 }

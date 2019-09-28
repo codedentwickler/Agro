@@ -36,6 +36,13 @@ class LoginPresenter: BasePresenter {
         }
     }
     
+    func loginWithFacebook(accessToken: String) {
+        self.view?.showLoading(withMessage: StringLiterals.AUTHENTICATING_USER)
+        apiService.loginWithFB(accessToken: accessToken)  { (loginResponse) in
+            self.handleLogin(loginResponse: loginResponse)
+        }
+    }
+    
     private func handleLogin(loginResponse: LoginResponse?) {
         guard let response = loginResponse else {
             self.view?.dismissLoading()

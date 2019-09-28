@@ -7,6 +7,17 @@ PODS:
     - Alamofire
     - EVReflection/Core
   - EVReflection/Core (5.10.1)
+  - ExpandableLabel (0.5.2)
+  - FacebookCore (0.8.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FacebookLogin (0.8.0):
+    - FacebookCore (~> 0.8.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKLoginKit (~> 5.0)
+  - FacebookShare (0.8.0):
+    - FacebookCore (~> 0.8.0)
+    - FBSDKCoreKit (~> 5.0)
+    - FBSDKShareKit (~> 5.0)
   - FBSDKCoreKit (5.3.0):
     - FBSDKCoreKit/Basics (= 5.3.0)
     - FBSDKCoreKit/Core (= 5.3.0)
@@ -14,6 +25,8 @@ PODS:
   - FBSDKCoreKit/Core (5.3.0):
     - FBSDKCoreKit/Basics
   - FBSDKLoginKit (5.3.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.3.0):
     - FBSDKCoreKit (~> 5.0)
   - Firebase/Analytics (6.5.0):
     - Firebase/Core
@@ -93,14 +106,16 @@ PODS:
   - SwiftyJSON (4.3.0)
   - SwiftyOnboard (1.3.8)
   - Toast-Swift (3.0.1)
-  - TTTAttributedLabel (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - Cards
   - DropDown
   - EVReflection/Alamofire
-  - FBSDKLoginKit
+  - ExpandableLabel
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Firebase/Analytics
   - Firebase/Messaging
   - FittedSheets
@@ -112,7 +127,6 @@ DEPENDENCIES:
   - SwiftyJSON (~> 4.0)
   - SwiftyOnboard
   - Toast-Swift (~> 3.0.1)
-  - TTTAttributedLabel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -120,8 +134,13 @@ SPEC REPOS:
     - Cards
     - DropDown
     - EVReflection
+    - ExpandableLabel
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - FBSDKShareKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -142,15 +161,19 @@ SPEC REPOS:
     - SwiftyJSON
     - SwiftyOnboard
     - Toast-Swift
-    - TTTAttributedLabel
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
+  ExpandableLabel: c2fab6d27860c572d67134b30522a5917746171d
+  FacebookCore: 563bb4cbcd7dd86cf89f3729252140bf256aacaa
+  FacebookLogin: 8b966ae661e95e7dba837d7cc49cc464ce003dba
+  FacebookShare: e75d5e81ef7bd7aab2f865446c4c27015b43bae6
   FBSDKCoreKit: 39748deefe37a005f983722e433be2ddcdd83ae7
   FBSDKLoginKit: bc0329e10045789e8d40b12d4f15ddbd07a898e2
+  FBSDKShareKit: f61d03f36ce4f1b379c7de7dbfe173662e68be44
   Firebase: dedc9e48ea3f3649ad5f6b982f8a0c73508a14b5
   FirebaseAnalytics: 3fb375bc9d13779add4039716f868d233a473fad
   FirebaseAnalyticsInterop: efbe45c8385ec626e29f9525e5ebd38520dfb6c1
@@ -171,8 +194,7 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
-  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 83a1fdaa33e483be1b924d7b3253b68f9a32e5de
+PODFILE CHECKSUM: 05d5e0f2feae6c4a3a64247ec0a42eaf8f600b31
 
 COCOAPODS: 1.6.0.rc.2

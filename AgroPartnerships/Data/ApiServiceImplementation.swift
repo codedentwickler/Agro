@@ -4,7 +4,6 @@ import SwiftyJSON
 
 class ApiServiceImplementation : ApiService {
     
-    
     static let shared = ApiServiceImplementation()
     
     func login(email : String,
@@ -18,6 +17,15 @@ class ApiServiceImplementation : ApiService {
                         method: .post,
                         parameters: parameters,
                         completion: completion)
+    }
+    
+    func loginWithFB(accessToken: String, completion: @escaping (LoginResponse?) -> Void) {
+        let parameters = [ApiConstants.Token: accessToken]
+        
+        Network.shared.request(ApiEndPoints.fbSignIn(),
+                               method: .post,
+                               parameters: parameters,
+                               completion: completion)
     }
     
     func loginWithFingerprint(email: String,
@@ -271,6 +279,18 @@ class ApiServiceImplementation : ApiService {
                                method: .delete,
                                parameters: parameters,
                                completion: completion)
+    }
+    
+    func generateReservedAccount(completion: @escaping (WalletBankAccount?) -> Void) {
+        
+       Network.shared.request(ApiEndPoints.createDBA(),
+                                      method: .post) { (response) in
+                   if let response = response {
+                       completion(WalletBankAccount(response))
+                   } else {
+                       completion(nil)
+                   }
+               }
     }
     
 }

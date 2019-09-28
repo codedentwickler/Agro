@@ -9,12 +9,16 @@
 import UIKit
 import FittedSheets
 import Kingfisher
+import ExpandableLabel
 
 class InvestDetailViewController: BaseViewController {
     
     @IBOutlet weak var investmentImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var investButton: UIView!
+    @IBOutlet weak var investActionButton: AgroActionButton!
+    @IBOutlet weak var investButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var investButtonTopSpace: NSLayoutConstraint!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var costPerUnitLabel: UILabel!
@@ -24,11 +28,10 @@ class InvestDetailViewController: BaseViewController {
     @IBOutlet weak var investmentCodeLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var yieldLabel: UILabel!
-    @IBOutlet weak var gradientView: GradientView!
-    @IBOutlet weak var readMoreButton: AgroActionButton!
-    @IBOutlet weak var investmentDescriptionTextView: UITextView!
-    @IBOutlet weak var investmentDescriptionTextViewHeight: NSLayoutConstraint!
     @IBOutlet weak var otherCommoditiesCollectionView: UICollectionView!
+    @IBOutlet weak var descriptionLabel: ExpandableLabel!
+    @IBOutlet weak var descriptionLabelHeight: NSLayoutConstraint!
+    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     
     public var investment: Investment!
     public var investments: [Investment]!
@@ -52,6 +55,13 @@ class InvestDetailViewController: BaseViewController {
         investButton.isUserInteractionEnabled = true
         investButton.addGestureRecognizer(tap)
         
+        if investment.status != "available" {
+            investButtonHeight.constant = CGFloat.zero
+            investButtonTopSpace.constant = CGFloat.zero
+            investButton.isHidden = true
+            investActionButton.isHidden = true
+        }
+        
         typeLabel.text = investment.type?.uppercased()
         productNameLabel.text = investment.title
         costPerUnitLabel.text = investment.price?.commaSeparatedNairaValue
@@ -68,23 +78,28 @@ class InvestDetailViewController: BaseViewController {
         
         investmentCodeLabel.text = investment.code
         locationLabel.text = investment.location
-        investmentDescriptionTextView.text = investment.description
         
-        if investmentDescriptionTextView.textExceedBoundsOfTextView() {
-            readMoreButton.isHidden = false
-            gradientView.isHidden = false
-            investmentDescriptionTextViewHeight.constant = CGFloat(150.0)
-        } else {
-            gradientView.isHidden = true
-            readMoreButton.isHidden = true
-            investmentDescriptionTextViewHeight.constant = investmentDescriptionTextView.contentSize.height + 8
-        }
+        let description = getDescription()
+        
+        descriptionLabel.numberOfLines = description.numberOfLines
+        descriptionLabel.shouldCollapse = true
+        descriptionLabel.collapsed = true
+        descriptionLabel.textReplacementType = description.textReplacementType
+        descriptionLabel.collapsedAttributedLink = NSAttributedString(string: "Read More")
+        descriptionLabel.setLessLinkWith(lessLink: "Read Less", attributes: [.foregroundColor:UIColor.red], position: description.textAlignment)
+        descriptionLabel.text = description.text
+        descriptionLabel.delegate = self
         
         otherInvestments.removeAll()
         otherInvestments.append(contentsOf: investments)
         otherInvestments.removeAll(where: { $0.code == investment.code })
         otherCommoditiesCollectionView.reloadData()
+        
     }
+    
+    func getDescription() -> (text: String, textReplacementType: ExpandableLabel.TextReplacementType, numberOfLines: Int, textAlignment: NSTextAlignment) {
+        return (investment.description ?? "", .word, 6, .left)
+      }
     
     private func loadImage() {
         let url = URL(string: investment.picture!)
@@ -146,7 +161,6 @@ class InvestDetailViewController: BaseViewController {
     }
     //The dynamic stuff are the investment title (Sweet Potato), yield (35%), duration (7) and the code (ASADCE4851).
     //    And on live it'll be the live URL.
-    
     @IBAction func userPressedShareCode(_ sender: Any) {
         let link = "https://staging.agropartnerships.co/investments/\(investment.code!)"
         let message = """
@@ -250,5 +264,22 @@ extension InvestDetailViewController: ProvideInvestmentDetailsDelegate {
             payVc.initializeTransactionRequest = initializeTransactionRequest
             navigationController?.pushViewController(payVc, animated: true)
         }
+    }
+}
+
+extension InvestDetailViewController: ExpandableLabelDelegate {
+    
+    func willExpandLabel(_ label: ExpandableLabel) {}
+    
+    func didExpandLabel(_ label: ExpandableLabel) {
+        let textHeight = label.intrinsicContentSize.height
+        contentViewHeight.constant = CGFloat(1550) + textHeight
+    }
+    
+    func willCollapseLabel(_ label: ExpandableLabel) {}
+    
+    func didCollapseLabel(_ label: ExpandableLabel) {
+        let textHeight = label.intrinsicContentSize.height
+        contentViewHeight.constant = CGFloat(1550)
     }
 }

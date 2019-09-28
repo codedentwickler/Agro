@@ -15,6 +15,9 @@ protocol ApiService {
                password: String,
                completion: @escaping (_ response: LoginResponse? ) -> Void)
     
+    func loginWithFB(accessToken: String,
+                     completion: @escaping (_ response: LoginResponse? ) -> Void)
+    
     func loginWithFingerprint(email: String,
                               key: String,
                               completion: @escaping (_ response: LoginResponse? ) -> Void)
@@ -77,6 +80,8 @@ protocol ApiService {
     func requestPayout(amount: Double, completion: @escaping (_ response: RequestPayoutResponse? ) -> Void)
     
     func registerAppToken(token: String, completion: @escaping (_ response: RegisterDeviceTokenResponse? ) -> Void)
+    
+    func generateReservedAccount(completion: @escaping (WalletBankAccount?) -> Void)
 }
 
 typealias RequestPayoutResponse = FundWalletResponse

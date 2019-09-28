@@ -24,8 +24,10 @@ use_frameworks!
     pod 'Firebase/Analytics'
     pod 'Firebase/Messaging'
     pod 'KeychainAccess'
-    pod 'FBSDKLoginKit'
-    pod 'TTTAttributedLabel'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
+    pod "ExpandableLabel"
 
 end
 

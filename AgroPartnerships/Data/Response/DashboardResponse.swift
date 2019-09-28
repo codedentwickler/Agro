@@ -13,7 +13,7 @@ struct DashboardResponse {
 	let transactions: [Transactions]?
 	let referrals: [Referral]?
 	var profile: Profile?
-    let walletBankAccount: WalletBankAccount?
+    var walletBankAccount: WalletBankAccount?
 	let paystackKey: String?
 	let status: String?
     let message: String?
@@ -27,7 +27,11 @@ struct DashboardResponse {
 		paystackKey = json["paystackKey"].stringValue
 		status = json["status"].stringValue
         message = json["message"].stringValue
-        walletBankAccount = WalletBankAccount(json["walletBankAccount"])
+        if json["walletBankAccount"] != JSON.null {
+            walletBankAccount = WalletBankAccount(json["walletBankAccount"])
+        } else {
+            walletBankAccount = nil
+        }
 	}
 
     public func isSuccessful() -> Bool {
