@@ -126,6 +126,7 @@ extension LoginViewController: LoginView {
                                 from: StoryBoardIdentifiers.Dashboard)
         LoginSession.shared.dashboardInformation = dashboardInformation
         vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true, completion: nil)
     }
 }

@@ -19,6 +19,7 @@ class InvestDetailViewController: BaseViewController {
     @IBOutlet weak var investActionButton: AgroActionButton!
     @IBOutlet weak var investButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var investButtonTopSpace: NSLayoutConstraint!
+    @IBOutlet weak var investButtonBottomSpace: NSLayoutConstraint!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var costPerUnitLabel: UILabel!
@@ -58,8 +59,15 @@ class InvestDetailViewController: BaseViewController {
         if investment.status != "available" {
             investButtonHeight.constant = CGFloat.zero
             investButtonTopSpace.constant = CGFloat.zero
+            investButtonBottomSpace.constant = CGFloat.zero
             investButton.isHidden = true
             investActionButton.isHidden = true
+        } else {
+            investButton.isHidden = false
+            investActionButton.isHidden = false
+            investButtonHeight.constant =  CGFloat(50)
+            investButtonTopSpace.constant = CGFloat(16)
+            investButtonBottomSpace.constant = CGFloat(16)
         }
         
         typeLabel.text = investment.type?.uppercased()

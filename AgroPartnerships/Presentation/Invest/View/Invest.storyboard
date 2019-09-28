@@ -37,7 +37,7 @@
                                         <rect key="frame" x="16" y="8" width="288" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-z0-wfg">
-                                                <rect key="frame" x="0.0" y="8.5" width="252" height="33"/>
+                                                <rect key="frame" x="0.0" y="8.5" width="252" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -484,7 +484,8 @@
                         <outlet property="durationLabel" destination="ezA-c6-vGW" id="Ufe-Dg-9ng"/>
                         <outlet property="investActionButton" destination="qqS-5g-im1" id="sTa-Ll-Vlt"/>
                         <outlet property="investButton" destination="chN-yl-VNX" id="FyX-05-6QW"/>
-                        <outlet property="investButtonHeight" destination="rz5-1I-Jsw" id="4Gw-zP-nRC"/>
+                        <outlet property="investButtonBottomSpace" destination="Byb-o5-CPY" id="baU-P6-KVD"/>
+                        <outlet property="investButtonHeight" destination="iYh-PZ-Pt6" id="mLZ-Nr-xv1"/>
                         <outlet property="investButtonTopSpace" destination="rz5-1I-Jsw" id="dzJ-3h-EEp"/>
                         <outlet property="investmentCodeLabel" destination="B7X-ez-Gug" id="6Ua-bY-lBA"/>
                         <outlet property="investmentImageView" destination="UWB-RL-WYQ" id="n1W-Xo-EcE"/>
@@ -514,13 +515,13 @@
                                 <rect key="frame" x="0.0" y="12" width="320" height="468"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-qk-DcP">
-                                        <rect key="frame" x="16" y="0.0" width="288" height="26"/>
+                                        <rect key="frame" x="16" y="0.0" width="288" height="26.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pZr-Cg-3Mt">
-                                        <rect key="frame" x="16" y="42" width="288" height="410"/>
+                                        <rect key="frame" x="16" y="42.5" width="288" height="409.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -913,7 +914,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Saved Cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.64999997615814209" translatesAutoresizingMaskIntoConstraints="NO" id="kar-eg-d2Z">
-                                                <rect key="frame" x="16" y="146" width="161" height="25"/>
+                                                <rect key="frame" x="16" y="146" width="148.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="UTQ-Jf-ypD"/>
                                                 </constraints>
@@ -954,7 +955,7 @@
                                                 <rect key="frame" x="16" y="380" width="382" height="164"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="AMOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEF-WY-pwt">
-                                                        <rect key="frame" x="16" y="12" width="77.5" height="21"/>
+                                                        <rect key="frame" x="16" y="12" width="82.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -965,13 +966,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="UNITS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka3-zR-6Nh">
-                                                        <rect key="frame" x="16" y="86" width="53" height="21"/>
+                                                        <rect key="frame" x="16" y="86" width="56.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sem-TJ-RQ7">
-                                                        <rect key="frame" x="16" y="111" width="16" height="33"/>
+                                                        <rect key="frame" x="16" y="111" width="17" height="33"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="28"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1163,7 +1164,7 @@
                                 <rect key="frame" x="0.0" y="4" width="414" height="566"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invest" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7d-4B-4dR">
-                                        <rect key="frame" x="16" y="4" width="100" height="24.5"/>
+                                        <rect key="frame" x="16" y="4" width="100" height="25.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="YVq-PI-HJo"/>
                                         </constraints>
@@ -1203,13 +1204,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet Potato - 02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-oX-6Wv">
-                                        <rect key="frame" x="108" y="55" width="146" height="21"/>
+                                        <rect key="frame" x="108" y="55" width="159" height="21"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                         <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrK-3s-FeW">
-                                        <rect key="frame" x="108" y="80" width="115" height="35"/>
+                                        <rect key="frame" x="108" y="80" width="117.5" height="36"/>
                                         <string key="text">₦95,000.00/unit
 33% in 7 months</string>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
@@ -1225,25 +1226,25 @@
                                         <viewLayoutGuide key="safeArea" id="qTP-Ow-V1N"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub total " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIi-Kf-aNW">
-                                        <rect key="frame" x="16" y="160" width="69.5" height="19"/>
+                                        <rect key="frame" x="16" y="160" width="72.5" height="19"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₦192,000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4g-Zo-OUM">
-                                        <rect key="frame" x="305" y="160" width="93" height="19"/>
+                                        <rect key="frame" x="302.5" y="160" width="95.5" height="19"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Funds " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzQ-3O-pOk">
-                                        <rect key="frame" x="16" y="195" width="97" height="19"/>
+                                        <rect key="frame" x="16" y="195" width="102" height="19"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₦192,000.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksq-Zp-J2Q">
-                                        <rect key="frame" x="305" y="195" width="93" height="19"/>
+                                        <rect key="frame" x="302.5" y="195" width="95.5" height="19"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1257,17 +1258,17 @@
                                         <viewLayoutGuide key="safeArea" id="CKV-fD-4p7"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-PN-QA5">
-                                        <rect key="frame" x="16" y="247" width="90" height="19"/>
+                                        <rect key="frame" x="16" y="247" width="83.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₦95,000.00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPi-mE-Cq9">
-                                        <rect key="frame" x="314" y="247" width="84" height="19"/>
+                                        <rect key="frame" x="313" y="247" width="85" height="19.5"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFz-Yy-Q6X">
-                                        <rect key="frame" x="16" y="278" width="398" height="1"/>
+                                        <rect key="frame" x="16" y="278.5" width="398" height="1"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.3106538955" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="pIU-57-7Jm"/>
@@ -1275,7 +1276,7 @@
                                         <viewLayoutGuide key="safeArea" id="2qg-yR-NAB"/>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3sy-X1-vzs">
-                                        <rect key="frame" x="0.0" y="295" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="295.5" width="414" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="XRe-cd-EkY"/>
@@ -1306,13 +1307,13 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay with" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHo-B4-bH6">
-                                                                    <rect key="frame" x="62" y="8" width="57.5" height="17.5"/>
+                                                                    <rect key="frame" x="62" y="8" width="59.5" height="18"/>
                                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                                     <color key="textColor" white="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit/Debit card" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBs-Rl-mBM">
-                                                                    <rect key="frame" x="62" y="27.5" width="115.5" height="17.5"/>
+                                                                    <rect key="frame" x="62" y="28" width="127.5" height="18"/>
                                                                     <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -1354,13 +1355,13 @@
                                         </cells>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If your wallet funds are more than the total investment cost, whatever money left stays your wallet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-Lx-rsv">
-                                        <rect key="frame" x="20" y="371" width="374" height="26"/>
+                                        <rect key="frame" x="20" y="371.5" width="374" height="26.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="11"/>
                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kz8-02-Ydg" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                        <rect key="frame" x="50" y="417" width="145" height="40"/>
+                                        <rect key="frame" x="50" y="418" width="145" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="9iG-Uc-vIJ"/>
                                         </constraints>
@@ -1387,7 +1388,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTK-F2-n9Q" customClass="AgroActionButton" customModule="AgroPartnerships" customModuleProvider="target">
-                                        <rect key="frame" x="219" y="417" width="145" height="40"/>
+                                        <rect key="frame" x="219" y="418" width="145" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="iTc-0a-FUu"/>
                                         </constraints>
@@ -1534,7 +1535,7 @@
                                                 <rect key="frame" x="16" y="70" width="382" height="164"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="AMOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak7-F6-NvC">
-                                                        <rect key="frame" x="16" y="12" width="77.5" height="21"/>
+                                                        <rect key="frame" x="16" y="12" width="82.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1545,13 +1546,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="UNITS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xV-VE-9SG">
-                                                        <rect key="frame" x="16" y="86" width="53" height="21"/>
+                                                        <rect key="frame" x="16" y="86" width="56.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARD-rZ-iPJ">
-                                                        <rect key="frame" x="16" y="111" width="16" height="33"/>
+                                                        <rect key="frame" x="16" y="111" width="17" height="33"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="28"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1621,7 +1622,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13J-IA-Dll">
-                                                        <rect key="frame" x="16" y="94" width="100.5" height="21"/>
+                                                        <rect key="frame" x="16" y="94" width="113.5" height="21"/>
                                                         <string key="text">0806694067
 </string>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
@@ -1629,7 +1630,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Access Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXf-gC-4BB">
-                                                        <rect key="frame" x="16" y="119" width="93.5" height="19"/>
+                                                        <rect key="frame" x="16" y="119" width="96" height="19"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1653,13 +1654,13 @@ Example (NAME74814 NAME SURNAME). A text or WhatsApp message with your full name
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="USER CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtE-7p-gQO">
-                                                                <rect key="frame" x="16" y="77" width="103.5" height="21"/>
+                                                                <rect key="frame" x="16" y="77" width="105.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
                                                                 <color key="textColor" red="0.1137254902" green="0.23137254900000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME7814" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ru-Tp-yEz">
-                                                                <rect key="frame" x="16" y="106" width="142.5" height="33"/>
+                                                                <rect key="frame" x="16" y="106" width="145.5" height="33"/>
                                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="28"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1725,7 +1726,7 @@ Example (NAME74814 NAME SURNAME). A text or WhatsApp message with your full name
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Agropartnerships Technology Limited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-Sa-iwj">
-                                                        <rect key="frame" x="16" y="74" width="266.5" height="19"/>
+                                                        <rect key="frame" x="16" y="74" width="295.5" height="19"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="16"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1738,13 +1739,13 @@ Example (NAME74814 NAME SURNAME). A text or WhatsApp message with your full name
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="0806694067" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a7-Tg-xIW">
-                                                        <rect key="frame" x="16" y="97" width="106" height="23"/>
+                                                        <rect key="frame" x="16" y="97" width="120" height="23"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="19"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Access Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kj-kd-FPL">
-                                                        <rect key="frame" x="16" y="124" width="93.5" height="19"/>
+                                                        <rect key="frame" x="16" y="124" width="96" height="19"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                         <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
